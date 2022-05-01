@@ -19,7 +19,7 @@ namespace Gestion_expertise
 
         private void suivi_expertise_Load(object sender, EventArgs e)
         {
-
+           
         }
         
         private void TextBox_Enter(object sender, EventArgs e)

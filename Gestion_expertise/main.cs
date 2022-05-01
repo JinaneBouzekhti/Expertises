@@ -131,6 +131,13 @@ namespace Gestion_expertise
             mainpanel.Controls.Add(TtExp);
             TtExp.Dock = DockStyle.Fill;
         }
-    
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            mainpanel.Controls.Clear();
+            suivi_expertise suivi = new suivi_expertise();
+            mainpanel.Controls.Add(suivi);
+            suivi.Dock = DockStyle.Fill;
+        }
     }
 }
