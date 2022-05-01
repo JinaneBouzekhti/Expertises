@@ -41,7 +41,5 @@ namespace Gestion_expertise
                 tb.UnderlinedStyle = false;
             }
         }
-
-        
     }
 }
