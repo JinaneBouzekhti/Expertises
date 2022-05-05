@@ -37,9 +37,5 @@ namespace Gestion_expertise
             ap.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
     }
 }

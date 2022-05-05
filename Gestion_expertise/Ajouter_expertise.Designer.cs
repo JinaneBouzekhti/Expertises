@@ -33,14 +33,13 @@ namespace Gestion_expertise
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.com_tribunal = new System.Windows.Forms.ComboBox();
+            this.com_CoursA = new System.Windows.Forms.ComboBox();
             this.txt_magistrat = new System.Windows.Forms.TextBox();
             this.txt_juge = new System.Windows.Forms.TextBox();
             this.txt_greffier = new System.Windows.Forms.TextBox();
@@ -67,22 +66,21 @@ namespace Gestion_expertise
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_ref_ref = new System.Windows.Forms.TextBox();
+            this.com_tribunalP = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.lbl_NExp = new System.Windows.Forms.Label();
-            this.txt_no_ser_exp = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_VideDs = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.txt_montant = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_ref_cab = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txt_ref_cab = new System.Windows.Forms.TextBox();
-            this.txt_ref_ref = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_no_ser_exp)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -120,15 +118,6 @@ namespace Gestion_expertise
             this.label20.Size = new System.Drawing.Size(200, 23);
             this.label20.TabIndex = 71;
             this.label20.Text = "Date désignation";
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(6, 316);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(200, 23);
-            this.label21.TabIndex = 72;
-            this.label21.Text = "No Serv. Expertise";
             // 
             // label8
             // 
@@ -184,14 +173,15 @@ namespace Gestion_expertise
             this.label3.TabIndex = 62;
             this.label3.Text = "Tribunal";
             // 
-            // com_tribunal
+            // com_CoursA
             // 
-            this.com_tribunal.FormattingEnabled = true;
-            this.com_tribunal.Location = new System.Drawing.Point(273, 100);
-            this.com_tribunal.Name = "com_tribunal";
-            this.com_tribunal.Size = new System.Drawing.Size(148, 25);
-            this.com_tribunal.TabIndex = 2;
-            this.com_tribunal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_tribunal_KeyDown);
+            this.com_CoursA.FormattingEnabled = true;
+            this.com_CoursA.Location = new System.Drawing.Point(273, 100);
+            this.com_CoursA.Name = "com_CoursA";
+            this.com_CoursA.Size = new System.Drawing.Size(168, 25);
+            this.com_CoursA.TabIndex = 2;
+            this.com_CoursA.SelectedValueChanged += new System.EventHandler(this.com_CoursA_SelectedValueChanged);
+            this.com_CoursA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_tribunal_KeyDown);
             // 
             // txt_magistrat
             // 
@@ -411,15 +401,13 @@ namespace Gestion_expertise
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.txt_ref_cab);
+            this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.txt_ref_ref);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.com_tribunalP);
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.lbl_NExp);
-            this.panel1.Controls.Add(this.txt_no_ser_exp);
-            this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
@@ -428,40 +416,40 @@ namespace Gestion_expertise
             this.panel1.Size = new System.Drawing.Size(612, 462);
             this.panel1.TabIndex = 91;
             // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(3, 54);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(146, 23);
+            this.label16.TabIndex = 102;
+            this.label16.Text = "Référence du référé";
+            // 
+            // txt_ref_ref
+            // 
+            this.txt_ref_ref.Location = new System.Drawing.Point(256, 51);
+            this.txt_ref_ref.Name = "txt_ref_ref";
+            this.txt_ref_ref.Size = new System.Drawing.Size(340, 25);
+            this.txt_ref_ref.TabIndex = 100;
+            // 
+            // com_tribunalP
+            // 
+            this.com_tribunalP.FormattingEnabled = true;
+            this.com_tribunalP.Location = new System.Drawing.Point(430, 86);
+            this.com_tribunalP.Name = "com_tribunalP";
+            this.com_tribunalP.Size = new System.Drawing.Size(166, 25);
+            this.com_tribunalP.TabIndex = 92;
+            // 
             // label26
             // 
             this.label26.BackColor = System.Drawing.Color.White;
             this.label26.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(155, 7);
+            this.label26.Location = new System.Drawing.Point(157, 10);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(14, 15);
             this.label26.TabIndex = 98;
             this.label26.Text = "*";
-            // 
-            // lbl_NExp
-            // 
-            this.lbl_NExp.BackColor = System.Drawing.Color.White;
-            this.lbl_NExp.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_NExp.ForeColor = System.Drawing.Color.Red;
-            this.lbl_NExp.Location = new System.Drawing.Point(256, 32);
-            this.lbl_NExp.Name = "lbl_NExp";
-            this.lbl_NExp.Size = new System.Drawing.Size(285, 15);
-            this.lbl_NExp.TabIndex = 96;
-            this.lbl_NExp.Text = "Ce champ est obligatoire !!!";
-            this.lbl_NExp.Visible = false;
-            // 
-            // txt_no_ser_exp
-            // 
-            this.txt_no_ser_exp.Location = new System.Drawing.Point(256, 314);
-            this.txt_no_ser_exp.Maximum = new decimal(new int[] {
-            -1981284352,
-            -1966660860,
-            0,
-            0});
-            this.txt_no_ser_exp.Name = "txt_no_ser_exp";
-            this.txt_no_ser_exp.Size = new System.Drawing.Size(340, 25);
-            this.txt_no_ser_exp.TabIndex = 94;
             // 
             // panel2
             // 
@@ -526,45 +514,37 @@ namespace Gestion_expertise
             this.txt_montant.Size = new System.Drawing.Size(340, 25);
             this.txt_montant.TabIndex = 92;
             // 
-            // comboBox1
+            // txt_ref_cab
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(410, 86);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 25);
-            this.comboBox1.TabIndex = 92;
+            this.txt_ref_cab.Location = new System.Drawing.Point(256, 10);
+            this.txt_ref_cab.Maximum = new decimal(new int[] {
+            -1981284352,
+            -1966660860,
+            0,
+            0});
+            this.txt_ref_cab.Name = "txt_ref_cab";
+            this.txt_ref_cab.Size = new System.Drawing.Size(340, 25);
+            this.txt_ref_cab.TabIndex = 103;
             // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(7, 53);
+            this.label14.Location = new System.Drawing.Point(6, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(200, 26);
-            this.label14.TabIndex = 101;
+            this.label14.Size = new System.Drawing.Size(154, 26);
+            this.label14.TabIndex = 104;
             this.label14.Text = "Référence du cabinet";
             // 
-            // label16
+            // label1
             // 
-            this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(3, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(146, 23);
-            this.label16.TabIndex = 102;
-            this.label16.Text = "Référence du référé";
-            // 
-            // txt_ref_cab
-            // 
-            this.txt_ref_cab.Location = new System.Drawing.Point(256, 54);
-            this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Size = new System.Drawing.Size(340, 25);
-            this.txt_ref_cab.TabIndex = 100;
-            // 
-            // txt_ref_ref
-            // 
-            this.txt_ref_ref.Location = new System.Drawing.Point(256, 7);
-            this.txt_ref_ref.Name = "txt_ref_ref";
-            this.txt_ref_ref.Size = new System.Drawing.Size(340, 25);
-            this.txt_ref_ref.TabIndex = 99;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(146, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 15);
+            this.label1.TabIndex = 105;
+            this.label1.Text = "*";
             // 
             // Ajouter_expertise
             // 
@@ -584,7 +564,7 @@ namespace Gestion_expertise
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.com_tribunal);
+            this.Controls.Add(this.com_CoursA);
             this.Controls.Add(this.txt_magistrat);
             this.Controls.Add(this.txt_juge);
             this.Controls.Add(this.txt_greffier);
@@ -598,10 +578,10 @@ namespace Gestion_expertise
             this.Load += new System.EventHandler(this.Ajouter_expertise_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_no_ser_exp)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,14 +592,13 @@ namespace Gestion_expertise
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox com_tribunal;
+        private System.Windows.Forms.ComboBox com_CoursA;
         private System.Windows.Forms.TextBox txt_magistrat;
         private System.Windows.Forms.TextBox txt_juge;
         private System.Windows.Forms.TextBox txt_greffier;
@@ -647,17 +626,16 @@ namespace Gestion_expertise
         private System.Windows.Forms.Button btn_annuler;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.NumericUpDown txt_no_ser_exp;
         private System.Windows.Forms.NumericUpDown txt_montant;
         private System.Windows.Forms.Label lbl_VideDs;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lbl_NExp;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox com_tribunalP;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txt_ref_cab;
         private System.Windows.Forms.TextBox txt_ref_ref;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown txt_ref_cab;
     }
 }

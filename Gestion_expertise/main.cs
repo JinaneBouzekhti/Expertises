@@ -62,6 +62,7 @@ namespace Gestion_expertise
             mainpanel.Controls.Add(TtExp);
             TtExp.Dock = DockStyle.Fill;
 
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -95,14 +96,7 @@ namespace Gestion_expertise
             u.Dock = DockStyle.Fill;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            mainpanel.Controls.Clear();
-            mainpanel.Controls.Clear();
-            ToutesExp TtExp = new ToutesExp();
-            mainpanel.Controls.Add(TtExp);
-            TtExp.Dock = DockStyle.Fill;
-        }
+       
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -138,6 +132,15 @@ namespace Gestion_expertise
             suivi_expertise suivi = new suivi_expertise();
             mainpanel.Controls.Add(suivi);
             suivi.Dock = DockStyle.Fill;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainpanel.Controls.Clear();
+            mainpanel.Controls.Clear();
+            ToutesExp TtExp = new ToutesExp();
+            mainpanel.Controls.Add(TtExp);
+            TtExp.Dock = DockStyle.Fill;
         }
     }
 }

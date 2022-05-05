@@ -16,12 +16,18 @@ namespace Gestion_expertise
     public partial class Ajouter_expertise : Form
     {
         string cs = ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString;
+
         DataSet ds = new DataSet();
+
+        BindingSource bsCA = new BindingSource();
         BindingSource bsTr = new BindingSource();
         BindingSource bsTypeExp = new BindingSource();
         BindingSource bsStt = new BindingSource();
+
         SqlCommand com;
         SqlCommandBuilder comB;
+
+        SqlDataAdapter daCA;
         SqlDataAdapter daTr;
         SqlDataAdapter daTypeExp;
         SqlDataAdapter daStt;
@@ -37,27 +43,26 @@ namespace Gestion_expertise
         {
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            //Remplisage comboBox Tribunal:
-            string req1 = "select* from Tribunal";
-            com = new SqlCommand(req1, cn);
-            daTr = new SqlDataAdapter(com);
 
-            if (ds.Tables["Tribunal"] != null)
-                ds.Tables["Tribunal"].Clear();
+            //Remplisage comboBox CoursA:
+            string req = "select* from CoursAppel";
+            com = new SqlCommand(req, cn);
+            daCA = new SqlDataAdapter(com);
 
-            daTr.Fill(ds, "Tribunal");
-            bsTr.DataSource = ds;
-            bsTr.DataMember = "Tribunal";
-            
-            comB = new SqlCommandBuilder(daTr);
+            if (ds.Tables["CoursAppel"] != null)
+                ds.Tables["CoursAppel"].Clear();
 
-            com_tribunal.DataSource = bsTr;
-            com_tribunal.DisplayMember = "NomTribunal";
-            com_tribunal.ValueMember = "NumTribunal";
-            com_tribunal.Text = "-------";
+            daCA.Fill(ds, "CoursAppel");
+            bsCA.DataSource = ds;
+            bsCA.DataMember = "CoursAppel";
 
-            com = null;
-            comB = null;
+            comB = new SqlCommandBuilder(daCA);
+
+            com_CoursA.DataSource = bsCA;
+            com_CoursA.DisplayMember = "NomCoursAppel";
+            com_CoursA.ValueMember = "NumCoursAppel";
+            com_CoursA.Text = "-------";
+
 
             //Remplisage comboBox TypeExp:
             string req2 = "select* from TypeExp";
@@ -70,7 +75,7 @@ namespace Gestion_expertise
 
             bsTypeExp.DataSource = ds;
             bsTypeExp.DataMember = "TypeExp";
-          
+
             comB = new SqlCommandBuilder(daTypeExp);
 
             com_type_exp.DataSource = bsTypeExp;
@@ -78,7 +83,7 @@ namespace Gestion_expertise
             com_type_exp.ValueMember = "NumTypeExp";
             com_type_exp.Text = "-------";
 
-            com = null; 
+            com = null;
             comB = null;
 
             //Remplisage comboBox Statut:
@@ -104,44 +109,65 @@ namespace Gestion_expertise
         }
         public string GetFolderName()
         {
+            int NumExp = 0;
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            SqlDataAdapter sa = new SqlDataAdapter("select NumExp from expertise", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                NumExp = Convert.ToInt32(dt.Rows.Count);
+            }
             string NameF;
-            string NumExp = txt_n_exp.Text;
+            NumExp += 1;
+            string date = DateTime.Now.ToString("yyyy");
             string ext = Path.GetExtension(ofd.FileName);
-            NameF = "Expertise" + NumExp + ext;
+            NameF = "Expertise" + "-" + NumExp + "-" + date + ext;
             return NameF;
         }
         private void btn_open_file_Click(object sender, EventArgs e)
         {
-            
-                fbd.ShowDialog();
-                txt_rep.Text = fbd.SelectedPath.ToString()+@"\";
-                
+
+            fbd.ShowDialog();
+            txt_rep.Text = fbd.SelectedPath.ToString() + @"\";
+
         }
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
-            string rqt = "insert into expertise values (@NumExp,@NomExp,@NumTribunal,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@NumServExp,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@RefRéféré,@RefCabinet,@NumRG,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut)";
+            string rqt = "insert into expertise values (@NumExp,@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
 
             com = new SqlCommand(rqt, cn);
 
-            com.Parameters.Add(new SqlParameter("@NumExp", txt_n_exp.Text));
-            com.Parameters.Add(new SqlParameter("@NomExp", txt_nom_exp.Text));
-            com.Parameters.Add(new SqlParameter("@NumTribunal", Convert.ToInt32(com_tribunal.SelectedValue)));
+            int NumExp = 0;
+            SqlDataAdapter sa = new SqlDataAdapter("select NumExp from expertise", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                NumExp = Convert.ToInt32(dt.Rows.Count);
+            }
+
+            NumExp += 1;
+            bool terminer = false;
+            com.Parameters.Add(new SqlParameter("@NumExp", NumExp));
+            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_ref.Text)));
+            com.Parameters.Add(new SqlParameter("@RefRéféré", txt_ref_ref.Text));
+            com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
             com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
             com.Parameters.Add(new SqlParameter("@NomGreffier", txt_greffier.Text));
             com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_decision.Text));
             com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
-            com.Parameters.Add(new SqlParameter("@NumServExp", txt_no_ser_exp.Text));
             com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
             com.Parameters.Add(new SqlParameter("@DateAcceptation", Convert.ToDateTime(date_acc.Text)));
             com.Parameters.Add(new SqlParameter("@DateConsignation", Convert.ToDateTime(date_consi.Text)));
             com.Parameters.Add(new SqlParameter("@MontantConsignation", txt_montant.Text));
-            com.Parameters.Add(new SqlParameter("@RefRéféré", txt_ref_ref.Text));
-            com.Parameters.Add(new SqlParameter("@RefCabinet", txt_ref_cab.Text));
-            com.Parameters.Add(new SqlParameter("@NumRG", txt_no_rg.Text));
             com.Parameters.Add(new SqlParameter("@LieuExp", txt_lieu.Text));
             com.Parameters.Add(new SqlParameter("@NumTypeExp", Convert.ToInt32(com_type_exp.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@DateConvPart", Convert.ToDateTime(date_conv.Text)));
@@ -149,19 +175,20 @@ namespace Gestion_expertise
             com.Parameters.Add(new SqlParameter("@HeureRvPart", txt_horai.Text));
             com.Parameters.Add(new SqlParameter("@RépertoireDoc", txt_rep.Text));
             com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(com_statu.SelectedValue)));
+            com.Parameters.Add(new SqlParameter("@Terminer", terminer));
 
-            string rqtPK = "select NumExp from expertise";
-            SqlCommand com1 = new SqlCommand(rqtPK, cn);
-            bool pk = false;
+            string rqtUnq = "select RefCabinet from expertise";
+            SqlCommand com1 = new SqlCommand(rqtUnq, cn);
+            bool Unq = false;
             SqlDataReader dr = com1.ExecuteReader();
 
 
             while (dr.Read())
             {
-                if (dr[0].ToString() == txt_n_exp.Text.ToString())
+                if (Convert.ToInt32(dr[0]) == Convert.ToInt32(txt_ref_ref.Text))
                 {
                     MessageBox.Show("Cette expertise existe déja", "Ereur");
-                    pk = true;
+                    Unq = true;
                     break;
                 }
 
@@ -169,28 +196,21 @@ namespace Gestion_expertise
             dr.Close();
             dr = null;
             com1 = null;
-            if (!pk)
+            if (!Unq)
             {
-                 if (txt_n_exp.Text == "")
-                 {
-                    lbl_NExp.Visible = true;
-                 }
+
+
+                if (txt_rep.Text == "" || txt_rep.Text == @"\")
+                {
+                    lbl_VideDs.Visible = true;
+                }
                 else
                 {
-
-
-                    if (txt_rep.Text == "" || txt_rep.Text == @"\")
-                    {
-                        lbl_VideDs.Visible = true;
-                    }
-                    else
-                    {
-                        string Chemin = txt_rep.Text + GetFolderName();
-                        DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                        Dir.Create();
-                        com.ExecuteNonQuery();
-                        this.Hide();
-                    }
+                    string Chemin = txt_rep.Text + GetFolderName();
+                    DirectoryInfo Dir = new DirectoryInfo(Chemin);
+                    Dir.Create();
+                    com.ExecuteNonQuery();
+                    this.Hide();
                 }
 
             }
@@ -211,7 +231,7 @@ namespace Gestion_expertise
             e.SuppressKeyPress = true;
         }
 
-        
+
 
         private void com_statu_KeyDown(object sender, KeyEventArgs e)
         {
@@ -225,6 +245,41 @@ namespace Gestion_expertise
             e.SuppressKeyPress = true;
         }
 
-       
+        private void com_CoursA_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            //Remplisage comboBox Tribunal:
+            if (com_CoursA.SelectedIndex > -1)
+            {
+                try
+                {
+                    SqlConnection cn = new SqlConnection(cs);
+                    cn.Open();
+                    int NumCA = Convert.ToInt32(com_CoursA.SelectedValue);
+                    string req1 = "select * from TribunauxPremière where NumCoursAppel =" + NumCA;
+                    com = new SqlCommand(req1, cn);
+                    daTr = new SqlDataAdapter(com);
+
+                    if (ds.Tables["TribunalP"] != null)
+                        ds.Tables["Tribunalp"].Clear();
+
+                    daTr.Fill(ds, "TribunalP");
+                    bsTr.DataSource = ds;
+                    bsTr.DataMember = "TribunalP";
+
+                    comB = new SqlCommandBuilder(daTr);
+
+                    com_tribunalP.DataSource = bsTr;
+                    com_tribunalP.DisplayMember = "NomTribunalP";
+                    com_tribunalP.ValueMember = "NumTribunalP";
+                    com_tribunalP.Text = "-------";
+
+                    com = null;
+                    comB = null;
+                }
+                catch (Exception ex) { }
+
+            }
+        }
     }
 }
