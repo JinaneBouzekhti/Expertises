@@ -54,7 +54,7 @@ namespace Gestion_expertise
 
 
             comboBox1.DataSource = bsExp;
-            comboBox1.DisplayMember = "NumExp";
+            comboBox1.DisplayMember = "RefCabinet";
             comboBox1.ValueMember = "NumExp";
             comboBox1.Text = "---Sélectionner une expertise--";
             mainpanel.Controls.Clear();
@@ -91,7 +91,7 @@ namespace Gestion_expertise
         private void button5_Click(object sender, EventArgs e)
         {
             mainpanel.Controls.Clear();
-            demandeur u = new demandeur(comboBox1.Text);
+            demandeur u = new demandeur(comboBox1.SelectedValue.ToString());
             mainpanel.Controls.Add(u);
             u.Dock = DockStyle.Fill;
         }
@@ -101,7 +101,7 @@ namespace Gestion_expertise
         private void button7_Click(object sender, EventArgs e)
         {
             mainpanel.Controls.Clear();
-            defendeur d = new defendeur(comboBox1.Text);
+            defendeur d = new defendeur(comboBox1.SelectedValue.ToString());
             mainpanel.Controls.Add(d);
             d.Dock = DockStyle.Fill;
         }
