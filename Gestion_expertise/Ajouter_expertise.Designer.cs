@@ -73,23 +73,23 @@ namespace Gestion_expertise
             this.lbl_VideDs = new System.Windows.Forms.Label();
             this.txt_montant = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label17
@@ -187,7 +187,7 @@ namespace Gestion_expertise
             this.com_CoursA.FormattingEnabled = true;
             this.com_CoursA.Location = new System.Drawing.Point(3, 3);
             this.com_CoursA.Name = "com_CoursA";
-            this.com_CoursA.Size = new System.Drawing.Size(144, 31);
+            this.com_CoursA.Size = new System.Drawing.Size(144, 25);
             this.com_CoursA.TabIndex = 2;
             this.com_CoursA.SelectedValueChanged += new System.EventHandler(this.com_CoursA_SelectedValueChanged);
             this.com_CoursA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_tribunal_KeyDown);
@@ -196,28 +196,28 @@ namespace Gestion_expertise
             // 
             this.txt_magistrat.Location = new System.Drawing.Point(309, 168);
             this.txt_magistrat.Name = "txt_magistrat";
-            this.txt_magistrat.Size = new System.Drawing.Size(301, 30);
+            this.txt_magistrat.Size = new System.Drawing.Size(301, 25);
             this.txt_magistrat.TabIndex = 3;
             // 
             // txt_juge
             // 
             this.txt_juge.Location = new System.Drawing.Point(309, 223);
             this.txt_juge.Name = "txt_juge";
-            this.txt_juge.Size = new System.Drawing.Size(301, 30);
+            this.txt_juge.Size = new System.Drawing.Size(301, 25);
             this.txt_juge.TabIndex = 4;
             // 
             // txt_greffier
             // 
             this.txt_greffier.Location = new System.Drawing.Point(309, 278);
             this.txt_greffier.Name = "txt_greffier";
-            this.txt_greffier.Size = new System.Drawing.Size(301, 30);
+            this.txt_greffier.Size = new System.Drawing.Size(301, 25);
             this.txt_greffier.TabIndex = 5;
             // 
             // txt_type_decision
             // 
             this.txt_type_decision.Location = new System.Drawing.Point(309, 333);
             this.txt_type_decision.Name = "txt_type_decision";
-            this.txt_type_decision.Size = new System.Drawing.Size(301, 30);
+            this.txt_type_decision.Size = new System.Drawing.Size(301, 25);
             this.txt_type_decision.TabIndex = 6;
             // 
             // label25
@@ -288,7 +288,7 @@ namespace Gestion_expertise
             this.com_statu.FormattingEnabled = true;
             this.com_statu.Location = new System.Drawing.Point(310, 388);
             this.com_statu.Name = "com_statu";
-            this.com_statu.Size = new System.Drawing.Size(301, 31);
+            this.com_statu.Size = new System.Drawing.Size(301, 25);
             this.com_statu.TabIndex = 23;
             this.com_statu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_statu_KeyDown);
             // 
@@ -297,7 +297,7 @@ namespace Gestion_expertise
             this.com_type_exp.FormattingEnabled = true;
             this.com_type_exp.Location = new System.Drawing.Point(310, 113);
             this.com_type_exp.Name = "com_type_exp";
-            this.com_type_exp.Size = new System.Drawing.Size(301, 31);
+            this.com_type_exp.Size = new System.Drawing.Size(301, 25);
             this.com_type_exp.TabIndex = 17;
             this.com_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_type_exp_KeyDown);
             // 
@@ -306,21 +306,21 @@ namespace Gestion_expertise
             this.txt_rep.Location = new System.Drawing.Point(3, 3);
             this.txt_rep.Name = "txt_rep";
             this.txt_rep.ReadOnly = true;
-            this.txt_rep.Size = new System.Drawing.Size(164, 30);
+            this.txt_rep.Size = new System.Drawing.Size(164, 25);
             this.txt_rep.TabIndex = 21;
             // 
             // txt_horai
             // 
             this.txt_horai.Location = new System.Drawing.Point(310, 278);
             this.txt_horai.Name = "txt_horai";
-            this.txt_horai.Size = new System.Drawing.Size(301, 30);
+            this.txt_horai.Size = new System.Drawing.Size(301, 25);
             this.txt_horai.TabIndex = 20;
             // 
             // txt_lieu
             // 
             this.txt_lieu.Location = new System.Drawing.Point(310, 58);
             this.txt_lieu.Name = "txt_lieu";
-            this.txt_lieu.Size = new System.Drawing.Size(301, 30);
+            this.txt_lieu.Size = new System.Drawing.Size(301, 25);
             this.txt_lieu.TabIndex = 16;
             // 
             // date_decision
@@ -328,7 +328,7 @@ namespace Gestion_expertise
             this.date_decision.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_decision.Location = new System.Drawing.Point(309, 388);
             this.date_decision.Name = "date_decision";
-            this.date_decision.Size = new System.Drawing.Size(301, 30);
+            this.date_decision.Size = new System.Drawing.Size(301, 25);
             this.date_decision.TabIndex = 7;
             this.date_decision.Value = new System.DateTime(2022, 4, 25, 0, 0, 0, 0);
             // 
@@ -337,7 +337,7 @@ namespace Gestion_expertise
             this.date_desi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_desi.Location = new System.Drawing.Point(309, 443);
             this.date_desi.Name = "date_desi";
-            this.date_desi.Size = new System.Drawing.Size(301, 30);
+            this.date_desi.Size = new System.Drawing.Size(301, 25);
             this.date_desi.TabIndex = 9;
             // 
             // date_acc
@@ -345,7 +345,7 @@ namespace Gestion_expertise
             this.date_acc.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_acc.Location = new System.Drawing.Point(309, 498);
             this.date_acc.Name = "date_acc";
-            this.date_acc.Size = new System.Drawing.Size(301, 30);
+            this.date_acc.Size = new System.Drawing.Size(301, 25);
             this.date_acc.TabIndex = 10;
             // 
             // date_consi
@@ -353,7 +353,7 @@ namespace Gestion_expertise
             this.date_consi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_consi.Location = new System.Drawing.Point(310, 3);
             this.date_consi.Name = "date_consi";
-            this.date_consi.Size = new System.Drawing.Size(301, 30);
+            this.date_consi.Size = new System.Drawing.Size(301, 25);
             this.date_consi.TabIndex = 11;
             // 
             // date_conv
@@ -361,7 +361,7 @@ namespace Gestion_expertise
             this.date_conv.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_conv.Location = new System.Drawing.Point(310, 168);
             this.date_conv.Name = "date_conv";
-            this.date_conv.Size = new System.Drawing.Size(301, 30);
+            this.date_conv.Size = new System.Drawing.Size(301, 25);
             this.date_conv.TabIndex = 18;
             // 
             // date_rend
@@ -369,7 +369,7 @@ namespace Gestion_expertise
             this.date_rend.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_rend.Location = new System.Drawing.Point(310, 223);
             this.date_rend.Name = "date_rend";
-            this.date_rend.Size = new System.Drawing.Size(301, 30);
+            this.date_rend.Size = new System.Drawing.Size(301, 25);
             this.date_rend.TabIndex = 19;
             // 
             // btn_open_file
@@ -409,7 +409,7 @@ namespace Gestion_expertise
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(3, 55);
+            this.label14.Location = new System.Drawing.Point(3, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(247, 30);
             this.label14.TabIndex = 104;
@@ -417,20 +417,20 @@ namespace Gestion_expertise
             // 
             // txt_ref_cab
             // 
-            this.txt_ref_cab.Location = new System.Drawing.Point(309, 58);
+            this.txt_ref_cab.Location = new System.Drawing.Point(309, 3);
             this.txt_ref_cab.Maximum = new decimal(new int[] {
             -1981284352,
             -1966660860,
             0,
             0});
             this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Size = new System.Drawing.Size(301, 30);
+            this.txt_ref_cab.Size = new System.Drawing.Size(301, 25);
             this.txt_ref_cab.TabIndex = 103;
             // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Location = new System.Drawing.Point(3, 55);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(300, 23);
             this.label16.TabIndex = 102;
@@ -438,9 +438,9 @@ namespace Gestion_expertise
             // 
             // txt_ref_ref
             // 
-            this.txt_ref_ref.Location = new System.Drawing.Point(309, 3);
+            this.txt_ref_ref.Location = new System.Drawing.Point(309, 58);
             this.txt_ref_ref.Name = "txt_ref_ref";
-            this.txt_ref_ref.Size = new System.Drawing.Size(301, 30);
+            this.txt_ref_ref.Size = new System.Drawing.Size(301, 25);
             this.txt_ref_ref.TabIndex = 100;
             // 
             // com_tribunalP
@@ -448,7 +448,7 @@ namespace Gestion_expertise
             this.com_tribunalP.FormattingEnabled = true;
             this.com_tribunalP.Location = new System.Drawing.Point(153, 3);
             this.com_tribunalP.Name = "com_tribunalP";
-            this.com_tribunalP.Size = new System.Drawing.Size(145, 31);
+            this.com_tribunalP.Size = new System.Drawing.Size(145, 25);
             this.com_tribunalP.TabIndex = 92;
             // 
             // lbl_VideDs
@@ -472,7 +472,7 @@ namespace Gestion_expertise
             0,
             0});
             this.txt_montant.Name = "txt_montant";
-            this.txt_montant.Size = new System.Drawing.Size(301, 30);
+            this.txt_montant.Size = new System.Drawing.Size(301, 25);
             this.txt_montant.TabIndex = 92;
             // 
             // tableLayoutPanel1
@@ -490,19 +490,6 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1271, 581);
             this.tableLayoutPanel1.TabIndex = 92;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(5, 5);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(625, 571);
-            this.panel3.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -515,48 +502,6 @@ namespace Gestion_expertise
             this.panel4.Padding = new System.Windows.Forms.Padding(5);
             this.panel4.Size = new System.Drawing.Size(626, 571);
             this.panel4.TabIndex = 1;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.date_decision, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.date_acc, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.date_desi, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label19, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.txt_juge, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txt_type_decision, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.txt_greffier, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label20, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txt_ref_cab, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txt_magistrat, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txt_ref_ref, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(613, 559);
-            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -599,21 +544,6 @@ namespace Gestion_expertise
             this.tableLayoutPanel3.Size = new System.Drawing.Size(614, 559);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.com_CoursA, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.com_tribunalP, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(309, 113);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(301, 49);
-            this.tableLayoutPanel4.TabIndex = 105;
-            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
@@ -645,9 +575,79 @@ namespace Gestion_expertise
             this.tableLayoutPanel6.Size = new System.Drawing.Size(301, 58);
             this.tableLayoutPanel6.TabIndex = 93;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.tableLayoutPanel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(5);
+            this.panel3.Size = new System.Drawing.Size(625, 571);
+            this.panel3.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.date_decision, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.date_acc, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.date_desi, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.txt_juge, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txt_type_decision, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txt_greffier, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label20, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txt_magistrat, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txt_ref_ref, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txt_ref_cab, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 10;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(613, 559);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.com_CoursA, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.com_tribunalP, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(309, 113);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(301, 49);
+            this.tableLayoutPanel4.TabIndex = 105;
+            // 
             // Ajouter_expertise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1271, 581);
@@ -662,16 +662,16 @@ namespace Gestion_expertise
             ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

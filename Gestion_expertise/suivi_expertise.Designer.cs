@@ -99,6 +99,7 @@ namespace Gestion_expertise
             // date_consi
             // 
             this.date_consi.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.date_consi.Enabled = false;
             this.date_consi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_consi.Location = new System.Drawing.Point(12, 211);
             this.date_consi.Margin = new System.Windows.Forms.Padding(2);
@@ -109,6 +110,7 @@ namespace Gestion_expertise
             // date_acc
             // 
             this.date_acc.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.date_acc.Enabled = false;
             this.date_acc.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_acc.Location = new System.Drawing.Point(12, 151);
             this.date_acc.Margin = new System.Windows.Forms.Padding(2);
@@ -119,6 +121,7 @@ namespace Gestion_expertise
             // date_desi
             // 
             this.date_desi.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.date_desi.Enabled = false;
             this.date_desi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_desi.Location = new System.Drawing.Point(12, 90);
             this.date_desi.Margin = new System.Windows.Forms.Padding(2);
@@ -129,6 +132,7 @@ namespace Gestion_expertise
             // date_decision
             // 
             this.date_decision.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.date_decision.Enabled = false;
             this.date_decision.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_decision.Location = new System.Drawing.Point(12, 31);
             this.date_decision.Margin = new System.Windows.Forms.Padding(2);
@@ -250,6 +254,7 @@ namespace Gestion_expertise
             this.txt_type_dec.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_type_dec.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_type_dec.BorderSize = 2;
+            this.txt_type_dec.Enabled = false;
             this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
             this.txt_type_dec.Location = new System.Drawing.Point(10, 447);
@@ -269,6 +274,7 @@ namespace Gestion_expertise
             this.txt_ref_cab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_ref_cab.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_ref_cab.BorderSize = 2;
+            this.txt_ref_cab.Enabled = false;
             this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
             this.txt_ref_cab.Location = new System.Drawing.Point(10, 27);
@@ -295,6 +301,7 @@ namespace Gestion_expertise
             // cmb_CoursA
             // 
             this.cmb_CoursA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.cmb_CoursA.Enabled = false;
             this.cmb_CoursA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_CoursA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmb_CoursA.FormattingEnabled = true;
@@ -309,6 +316,7 @@ namespace Gestion_expertise
             // cmb_trib_pr
             // 
             this.cmb_trib_pr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.cmb_trib_pr.Enabled = false;
             this.cmb_trib_pr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_trib_pr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmb_trib_pr.FormattingEnabled = true;
@@ -325,6 +333,7 @@ namespace Gestion_expertise
             this.txt_gre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_gre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_gre.BorderSize = 2;
+            this.txt_gre.Enabled = false;
             this.txt_gre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_gre.ForeColor = System.Drawing.Color.DimGray;
             this.txt_gre.Location = new System.Drawing.Point(10, 386);
@@ -346,6 +355,7 @@ namespace Gestion_expertise
             this.txt_jug.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_jug.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_jug.BorderSize = 2;
+            this.txt_jug.Enabled = false;
             this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
             this.txt_jug.Location = new System.Drawing.Point(10, 326);
@@ -367,6 +377,7 @@ namespace Gestion_expertise
             this.txt_magi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_magi.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_magi.BorderSize = 2;
+            this.txt_magi.Enabled = false;
             this.txt_magi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_magi.ForeColor = System.Drawing.Color.DimGray;
             this.txt_magi.Location = new System.Drawing.Point(10, 271);
@@ -388,6 +399,7 @@ namespace Gestion_expertise
             this.txt_ref_ref.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_ref_ref.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_ref_ref.BorderSize = 2;
+            this.txt_ref_ref.Enabled = false;
             this.txt_ref_ref.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ref_ref.ForeColor = System.Drawing.Color.DimGray;
             this.txt_ref_ref.Location = new System.Drawing.Point(11, 86);
@@ -486,6 +498,7 @@ namespace Gestion_expertise
             // date_conv
             // 
             this.date_conv.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.date_conv.Enabled = false;
             this.date_conv.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_conv.Location = new System.Drawing.Point(12, 381);
             this.date_conv.Margin = new System.Windows.Forms.Padding(2);
@@ -506,6 +519,7 @@ namespace Gestion_expertise
             // date_rend
             // 
             this.date_rend.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.date_rend.Enabled = false;
             this.date_rend.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_rend.Location = new System.Drawing.Point(13, 447);
             this.date_rend.Margin = new System.Windows.Forms.Padding(2);
@@ -538,6 +552,7 @@ namespace Gestion_expertise
             // btn_Rep
             // 
             this.btn_Rep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_Rep.Enabled = false;
             this.btn_Rep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.btn_Rep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.btn_Rep.Location = new System.Drawing.Point(250, 90);
@@ -575,6 +590,7 @@ namespace Gestion_expertise
             // cmb_stat
             // 
             this.cmb_stat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.cmb_stat.Enabled = false;
             this.cmb_stat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_stat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmb_stat.FormattingEnabled = true;
@@ -591,6 +607,7 @@ namespace Gestion_expertise
             this.txt_montan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_montan.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_montan.BorderSize = 2;
+            this.txt_montan.Enabled = false;
             this.txt_montan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_montan.ForeColor = System.Drawing.Color.DimGray;
             this.txt_montan.Location = new System.Drawing.Point(12, 218);
@@ -612,6 +629,7 @@ namespace Gestion_expertise
             this.txt_hor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_hor.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_hor.BorderSize = 2;
+            this.txt_hor.Enabled = false;
             this.txt_hor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hor.ForeColor = System.Drawing.Color.DimGray;
             this.txt_hor.Location = new System.Drawing.Point(12, 38);
@@ -633,6 +651,7 @@ namespace Gestion_expertise
             this.txt_rep.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_rep.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_rep.BorderSize = 2;
+            this.txt_rep.Enabled = false;
             this.txt_rep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rep.ForeColor = System.Drawing.Color.DimGray;
             this.txt_rep.Location = new System.Drawing.Point(12, 90);
@@ -650,6 +669,7 @@ namespace Gestion_expertise
             // 
             // cb_termine
             // 
+            this.cb_termine.Enabled = false;
             this.cb_termine.Location = new System.Drawing.Point(178, 275);
             this.cb_termine.Margin = new System.Windows.Forms.Padding(2);
             this.cb_termine.MinimumSize = new System.Drawing.Size(20, 18);
@@ -703,6 +723,7 @@ namespace Gestion_expertise
             // cmb_type_exp
             // 
             this.cmb_type_exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.cmb_type_exp.Enabled = false;
             this.cmb_type_exp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_type_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmb_type_exp.FormattingEnabled = true;
@@ -719,6 +740,7 @@ namespace Gestion_expertise
             this.txt_lieu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_lieu.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_lieu.BorderSize = 2;
+            this.txt_lieu.Enabled = false;
             this.txt_lieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lieu.ForeColor = System.Drawing.Color.DimGray;
             this.txt_lieu.Location = new System.Drawing.Point(12, 271);

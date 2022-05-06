@@ -143,20 +143,16 @@ namespace Gestion_expertise
 
             com = new SqlCommand(rqt, cn);
 
-            int NumExp = 0;
-            SqlDataAdapter sa = new SqlDataAdapter("select NumExp from expertise", cn);
+            SqlDataAdapter sa = new SqlDataAdapter("select Max(NumExp) from expertise", cn);
             DataTable dt = new DataTable();
             sa.Fill(dt);
+            int NumExp = Convert.ToInt32(dt.Rows[0][0]);
 
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                NumExp = Convert.ToInt32(dt.Rows.Count);
-            }
 
             NumExp += 1;
             bool terminer = false;
             com.Parameters.Add(new SqlParameter("@NumExp", NumExp));
-            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_ref.Text)));
+            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Text)));
             com.Parameters.Add(new SqlParameter("@RefRéféré", txt_ref_ref.Text));
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
