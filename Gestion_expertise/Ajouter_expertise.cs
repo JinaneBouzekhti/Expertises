@@ -281,5 +281,13 @@ namespace Gestion_expertise
 
             }
         }
+
+        private void Ajouter_expertise_SizeChanged(object sender, EventArgs e)
+        {
+            if(this.Width<1200)
+            this.Font =  new Font("Arial", 10, FontStyle.Bold);
+            else
+                this.Font = new Font("Arial", 14, FontStyle.Bold);
+        }
     }
 }
