@@ -39,20 +39,21 @@ namespace Gestion_expertise
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.20765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.95628F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.Controls.Add(this.btn_back, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_forward, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 29);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(294, 24);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // btn_back
@@ -61,9 +62,10 @@ namespace Gestion_expertise
             this.btn_back.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.Color.Black;
-            this.btn_back.Location = new System.Drawing.Point(3, 3);
+            this.btn_back.Location = new System.Drawing.Point(2, 2);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(24, 23);
+            this.btn_back.Size = new System.Drawing.Size(18, 20);
             this.btn_back.TabIndex = 0;
             this.btn_back.Text = "<";
             this.btn_back.UseVisualStyleBackColor = false;
@@ -75,9 +77,10 @@ namespace Gestion_expertise
             this.btn_forward.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_forward.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_forward.ForeColor = System.Drawing.Color.Black;
-            this.btn_forward.Location = new System.Drawing.Point(33, 3);
+            this.btn_forward.Location = new System.Drawing.Point(24, 2);
+            this.btn_forward.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_forward.Name = "btn_forward";
-            this.btn_forward.Size = new System.Drawing.Size(24, 23);
+            this.btn_forward.Size = new System.Drawing.Size(18, 20);
             this.btn_forward.TabIndex = 1;
             this.btn_forward.Text = ">";
             this.btn_forward.UseVisualStyleBackColor = false;
@@ -86,23 +89,25 @@ namespace Gestion_expertise
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 29);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 24);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(15, 16);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(392, 728);
+            this.webBrowser1.Size = new System.Drawing.Size(294, 591);
             this.webBrowser1.TabIndex = 6;
-            this.webBrowser1.Url = new System.Uri("C:\\Users\\Badreddine\\Desktop\\test", System.UriKind.Absolute);
+            this.webBrowser1.Url = new System.Uri("E:\\Exepertises", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // FolderView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FolderView";
-            this.Size = new System.Drawing.Size(392, 757);
+            this.Size = new System.Drawing.Size(294, 615);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

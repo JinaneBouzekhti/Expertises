@@ -43,16 +43,16 @@ namespace Gestion_expertise
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmb_type_dec = new System.Windows.Forms.ComboBox();
-            this.cmb_trib = new System.Windows.Forms.ComboBox();
+            this.txt_type_dec = new CustomControls.RJControls.RJTextBox();
+            this.txt_ref_cab = new CustomControls.RJControls.RJTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmb_CoursA = new System.Windows.Forms.ComboBox();
             this.cmb_trib_pr = new System.Windows.Forms.ComboBox();
             this.txt_gre = new CustomControls.RJControls.RJTextBox();
-            this.txt_juj = new CustomControls.RJControls.RJTextBox();
+            this.txt_jug = new CustomControls.RJControls.RJTextBox();
             this.txt_magi = new CustomControls.RJControls.RJTextBox();
-            this.txt_ref_cab = new CustomControls.RJControls.RJTextBox();
             this.txt_ref_ref = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@ namespace Gestion_expertise
             this.date_rend = new System.Windows.Forms.DateTimePicker();
             this.btn_open_file = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Rep = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_stat = new System.Windows.Forms.ComboBox();
             this.txt_montan = new CustomControls.RJControls.RJTextBox();
@@ -79,6 +79,8 @@ namespace Gestion_expertise
             this.button3 = new System.Windows.Forms.Button();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_suprimmer = new System.Windows.Forms.Button();
+            this.btn_annuler = new System.Windows.Forms.Button();
+            this.btn_valider = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -219,13 +221,14 @@ namespace Gestion_expertise
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cmb_type_dec);
-            this.panel1.Controls.Add(this.cmb_trib);
+            this.panel1.Controls.Add(this.txt_type_dec);
+            this.panel1.Controls.Add(this.txt_ref_cab);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.cmb_CoursA);
             this.panel1.Controls.Add(this.cmb_trib_pr);
             this.panel1.Controls.Add(this.txt_gre);
-            this.panel1.Controls.Add(this.txt_juj);
+            this.panel1.Controls.Add(this.txt_jug);
             this.panel1.Controls.Add(this.txt_magi);
-            this.panel1.Controls.Add(this.txt_ref_cab);
             this.panel1.Controls.Add(this.txt_ref_ref);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -233,7 +236,6 @@ namespace Gestion_expertise
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.panel1.Location = new System.Drawing.Point(10, 14);
@@ -242,29 +244,67 @@ namespace Gestion_expertise
             this.panel1.Size = new System.Drawing.Size(284, 531);
             this.panel1.TabIndex = 111;
             // 
-            // cmb_type_dec
+            // txt_type_dec
             // 
-            this.cmb_type_dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
-            this.cmb_type_dec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmb_type_dec.FormattingEnabled = true;
-            this.cmb_type_dec.Location = new System.Drawing.Point(10, 449);
-            this.cmb_type_dec.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_type_dec.Name = "cmb_type_dec";
-            this.cmb_type_dec.Size = new System.Drawing.Size(262, 24);
-            this.cmb_type_dec.TabIndex = 120;
+            this.txt_type_dec.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_type_dec.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_type_dec.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_type_dec.BorderSize = 2;
+            this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_type_dec.Location = new System.Drawing.Point(10, 447);
+            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_type_dec.Multiline = false;
+            this.txt_type_dec.Name = "txt_type_dec";
+            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_type_dec.PasswordChar = false;
+            this.txt_type_dec.Size = new System.Drawing.Size(262, 29);
+            this.txt_type_dec.TabIndex = 123;
+            this.txt_type_dec.Texts = "";
+            this.txt_type_dec.UnderlinedStyle = false;
             // 
-            // cmb_trib
+            // txt_ref_cab
             // 
-            this.cmb_trib.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
-            this.cmb_trib.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_trib.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmb_trib.FormattingEnabled = true;
-            this.cmb_trib.Location = new System.Drawing.Point(10, 145);
-            this.cmb_trib.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_trib.Name = "cmb_trib";
-            this.cmb_trib.Size = new System.Drawing.Size(262, 24);
-            this.cmb_trib.TabIndex = 118;
+            this.txt_ref_cab.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ref_cab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_ref_cab.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_ref_cab.BorderSize = 2;
+            this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_ref_cab.Location = new System.Drawing.Point(10, 27);
+            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ref_cab.Multiline = false;
+            this.txt_ref_cab.Name = "txt_ref_cab";
+            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_ref_cab.PasswordChar = false;
+            this.txt_ref_cab.Size = new System.Drawing.Size(262, 29);
+            this.txt_ref_cab.TabIndex = 122;
+            this.txt_ref_cab.Texts = "";
+            this.txt_ref_cab.UnderlinedStyle = false;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(8, 7);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(135, 21);
+            this.label14.TabIndex = 121;
+            this.label14.Text = "Référence du cabinet";
+            // 
+            // cmb_CoursA
+            // 
+            this.cmb_CoursA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.cmb_CoursA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_CoursA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmb_CoursA.FormattingEnabled = true;
+            this.cmb_CoursA.Location = new System.Drawing.Point(10, 145);
+            this.cmb_CoursA.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_CoursA.Name = "cmb_CoursA";
+            this.cmb_CoursA.Size = new System.Drawing.Size(262, 24);
+            this.cmb_CoursA.TabIndex = 118;
+            this.cmb_CoursA.SelectedValueChanged += new System.EventHandler(this.cmb_CoursA_SelectedValueChanged);
+            this.cmb_CoursA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_CoursA_KeyDown);
             // 
             // cmb_trib_pr
             // 
@@ -277,6 +317,7 @@ namespace Gestion_expertise
             this.cmb_trib_pr.Name = "cmb_trib_pr";
             this.cmb_trib_pr.Size = new System.Drawing.Size(262, 24);
             this.cmb_trib_pr.TabIndex = 117;
+            this.cmb_trib_pr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_trib_pr_KeyDown);
             // 
             // txt_gre
             // 
@@ -299,26 +340,26 @@ namespace Gestion_expertise
             this.txt_gre.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txt_gre.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // txt_juj
+            // txt_jug
             // 
-            this.txt_juj.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_juj.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_juj.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_juj.BorderSize = 2;
-            this.txt_juj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_juj.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_juj.Location = new System.Drawing.Point(10, 326);
-            this.txt_juj.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_juj.Multiline = false;
-            this.txt_juj.Name = "txt_juj";
-            this.txt_juj.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_juj.PasswordChar = false;
-            this.txt_juj.Size = new System.Drawing.Size(262, 29);
-            this.txt_juj.TabIndex = 115;
-            this.txt_juj.Texts = "";
-            this.txt_juj.UnderlinedStyle = false;
-            this.txt_juj.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_juj.Leave += new System.EventHandler(this.textBox_Leave);
+            this.txt_jug.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_jug.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_jug.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_jug.BorderSize = 2;
+            this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_jug.Location = new System.Drawing.Point(10, 326);
+            this.txt_jug.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_jug.Multiline = false;
+            this.txt_jug.Name = "txt_jug";
+            this.txt_jug.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_jug.PasswordChar = false;
+            this.txt_jug.Size = new System.Drawing.Size(262, 29);
+            this.txt_jug.TabIndex = 115;
+            this.txt_jug.Texts = "";
+            this.txt_jug.UnderlinedStyle = false;
+            this.txt_jug.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_jug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // txt_magi
             // 
@@ -341,27 +382,6 @@ namespace Gestion_expertise
             this.txt_magi.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txt_magi.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // txt_ref_cab
-            // 
-            this.txt_ref_cab.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ref_cab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_cab.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_cab.BorderSize = 2;
-            this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_ref_cab.Location = new System.Drawing.Point(10, 86);
-            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ref_cab.Multiline = false;
-            this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_ref_cab.PasswordChar = false;
-            this.txt_ref_cab.Size = new System.Drawing.Size(262, 29);
-            this.txt_ref_cab.TabIndex = 115;
-            this.txt_ref_cab.Texts = "";
-            this.txt_ref_cab.UnderlinedStyle = false;
-            this.txt_ref_cab.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_ref_cab.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
             // txt_ref_ref
             // 
             this.txt_ref_ref.BackColor = System.Drawing.SystemColors.Window;
@@ -370,7 +390,7 @@ namespace Gestion_expertise
             this.txt_ref_ref.BorderSize = 2;
             this.txt_ref_ref.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ref_ref.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_ref_ref.Location = new System.Drawing.Point(10, 31);
+            this.txt_ref_ref.Location = new System.Drawing.Point(11, 86);
             this.txt_ref_ref.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ref_ref.Multiline = false;
             this.txt_ref_ref.Name = "txt_ref_ref";
@@ -393,20 +413,10 @@ namespace Gestion_expertise
             this.label1.TabIndex = 114;
             this.label1.Text = "Tribunal de première instance";
             // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(8, 66);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(135, 21);
-            this.label14.TabIndex = 65;
-            this.label14.Text = "Référence du cabinet";
-            // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(8, 10);
+            this.label16.Location = new System.Drawing.Point(9, 65);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(138, 18);
@@ -525,18 +535,19 @@ namespace Gestion_expertise
             this.label25.TabIndex = 90;
             this.label25.Text = "Statut de la mission";
             // 
-            // button1
+            // btn_Rep
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(250, 90);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 28);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Rep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_Rep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_Rep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_Rep.Location = new System.Drawing.Point(250, 90);
+            this.btn_Rep.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Rep.Name = "btn_Rep";
+            this.btn_Rep.Size = new System.Drawing.Size(30, 28);
+            this.btn_Rep.TabIndex = 94;
+            this.btn_Rep.Text = "...";
+            this.btn_Rep.UseVisualStyleBackColor = false;
+            this.btn_Rep.Click += new System.EventHandler(this.btn_Rep_Click);
             // 
             // panel2
             // 
@@ -548,7 +559,7 @@ namespace Gestion_expertise
             this.panel2.Controls.Add(this.txt_rep);
             this.panel2.Controls.Add(this.cb_termine);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_Rep);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.btn_open_file);
             this.panel2.Controls.Add(this.label17);
@@ -572,6 +583,7 @@ namespace Gestion_expertise
             this.cmb_stat.Name = "cmb_stat";
             this.cmb_stat.Size = new System.Drawing.Size(262, 24);
             this.cmb_stat.TabIndex = 120;
+            this.cmb_stat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_stat_KeyDown);
             // 
             // txt_montan
             // 
@@ -699,6 +711,7 @@ namespace Gestion_expertise
             this.cmb_type_exp.Name = "cmb_type_exp";
             this.cmb_type_exp.Size = new System.Drawing.Size(262, 24);
             this.cmb_type_exp.TabIndex = 119;
+            this.cmb_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_type_exp_KeyDown);
             // 
             // txt_lieu
             // 
@@ -743,6 +756,7 @@ namespace Gestion_expertise
             this.btn_modifier.TabIndex = 114;
             this.btn_modifier.Text = "Modifier";
             this.btn_modifier.UseVisualStyleBackColor = false;
+            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
             // 
             // btn_suprimmer
             // 
@@ -754,11 +768,40 @@ namespace Gestion_expertise
             this.btn_suprimmer.TabIndex = 115;
             this.btn_suprimmer.Text = "Suprimmer";
             this.btn_suprimmer.UseVisualStyleBackColor = false;
+            this.btn_suprimmer.Click += new System.EventHandler(this.btn_suprimmer_Click);
+            // 
+            // btn_annuler
+            // 
+            this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_annuler.Location = new System.Drawing.Point(653, 404);
+            this.btn_annuler.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_annuler.Name = "btn_annuler";
+            this.btn_annuler.Size = new System.Drawing.Size(104, 26);
+            this.btn_annuler.TabIndex = 119;
+            this.btn_annuler.Text = "Annuler";
+            this.btn_annuler.UseVisualStyleBackColor = false;
+            this.btn_annuler.Visible = false;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
+            // 
+            // btn_valider
+            // 
+            this.btn_valider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_valider.Location = new System.Drawing.Point(761, 404);
+            this.btn_valider.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_valider.Name = "btn_valider";
+            this.btn_valider.Size = new System.Drawing.Size(104, 26);
+            this.btn_valider.TabIndex = 118;
+            this.btn_valider.Text = "Valider";
+            this.btn_valider.UseVisualStyleBackColor = false;
+            this.btn_valider.Visible = false;
+            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
             // suivi_expertise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btn_annuler);
+            this.Controls.Add(this.btn_valider);
             this.Controls.Add(this.btn_suprimmer);
             this.Controls.Add(this.btn_modifier);
             this.Controls.Add(this.panel3);
@@ -792,7 +835,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
@@ -806,7 +848,7 @@ namespace Gestion_expertise
         private System.Windows.Forms.DateTimePicker date_rend;
         private System.Windows.Forms.Button btn_open_file;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Rep;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
@@ -816,17 +858,20 @@ namespace Gestion_expertise
         private WinFormsApp1.CheckBoxCustom cb_termine;
         private CustomControls.RJControls.RJTextBox txt_ref_ref;
         private CustomControls.RJControls.RJTextBox txt_gre;
-        private CustomControls.RJControls.RJTextBox txt_juj;
+        private CustomControls.RJControls.RJTextBox txt_jug;
         private CustomControls.RJControls.RJTextBox txt_magi;
-        private CustomControls.RJControls.RJTextBox txt_ref_cab;
         private CustomControls.RJControls.RJTextBox txt_hor;
         private CustomControls.RJControls.RJTextBox txt_rep;
         private CustomControls.RJControls.RJTextBox txt_montan;
         private CustomControls.RJControls.RJTextBox txt_lieu;
-        private System.Windows.Forms.ComboBox cmb_type_dec;
-        private System.Windows.Forms.ComboBox cmb_trib;
+        private System.Windows.Forms.ComboBox cmb_CoursA;
         private System.Windows.Forms.ComboBox cmb_trib_pr;
         private System.Windows.Forms.ComboBox cmb_stat;
         private System.Windows.Forms.ComboBox cmb_type_exp;
+        private CustomControls.RJControls.RJTextBox txt_ref_cab;
+        private System.Windows.Forms.Label label14;
+        private CustomControls.RJControls.RJTextBox txt_type_dec;
+        private System.Windows.Forms.Button btn_annuler;
+        private System.Windows.Forms.Button btn_valider;
     }
 }

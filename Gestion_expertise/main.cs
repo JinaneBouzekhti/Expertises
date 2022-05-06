@@ -120,7 +120,7 @@ namespace Gestion_expertise
         private void button2_Click_1(object sender, EventArgs e)
         {
             mainpanel.Controls.Clear();
-            suivi_expertise suivi = new suivi_expertise();
+            suivi_expertise suivi = new suivi_expertise(comboBox1.SelectedValue.ToString());
             mainpanel.Controls.Add(suivi);
             suivi.Dock = DockStyle.Fill;
         }
