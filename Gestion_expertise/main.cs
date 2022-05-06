@@ -23,14 +23,7 @@ namespace Gestion_expertise
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //foreach (string s in listBox1.Items)
-            //    dataGridView1.Rows.Add(s.Split('\t'));
-
-            //textBox2.Text = dataGridView1.Rows.Count.ToString();
-
-        }
+        
 
         private void main_Load(object sender, EventArgs e)
         {
@@ -65,15 +58,7 @@ namespace Gestion_expertise
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //List<string> l = new List<string>(textBox1.Text.Split('\n'));
-            //foreach (string s in l)
-            //{
-            //    listBox1.Items.Add(s);
-            //}
-
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -156,5 +141,7 @@ namespace Gestion_expertise
             mainpanel.Controls.Add(mahakim);
             mahakim.Dock = DockStyle.Fill;
         }
+
+        
     }
 }
