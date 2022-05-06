@@ -131,6 +131,18 @@
     <Compile Include="demandeur.Designer.cs">
       <DependentUpon>demandeur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FolderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FolderView.Designer.cs">
+      <DependentUpon>FolderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mahakim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mahakim.Designer.cs">
+      <DependentUpon>Mahakim.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="demandeur.resx">
       <DependentUpon>demandeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderView.resx">
+      <DependentUpon>FolderView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

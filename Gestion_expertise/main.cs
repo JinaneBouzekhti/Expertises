@@ -81,7 +81,13 @@ namespace Gestion_expertise
             ex.Show();
         }
 
-        
+        private void main_size_Changed(object sender, EventArgs e)
+        {
+            if (this.Width < 1200)
+                tableLayoutPanel1.ColumnStyles[1].Width = 3;
+            else
+                tableLayoutPanel1.ColumnStyles[1].Width = 15;
+        }
 
         private void main_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -141,6 +147,14 @@ namespace Gestion_expertise
             ToutesExp TtExp = new ToutesExp();
             mainpanel.Controls.Add(TtExp);
             TtExp.Dock = DockStyle.Fill;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            mainpanel.Controls.Clear();
+            Mahakim mahakim = new Mahakim();
+            mainpanel.Controls.Add(mahakim);
+            mahakim.Dock = DockStyle.Fill;
         }
     }
 }
