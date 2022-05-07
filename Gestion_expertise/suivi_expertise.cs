@@ -111,7 +111,7 @@ namespace Gestion_expertise
             DataTable dt = new DataTable();
             sa.Fill(dt);
 
-            txt_ref_cab.Texts = dt.Rows[0][1].ToString();
+            txt_ref_cab.Text = dt.Rows[0][1].ToString();
             txt_ref_ref.Texts = dt.Rows[0][2].ToString();
 
             SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][3], cn);
@@ -299,7 +299,7 @@ namespace Gestion_expertise
             string rqt = " update expertise set RefCabinet =@RefCabinet , RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where NumExp like '" + numexp + "'";
             SqlCommand com = new SqlCommand(rqt, cn);
 
-            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Texts)));
+            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Text)));
             com.Parameters.Add(new SqlParameter("@RefRéféré", txt_ref_ref.Texts));
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(cmb_trib_pr.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magi.Texts));
@@ -329,7 +329,7 @@ namespace Gestion_expertise
 
             while (dr.Read())
             {
-                if (Convert.ToInt32(txt_ref_cab.Texts) == Convert.ToInt32(dr[0]))
+                if (Convert.ToInt32(txt_ref_cab.Text) == Convert.ToInt32(dr[0]))
                 {
                     Unq = true;
                     break;
@@ -343,12 +343,16 @@ namespace Gestion_expertise
             if (!Unq)
             {
                 string Chemin = txt_rep.Texts;
-                DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                if (Dir.Exists)
-                    MessageBox.Show("Ce dossier existe déja ( " + GetFolderName() + " )", "Ereur");
+                if (Chemin != "")
+                {
+                    DirectoryInfo Dir = new DirectoryInfo(Chemin);
+                     Dir.Create();
+                        com.ExecuteNonQuery();
+                        Activate(false);
+                    
+                }
                 else
                 {
-                    Dir.Create();
                     com.ExecuteNonQuery();
                     Activate(false);
                 }
@@ -435,7 +439,7 @@ namespace Gestion_expertise
             sa.Fill(dt);
 
 
-            txt_ref_cab.Texts = dt.Rows[0][1].ToString();
+            txt_ref_cab.Text = dt.Rows[0][1].ToString();
             txt_ref_ref.Texts = dt.Rows[0][2].ToString();
 
             SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][3], cn);

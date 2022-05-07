@@ -44,7 +44,6 @@ namespace Gestion_expertise
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_type_dec = new CustomControls.RJControls.RJTextBox();
-            this.txt_ref_cab = new CustomControls.RJControls.RJTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmb_CoursA = new System.Windows.Forms.ComboBox();
             this.cmb_trib_pr = new System.Windows.Forms.ComboBox();
@@ -81,9 +80,11 @@ namespace Gestion_expertise
             this.btn_suprimmer = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_valider = new System.Windows.Forms.Button();
+            this.txt_ref_cab = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -225,8 +226,8 @@ namespace Gestion_expertise
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txt_type_dec);
             this.panel1.Controls.Add(this.txt_ref_cab);
+            this.panel1.Controls.Add(this.txt_type_dec);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.cmb_CoursA);
             this.panel1.Controls.Add(this.cmb_trib_pr);
@@ -267,26 +268,6 @@ namespace Gestion_expertise
             this.txt_type_dec.TabIndex = 123;
             this.txt_type_dec.Texts = "";
             this.txt_type_dec.UnderlinedStyle = false;
-            // 
-            // txt_ref_cab
-            // 
-            this.txt_ref_cab.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ref_cab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_cab.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_cab.BorderSize = 2;
-            this.txt_ref_cab.Enabled = false;
-            this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_ref_cab.Location = new System.Drawing.Point(10, 27);
-            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ref_cab.Multiline = false;
-            this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_ref_cab.PasswordChar = false;
-            this.txt_ref_cab.Size = new System.Drawing.Size(262, 29);
-            this.txt_ref_cab.TabIndex = 122;
-            this.txt_ref_cab.Texts = "";
-            this.txt_ref_cab.UnderlinedStyle = false;
             // 
             // label14
             // 
@@ -818,6 +799,13 @@ namespace Gestion_expertise
             this.btn_valider.Visible = false;
             this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
             // 
+            // txt_ref_cab
+            // 
+            this.txt_ref_cab.Location = new System.Drawing.Point(12, 32);
+            this.txt_ref_cab.Name = "txt_ref_cab";
+            this.txt_ref_cab.Size = new System.Drawing.Size(260, 21);
+            this.txt_ref_cab.TabIndex = 124;
+            // 
             // suivi_expertise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -838,6 +826,7 @@ namespace Gestion_expertise
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -890,10 +879,10 @@ namespace Gestion_expertise
         private System.Windows.Forms.ComboBox cmb_trib_pr;
         private System.Windows.Forms.ComboBox cmb_stat;
         private System.Windows.Forms.ComboBox cmb_type_exp;
-        private CustomControls.RJControls.RJTextBox txt_ref_cab;
         private System.Windows.Forms.Label label14;
         private CustomControls.RJControls.RJTextBox txt_type_dec;
         private System.Windows.Forms.Button btn_annuler;
         private System.Windows.Forms.Button btn_valider;
+        private System.Windows.Forms.NumericUpDown txt_ref_cab;
     }
 }
