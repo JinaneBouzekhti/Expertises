@@ -39,9 +39,10 @@ namespace Gestion_expertise
             this.numexp = numexp;
         }
         string numexp;
+
         private void suivi_expertise_Load(object sender, EventArgs e)
         {
-
+            
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
@@ -110,7 +111,6 @@ namespace Gestion_expertise
             DataTable dt = new DataTable();
             sa.Fill(dt);
 
-
             txt_ref_cab.Texts = dt.Rows[0][1].ToString();
             txt_ref_ref.Texts = dt.Rows[0][2].ToString();
 
@@ -123,7 +123,6 @@ namespace Gestion_expertise
             DataTable dt2 = new DataTable();
             sa2.Fill(dt2);
             cmb_CoursA.Text = dt2.Rows[0][1].ToString();
-
 
             txt_magi.Texts = dt.Rows[0][4].ToString();
             txt_jug.Texts = dt.Rows[0][5].ToString();
@@ -204,7 +203,6 @@ namespace Gestion_expertise
                 tb = (RJTextBox)sender;
                 tb.UnderlinedStyle = true;
             }
-     
         }
 
         private void textBox_Leave(object sender, EventArgs e)
@@ -236,35 +234,24 @@ namespace Gestion_expertise
         {
             e.SuppressKeyPress = true;
         }
+
         public string GetFolderName()
         {
-            int NumExp = 0;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            SqlDataAdapter sa = new SqlDataAdapter("select NumExp from expertise", cn);
-            DataTable dt = new DataTable();
-            sa.Fill(dt);
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                NumExp = Convert.ToInt32(dt.Rows.Count);
-            }
             string NameF;
-            NumExp += 1;
             string date = DateTime.Now.ToString("yyyy");
             string ext = Path.GetExtension(ofd.FileName);
-            NameF = "Expertise" + "-" + NumExp + "-" + date + ext;
+            NameF = "Expertise" + "-" + numexp + "-" + date + ext;
             return NameF;
         }
 
         private void btn_Rep_Click(object sender, EventArgs e)
         {
-
             fbd.ShowDialog();
-            txt_rep.Texts = fbd.SelectedPath.ToString() + @"\";
+            txt_rep.Texts = fbd.SelectedPath.ToString() + @"\" + GetFolderName();
         }
 
-    
         public void Activate(Boolean v)
         {
             txt_ref_cab.Enabled = v;
@@ -302,6 +289,7 @@ namespace Gestion_expertise
        
         private void btn_valider_Click(object sender, EventArgs e)
         {
+
             bool tr = false;
             if (cb_termine.Checked)
                 tr = true;
@@ -354,11 +342,17 @@ namespace Gestion_expertise
 
             if (!Unq)
             {
-                string Chemin = txt_rep.Text + GetFolderName();
+                string Chemin = txt_rep.Texts;
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                Dir.Create();
-                com.ExecuteNonQuery();
-                Activate(false);
+                if (Dir.Exists)
+                    MessageBox.Show("Ce dossier existe déja ( " + GetFolderName() + " )", "Ereur");
+                else
+                {
+                    Dir.Create();
+                    com.ExecuteNonQuery();
+                    Activate(false);
+                }
+
             }
             else
             {
@@ -369,7 +363,6 @@ namespace Gestion_expertise
             cn.Close();
             cn = null;
         }
-
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
@@ -493,25 +486,32 @@ namespace Gestion_expertise
             }
             Activate(false);
         }
+
         private void btn_suprimmer_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Etes-vous sûre de cette supression !!", "Supression", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                string dossier = "";
+                if (txt_rep.Texts != "")
+                    dossier = txt_rep.Texts;
+                
                 SqlConnection cn = new SqlConnection(cs);
                 cn.Open();
                 string rqt = "delete from expertise where NumExp like '" + numexp + "'";
                 SqlCommand com = new SqlCommand(rqt, cn);
+
+                if (dossier != "")
+                {
+                    if (Directory.Exists(dossier))
+                        Directory.Delete(dossier);
+                }
                 com.ExecuteNonQuery();
                 this.Controls.Clear();
                 ToutesExp uc = null;
                 uc = new ToutesExp();
                 this.Controls.Add(uc);
                 uc.Dock = DockStyle.Fill;
-
             }
-
         }
-
-       
     }
 }
