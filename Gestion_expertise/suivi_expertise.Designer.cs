@@ -43,14 +43,9 @@ namespace Gestion_expertise
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_type_dec = new CustomControls.RJControls.RJTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmb_CoursA = new System.Windows.Forms.ComboBox();
             this.cmb_trib_pr = new System.Windows.Forms.ComboBox();
-            this.txt_gre = new CustomControls.RJControls.RJTextBox();
-            this.txt_jug = new CustomControls.RJControls.RJTextBox();
-            this.txt_magi = new CustomControls.RJControls.RJTextBox();
-            this.txt_ref_ref = new CustomControls.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -67,20 +62,25 @@ namespace Gestion_expertise
             this.btn_Rep = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_stat = new System.Windows.Forms.ComboBox();
-            this.txt_montan = new CustomControls.RJControls.RJTextBox();
-            this.txt_hor = new CustomControls.RJControls.RJTextBox();
-            this.txt_rep = new CustomControls.RJControls.RJTextBox();
-            this.cb_termine = new WinFormsApp1.CheckBoxCustom();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmb_type_exp = new System.Windows.Forms.ComboBox();
-            this.txt_lieu = new CustomControls.RJControls.RJTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_suprimmer = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_valider = new System.Windows.Forms.Button();
             this.txt_ref_cab = new System.Windows.Forms.NumericUpDown();
+            this.txt_lieu = new CustomControls.RJControls.RJTextBox();
+            this.txt_montan = new CustomControls.RJControls.RJTextBox();
+            this.txt_hor = new CustomControls.RJControls.RJTextBox();
+            this.txt_rep = new CustomControls.RJControls.RJTextBox();
+            this.cb_termine = new WinFormsApp1.CheckBoxCustom();
+            this.txt_type_dec = new CustomControls.RJControls.RJTextBox();
+            this.txt_gre = new CustomControls.RJControls.RJTextBox();
+            this.txt_jug = new CustomControls.RJControls.RJTextBox();
+            this.txt_magi = new CustomControls.RJControls.RJTextBox();
+            this.txt_ref_ref = new CustomControls.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -249,26 +249,6 @@ namespace Gestion_expertise
             this.panel1.Size = new System.Drawing.Size(284, 531);
             this.panel1.TabIndex = 111;
             // 
-            // txt_type_dec
-            // 
-            this.txt_type_dec.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_type_dec.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_type_dec.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_type_dec.BorderSize = 2;
-            this.txt_type_dec.Enabled = false;
-            this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_type_dec.Location = new System.Drawing.Point(10, 447);
-            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_type_dec.Multiline = false;
-            this.txt_type_dec.Name = "txt_type_dec";
-            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_type_dec.PasswordChar = false;
-            this.txt_type_dec.Size = new System.Drawing.Size(262, 29);
-            this.txt_type_dec.TabIndex = 123;
-            this.txt_type_dec.Texts = "";
-            this.txt_type_dec.UnderlinedStyle = false;
-            // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.White;
@@ -307,94 +287,6 @@ namespace Gestion_expertise
             this.cmb_trib_pr.Size = new System.Drawing.Size(262, 24);
             this.cmb_trib_pr.TabIndex = 117;
             this.cmb_trib_pr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_trib_pr_KeyDown);
-            // 
-            // txt_gre
-            // 
-            this.txt_gre.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_gre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_gre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_gre.BorderSize = 2;
-            this.txt_gre.Enabled = false;
-            this.txt_gre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gre.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_gre.Location = new System.Drawing.Point(10, 386);
-            this.txt_gre.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_gre.Multiline = false;
-            this.txt_gre.Name = "txt_gre";
-            this.txt_gre.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_gre.PasswordChar = false;
-            this.txt_gre.Size = new System.Drawing.Size(262, 29);
-            this.txt_gre.TabIndex = 115;
-            this.txt_gre.Texts = "";
-            this.txt_gre.UnderlinedStyle = false;
-            this.txt_gre.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_gre.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_jug
-            // 
-            this.txt_jug.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_jug.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_jug.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_jug.BorderSize = 2;
-            this.txt_jug.Enabled = false;
-            this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_jug.Location = new System.Drawing.Point(10, 326);
-            this.txt_jug.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_jug.Multiline = false;
-            this.txt_jug.Name = "txt_jug";
-            this.txt_jug.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_jug.PasswordChar = false;
-            this.txt_jug.Size = new System.Drawing.Size(262, 29);
-            this.txt_jug.TabIndex = 115;
-            this.txt_jug.Texts = "";
-            this.txt_jug.UnderlinedStyle = false;
-            this.txt_jug.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_jug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_magi
-            // 
-            this.txt_magi.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_magi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_magi.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_magi.BorderSize = 2;
-            this.txt_magi.Enabled = false;
-            this.txt_magi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_magi.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_magi.Location = new System.Drawing.Point(10, 271);
-            this.txt_magi.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_magi.Multiline = false;
-            this.txt_magi.Name = "txt_magi";
-            this.txt_magi.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_magi.PasswordChar = false;
-            this.txt_magi.Size = new System.Drawing.Size(262, 29);
-            this.txt_magi.TabIndex = 115;
-            this.txt_magi.Texts = "";
-            this.txt_magi.UnderlinedStyle = false;
-            this.txt_magi.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_magi.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_ref_ref
-            // 
-            this.txt_ref_ref.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ref_ref.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_ref.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_ref.BorderSize = 2;
-            this.txt_ref_ref.Enabled = false;
-            this.txt_ref_ref.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ref_ref.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_ref_ref.Location = new System.Drawing.Point(11, 86);
-            this.txt_ref_ref.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ref_ref.Multiline = false;
-            this.txt_ref_ref.Name = "txt_ref_ref";
-            this.txt_ref_ref.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_ref_ref.PasswordChar = false;
-            this.txt_ref_ref.Size = new System.Drawing.Size(262, 29);
-            this.txt_ref_ref.TabIndex = 115;
-            this.txt_ref_ref.Texts = "";
-            this.txt_ref_ref.UnderlinedStyle = false;
-            this.txt_ref_ref.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_ref_ref.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // label1
             // 
@@ -582,6 +474,150 @@ namespace Gestion_expertise
             this.cmb_stat.TabIndex = 120;
             this.cmb_stat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_stat_KeyDown);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(10, 281);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 18);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Expertise terminé";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmb_type_exp);
+            this.panel3.Controls.Add(this.txt_lieu);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.date_decision);
+            this.panel3.Controls.Add(this.date_consi);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.date_rend);
+            this.panel3.Controls.Add(this.date_desi);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.date_acc);
+            this.panel3.Controls.Add(this.date_conv);
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.panel3.Location = new System.Drawing.Point(314, 14);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(284, 531);
+            this.panel3.TabIndex = 113;
+            // 
+            // cmb_type_exp
+            // 
+            this.cmb_type_exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.cmb_type_exp.Enabled = false;
+            this.cmb_type_exp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_type_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmb_type_exp.FormattingEnabled = true;
+            this.cmb_type_exp.Location = new System.Drawing.Point(12, 330);
+            this.cmb_type_exp.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_type_exp.Name = "cmb_type_exp";
+            this.cmb_type_exp.Size = new System.Drawing.Size(262, 24);
+            this.cmb_type_exp.TabIndex = 119;
+            this.cmb_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_type_exp_KeyDown);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.button3.Location = new System.Drawing.Point(454, 246);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(26, 25);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "...";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btn_modifier
+            // 
+            this.btn_modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_modifier.Location = new System.Drawing.Point(763, 352);
+            this.btn_modifier.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_modifier.Name = "btn_modifier";
+            this.btn_modifier.Size = new System.Drawing.Size(138, 26);
+            this.btn_modifier.TabIndex = 114;
+            this.btn_modifier.Text = "Modifier";
+            this.btn_modifier.UseVisualStyleBackColor = false;
+            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
+            // 
+            // btn_suprimmer
+            // 
+            this.btn_suprimmer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_suprimmer.Location = new System.Drawing.Point(618, 352);
+            this.btn_suprimmer.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_suprimmer.Name = "btn_suprimmer";
+            this.btn_suprimmer.Size = new System.Drawing.Size(138, 26);
+            this.btn_suprimmer.TabIndex = 115;
+            this.btn_suprimmer.Text = "Suprimmer";
+            this.btn_suprimmer.UseVisualStyleBackColor = false;
+            this.btn_suprimmer.Click += new System.EventHandler(this.btn_suprimmer_Click);
+            // 
+            // btn_annuler
+            // 
+            this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_annuler.Location = new System.Drawing.Point(653, 404);
+            this.btn_annuler.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_annuler.Name = "btn_annuler";
+            this.btn_annuler.Size = new System.Drawing.Size(104, 26);
+            this.btn_annuler.TabIndex = 119;
+            this.btn_annuler.Text = "Annuler";
+            this.btn_annuler.UseVisualStyleBackColor = false;
+            this.btn_annuler.Visible = false;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
+            // 
+            // btn_valider
+            // 
+            this.btn_valider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_valider.Location = new System.Drawing.Point(761, 404);
+            this.btn_valider.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_valider.Name = "btn_valider";
+            this.btn_valider.Size = new System.Drawing.Size(104, 26);
+            this.btn_valider.TabIndex = 118;
+            this.btn_valider.Text = "Valider";
+            this.btn_valider.UseVisualStyleBackColor = false;
+            this.btn_valider.Visible = false;
+            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
+            // 
+            // txt_ref_cab
+            // 
+            this.txt_ref_cab.Enabled = false;
+            this.txt_ref_cab.Location = new System.Drawing.Point(12, 32);
+            this.txt_ref_cab.Name = "txt_ref_cab";
+            this.txt_ref_cab.Size = new System.Drawing.Size(260, 21);
+            this.txt_ref_cab.TabIndex = 124;
+            // 
+            // txt_lieu
+            // 
+            this.txt_lieu.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_lieu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_lieu.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_lieu.BorderSize = 2;
+            this.txt_lieu.Enabled = false;
+            this.txt_lieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lieu.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_lieu.Location = new System.Drawing.Point(12, 271);
+            this.txt_lieu.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_lieu.Multiline = false;
+            this.txt_lieu.Name = "txt_lieu";
+            this.txt_lieu.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_lieu.PasswordChar = false;
+            this.txt_lieu.Size = new System.Drawing.Size(262, 29);
+            this.txt_lieu.TabIndex = 117;
+            this.txt_lieu.Texts = "";
+            this.txt_lieu.UnderlinedStyle = false;
+            this.txt_lieu.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_lieu.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
             // txt_montan
             // 
             this.txt_montan.BackColor = System.Drawing.SystemColors.Window;
@@ -663,148 +699,113 @@ namespace Gestion_expertise
             this.cb_termine.TabIndex = 96;
             this.cb_termine.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // txt_type_dec
             // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 281);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 18);
-            this.label2.TabIndex = 95;
-            this.label2.Text = "Expertise terminé";
+            this.txt_type_dec.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_type_dec.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_type_dec.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_type_dec.BorderSize = 2;
+            this.txt_type_dec.Enabled = false;
+            this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_type_dec.Location = new System.Drawing.Point(10, 447);
+            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_type_dec.Multiline = false;
+            this.txt_type_dec.Name = "txt_type_dec";
+            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_type_dec.PasswordChar = false;
+            this.txt_type_dec.Size = new System.Drawing.Size(262, 29);
+            this.txt_type_dec.TabIndex = 123;
+            this.txt_type_dec.Texts = "";
+            this.txt_type_dec.UnderlinedStyle = false;
             // 
-            // panel3
+            // txt_gre
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.cmb_type_exp);
-            this.panel3.Controls.Add(this.txt_lieu);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.date_decision);
-            this.panel3.Controls.Add(this.date_consi);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.date_rend);
-            this.panel3.Controls.Add(this.date_desi);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.date_acc);
-            this.panel3.Controls.Add(this.date_conv);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.panel3.Location = new System.Drawing.Point(314, 14);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 531);
-            this.panel3.TabIndex = 113;
+            this.txt_gre.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_gre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_gre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_gre.BorderSize = 2;
+            this.txt_gre.Enabled = false;
+            this.txt_gre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gre.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_gre.Location = new System.Drawing.Point(10, 386);
+            this.txt_gre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_gre.Multiline = false;
+            this.txt_gre.Name = "txt_gre";
+            this.txt_gre.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_gre.PasswordChar = false;
+            this.txt_gre.Size = new System.Drawing.Size(262, 29);
+            this.txt_gre.TabIndex = 115;
+            this.txt_gre.Texts = "";
+            this.txt_gre.UnderlinedStyle = false;
+            this.txt_gre.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_gre.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // cmb_type_exp
+            // txt_jug
             // 
-            this.cmb_type_exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
-            this.cmb_type_exp.Enabled = false;
-            this.cmb_type_exp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_type_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmb_type_exp.FormattingEnabled = true;
-            this.cmb_type_exp.Location = new System.Drawing.Point(12, 330);
-            this.cmb_type_exp.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_type_exp.Name = "cmb_type_exp";
-            this.cmb_type_exp.Size = new System.Drawing.Size(262, 24);
-            this.cmb_type_exp.TabIndex = 119;
-            this.cmb_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_type_exp_KeyDown);
+            this.txt_jug.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_jug.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_jug.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_jug.BorderSize = 2;
+            this.txt_jug.Enabled = false;
+            this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_jug.Location = new System.Drawing.Point(10, 326);
+            this.txt_jug.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_jug.Multiline = false;
+            this.txt_jug.Name = "txt_jug";
+            this.txt_jug.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_jug.PasswordChar = false;
+            this.txt_jug.Size = new System.Drawing.Size(262, 29);
+            this.txt_jug.TabIndex = 115;
+            this.txt_jug.Texts = "";
+            this.txt_jug.UnderlinedStyle = false;
+            this.txt_jug.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_jug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // txt_lieu
+            // txt_magi
             // 
-            this.txt_lieu.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_lieu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_lieu.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_lieu.BorderSize = 2;
-            this.txt_lieu.Enabled = false;
-            this.txt_lieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lieu.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_lieu.Location = new System.Drawing.Point(12, 271);
-            this.txt_lieu.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_lieu.Multiline = false;
-            this.txt_lieu.Name = "txt_lieu";
-            this.txt_lieu.Padding = new System.Windows.Forms.Padding(6);
-            this.txt_lieu.PasswordChar = false;
-            this.txt_lieu.Size = new System.Drawing.Size(262, 29);
-            this.txt_lieu.TabIndex = 117;
-            this.txt_lieu.Texts = "";
-            this.txt_lieu.UnderlinedStyle = false;
-            this.txt_lieu.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_lieu.Leave += new System.EventHandler(this.textBox_Leave);
+            this.txt_magi.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_magi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_magi.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_magi.BorderSize = 2;
+            this.txt_magi.Enabled = false;
+            this.txt_magi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_magi.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_magi.Location = new System.Drawing.Point(10, 271);
+            this.txt_magi.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_magi.Multiline = false;
+            this.txt_magi.Name = "txt_magi";
+            this.txt_magi.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_magi.PasswordChar = false;
+            this.txt_magi.Size = new System.Drawing.Size(262, 29);
+            this.txt_magi.TabIndex = 115;
+            this.txt_magi.Texts = "";
+            this.txt_magi.UnderlinedStyle = false;
+            this.txt_magi.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_magi.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // button3
+            // txt_ref_ref
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button3.Location = new System.Drawing.Point(454, 246);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 25);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // btn_modifier
-            // 
-            this.btn_modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_modifier.Location = new System.Drawing.Point(763, 352);
-            this.btn_modifier.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_modifier.Name = "btn_modifier";
-            this.btn_modifier.Size = new System.Drawing.Size(138, 26);
-            this.btn_modifier.TabIndex = 114;
-            this.btn_modifier.Text = "Modifier";
-            this.btn_modifier.UseVisualStyleBackColor = false;
-            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
-            // 
-            // btn_suprimmer
-            // 
-            this.btn_suprimmer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_suprimmer.Location = new System.Drawing.Point(618, 352);
-            this.btn_suprimmer.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_suprimmer.Name = "btn_suprimmer";
-            this.btn_suprimmer.Size = new System.Drawing.Size(138, 26);
-            this.btn_suprimmer.TabIndex = 115;
-            this.btn_suprimmer.Text = "Suprimmer";
-            this.btn_suprimmer.UseVisualStyleBackColor = false;
-            this.btn_suprimmer.Click += new System.EventHandler(this.btn_suprimmer_Click);
-            // 
-            // btn_annuler
-            // 
-            this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_annuler.Location = new System.Drawing.Point(653, 404);
-            this.btn_annuler.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_annuler.Name = "btn_annuler";
-            this.btn_annuler.Size = new System.Drawing.Size(104, 26);
-            this.btn_annuler.TabIndex = 119;
-            this.btn_annuler.Text = "Annuler";
-            this.btn_annuler.UseVisualStyleBackColor = false;
-            this.btn_annuler.Visible = false;
-            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
-            // 
-            // btn_valider
-            // 
-            this.btn_valider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_valider.Location = new System.Drawing.Point(761, 404);
-            this.btn_valider.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_valider.Name = "btn_valider";
-            this.btn_valider.Size = new System.Drawing.Size(104, 26);
-            this.btn_valider.TabIndex = 118;
-            this.btn_valider.Text = "Valider";
-            this.btn_valider.UseVisualStyleBackColor = false;
-            this.btn_valider.Visible = false;
-            this.btn_valider.Click += new System.EventHandler(this.btn_valider_Click);
-            // 
-            // txt_ref_cab
-            // 
-            this.txt_ref_cab.Location = new System.Drawing.Point(12, 32);
-            this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Size = new System.Drawing.Size(260, 21);
-            this.txt_ref_cab.TabIndex = 124;
+            this.txt_ref_ref.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ref_ref.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_ref_ref.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_ref_ref.BorderSize = 2;
+            this.txt_ref_ref.Enabled = false;
+            this.txt_ref_ref.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ref_ref.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_ref_ref.Location = new System.Drawing.Point(11, 86);
+            this.txt_ref_ref.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ref_ref.Multiline = false;
+            this.txt_ref_ref.Name = "txt_ref_ref";
+            this.txt_ref_ref.Padding = new System.Windows.Forms.Padding(6);
+            this.txt_ref_ref.PasswordChar = false;
+            this.txt_ref_ref.Size = new System.Drawing.Size(262, 29);
+            this.txt_ref_ref.TabIndex = 115;
+            this.txt_ref_ref.Texts = "";
+            this.txt_ref_ref.UnderlinedStyle = false;
+            this.txt_ref_ref.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_ref_ref.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // suivi_expertise
             // 
