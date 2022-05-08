@@ -18,10 +18,10 @@ namespace Gestion_expertise
         string cs = ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString;
 
         DataSet ds = new DataSet();
-
         BindingSource bsCA = new BindingSource();
         BindingSource bsTr = new BindingSource();
         BindingSource bsTypeExp = new BindingSource();
+        BindingSource bsTypeExp2 = new BindingSource();
         BindingSource bsStt = new BindingSource();
 
         SqlCommand com;
@@ -30,6 +30,7 @@ namespace Gestion_expertise
         SqlDataAdapter daCA;
         SqlDataAdapter daTr;
         SqlDataAdapter daTypeExp;
+        SqlDataAdapter daTypeExp2;
         SqlDataAdapter daStt;
 
         OpenFileDialog ofd = new OpenFileDialog();
@@ -45,8 +46,8 @@ namespace Gestion_expertise
             cn.Open();
 
             //Remplisage comboBox CoursA:
-            string req1 = "select* from CoursAppel";
-            com = new SqlCommand(req1, cn);
+            string req = "select* from CoursAppel";
+            com = new SqlCommand(req, cn);
             daCA = new SqlDataAdapter(com);
 
             if (ds.Tables["CoursAppel"] != null)
@@ -62,8 +63,7 @@ namespace Gestion_expertise
             com_CoursA.DisplayMember = "NomCoursAppel";
             com_CoursA.ValueMember = "NumCoursAppel";
             com_CoursA.Text = "-------";
-            com = null;
-            comB = null;
+
 
             //Remplisage comboBox TypeExp:
             string req2 = "select* from TypeExp";
@@ -79,10 +79,11 @@ namespace Gestion_expertise
 
             comB = new SqlCommandBuilder(daTypeExp);
 
-            com_type_exp.DataSource = bsTypeExp;
-            com_type_exp.DisplayMember = "typeExp";
-            com_type_exp.ValueMember = "NumTypeExp";
-            com_type_exp.Text = "-------";
+
+            com_RefType.DataSource = bsTypeExp;
+            com_RefType.DisplayMember = "Code";
+            com_RefType.ValueMember = "NumTypeExp";
+            com_RefType.Text = "-------";
 
             com = null;
             comB = null;
@@ -107,6 +108,8 @@ namespace Gestion_expertise
             com_statu.Text = "-------";
             com = null;
             comB = null;
+
+            com_type_exp.Text = "-------";
         } 
         
         private void com_CoursA_SelectedValueChanged(object sender, EventArgs e)
@@ -176,12 +179,14 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            int NumExp;
-            bool terminer = false;
-
+            string Ref = txt_refYear.Text + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Text;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            
+
+            string rqt = "insert into expertise values (@NumExp,@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
+
+            com = new SqlCommand(rqt, cn);
+            int NumExp;
             SqlDataAdapter sa = new SqlDataAdapter("select Max(NumExp) from expertise", cn);
             DataTable dt = new DataTable();
             sa.Fill(dt);
@@ -189,13 +194,13 @@ namespace Gestion_expertise
                 NumExp = 0;
             else
                 NumExp = Convert.ToInt32(dt.Rows[0][0]);
-            NumExp += 1;
 
-            string req = "insert into expertise values (@NumExp,@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
-            com = new SqlCommand(req, cn);
+
+            NumExp += 1;
+            bool terminer = false;
             com.Parameters.Add(new SqlParameter("@NumExp", NumExp));
             com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Text)));
-            com.Parameters.Add(new SqlParameter("@RefRéféré", txt_ref_ref.Text));
+            com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
             com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
@@ -214,28 +219,31 @@ namespace Gestion_expertise
             com.Parameters.Add(new SqlParameter("@RépertoireDoc", txt_rep.Text));
             com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(com_statu.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@Terminer", terminer));
-            
-            //Voir si le référence du cabinet repete-t-il
-            string reqUnq = "select RefCabinet from expertise";
-            SqlCommand com1 = new SqlCommand(reqUnq, cn);
+
+            string rqtUnq = "select RefCabinet from expertise";
+            SqlCommand com1 = new SqlCommand(rqtUnq, cn);
             bool Unq = false;
             SqlDataReader dr = com1.ExecuteReader();
+
 
             while (dr.Read())
             {
                 if (Convert.ToInt32(dr[0]) == Convert.ToInt32(txt_ref_cab.Text))
                 {
+                    MessageBox.Show("Cette expertise existe déja", "Ereur");
                     Unq = true;
                     break;
                 }
+
             }
             dr.Close();
             dr = null;
             com1 = null;
-
             if (!Unq)
             {
-                if (txt_rep.Text == "" || txt_rep.Text == @"\"+GetFolderName())
+
+
+                if (txt_rep.Text == "" || txt_rep.Text == @"\")
                 {
                     lbl_VideDs.Visible = true;
                 }
@@ -254,15 +262,10 @@ namespace Gestion_expertise
                 }
 
             }
-            else
-            {
-                MessageBox.Show("Cette expertise existe déja", "Ereur");
-            }
 
             com = null;
             cn.Close();
             cn = null;
-
         }
 
         private void btn_annuler_Click(object sender, EventArgs e)
@@ -292,5 +295,7 @@ namespace Gestion_expertise
             else
                 this.Font = new Font("Arial", 14, FontStyle.Bold);
         }
+
+      
     }
 }

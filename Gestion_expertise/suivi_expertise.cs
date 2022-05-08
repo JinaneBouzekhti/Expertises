@@ -21,6 +21,7 @@ namespace Gestion_expertise
         BindingSource bsCA = new BindingSource();
         BindingSource bsTr = new BindingSource();
         BindingSource bsTypeExp = new BindingSource();
+        BindingSource bsTypeExp2 = new BindingSource();
         BindingSource bsStt = new BindingSource();
 
         SqlCommand com;
@@ -29,6 +30,7 @@ namespace Gestion_expertise
         SqlDataAdapter daCA;
         SqlDataAdapter daTr;
         SqlDataAdapter daTypeExp;
+        SqlDataAdapter daTypeExp2;
         SqlDataAdapter daStt;
 
         OpenFileDialog ofd = new OpenFileDialog();
@@ -42,7 +44,6 @@ namespace Gestion_expertise
 
         private void suivi_expertise_Load(object sender, EventArgs e)
         {
-            
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
@@ -59,9 +60,11 @@ namespace Gestion_expertise
 
             comB = new SqlCommandBuilder(daTypeExp);
 
-            cmb_type_exp.DataSource = bsTypeExp;
-            cmb_type_exp.DisplayMember = "typeExp";
-            cmb_type_exp.ValueMember = "NumTypeExp";
+
+            com_RefType.DataSource = bsTypeExp;
+            com_RefType.DisplayMember = "Code";
+            com_RefType.ValueMember = "NumTypeExp";
+            com_RefType.Text = "-------";
 
             com = null;
             comB = null;
@@ -111,8 +114,14 @@ namespace Gestion_expertise
             DataTable dt = new DataTable();
             sa.Fill(dt);
 
+
             txt_ref_cab.Text = dt.Rows[0][1].ToString();
-            txt_ref_ref.Texts = dt.Rows[0][2].ToString();
+            string Ref = dt.Rows[0][2].ToString();
+            string[] list = Ref.Split('/');
+
+            txt_refYear.Texts = list[0];
+            com_RefType.Text = list[1];
+            txt_refCode.Texts = list[2];
 
             SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][3], cn);
             DataTable dt1 = new DataTable();
@@ -123,6 +132,7 @@ namespace Gestion_expertise
             DataTable dt2 = new DataTable();
             sa2.Fill(dt2);
             cmb_CoursA.Text = dt2.Rows[0][1].ToString();
+
 
             txt_magi.Texts = dt.Rows[0][4].ToString();
             txt_jug.Texts = dt.Rows[0][5].ToString();
@@ -159,7 +169,7 @@ namespace Gestion_expertise
             {
                 cb_termine.Checked = true;
             }
-            
+
         }
 
         private void cmb_CoursA_SelectedValueChanged(object sender, EventArgs e)
@@ -254,8 +264,11 @@ namespace Gestion_expertise
 
         public void Activate(Boolean v)
         {
+
             txt_ref_cab.Enabled = v;
-            txt_ref_ref.Enabled = v;
+            txt_refYear.Enabled = v;
+            com_RefType.Enabled = v;
+            txt_refCode.Enabled = v;
             cmb_CoursA.Enabled = v;
             cmb_trib_pr.Enabled = v;
             txt_magi.Enabled = v;
@@ -267,7 +280,6 @@ namespace Gestion_expertise
             date_acc.Enabled = v;
             date_consi.Enabled = v;
             txt_lieu.Enabled = v;
-            cmb_type_exp.Enabled = v;
             date_conv.Enabled = v;
             date_rend.Enabled = v;
             txt_hor.Enabled = v;
@@ -290,6 +302,8 @@ namespace Gestion_expertise
         private void btn_valider_Click(object sender, EventArgs e)
         {
 
+            string Ref = txt_refYear.Texts + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Texts;
+
             bool tr = false;
             if (cb_termine.Checked)
                 tr = true;
@@ -300,7 +314,7 @@ namespace Gestion_expertise
             SqlCommand com = new SqlCommand(rqt, cn);
 
             com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Text)));
-            com.Parameters.Add(new SqlParameter("@RefRéféré", txt_ref_ref.Texts));
+            com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(cmb_trib_pr.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magi.Texts));
             com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_jug.Texts));
@@ -346,10 +360,14 @@ namespace Gestion_expertise
                 if (Chemin != "")
                 {
                     DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                     Dir.Create();
+                    if (Dir.Exists)
+                        MessageBox.Show("Ce dossier existe déja ( " + GetFolderName() + " )", "Ereur");
+                    else
+                    {
+                        Dir.Create();
                         com.ExecuteNonQuery();
                         Activate(false);
-                    
+                    }
                 }
                 else
                 {
@@ -370,6 +388,8 @@ namespace Gestion_expertise
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
+            string Ref = txt_refYear.Texts + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Texts;
+
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
@@ -440,7 +460,7 @@ namespace Gestion_expertise
 
 
             txt_ref_cab.Text = dt.Rows[0][1].ToString();
-            txt_ref_ref.Texts = dt.Rows[0][2].ToString();
+            Ref = dt.Rows[0][2].ToString();
 
             SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][3], cn);
             DataTable dt1 = new DataTable();
@@ -518,6 +538,36 @@ namespace Gestion_expertise
             }
         }
 
-        
+        private void com_RefType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (com_RefType.SelectedIndex > -1)
+            {
+                try
+                {
+                    SqlConnection cn = new SqlConnection(cs);
+                    cn.Open();
+                    int NumType = Convert.ToInt32(com_RefType.SelectedValue);
+                    string req3 = "select * from TypeExp where NumTypeExp =" + NumType;
+                    com = new SqlCommand(req3, cn);
+                    daTypeExp2 = new SqlDataAdapter(com);
+                    if (ds.Tables["TypeExp2"] != null)
+                        ds.Tables["TypeExp2"].Clear();
+
+                    daTypeExp2.Fill(ds, "TypeExp2");
+
+                    bsTypeExp2.DataSource = ds;
+                    bsTypeExp2.DataMember = "TypeExp2";
+
+                    comB = new SqlCommandBuilder(daTypeExp2);
+
+                    cmb_type_exp.DataSource = bsTypeExp2;
+                    cmb_type_exp.DisplayMember = "typeExp";
+                    cmb_type_exp.ValueMember = "NumTypeExp";
+                    com = null;
+                    comB = null;
+                }
+                catch (Exception ex) { }
+            }
+        }
     }
 }
