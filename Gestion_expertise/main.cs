@@ -96,8 +96,7 @@ namespace Gestion_expertise
                 else
                 {
                     cont.Font = new Font(this.Font.Name, cont.Font.Size + i);                    
-                }
-                    
+                }                    
             }
         }
         private void main_FormClosed(object sender, FormClosedEventArgs e)

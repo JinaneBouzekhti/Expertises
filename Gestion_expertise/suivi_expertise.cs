@@ -159,7 +159,7 @@ namespace Gestion_expertise
             {
                 cb_termine.Checked = true;
             }
-
+            
         }
 
         private void cmb_CoursA_SelectedValueChanged(object sender, EventArgs e)
@@ -517,5 +517,7 @@ namespace Gestion_expertise
                 uc.Dock = DockStyle.Fill;
             }
         }
+
+        
     }
 }

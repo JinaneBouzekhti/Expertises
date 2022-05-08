@@ -376,9 +376,9 @@ namespace Gestion_expertise
             // 
             this.btn_open_file.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.btn_open_file.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_open_file.Location = new System.Drawing.Point(232, 3);
+            this.btn_open_file.Location = new System.Drawing.Point(258, 3);
             this.btn_open_file.Name = "btn_open_file";
-            this.btn_open_file.Size = new System.Drawing.Size(24, 23);
+            this.btn_open_file.Size = new System.Drawing.Size(40, 23);
             this.btn_open_file.TabIndex = 22;
             this.btn_open_file.Text = "...";
             this.btn_open_file.UseVisualStyleBackColor = false;
@@ -546,6 +546,7 @@ namespace Gestion_expertise
             // 
             // tableLayoutPanel5
             // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -557,7 +558,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(270, 49);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(301, 49);
             this.tableLayoutPanel5.TabIndex = 91;
             // 
             // tableLayoutPanel6
