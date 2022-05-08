@@ -37,5 +37,18 @@ namespace Gestion_expertise
             ajouter_partie ap = new ajouter_partie(numexp);
             ap.Show();
         }
+
+        private void demandeur_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.Width < 1200)
+            {
+                this.Font = new Font("Arial", 10, FontStyle.Regular);
+            }
+            else
+            {
+            
+                this.Font = new Font("Arial", 14, FontStyle.Regular);
+            }
+        }
     }
 }

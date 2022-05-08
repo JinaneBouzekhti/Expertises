@@ -68,12 +68,38 @@ namespace Gestion_expertise
 
         private void main_size_Changed(object sender, EventArgs e)
         {
-            if (this.Width < 1200)
+            if (this.Width < 1200 && sizeup == true) 
+            { 
                 tableLayoutPanel1.ColumnStyles[1].Width = 3;
-            else
+                change_Font(-2,this);
+                sizeup = false;
+                MessageBox.Show(this.Width.ToString());
+            }
+            if (this.Width > 1200 && sizeup == false)
+            {
                 tableLayoutPanel1.ColumnStyles[1].Width = 15;
+                change_Font(2,this);
+                sizeup = true;
+                MessageBox.Show(this.Width.ToString());
+            }    
+                
         }
-
+        bool sizeup = false;
+        public void change_Font(int i,Control cntr)
+        {
+           foreach(Control cont in cntr.Controls)
+            {
+                if (cont.HasChildren )
+                {
+                    change_Font(i,cont);                    
+                }
+                else
+                {
+                    cont.Font = new Font(this.Font.Name, cont.Font.Size + i);                    
+                }
+                    
+            }
+        }
         private void main_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

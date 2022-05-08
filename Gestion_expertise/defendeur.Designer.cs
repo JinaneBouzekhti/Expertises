@@ -34,13 +34,13 @@ namespace Gestion_expertise
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_ajouter = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avocat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_ajouter = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -96,34 +96,6 @@ namespace Gestion_expertise
             this.dataGridView1.Size = new System.Drawing.Size(1135, 585);
             this.dataGridView1.TabIndex = 2;
             // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nom Complet";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.Width = 250;
-            // 
-            // adresse
-            // 
-            this.adresse.HeaderText = "Adresse";
-            this.adresse.MinimumWidth = 6;
-            this.adresse.Name = "adresse";
-            this.adresse.Width = 400;
-            // 
-            // avocat
-            // 
-            this.avocat.HeaderText = "Avocat";
-            this.avocat.MinimumWidth = 6;
-            this.avocat.Name = "avocat";
-            this.avocat.Width = 250;
-            // 
-            // telephone
-            // 
-            this.telephone.HeaderText = "Telephone";
-            this.telephone.MinimumWidth = 6;
-            this.telephone.Name = "telephone";
-            this.telephone.Width = 150;
-            // 
             // btn_ajouter
             // 
             this.btn_ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -168,6 +140,34 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1135, 51);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
+            // nom
+            // 
+            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nom.HeaderText = "Nom Complet";
+            this.nom.MinimumWidth = 6;
+            this.nom.Name = "nom";
+            // 
+            // adresse
+            // 
+            this.adresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.adresse.HeaderText = "Adresse";
+            this.adresse.MinimumWidth = 6;
+            this.adresse.Name = "adresse";
+            // 
+            // avocat
+            // 
+            this.avocat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.avocat.HeaderText = "Avocat";
+            this.avocat.MinimumWidth = 6;
+            this.avocat.Name = "avocat";
+            // 
+            // telephone
+            // 
+            this.telephone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telephone.HeaderText = "Telephone";
+            this.telephone.MinimumWidth = 6;
+            this.telephone.Name = "telephone";
+            // 
             // defendeur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -190,12 +190,12 @@ namespace Gestion_expertise
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_ajouter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresse;
         private System.Windows.Forms.DataGridViewTextBoxColumn avocat;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephone;
-        private System.Windows.Forms.Button btn_ajouter;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }
