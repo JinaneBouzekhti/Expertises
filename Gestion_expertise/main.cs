@@ -73,14 +73,14 @@ namespace Gestion_expertise
                 tableLayoutPanel1.ColumnStyles[1].Width = 3;
                 change_Font(-2,this);
                 sizeup = false;
-                MessageBox.Show(this.Width.ToString());
+                
             }
             if (this.Width > 1200 && sizeup == false)
             {
                 tableLayoutPanel1.ColumnStyles[1].Width = 15;
                 change_Font(2,this);
                 sizeup = true;
-                MessageBox.Show(this.Width.ToString());
+                
             }    
                 
         }
