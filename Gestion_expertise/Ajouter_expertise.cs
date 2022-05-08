@@ -296,6 +296,36 @@ namespace Gestion_expertise
                 this.Font = new Font("Arial", 14, FontStyle.Bold);
         }
 
-      
+        private void com_RefType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (com_RefType.SelectedIndex > -1)
+            {
+                try
+                {
+                    SqlConnection cn = new SqlConnection(cs);
+                    cn.Open();
+                    int NumType = Convert.ToInt32(com_RefType.SelectedValue);
+                    string req3 = "select * from TypeExp where NumTypeExp =" + NumType;
+                    com = new SqlCommand(req3, cn);
+                    daTypeExp2 = new SqlDataAdapter(com);
+                    if (ds.Tables["TypeExp2"] != null)
+                        ds.Tables["TypeExp2"].Clear();
+
+                    daTypeExp2.Fill(ds, "TypeExp2");
+
+                    bsTypeExp2.DataSource = ds;
+                    bsTypeExp2.DataMember = "TypeExp2";
+
+                    comB = new SqlCommandBuilder(daTypeExp2);
+
+                    com_type_exp.DataSource = bsTypeExp2;
+                    com_type_exp.DisplayMember = "typeExp";
+                    com_type_exp.ValueMember = "NumTypeExp";
+                    com = null;
+                    comB = null;
+                }
+                catch (Exception ex) { }
+            }
+        }
     }
 }

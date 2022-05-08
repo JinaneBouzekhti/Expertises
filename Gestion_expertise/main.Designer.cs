@@ -31,13 +31,11 @@ namespace Gestion_expertise
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidebarpanel = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Mahakim = new System.Windows.Forms.Button();
+            this.Btn_Def = new System.Windows.Forms.Button();
+            this.Btn_Document = new System.Windows.Forms.Button();
+            this.Btn_Dem = new System.Windows.Forms.Button();
+            this.Btn_Suivi = new System.Windows.Forms.Button();
             this.iconpanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.navbarpanel = new System.Windows.Forms.Panel();
@@ -65,135 +63,104 @@ namespace Gestion_expertise
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 749);
+            this.panel1.Size = new System.Drawing.Size(183, 599);
             this.panel1.TabIndex = 0;
             // 
             // sidebarpanel
             // 
             this.sidebarpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.sidebarpanel.Controls.Add(this.button9);
-            this.sidebarpanel.Controls.Add(this.button7);
-            this.sidebarpanel.Controls.Add(this.button6);
-            this.sidebarpanel.Controls.Add(this.button5);
-            this.sidebarpanel.Controls.Add(this.button4);
-            this.sidebarpanel.Controls.Add(this.button2);
-            this.sidebarpanel.Controls.Add(this.button1);
+            this.sidebarpanel.Controls.Add(this.Btn_Mahakim);
+            this.sidebarpanel.Controls.Add(this.Btn_Def);
+            this.sidebarpanel.Controls.Add(this.Btn_Document);
+            this.sidebarpanel.Controls.Add(this.Btn_Dem);
+            this.sidebarpanel.Controls.Add(this.Btn_Suivi);
             this.sidebarpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidebarpanel.Font = new System.Drawing.Font("Segoe UI", 7F);
-            this.sidebarpanel.Location = new System.Drawing.Point(0, 155);
+            this.sidebarpanel.Location = new System.Drawing.Point(0, 124);
             this.sidebarpanel.Margin = new System.Windows.Forms.Padding(2);
             this.sidebarpanel.Name = "sidebarpanel";
-            this.sidebarpanel.Size = new System.Drawing.Size(229, 594);
+            this.sidebarpanel.Size = new System.Drawing.Size(183, 475);
             this.sidebarpanel.TabIndex = 0;
             // 
-            // button9
+            // Btn_Mahakim
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(2, 315);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(222, 42);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "MAHAKIM.MA";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.Btn_Mahakim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.Btn_Mahakim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_Mahakim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Mahakim.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_Mahakim.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Mahakim.Location = new System.Drawing.Point(3, 263);
+            this.Btn_Mahakim.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Mahakim.Name = "Btn_Mahakim";
+            this.Btn_Mahakim.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Mahakim.TabIndex = 8;
+            this.Btn_Mahakim.Text = "MAHAKIM.MA";
+            this.Btn_Mahakim.UseVisualStyleBackColor = false;
+            this.Btn_Mahakim.Click += new System.EventHandler(this.Btn_Mahakim_Click);
             // 
-            // button7
+            // Btn_Def
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(2, 216);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(222, 42);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "LISTE DES DEFENDEURS";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Btn_Def.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.Btn_Def.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_Def.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Def.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_Def.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Def.Location = new System.Drawing.Point(3, 159);
+            this.Btn_Def.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Def.Name = "Btn_Def";
+            this.Btn_Def.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Def.TabIndex = 6;
+            this.Btn_Def.Text = "LISTE DES DEFENDEURS";
+            this.Btn_Def.UseVisualStyleBackColor = false;
+            this.Btn_Def.Click += new System.EventHandler(this.Btn_Def_Click);
             // 
-            // button6
+            // Btn_Document
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(2, 265);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(222, 42);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "GÉNÉRATION DES DOCUMENTS";
-            this.button6.UseVisualStyleBackColor = false;
+            this.Btn_Document.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.Btn_Document.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_Document.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Document.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_Document.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Document.Location = new System.Drawing.Point(3, 211);
+            this.Btn_Document.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Document.Name = "Btn_Document";
+            this.Btn_Document.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Document.TabIndex = 7;
+            this.Btn_Document.Text = "GÉNÉRATION DES DOCUMENTS";
+            this.Btn_Document.UseVisualStyleBackColor = false;
+            this.Btn_Document.Click += new System.EventHandler(this.Btn_Document_Click);
             // 
-            // button5
+            // Btn_Dem
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(2, 166);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(222, 42);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "LISTE DES DEMANDEURS";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Btn_Dem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.Btn_Dem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_Dem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Dem.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_Dem.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Dem.Location = new System.Drawing.Point(3, 107);
+            this.Btn_Dem.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Dem.Name = "Btn_Dem";
+            this.Btn_Dem.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Dem.TabIndex = 5;
+            this.Btn_Dem.Text = "LISTE DES DEMANDEURS";
+            this.Btn_Dem.UseVisualStyleBackColor = false;
+            this.Btn_Dem.Click += new System.EventHandler(this.Btn_Dem_Click);
             // 
-            // button4
+            // Btn_Suivi
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(2, 118);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(222, 42);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "CONSIGNATIONS ET HONORAIRES";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(4, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "SUIVI DE L\'EXPERTISE";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(4, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "DOSSIER DE L\'EXPERTISE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btn_Suivi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.Btn_Suivi.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_Suivi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Suivi.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_Suivi.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Suivi.Location = new System.Drawing.Point(3, 55);
+            this.Btn_Suivi.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Suivi.Name = "Btn_Suivi";
+            this.Btn_Suivi.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Suivi.TabIndex = 3;
+            this.Btn_Suivi.Text = "SUIVI DE L\'EXPERTISE";
+            this.Btn_Suivi.UseVisualStyleBackColor = false;
+            this.Btn_Suivi.Click += new System.EventHandler(this.Btn_Suivi_Click);
             // 
             // iconpanel
             // 
@@ -203,7 +170,7 @@ namespace Gestion_expertise
             this.iconpanel.Location = new System.Drawing.Point(0, 0);
             this.iconpanel.Margin = new System.Windows.Forms.Padding(2);
             this.iconpanel.Name = "iconpanel";
-            this.iconpanel.Size = new System.Drawing.Size(229, 155);
+            this.iconpanel.Size = new System.Drawing.Size(183, 124);
             this.iconpanel.TabIndex = 1;
             // 
             // pictureBox1
@@ -215,7 +182,7 @@ namespace Gestion_expertise
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -225,10 +192,10 @@ namespace Gestion_expertise
             this.navbarpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(233)))));
             this.navbarpanel.Controls.Add(this.tableLayoutPanel2);
             this.navbarpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navbarpanel.Location = new System.Drawing.Point(229, 0);
+            this.navbarpanel.Location = new System.Drawing.Point(183, 0);
             this.navbarpanel.Margin = new System.Windows.Forms.Padding(2);
             this.navbarpanel.Name = "navbarpanel";
-            this.navbarpanel.Size = new System.Drawing.Size(1141, 48);
+            this.navbarpanel.Size = new System.Drawing.Size(913, 38);
             this.navbarpanel.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -244,10 +211,11 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1141, 48);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(913, 38);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // button8
@@ -262,7 +230,7 @@ namespace Gestion_expertise
             this.button8.Location = new System.Drawing.Point(2, 2);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(167, 44);
+            this.button8.Size = new System.Drawing.Size(132, 34);
             this.button8.TabIndex = 9;
             this.button8.Text = "Toutes les expertises";
             this.button8.UseVisualStyleBackColor = false;
@@ -276,10 +244,10 @@ namespace Gestion_expertise
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button3.Location = new System.Drawing.Point(914, 5);
+            this.button3.Location = new System.Drawing.Point(731, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 38);
+            this.button3.Size = new System.Drawing.Size(132, 30);
             this.button3.TabIndex = 1;
             this.button3.Text = "Ajouter  Expertise";
             this.button3.UseVisualStyleBackColor = true;
@@ -289,11 +257,11 @@ namespace Gestion_expertise
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 20;
-            this.comboBox1.Location = new System.Drawing.Point(629, 11);
+            this.comboBox1.ItemHeight = 15;
+            this.comboBox1.Location = new System.Drawing.Point(503, 8);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(281, 28);
+            this.comboBox1.Size = new System.Drawing.Size(224, 23);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
@@ -306,11 +274,12 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.Controls.Add(this.mainpanel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.folderView1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(229, 48);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(183, 38);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1141, 701);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(913, 561);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // mainpanel
@@ -321,24 +290,24 @@ namespace Gestion_expertise
             this.mainpanel.Location = new System.Drawing.Point(2, 2);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1102, 697);
+            this.mainpanel.Size = new System.Drawing.Size(881, 557);
             this.mainpanel.TabIndex = 3;
             // 
             // folderView1
             // 
             this.folderView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.folderView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.folderView1.Location = new System.Drawing.Point(1109, 4);
-            this.folderView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.folderView1.Location = new System.Drawing.Point(887, 3);
+            this.folderView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.folderView1.Name = "folderView1";
-            this.folderView1.Size = new System.Drawing.Size(29, 693);
+            this.folderView1.Size = new System.Drawing.Size(24, 555);
             this.folderView1.TabIndex = 4;
             // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1096, 599);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.navbarpanel);
             this.Controls.Add(this.panel1);
@@ -369,15 +338,13 @@ namespace Gestion_expertise
         private System.Windows.Forms.Panel iconpanel;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_Def;
+        private System.Windows.Forms.Button Btn_Document;
+        private System.Windows.Forms.Button Btn_Dem;
+        private System.Windows.Forms.Button Btn_Suivi;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button Btn_Mahakim;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel mainpanel;
         private FolderView folderView1;

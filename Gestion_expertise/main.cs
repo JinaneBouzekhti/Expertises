@@ -103,27 +103,65 @@ namespace Gestion_expertise
         {
             Application.Exit();
         }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void Btn_Suivi_Click(object sender, EventArgs e)
         {
-            mainpanel.Controls.Clear();
-            demandeur u = new demandeur(comboBox1.SelectedValue.ToString());
-            mainpanel.Controls.Add(u);
-            u.Dock = DockStyle.Fill;
+            if (comboBox1.SelectedIndex > -1)
+            {
+                try
+                {
+                    mainpanel.Controls.Clear();
+                    suivi_expertise suivi = new suivi_expertise(comboBox1.SelectedValue.ToString());
+                    mainpanel.Controls.Add(suivi);
+                    suivi.Dock = DockStyle.Fill;
+                }
+                catch (Exception ex) { }
+            }
         }
 
-       
-
-        private void button7_Click(object sender, EventArgs e)
+        private void Btn_Dem_Click(object sender, EventArgs e)
         {
-            mainpanel.Controls.Clear();
-            defendeur d = new defendeur(comboBox1.SelectedValue.ToString());
-            mainpanel.Controls.Add(d);
-            d.Dock = DockStyle.Fill;
+            if (comboBox1.SelectedIndex > -1)
+            {
+                try
+                {
+                    mainpanel.Controls.Clear();
+                    demandeur u = new demandeur(comboBox1.SelectedValue.ToString());
+                    mainpanel.Controls.Add(u);
+                    u.Dock = DockStyle.Fill;
+                }
+                catch (Exception ex) { }
+            }
         }
 
-        
-            
+        private void Btn_Def_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex > -1)
+            {
+                try
+                {
+                    mainpanel.Controls.Clear();
+                    defendeur d = new defendeur(comboBox1.SelectedValue.ToString());
+                    mainpanel.Controls.Add(d);
+                    d.Dock = DockStyle.Fill;
+                }
+                catch (Exception ex) { }
+            }
+        }
+        private void Btn_Document_Click(object sender, EventArgs e)
+        {
+
+            mainpanel.Controls.Clear();
+            ToutesExp TtExp = new ToutesExp();
+            mainpanel.Controls.Add(TtExp);
+            TtExp.Dock = DockStyle.Fill;
+        }
+        private void Btn_Mahakim_Click(object sender, EventArgs e)
+        {
+            mainpanel.Controls.Clear();
+            Mahakim mahakim = new Mahakim();
+            mainpanel.Controls.Add(mahakim);
+            mahakim.Dock = DockStyle.Fill;
+        }
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -132,22 +170,6 @@ namespace Gestion_expertise
                 int index = comboBox1.FindString(comboBox1.Text);
                 comboBox1.SelectedIndex = index;
             }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            mainpanel.Controls.Clear();
-            ToutesExp TtExp = new ToutesExp();
-            mainpanel.Controls.Add(TtExp);
-            TtExp.Dock = DockStyle.Fill;
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            mainpanel.Controls.Clear();
-            suivi_expertise suivi = new suivi_expertise(comboBox1.SelectedValue.ToString());
-            mainpanel.Controls.Add(suivi);
-            suivi.Dock = DockStyle.Fill;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -159,14 +181,5 @@ namespace Gestion_expertise
             TtExp.Dock = DockStyle.Fill;
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            mainpanel.Controls.Clear();
-            Mahakim mahakim = new Mahakim();
-            mainpanel.Controls.Add(mahakim);
-            mahakim.Dock = DockStyle.Fill;
-        }
-
-        
     }
 }

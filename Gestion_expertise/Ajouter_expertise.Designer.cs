@@ -673,6 +673,7 @@ namespace Gestion_expertise
             this.com_RefType.Name = "com_RefType";
             this.com_RefType.Size = new System.Drawing.Size(82, 25);
             this.com_RefType.TabIndex = 1;
+            this.com_RefType.SelectedIndexChanged += new System.EventHandler(this.com_RefType_SelectedIndexChanged);
             // 
             // label1
             // 
