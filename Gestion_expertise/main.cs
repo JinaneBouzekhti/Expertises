@@ -171,7 +171,14 @@ namespace Gestion_expertise
                 comboBox1.SelectedIndex = index;
             }
         }
+        private void Btn_TtExp_Click(object sender, EventArgs e)
+        {
 
+            mainpanel.Controls.Clear();
+            ToutesExp ttExp = new ToutesExp();
+            mainpanel.Controls.Add(ttExp);
+            ttExp.Dock = DockStyle.Fill;
+        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             mainpanel.Controls.Clear();
@@ -181,5 +188,6 @@ namespace Gestion_expertise
             TtExp.Dock = DockStyle.Fill;
         }
 
+       
     }
 }

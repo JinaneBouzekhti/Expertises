@@ -40,7 +40,7 @@ namespace Gestion_expertise
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.navbarpanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Btn_TtExp = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -89,10 +89,10 @@ namespace Gestion_expertise
             this.Btn_Mahakim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Mahakim.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.Btn_Mahakim.ForeColor = System.Drawing.Color.Black;
-            this.Btn_Mahakim.Location = new System.Drawing.Point(3, 263);
+            this.Btn_Mahakim.Location = new System.Drawing.Point(3, 351);
             this.Btn_Mahakim.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Mahakim.Name = "Btn_Mahakim";
-            this.Btn_Mahakim.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Mahakim.Size = new System.Drawing.Size(176, 55);
             this.Btn_Mahakim.TabIndex = 8;
             this.Btn_Mahakim.Text = "MAHAKIM.MA";
             this.Btn_Mahakim.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@ namespace Gestion_expertise
             this.Btn_Def.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Def.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.Btn_Def.ForeColor = System.Drawing.Color.Black;
-            this.Btn_Def.Location = new System.Drawing.Point(3, 159);
+            this.Btn_Def.Location = new System.Drawing.Point(3, 203);
             this.Btn_Def.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Def.Name = "Btn_Def";
-            this.Btn_Def.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Def.Size = new System.Drawing.Size(176, 55);
             this.Btn_Def.TabIndex = 6;
             this.Btn_Def.Text = "LISTE DES DEFENDEURS";
             this.Btn_Def.UseVisualStyleBackColor = false;
@@ -121,10 +121,10 @@ namespace Gestion_expertise
             this.Btn_Document.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Document.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.Btn_Document.ForeColor = System.Drawing.Color.Black;
-            this.Btn_Document.Location = new System.Drawing.Point(3, 211);
+            this.Btn_Document.Location = new System.Drawing.Point(3, 277);
             this.Btn_Document.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Document.Name = "Btn_Document";
-            this.Btn_Document.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Document.Size = new System.Drawing.Size(176, 55);
             this.Btn_Document.TabIndex = 7;
             this.Btn_Document.Text = "GÉNÉRATION DES DOCUMENTS";
             this.Btn_Document.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@ namespace Gestion_expertise
             this.Btn_Dem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Dem.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.Btn_Dem.ForeColor = System.Drawing.Color.Black;
-            this.Btn_Dem.Location = new System.Drawing.Point(3, 107);
+            this.Btn_Dem.Location = new System.Drawing.Point(3, 129);
             this.Btn_Dem.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Dem.Name = "Btn_Dem";
-            this.Btn_Dem.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Dem.Size = new System.Drawing.Size(176, 55);
             this.Btn_Dem.TabIndex = 5;
             this.Btn_Dem.Text = "LISTE DES DEMANDEURS";
             this.Btn_Dem.UseVisualStyleBackColor = false;
@@ -156,7 +156,7 @@ namespace Gestion_expertise
             this.Btn_Suivi.Location = new System.Drawing.Point(3, 55);
             this.Btn_Suivi.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Suivi.Name = "Btn_Suivi";
-            this.Btn_Suivi.Size = new System.Drawing.Size(178, 34);
+            this.Btn_Suivi.Size = new System.Drawing.Size(176, 55);
             this.Btn_Suivi.TabIndex = 3;
             this.Btn_Suivi.Text = "SUIVI DE L\'EXPERTISE";
             this.Btn_Suivi.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel2.Controls.Add(this.button8, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Btn_TtExp, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -218,23 +218,23 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Size = new System.Drawing.Size(913, 38);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
-            // button8
+            // Btn_TtExp
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackColor = System.Drawing.Color.White;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(2, 2);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(132, 34);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Toutes les expertises";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Btn_TtExp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_TtExp.BackColor = System.Drawing.Color.White;
+            this.Btn_TtExp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_TtExp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_TtExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_TtExp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_TtExp.ForeColor = System.Drawing.Color.Black;
+            this.Btn_TtExp.Location = new System.Drawing.Point(2, 2);
+            this.Btn_TtExp.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_TtExp.Name = "Btn_TtExp";
+            this.Btn_TtExp.Size = new System.Drawing.Size(132, 34);
+            this.Btn_TtExp.TabIndex = 9;
+            this.Btn_TtExp.Text = "Toutes les expertises";
+            this.Btn_TtExp.UseVisualStyleBackColor = false;
+            this.Btn_TtExp.Click += new System.EventHandler(this.Btn_TtExp_Click);
             // 
             // button3
             // 
@@ -258,7 +258,7 @@ namespace Gestion_expertise
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 15;
-            this.comboBox1.Location = new System.Drawing.Point(503, 8);
+            this.comboBox1.Location = new System.Drawing.Point(503, 7);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(224, 23);
@@ -343,7 +343,7 @@ namespace Gestion_expertise
         private System.Windows.Forms.Button Btn_Document;
         private System.Windows.Forms.Button Btn_Dem;
         private System.Windows.Forms.Button Btn_Suivi;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Btn_TtExp;
         private System.Windows.Forms.Button Btn_Mahakim;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel mainpanel;

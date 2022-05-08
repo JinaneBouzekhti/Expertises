@@ -300,6 +300,7 @@ namespace Gestion_expertise
             // 
             // com_type_exp
             // 
+            this.com_type_exp.Enabled = false;
             this.com_type_exp.FormattingEnabled = true;
             this.com_type_exp.Location = new System.Drawing.Point(310, 113);
             this.com_type_exp.Name = "com_type_exp";
