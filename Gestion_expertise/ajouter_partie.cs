@@ -31,10 +31,13 @@ namespace Gestion_expertise
             List<string> l = new List<string>(txt_copier.Text.Split('\n'));
             foreach (string s in l)
             {
-                if (s.Contains("مدعى عليه"))
-                    dgv_def.Rows.Add(s.Split('\t'));
+                string sentence = s.Replace('\t', ' ').Trim();
+                if (sentence != "") ;
+                if (sentence.Contains("مدعى عليه"))
+                    dgv_def.Rows.Add("مدعى عليه", s.Contains("(1)") ? s.Replace("مدعى عليه", "").Replace("(1)", "").Replace("المحامون", "").Trim() : s.Replace("مدعى عليه", "").Trim());
+
                 else
-                    dgv_dem.Rows.Add(s.Split('\t'));
+                    dgv_dem.Rows.Add("مدعي", s.Contains("(1)") ? s.Replace("مدعي", "").Replace("(1)", "").Replace("المحامون", "").Trim() : s.Replace("مدعي", "").Trim());
             }
         }
 
@@ -43,16 +46,16 @@ namespace Gestion_expertise
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
             con.Open();
-            if(ch_def.Checked)
-                for(int i = 0; i < dgv_def.RowCount; i++)
+            if (ch_def.Checked)
+                for (int i = 0; i < dgv_def.RowCount; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Défenseur values(N'"+dgv_def.Rows[i].Cells[1].Value+"','','','','"+numexp+"')",con);
+                    SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,NumExp) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
                     cmd.ExecuteNonQuery();
                 }
             if (ch_dem.Checked)
                 for (int i = 0; i < dgv_dem.RowCount; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Demandeur values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','','','','" + numexp + "')", con);
+                    SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,NumExp) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
                     cmd.ExecuteNonQuery();
                 }
             this.Close();
