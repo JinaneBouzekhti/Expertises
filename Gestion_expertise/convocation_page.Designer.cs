@@ -38,20 +38,23 @@ namespace Gestion_expertise
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.défenseurBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.expertisesDataSet = new Gestion_expertise.expertisesDataSet();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.demandeurBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.expertisesDataSet1 = new Gestion_expertise.expertisesDataSet1();
-            this.défenseurTableAdapter = new Gestion_expertise.expertisesDataSetTableAdapters.DéfenseurTableAdapter();
-            this.expertisesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.demandeurTableAdapter = new Gestion_expertise.expertisesDataSet1TableAdapters.DemandeurTableAdapter();
-            this.nomCompletDemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portableDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomCompletDéfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.portableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkdef = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.défenseurBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.expertisesDataSet = new Gestion_expertise.expertisesDataSet();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.nomCompletDemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.portableDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkdem = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.demandeurBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.expertisesDataSet1 = new Gestion_expertise.expertisesDataSet1();
+            this.btn_exporter = new System.Windows.Forms.Button();
+            this.défenseurTableAdapter = new Gestion_expertise.expertisesDataSetTableAdapters.DéfenseurTableAdapter();
+            this.expertisesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.demandeurTableAdapter = new Gestion_expertise.expertisesDataSet1TableAdapters.DemandeurTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.défenseurBindingSource)).BeginInit();
@@ -69,13 +72,14 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_exporter, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.737589F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.26241F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(937, 564);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -99,7 +103,8 @@ namespace Gestion_expertise
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomCompletDéfDataGridViewTextBoxColumn,
             this.adresseDataGridViewTextBoxColumn,
-            this.portableDataGridViewTextBoxColumn});
+            this.portableDataGridViewTextBoxColumn,
+            this.checkdef});
             this.dataGridView1.DataSource = this.défenseurBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -112,13 +117,46 @@ namespace Gestion_expertise
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(462, 483);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // nomCompletDéfDataGridViewTextBoxColumn
+            // 
+            this.nomCompletDéfDataGridViewTextBoxColumn.DataPropertyName = "NomCompletDéf";
+            this.nomCompletDéfDataGridViewTextBoxColumn.HeaderText = "NomCompletDéf";
+            this.nomCompletDéfDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomCompletDéfDataGridViewTextBoxColumn.Name = "nomCompletDéfDataGridViewTextBoxColumn";
+            this.nomCompletDéfDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // adresseDataGridViewTextBoxColumn
+            // 
+            this.adresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse";
+            this.adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
+            this.adresseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adresseDataGridViewTextBoxColumn.Name = "adresseDataGridViewTextBoxColumn";
+            this.adresseDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // portableDataGridViewTextBoxColumn
+            // 
+            this.portableDataGridViewTextBoxColumn.DataPropertyName = "Portable";
+            this.portableDataGridViewTextBoxColumn.HeaderText = "Portable";
+            this.portableDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.portableDataGridViewTextBoxColumn.Name = "portableDataGridViewTextBoxColumn";
+            this.portableDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // checkdef
+            // 
+            this.checkdef.DataPropertyName = "NumDéf";
+            this.checkdef.HeaderText = "check";
+            this.checkdef.MinimumWidth = 6;
+            this.checkdef.Name = "checkdef";
+            this.checkdef.ReadOnly = true;
+            this.checkdef.Width = 125;
             // 
             // défenseurBindingSource
             // 
@@ -150,7 +188,8 @@ namespace Gestion_expertise
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomCompletDemDataGridViewTextBoxColumn,
             this.adresseDataGridViewTextBoxColumn1,
-            this.portableDataGridViewTextBoxColumn1});
+            this.portableDataGridViewTextBoxColumn1,
+            this.checkdem});
             this.dataGridView2.DataSource = this.demandeurBindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
@@ -163,36 +202,13 @@ namespace Gestion_expertise
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView2.Location = new System.Drawing.Point(471, 31);
+            this.dataGridView2.Location = new System.Drawing.Point(471, 37);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(463, 410);
+            this.dataGridView2.Size = new System.Drawing.Size(463, 483);
             this.dataGridView2.TabIndex = 4;
-            // 
-            // demandeurBindingSource
-            // 
-            this.demandeurBindingSource.DataMember = "Demandeur";
-            this.demandeurBindingSource.DataSource = this.expertisesDataSet1;
-            // 
-            // expertisesDataSet1
-            // 
-            this.expertisesDataSet1.DataSetName = "expertisesDataSet1";
-            this.expertisesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // défenseurTableAdapter
-            // 
-            this.défenseurTableAdapter.ClearBeforeFill = true;
-            // 
-            // expertisesDataSetBindingSource
-            // 
-            this.expertisesDataSetBindingSource.DataSource = this.expertisesDataSet;
-            this.expertisesDataSetBindingSource.Position = 0;
-            // 
-            // demandeurTableAdapter
-            // 
-            this.demandeurTableAdapter.ClearBeforeFill = true;
             // 
             // nomCompletDemDataGridViewTextBoxColumn
             // 
@@ -218,29 +234,50 @@ namespace Gestion_expertise
             this.portableDataGridViewTextBoxColumn1.Name = "portableDataGridViewTextBoxColumn1";
             this.portableDataGridViewTextBoxColumn1.Width = 125;
             // 
-            // nomCompletDéfDataGridViewTextBoxColumn
+            // checkdem
             // 
-            this.nomCompletDéfDataGridViewTextBoxColumn.DataPropertyName = "NomCompletDéf";
-            this.nomCompletDéfDataGridViewTextBoxColumn.HeaderText = "NomCompletDéf";
-            this.nomCompletDéfDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomCompletDéfDataGridViewTextBoxColumn.Name = "nomCompletDéfDataGridViewTextBoxColumn";
-            this.nomCompletDéfDataGridViewTextBoxColumn.Width = 125;
+            this.checkdem.DataPropertyName = "NumDem";
+            this.checkdem.HeaderText = "chek";
+            this.checkdem.MinimumWidth = 6;
+            this.checkdem.Name = "checkdem";
+            this.checkdem.ReadOnly = true;
+            this.checkdem.Width = 125;
             // 
-            // adresseDataGridViewTextBoxColumn
+            // demandeurBindingSource
             // 
-            this.adresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse";
-            this.adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
-            this.adresseDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adresseDataGridViewTextBoxColumn.Name = "adresseDataGridViewTextBoxColumn";
-            this.adresseDataGridViewTextBoxColumn.Width = 125;
+            this.demandeurBindingSource.DataMember = "Demandeur";
+            this.demandeurBindingSource.DataSource = this.expertisesDataSet1;
             // 
-            // portableDataGridViewTextBoxColumn
+            // expertisesDataSet1
             // 
-            this.portableDataGridViewTextBoxColumn.DataPropertyName = "Portable";
-            this.portableDataGridViewTextBoxColumn.HeaderText = "Portable";
-            this.portableDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.portableDataGridViewTextBoxColumn.Name = "portableDataGridViewTextBoxColumn";
-            this.portableDataGridViewTextBoxColumn.Width = 125;
+            this.expertisesDataSet1.DataSetName = "expertisesDataSet1";
+            this.expertisesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btn_exporter
+            // 
+            this.btn_exporter.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_exporter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_exporter.Location = new System.Drawing.Point(769, 527);
+            this.btn_exporter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exporter.Name = "btn_exporter";
+            this.btn_exporter.Size = new System.Drawing.Size(165, 32);
+            this.btn_exporter.TabIndex = 27;
+            this.btn_exporter.Text = "Exporter";
+            this.btn_exporter.UseVisualStyleBackColor = false;
+            this.btn_exporter.Click += new System.EventHandler(this.btn_exporter_Click);
+            // 
+            // défenseurTableAdapter
+            // 
+            this.défenseurTableAdapter.ClearBeforeFill = true;
+            // 
+            // expertisesDataSetBindingSource
+            // 
+            this.expertisesDataSetBindingSource.DataSource = this.expertisesDataSet;
+            this.expertisesDataSetBindingSource.Position = 0;
+            // 
+            // demandeurTableAdapter
+            // 
+            this.demandeurTableAdapter.ClearBeforeFill = true;
             // 
             // convocation_page
             // 
@@ -274,11 +311,14 @@ namespace Gestion_expertise
         private expertisesDataSet1 expertisesDataSet1;
         private System.Windows.Forms.BindingSource expertisesDataSetBindingSource;
         private expertisesDataSet1TableAdapters.DemandeurTableAdapter demandeurTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomCompletDéfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn portableDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomCompletDemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn portableDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomCompletDéfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn portableDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkdef;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkdem;
+        private System.Windows.Forms.Button btn_exporter;
     }
 }
