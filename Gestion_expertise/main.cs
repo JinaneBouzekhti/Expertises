@@ -151,9 +151,9 @@ namespace Gestion_expertise
         {
 
             mainpanel.Controls.Clear();
-            ToutesExp TtExp = new ToutesExp();
-            mainpanel.Controls.Add(TtExp);
-            TtExp.Dock = DockStyle.Fill;
+            convocation_page conv = new convocation_page(comboBox1.SelectedValue.ToString());
+            mainpanel.Controls.Add(conv);
+            conv.Dock = DockStyle.Fill;
         }
         private void Btn_Mahakim_Click(object sender, EventArgs e)
         {
