@@ -128,6 +128,7 @@ namespace Gestion_expertise
             sa1.Fill(dt1);
             cmb_trib_pr.Text = dt1.Rows[0][1].ToString();
 
+
             SqlDataAdapter sa2 = new SqlDataAdapter("select * from  CoursAppel  where NumCoursAppel =" + dt1.Rows[0][2], cn);
             DataTable dt2 = new DataTable();
             sa2.Fill(dt2);
@@ -174,34 +175,37 @@ namespace Gestion_expertise
 
         private void cmb_CoursA_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmb_CoursA.SelectedIndex > -1)
+            if (cmb_CoursA.Enabled)
             {
-                try
+                if (cmb_CoursA.SelectedIndex > -1)
                 {
-                    SqlConnection cn = new SqlConnection(cs);
-                    cn.Open();
-                    int NumCA = Convert.ToInt32(cmb_CoursA.SelectedValue);
-                    string req1 = "select * from TribunauxPremière where NumCoursAppel =" + NumCA;
-                    com = new SqlCommand(req1, cn);
-                    daTr = new SqlDataAdapter(com);
+                    try
+                    {
+                        SqlConnection cn = new SqlConnection(cs);
+                        cn.Open();
+                        int NumCA = Convert.ToInt32(cmb_CoursA.SelectedValue);
+                        string req1 = "select * from TribunauxPremière where NumCoursAppel =" + NumCA;
+                        com = new SqlCommand(req1, cn);
+                        daTr = new SqlDataAdapter(com);
 
-                    if (ds.Tables["TribunalP"] != null)
-                        ds.Tables["Tribunalp"].Clear();
+                        if (ds.Tables["TribunalP"] != null)
+                            ds.Tables["Tribunalp"].Clear();
 
-                    daTr.Fill(ds, "TribunalP");
-                    bsTr.DataSource = ds;
-                    bsTr.DataMember = "TribunalP";
+                        daTr.Fill(ds, "TribunalP");
+                        bsTr.DataSource = ds;
+                        bsTr.DataMember = "TribunalP";
 
-                    comB = new SqlCommandBuilder(daTr);
+                        comB = new SqlCommandBuilder(daTr);
 
-                    cmb_trib_pr.DataSource = bsTr;
-                    cmb_trib_pr.DisplayMember = "NomTribunalP";
-                    cmb_trib_pr.ValueMember = "NumTribunalP";
+                        cmb_trib_pr.DataSource = bsTr;
+                        cmb_trib_pr.DisplayMember = "NomTribunalP";
+                        cmb_trib_pr.ValueMember = "NumTribunalP";
 
-                    com = null;
-                    comB = null;
+                        com = null;
+                        comB = null;
+                    }
+                    catch (Exception ex) { }
                 }
-                catch (Exception ex) { }
             }
         }
 
@@ -257,7 +261,7 @@ namespace Gestion_expertise
         private void btn_Rep_Click(object sender, EventArgs e)
         {
             fbd.ShowDialog();
-            txt_rep.Texts = fbd.SelectedPath.ToString() + @"\" + GetFolderName();
+            txt_rep.Texts = fbd.SelectedPath.ToString() + @"\" + GetFolderName() + @"\";
         }
 
         public void Activate(Boolean v)
@@ -300,8 +304,9 @@ namespace Gestion_expertise
         private void btn_valider_Click(object sender, EventArgs e)
         {
 
-            string Ref = txt_refYear.Texts + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Texts;
 
+
+            string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
             bool tr = false;
             if (cb_termine.Checked)
                 tr = true;
@@ -358,11 +363,14 @@ namespace Gestion_expertise
                 if (Chemin != "")
                 {
                     DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                    if (Dir.Exists)
-                        MessageBox.Show("Ce dossier existe déja ( " + GetFolderName() + " )", "Ereur");
-                    else
+                    if (!Dir.Exists)
                     {
                         Dir.Create();
+                        com.ExecuteNonQuery();
+                        Activate(false);
+                    }
+                    else
+                    {
                         com.ExecuteNonQuery();
                         Activate(false);
                     }
@@ -386,8 +394,8 @@ namespace Gestion_expertise
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
-            string Ref = txt_refYear.Texts + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Texts;
-
+           
+            string Ref = txt_refYear.Text + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Text;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 

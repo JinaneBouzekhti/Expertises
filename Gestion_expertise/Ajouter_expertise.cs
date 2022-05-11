@@ -179,7 +179,7 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            string Ref = txt_refYear.Text + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Text;
+            string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
