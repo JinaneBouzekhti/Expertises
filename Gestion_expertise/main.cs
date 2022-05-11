@@ -55,7 +55,10 @@ namespace Gestion_expertise
             mainpanel.Controls.Add(TtExp);
             TtExp.Dock = DockStyle.Fill;
 
-
+            Btn_Def.Enabled = false;
+            Btn_Dem.Enabled = false;
+            Btn_Document.Enabled = false;
+            Btn_Suivi.Enabled = false;
         }
 
         
@@ -181,11 +184,17 @@ namespace Gestion_expertise
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             mainpanel.Controls.Clear();
             mainpanel.Controls.Clear();
             ToutesExp TtExp = new ToutesExp();
             mainpanel.Controls.Add(TtExp);
             TtExp.Dock = DockStyle.Fill;
+
+            Btn_Def.Enabled = true;
+            Btn_Dem.Enabled = true;
+            Btn_Document.Enabled = true;
+            Btn_Suivi.Enabled = true;
         }
 
        

@@ -37,5 +37,17 @@ namespace Gestion_expertise
             ap.Show();
         }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
+
+            con.Open();
+            for (int i = 0; i < dataGridView1.Rows.Count; i++) 
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Défenseur SET  Adresse= N'" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "' , Portable = '" + dataGridView1.Rows[i].Cells[3].Value.ToString() + "'Where  NomCompletDéf = N'" + dataGridView1.Rows[i].Cells[0].Value.ToString() + "'", con);
+                cmd.ExecuteNonQuery();                
+            }
+            MessageBox.Show("les modification est enregistré avec succès");
+        }
     }
 }

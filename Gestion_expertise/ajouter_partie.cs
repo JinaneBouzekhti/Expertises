@@ -49,14 +49,19 @@ namespace Gestion_expertise
             if (ch_def.Checked)
                 for (int i = 0; i < dgv_def.RowCount; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,NumExp) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
-                    cmd.ExecuteNonQuery();
+                    if (dgv_def.Rows[i].Cells[1].Value.ToString() != "") { 
+                        SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,NumExp) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             if (ch_dem.Checked)
                 for (int i = 0; i < dgv_dem.RowCount; i++)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,NumExp) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
-                    cmd.ExecuteNonQuery();
+                    if (dgv_dem.Rows[i].Cells[1].Value.ToString() != "")
+                    {
+                        SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,NumExp) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             this.Close();
         }

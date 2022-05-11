@@ -37,7 +37,18 @@ namespace Gestion_expertise
             ajouter_partie ap = new ajouter_partie(numexp);
             ap.Show();
         }
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
 
+            con.Open();
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Demandeur SET Adresse= N'" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "' , Portable = '" + dataGridView1.Rows[i].Cells[3].Value.ToString() + "' Where  NomCompletDem = N'" + dataGridView1.Rows[i].Cells[0].Value.ToString() +"'", con);
+                cmd.ExecuteNonQuery();
+            }
+            MessageBox.Show("les modification est enregistré avec succès");
+        }
         private void demandeur_SizeChanged(object sender, EventArgs e)
         {
             if (this.Width < 1200)

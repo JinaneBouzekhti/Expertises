@@ -34,13 +34,14 @@ namespace Gestion_expertise
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_ajouter = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avocat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_ajouter = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -58,6 +59,8 @@ namespace Gestion_expertise
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
@@ -96,6 +99,34 @@ namespace Gestion_expertise
             this.dataGridView1.Size = new System.Drawing.Size(1135, 585);
             this.dataGridView1.TabIndex = 2;
             // 
+            // nom
+            // 
+            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nom.HeaderText = "Nom Complet";
+            this.nom.MinimumWidth = 6;
+            this.nom.Name = "nom";
+            // 
+            // adresse
+            // 
+            this.adresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.adresse.HeaderText = "Adresse";
+            this.adresse.MinimumWidth = 6;
+            this.adresse.Name = "adresse";
+            // 
+            // avocat
+            // 
+            this.avocat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.avocat.HeaderText = "Avocat";
+            this.avocat.MinimumWidth = 6;
+            this.avocat.Name = "avocat";
+            // 
+            // telephone
+            // 
+            this.telephone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telephone.HeaderText = "Telephone";
+            this.telephone.MinimumWidth = 6;
+            this.telephone.Name = "telephone";
+            // 
             // btn_ajouter
             // 
             this.btn_ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -132,6 +163,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.Controls.Add(this.btn_ajouter, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_save, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 648);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -140,33 +172,18 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1135, 51);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // nom
+            // btn_save
             // 
-            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nom.HeaderText = "Nom Complet";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            // 
-            // adresse
-            // 
-            this.adresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.adresse.HeaderText = "Adresse";
-            this.adresse.MinimumWidth = 6;
-            this.adresse.Name = "adresse";
-            // 
-            // avocat
-            // 
-            this.avocat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.avocat.HeaderText = "Avocat";
-            this.avocat.MinimumWidth = 6;
-            this.avocat.Name = "avocat";
-            // 
-            // telephone
-            // 
-            this.telephone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telephone.HeaderText = "Telephone";
-            this.telephone.MinimumWidth = 6;
-            this.telephone.Name = "telephone";
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_save.Location = new System.Drawing.Point(796, 9);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(165, 32);
+            this.btn_save.TabIndex = 26;
+            this.btn_save.Text = "enregistrer";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // defendeur
             // 
@@ -197,5 +214,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridViewTextBoxColumn adresse;
         private System.Windows.Forms.DataGridViewTextBoxColumn avocat;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephone;
+        private System.Windows.Forms.Button btn_save;
     }
 }

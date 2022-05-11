@@ -69,7 +69,7 @@ namespace Gestion_expertise
                 C.SetParameterValue("nom complet", data.Rows[i][6]);
                 C.SetParameterValue("adresse", data.Rows[i][7] is null ? " " : data.Rows[i][7]);
 
-                string Chemin = data.Rows[i][8].ToString() + @"الاستدعاءات\";
+                string Chemin = data.Rows[i][8].ToString() +"\\"+ "الاستدعاءات"+"\\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
                 if (!Dir.Exists)
                     Dir.Create();
@@ -101,7 +101,7 @@ namespace Gestion_expertise
                 C.SetParameterValue("Date_Reçu", Convert.ToDateTime(data.Rows[i][2]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
                 C.SetParameterValue("HeurRv", data.Rows[i][3]);
                 C.SetParameterValue("DateRV", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
-                string Chemin = data.Rows[i][6].ToString() + @"التسليمات\";
+                string Chemin = data.Rows[i][6].ToString() + @"\التسليمات\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
                 if (!Dir.Exists)
                     Dir.Create();
