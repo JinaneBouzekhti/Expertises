@@ -168,13 +168,13 @@ namespace Gestion_expertise
 
             string date = DateTime.Now.ToString("yyyy");
             string ext = Path.GetExtension(ofd.FileName);
-            NameF = "Expertise" + "-" + NumExp + "-" + date + ext;
+            NameF = "EXP" + "-" + date + "-" + NumExp + ext;
             return NameF;
         }
         private void btn_open_file_Click(object sender, EventArgs e)
         {
             fbd.ShowDialog();
-            txt_rep.Text = fbd.SelectedPath.ToString() + @"\" + GetFolderName();
+            txt_rep.Text = fbd.SelectedPath.ToString() + @"\" + GetFolderName() + @"\";
         }
 
         private void btn_ajouter_Click(object sender, EventArgs e)

@@ -247,12 +247,10 @@ namespace Gestion_expertise
 
         public string GetFolderName()
         {
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
             string NameF;
             string date = DateTime.Now.ToString("yyyy");
             string ext = Path.GetExtension(ofd.FileName);
-            NameF = "Expertise" + "-" + numexp + "-" + date + ext;
+            NameF = "EXP" + "-" + date + "-" + numexp + ext;
             return NameF;
         }
 

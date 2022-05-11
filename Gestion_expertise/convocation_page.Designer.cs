@@ -55,6 +55,7 @@ namespace Gestion_expertise
             this.défenseurTableAdapter = new Gestion_expertise.expertisesDataSetTableAdapters.DéfenseurTableAdapter();
             this.expertisesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.demandeurTableAdapter = new Gestion_expertise.expertisesDataSet1TableAdapters.DemandeurTableAdapter();
+            this.btn_recu = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.défenseurBindingSource)).BeginInit();
@@ -70,17 +71,19 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_recu, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_exporter, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.737589F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.26241F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(937, 564);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(703, 458);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -117,12 +120,12 @@ namespace Gestion_expertise
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 30);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 483);
+            this.dataGridView1.Size = new System.Drawing.Size(347, 392);
             this.dataGridView1.TabIndex = 3;
             // 
             // nomCompletDéfDataGridViewTextBoxColumn
@@ -202,12 +205,12 @@ namespace Gestion_expertise
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView2.Location = new System.Drawing.Point(471, 37);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(353, 30);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(463, 483);
+            this.dataGridView2.Size = new System.Drawing.Size(348, 392);
             this.dataGridView2.TabIndex = 4;
             // 
             // nomCompletDemDataGridViewTextBoxColumn
@@ -257,10 +260,10 @@ namespace Gestion_expertise
             // 
             this.btn_exporter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_exporter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_exporter.Location = new System.Drawing.Point(769, 527);
-            this.btn_exporter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exporter.Location = new System.Drawing.Point(577, 428);
+            this.btn_exporter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_exporter.Name = "btn_exporter";
-            this.btn_exporter.Size = new System.Drawing.Size(165, 32);
+            this.btn_exporter.Size = new System.Drawing.Size(124, 26);
             this.btn_exporter.TabIndex = 27;
             this.btn_exporter.Text = "Exporter";
             this.btn_exporter.UseVisualStyleBackColor = false;
@@ -279,13 +282,27 @@ namespace Gestion_expertise
             // 
             this.demandeurTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_recu
+            // 
+            this.btn_recu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_recu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_recu.Location = new System.Drawing.Point(225, 428);
+            this.btn_recu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_recu.Name = "btn_recu";
+            this.btn_recu.Size = new System.Drawing.Size(124, 26);
+            this.btn_recu.TabIndex = 28;
+            this.btn_recu.Text = "Exporter2";
+            this.btn_recu.UseVisualStyleBackColor = false;
+            this.btn_recu.Click += new System.EventHandler(this.btn_recu_Click);
+            // 
             // convocation_page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "convocation_page";
-            this.Size = new System.Drawing.Size(937, 564);
+            this.Size = new System.Drawing.Size(703, 458);
             this.Load += new System.EventHandler(this.convocation_page_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -320,5 +337,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkdef;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkdem;
         private System.Windows.Forms.Button btn_exporter;
+        private System.Windows.Forms.Button btn_recu;
     }
 }
