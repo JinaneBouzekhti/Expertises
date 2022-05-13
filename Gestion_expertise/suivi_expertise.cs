@@ -176,7 +176,8 @@ namespace Gestion_expertise
 
         private void cmb_CoursA_SelectedValueChanged(object sender, EventArgs e)
         {
-           
+            if (cmb_CoursA.Enabled)
+            {
                 if (cmb_CoursA.SelectedIndex > -1)
                 {
                     try
@@ -206,7 +207,8 @@ namespace Gestion_expertise
                     }
                     catch (Exception ex) { }
                 }
-            
+            }
+
         }
         private void TextBox_Enter(object sender, EventArgs e)
         {
@@ -312,11 +314,11 @@ namespace Gestion_expertise
             sa.Fill(dt);
 
            
-            string rqt = " update expertise set RefCabinet =@RefCabinet , RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where RefCabinet like '" + RefCabinet + "'";
+            string rqt = " update expertise set RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where RefCabinet like '" + RefCabinet + "'";
             SqlCommand com = new SqlCommand(rqt, cn);
 
-            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Texts)));
-            com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
+            //com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Texts)));
+           com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
             if(cmb_trib_pr.SelectedValue != null)
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(cmb_trib_pr.SelectedValue)));
             else

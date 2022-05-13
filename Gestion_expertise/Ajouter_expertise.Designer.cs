@@ -698,6 +698,7 @@ namespace Gestion_expertise
             // 
             // txt_ref_cab
             // 
+            this.txt_ref_cab.Enabled = false;
             this.txt_ref_cab.Location = new System.Drawing.Point(309, 3);
             this.txt_ref_cab.Name = "txt_ref_cab";
             this.txt_ref_cab.Size = new System.Drawing.Size(301, 25);
