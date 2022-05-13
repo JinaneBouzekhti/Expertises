@@ -37,31 +37,42 @@ namespace Gestion_expertise
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_copier = new System.Windows.Forms.TextBox();
             this.dgv_dem = new System.Windows.Forms.DataGridView();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_def = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_traiter = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.ch_def = new System.Windows.Forms.CheckBox();
             this.ch_dem = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_def)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_copier
             // 
-            this.txt_copier.Location = new System.Drawing.Point(12, 157);
+            this.txt_copier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_copier.Location = new System.Drawing.Point(3, 152);
             this.txt_copier.Multiline = true;
             this.txt_copier.Name = "txt_copier";
             this.txt_copier.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_copier.Size = new System.Drawing.Size(437, 515);
+            this.txt_copier.Size = new System.Drawing.Size(479, 516);
             this.txt_copier.TabIndex = 0;
             // 
             // dgv_dem
@@ -91,36 +102,24 @@ namespace Gestion_expertise
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_dem.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_dem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dem.EnableHeadersVisualStyles = false;
             this.dgv_dem.GridColor = System.Drawing.Color.Gray;
-            this.dgv_dem.Location = new System.Drawing.Point(469, 48);
+            this.dgv_dem.Location = new System.Drawing.Point(3, 40);
             this.dgv_dem.Name = "dgv_dem";
             this.dgv_dem.RowHeadersWidth = 51;
             this.dgv_dem.RowTemplate.Height = 29;
-            this.dgv_dem.Size = new System.Drawing.Size(501, 292);
+            this.dgv_dem.Size = new System.Drawing.Size(479, 292);
             this.dgv_dem.TabIndex = 3;
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            this.Type.Width = 150;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nom Complet";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.Width = 300;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Location = new System.Drawing.Point(3, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 115);
+            this.label1.Size = new System.Drawing.Size(479, 115);
             this.label1.TabIndex = 5;
             this.label1.Text = "Copier toutes les parties de l\'expertise a partire de site \r\n(www.mahakim.ma)\r\n__" +
     "___________________________________________________________\r\n\r\n Et collez-les ic" +
@@ -130,7 +129,7 @@ namespace Gestion_expertise
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(469, 23);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 6;
@@ -140,7 +139,7 @@ namespace Gestion_expertise
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(469, 357);
+            this.label3.Location = new System.Drawing.Point(3, 335);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 7;
@@ -173,34 +172,21 @@ namespace Gestion_expertise
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_def.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_def.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_def.EnableHeadersVisualStyles = false;
             this.dgv_def.GridColor = System.Drawing.Color.Gray;
-            this.dgv_def.Location = new System.Drawing.Point(469, 379);
+            this.dgv_def.Location = new System.Drawing.Point(3, 375);
             this.dgv_def.Name = "dgv_def";
             this.dgv_def.RowHeadersWidth = 51;
             this.dgv_def.RowTemplate.Height = 29;
-            this.dgv_def.Size = new System.Drawing.Size(501, 292);
+            this.dgv_def.Size = new System.Drawing.Size(479, 292);
             this.dgv_def.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Type";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nom Complet";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 300;
             // 
             // btn_ajouter
             // 
             this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_ajouter.Location = new System.Drawing.Point(828, 708);
+            this.btn_ajouter.Location = new System.Drawing.Point(334, 3);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(142, 32);
             this.btn_ajouter.TabIndex = 27;
@@ -212,7 +198,7 @@ namespace Gestion_expertise
             // 
             this.btn_traiter.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_traiter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_traiter.Location = new System.Drawing.Point(12, 677);
+            this.btn_traiter.Location = new System.Drawing.Point(3, 674);
             this.btn_traiter.Name = "btn_traiter";
             this.btn_traiter.Size = new System.Drawing.Size(173, 32);
             this.btn_traiter.TabIndex = 28;
@@ -224,7 +210,7 @@ namespace Gestion_expertise
             // 
             this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.btn_annuler.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_annuler.Location = new System.Drawing.Point(680, 708);
+            this.btn_annuler.Location = new System.Drawing.Point(186, 3);
             this.btn_annuler.Name = "btn_annuler";
             this.btn_annuler.Size = new System.Drawing.Size(142, 32);
             this.btn_annuler.TabIndex = 29;
@@ -236,7 +222,7 @@ namespace Gestion_expertise
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(469, 677);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 30;
@@ -246,7 +232,7 @@ namespace Gestion_expertise
             // 
             this.ch_def.AutoSize = true;
             this.ch_def.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.ch_def.Location = new System.Drawing.Point(540, 677);
+            this.ch_def.Location = new System.Drawing.Point(79, 3);
             this.ch_def.Name = "ch_def";
             this.ch_def.Size = new System.Drawing.Size(105, 24);
             this.ch_def.TabIndex = 31;
@@ -257,12 +243,117 @@ namespace Gestion_expertise
             // 
             this.ch_dem.AutoSize = true;
             this.ch_dem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.ch_dem.Location = new System.Drawing.Point(647, 677);
+            this.ch_dem.Location = new System.Drawing.Point(190, 3);
             this.ch_dem.Name = "ch_dem";
             this.ch_dem.Size = new System.Drawing.Size(113, 24);
             this.ch_dem.TabIndex = 32;
             this.ch_dem.Text = "Demandeur";
             this.ch_dem.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(982, 753);
+            this.tableLayoutPanel1.TabIndex = 33;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txt_copier, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn_traiter, 0, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(485, 747);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.dgv_dem, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.dgv_def, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel2, 0, 5);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(494, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(485, 747);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.ch_def);
+            this.flowLayoutPanel1.Controls.Add(this.ch_dem);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 673);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(479, 31);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btn_ajouter);
+            this.flowLayoutPanel2.Controls.Add(this.btn_annuler);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 710);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(479, 34);
+            this.flowLayoutPanel2.TabIndex = 10;
+            // 
+            // Type
+            // 
+            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Type.HeaderText = "Type";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            // 
+            // nom
+            // 
+            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nom.HeaderText = "Nom Complet";
+            this.nom.MinimumWidth = 6;
+            this.nom.Name = "nom";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nom Complet";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // ajouter_partie
             // 
@@ -270,26 +361,22 @@ namespace Gestion_expertise
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(982, 753);
-            this.Controls.Add(this.ch_dem);
-            this.Controls.Add(this.ch_def);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_annuler);
-            this.Controls.Add(this.btn_traiter);
-            this.Controls.Add(this.btn_ajouter);
-            this.Controls.Add(this.dgv_def);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgv_dem);
-            this.Controls.Add(this.txt_copier);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "ajouter_partie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ajouter_partie";
-            this.Load += new System.EventHandler(this.ajouter_partie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_def)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -299,17 +386,22 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridView dgv_dem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_def;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button btn_ajouter;
         private System.Windows.Forms.Button btn_traiter;
         private System.Windows.Forms.Button btn_annuler;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox ch_def;
         private System.Windows.Forms.CheckBox ch_dem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

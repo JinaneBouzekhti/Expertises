@@ -203,5 +203,33 @@ namespace Gestion_expertise
             Calandrier.Clandrier cal = new Calandrier.Clandrier();
             cal.Show();
         }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            string req = "select * from expertise";
+            SqlCommand com = new SqlCommand(req, cn);
+
+            SqlDataAdapter daExp = new SqlDataAdapter(com);
+
+            if (ds.Tables["expertise"] != null)
+                ds.Tables["expertise"].Clear();
+
+            daExp.Fill(ds, "expertise");
+
+            bsExp.DataSource = ds;
+            bsExp.DataMember = "expertise";
+
+            SqlCommandBuilder comB = new SqlCommandBuilder(daExp);
+
+
+            comboBox1.DataSource = bsExp;
+            comboBox1.DisplayMember = "RefCabinet";
+            comboBox1.ValueMember = "RefCabinet";
+            comboBox1.Text = "---Sélectionner une expertise--";
+            cn.Close();
+            
+        }
     }
 }

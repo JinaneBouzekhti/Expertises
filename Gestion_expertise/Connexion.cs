@@ -66,7 +66,7 @@ namespace Gestion_expertise
                     com.ExecuteNonQuery();
                 }
                 this.Hide();
-                main m1 = new main();
+                main m1 = new main();                
                 m1.Show();
                 
               

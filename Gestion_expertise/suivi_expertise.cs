@@ -540,7 +540,7 @@ namespace Gestion_expertise
                 if (dossier != "")
                 {
                     if (Directory.Exists(dossier))
-                        Directory.Delete(dossier);
+                        Directory.Delete(dossier,true);
                 }
                 com.ExecuteNonQuery();
                 this.Controls.Clear();

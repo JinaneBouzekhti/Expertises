@@ -20,10 +20,7 @@ namespace Gestion_expertise
             InitializeComponent();
         }
         string RefCabinet;
-        private void ajouter_partie_Load(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void btn_traiter_Click(object sender, EventArgs e)
         {
@@ -70,5 +67,7 @@ namespace Gestion_expertise
         {
             this.Close();
         }
+
+       
     }
 }
