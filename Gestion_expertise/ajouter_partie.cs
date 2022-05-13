@@ -14,12 +14,12 @@ namespace Gestion_expertise
 {
     public partial class ajouter_partie : Form
     {
-        public ajouter_partie(string numexp)
+        public ajouter_partie(string RefCabinet)
         {
-            this.numexp = numexp;
+            this.RefCabinet = RefCabinet;
             InitializeComponent();
         }
-        string numexp;
+        string RefCabinet;
         private void ajouter_partie_Load(object sender, EventArgs e)
         {
             
@@ -50,7 +50,7 @@ namespace Gestion_expertise
                 for (int i = 0; i < dgv_def.RowCount; i++)
                 {
                     if (dgv_def.Rows[i].Cells[1].Value.ToString() != "") { 
-                        SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,NumExp) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
+                        SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,RefCabinet) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "')", con);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -59,7 +59,7 @@ namespace Gestion_expertise
                 {
                     if (dgv_dem.Rows[i].Cells[1].Value.ToString() != "")
                     {
-                        SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,NumExp) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(numexp) + "')", con);
+                        SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,RefCabinet) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "')", con);
                         cmd.ExecuteNonQuery();
                     }
                 }

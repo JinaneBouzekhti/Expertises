@@ -35,12 +35,12 @@ namespace Gestion_expertise
 
         OpenFileDialog ofd = new OpenFileDialog();
         FolderBrowserDialog fbd = new FolderBrowserDialog();
-        public suivi_expertise(string numexp)
+        public suivi_expertise(string RefCabinet)
         {
             InitializeComponent();
-            this.numexp = numexp;
+            this.RefCabinet = RefCabinet;
         }
-        string numexp;
+        string RefCabinet;
 
         private void suivi_expertise_Load(object sender, EventArgs e)
         {
@@ -110,20 +110,20 @@ namespace Gestion_expertise
             com = null;
             comB = null;
 
-            SqlDataAdapter sa = new SqlDataAdapter("select * from expertise where NumExp like '" + numexp + "'", cn);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from expertise where RefCabinet like '" + RefCabinet + "'", cn);
             DataTable dt = new DataTable();
             sa.Fill(dt);
 
 
-            txt_ref_cab.Text = dt.Rows[0][1].ToString();
-            string Ref = dt.Rows[0][2].ToString();
+            txt_ref_cab.Texts = dt.Rows[0][0].ToString();
+            string Ref = dt.Rows[0][1].ToString();
             string[] list = Ref.Split('/');
 
             txt_refYear.Texts = list[0];
             com_RefType.Text = list[1];
             txt_refCode.Texts = list[2];
 
-            SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][3], cn);
+            SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][2], cn);
             DataTable dt1 = new DataTable();
             sa1.Fill(dt1);
             cmb_trib_pr.Text = dt1.Rows[0][1].ToString();
@@ -135,38 +135,39 @@ namespace Gestion_expertise
             cmb_CoursA.Text = dt2.Rows[0][1].ToString();
 
 
-            txt_magi.Texts = dt.Rows[0][4].ToString();
-            txt_jug.Texts = dt.Rows[0][5].ToString();
-            txt_gre.Texts = dt.Rows[0][6].ToString();
-            txt_type_dec.Texts = dt.Rows[0][7].ToString();
+            txt_magi.Texts = dt.Rows[0][3].ToString();
+            txt_jug.Texts = dt.Rows[0][4].ToString();
+            txt_gre.Texts = dt.Rows[0][5].ToString();
+            txt_type_dec.Texts = dt.Rows[0][6].ToString();
 
-            date_decision.Text = dt.Rows[0][8].ToString();
-            date_desi.Text = dt.Rows[0][9].ToString();
-            date_acc.Text = dt.Rows[0][10].ToString();
-            date_consi.Text = dt.Rows[0][11].ToString();
+            date_decision.Text = dt.Rows[0][7].ToString();
+            date_desi.Text = dt.Rows[0][8].ToString();
+            date_acc.Text = dt.Rows[0][9].ToString();
+            date_consi.Text = dt.Rows[0][10].ToString();
 
-            txt_lieu.Texts = dt.Rows[0][13].ToString();
+            txt_lieu.Texts = dt.Rows[0][12].ToString();
 
-            SqlDataAdapter sa3 = new SqlDataAdapter("select * from TypeExp  where NumTypeExp =" + dt.Rows[0][14], cn);
+            SqlDataAdapter sa3 = new SqlDataAdapter("select * from TypeExp  where NumTypeExp =" + dt.Rows[0][13], cn);
             DataTable dt3 = new DataTable();
             sa3.Fill(dt3);
             cmb_type_exp.Text = dt3.Rows[0][1].ToString();
 
-            date_conv.Text = dt.Rows[0][15].ToString();
-            date_rend.Text = dt.Rows[0][16].ToString();
+
+            date_conv.Text = dt.Rows[0][14].ToString();
+            date_rend.Text = dt.Rows[0][15].ToString();
 
 
-            txt_hor.Texts = dt.Rows[0][17].ToString();
-            txt_rep.Texts = dt.Rows[0][18].ToString();
+            txt_hor.Texts = dt.Rows[0][16].ToString();
+            txt_rep.Texts = dt.Rows[0][17].ToString();
 
-            SqlDataAdapter sa4 = new SqlDataAdapter("select * from Statut  where NumStatut =" + dt.Rows[0][19], cn);
+            SqlDataAdapter sa4 = new SqlDataAdapter("select * from Statut  where NumStatut =" + dt.Rows[0][18], cn);
             DataTable dt4 = new DataTable();
             sa4.Fill(dt4);
             cmb_stat.Text = dt4.Rows[0][1].ToString();
 
-            txt_montan.Texts = dt.Rows[0][12].ToString();
+            txt_montan.Texts = dt.Rows[0][11].ToString();
 
-            if (Convert.ToInt32(dt.Rows[0][20]) == 1)
+            if (Convert.ToInt32(dt.Rows[0][19]) == 1)
             {
                 cb_termine.Checked = true;
             }
@@ -175,8 +176,7 @@ namespace Gestion_expertise
 
         private void cmb_CoursA_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmb_CoursA.Enabled)
-            {
+           
                 if (cmb_CoursA.SelectedIndex > -1)
                 {
                     try
@@ -206,9 +206,8 @@ namespace Gestion_expertise
                     }
                     catch (Exception ex) { }
                 }
-            }
+            
         }
-
         private void TextBox_Enter(object sender, EventArgs e)
         {
             RJTextBox tb = null;
@@ -254,20 +253,18 @@ namespace Gestion_expertise
             string NameF;
             string date = DateTime.Now.ToString("yyyy");
             string ext = Path.GetExtension(ofd.FileName);
-            NameF = "EXP" + "-" + date + "-" + numexp + ext;
+            NameF = "EXP" + "-" + RefCabinet + "-" + date + ext;
             return NameF;
         }
 
         private void btn_Rep_Click(object sender, EventArgs e)
         {
             fbd.ShowDialog();
-            txt_rep.Texts = fbd.SelectedPath.ToString() + @"\" + GetFolderName() + @"\";
+            txt_rep.Texts = fbd.SelectedPath.ToString() + @"\" + GetFolderName() ;
         }
 
         public void Activate(Boolean v)
         {
-
-            txt_ref_cab.Enabled = v;
             txt_refYear.Enabled = v;
             com_RefType.Enabled = v;
             txt_refCode.Enabled = v;
@@ -303,22 +300,27 @@ namespace Gestion_expertise
        
         private void btn_valider_Click(object sender, EventArgs e)
         {
-
-
-
-            string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
+            string Ref = txt_refYear.Texts + "/" + com_RefType.Text + "/" + txt_refCode.Texts;
             bool tr = false;
             if (cb_termine.Checked)
                 tr = true;
 
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            string rqt = " update expertise set RefCabinet =@RefCabinet , RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where NumExp like '" + numexp + "'";
+            SqlDataAdapter sa = new SqlDataAdapter("select T.NumTribunalP from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP where RefCabinet like " + RefCabinet, cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+
+           
+            string rqt = " update expertise set RefCabinet =@RefCabinet , RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where RefCabinet like '" + RefCabinet + "'";
             SqlCommand com = new SqlCommand(rqt, cn);
 
-            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Text)));
+            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Texts)));
             com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
+            if(cmb_trib_pr.SelectedValue != null)
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(cmb_trib_pr.SelectedValue)));
+            else
+            com.Parameters.Add(new SqlParameter("@NumTribunalP", dt.Rows[0][0]));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magi.Texts));
             com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_jug.Texts));
             com.Parameters.Add(new SqlParameter("@NomGreffier", txt_gre.Texts));
@@ -337,30 +339,29 @@ namespace Gestion_expertise
             com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(cmb_stat.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@Terminer", tr));
 
+            //string rqtUnq = "select RefCabinet from expertise where NumExp !=" + numexp;
+            //SqlCommand com1 = new SqlCommand(rqtUnq, cn);
+            //bool Unq = false;
+            //SqlDataReader dr = com1.ExecuteReader();
 
-            string rqtUnq = "select RefCabinet from expertise where NumExp !=" + numexp;
-            SqlCommand com1 = new SqlCommand(rqtUnq, cn);
-            bool Unq = false;
-            SqlDataReader dr = com1.ExecuteReader();
 
+            //while (dr.Read())
+            //{
+            //    if (Convert.ToInt32(txt_ref_cab.Text) == Convert.ToInt32(dr[0]))
+            //    {
+            //        Unq = true;
+            //        break;
+            //    }
 
-            while (dr.Read())
-            {
-                if (Convert.ToInt32(txt_ref_cab.Text) == Convert.ToInt32(dr[0]))
-                {
-                    Unq = true;
-                    break;
-                }
+            //}
+            //dr.Close();
+            //dr = null;
+            //com1 = null;
 
-            }
-            dr.Close();
-            dr = null;
-            com1 = null;
-
-            if (!Unq)
-            {
-                string Chemin = txt_rep.Texts;
-                if (Chemin != "")
+            //if (!Unq)
+            //{
+            string Chemin = txt_rep.Texts;
+            if (Chemin != "")
                 {
                     DirectoryInfo Dir = new DirectoryInfo(Chemin);
                     if (!Dir.Exists)
@@ -381,11 +382,11 @@ namespace Gestion_expertise
                     Activate(false);
                 }
 
-            }
-            else
-            {
-                MessageBox.Show("Cette expertise existe déja", "Ereur");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Cette expertise existe déja", "Ereur");
+            //}
 
             com = null;
             cn.Close();
@@ -394,10 +395,9 @@ namespace Gestion_expertise
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
-           
-            string Ref = txt_refYear.Text + "/" + com_RefType.SelectedIndex + "/" + txt_refCode.Text;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
+            
 
             string req2 = "select* from TypeExp";
             com = new SqlCommand(req2, cn);
@@ -412,13 +412,13 @@ namespace Gestion_expertise
 
             comB = new SqlCommandBuilder(daTypeExp);
 
-            cmb_type_exp.DataSource = bsTypeExp;
-            cmb_type_exp.DisplayMember = "typeExp";
-            cmb_type_exp.ValueMember = "NumTypeExp";
+            com_RefType.DataSource = bsTypeExp;
+            com_RefType.DisplayMember = "Code";
+            com_RefType.ValueMember = "NumTypeExp";
+            com_RefType.Text = "-------";
 
             com = null;
             comB = null;
-
 
             string req = "select* from CoursAppel";
             com = new SqlCommand(req, cn);
@@ -440,7 +440,6 @@ namespace Gestion_expertise
             com = null;
             comB = null;
 
-
             string req3 = "select* from Statut";
             com = new SqlCommand(req3, cn);
             daStt = new SqlDataAdapter(com);
@@ -460,60 +459,66 @@ namespace Gestion_expertise
             com = null;
             comB = null;
 
-            SqlDataAdapter sa = new SqlDataAdapter("select * from expertise where NumExp like '" + numexp + "'", cn);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from expertise where RefCabinet like '" + RefCabinet + "'", cn);
             DataTable dt = new DataTable();
             sa.Fill(dt);
 
 
-            txt_ref_cab.Text = dt.Rows[0][1].ToString();
-            Ref = dt.Rows[0][2].ToString();
+            txt_ref_cab.Texts = dt.Rows[0][0].ToString();
+            string Ref = dt.Rows[0][1].ToString();
+            string[] list = Ref.Split('/');
 
-            SqlDataAdapter sa1 = new SqlDataAdapter("select * from TribunauxPremière where NumTribunalP =" + dt.Rows[0][3], cn);
+            txt_refYear.Texts = list[0];
+            com_RefType.Text = list[1];
+            txt_refCode.Texts = list[2];
+
+            SqlDataAdapter sa1 = new SqlDataAdapter("select NomTribunalP,NumCoursAppel from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP where RefCabinet like " + RefCabinet, cn);
             DataTable dt1 = new DataTable();
             sa1.Fill(dt1);
-            cmb_trib_pr.Text = dt1.Rows[0][1].ToString();
 
-            SqlDataAdapter sa2 = new SqlDataAdapter("select * from  CoursAppel  where NumCoursAppel =" + dt1.Rows[0][2], cn);
+            SqlDataAdapter sa2 = new SqlDataAdapter("select * from  CoursAppel  where NumCoursAppel =" + dt1.Rows[0][1], cn);
             DataTable dt2 = new DataTable();
             sa2.Fill(dt2);
             cmb_CoursA.Text = dt2.Rows[0][1].ToString();
 
+            cmb_trib_pr.Text = dt1.Rows[0][0].ToString();
 
-            txt_magi.Texts = dt.Rows[0][4].ToString();
-            txt_jug.Texts = dt.Rows[0][5].ToString();
-            txt_gre.Texts = dt.Rows[0][6].ToString();
-            txt_type_dec.Texts = dt.Rows[0][7].ToString();
+            txt_magi.Texts = dt.Rows[0][3].ToString();
+            txt_jug.Texts = dt.Rows[0][4].ToString();
+            txt_gre.Texts = dt.Rows[0][5].ToString();
+            txt_type_dec.Texts = dt.Rows[0][6].ToString();
 
-            date_decision.Text = dt.Rows[0][8].ToString();
-            date_desi.Text = dt.Rows[0][9].ToString();
-            date_acc.Text = dt.Rows[0][10].ToString();
-            date_consi.Text = dt.Rows[0][11].ToString();
+            date_decision.Text = dt.Rows[0][7].ToString();
+            date_desi.Text = dt.Rows[0][8].ToString();
+            date_acc.Text = dt.Rows[0][9].ToString();
+            date_consi.Text = dt.Rows[0][10].ToString();
 
-            txt_lieu.Texts = dt.Rows[0][13].ToString();
+            txt_lieu.Texts = dt.Rows[0][12].ToString();
 
-            SqlDataAdapter sa3 = new SqlDataAdapter("select * from TypeExp  where NumTypeExp =" + dt.Rows[0][14], cn);
+            SqlDataAdapter sa3 = new SqlDataAdapter("select * from TypeExp  where NumTypeExp =" + dt.Rows[0][13], cn);
             DataTable dt3 = new DataTable();
             sa3.Fill(dt3);
             cmb_type_exp.Text = dt3.Rows[0][1].ToString();
 
-            date_conv.Text = dt.Rows[0][15].ToString();
-            date_rend.Text = dt.Rows[0][16].ToString();
+            date_conv.Text = dt.Rows[0][14].ToString();
+            date_rend.Text = dt.Rows[0][15].ToString();
 
 
-            txt_hor.Texts = dt.Rows[0][17].ToString();
-            txt_rep.Texts = dt.Rows[0][18].ToString();
+            txt_hor.Texts = dt.Rows[0][16].ToString();
+            txt_rep.Texts = dt.Rows[0][17].ToString();
 
-            SqlDataAdapter sa4 = new SqlDataAdapter("select * from Statut  where NumStatut =" + dt.Rows[0][19], cn);
+            SqlDataAdapter sa4 = new SqlDataAdapter("select * from Statut  where NumStatut =" + dt.Rows[0][18], cn);
             DataTable dt4 = new DataTable();
             sa4.Fill(dt4);
             cmb_stat.Text = dt4.Rows[0][1].ToString();
 
-            txt_montan.Texts = dt.Rows[0][12].ToString();
+            txt_montan.Texts = dt.Rows[0][11].ToString();
 
-            if (Convert.ToInt32(dt.Rows[0][20]) == 1)
+            if (Convert.ToInt32(dt.Rows[0][19]) == 1)
             {
                 cb_termine.Checked = true;
             }
+
             Activate(false);
         }
 
@@ -527,7 +532,7 @@ namespace Gestion_expertise
                 
                 SqlConnection cn = new SqlConnection(cs);
                 cn.Open();
-                string rqt = "delete from expertise where NumExp like '" + numexp + "'";
+                string rqt = "delete from expertise where RefCabinet like '" + RefCabinet + "'";
                 SqlCommand com = new SqlCommand(rqt, cn);
 
                 if (dossier != "")
@@ -658,5 +663,7 @@ namespace Gestion_expertise
                 foreach (string s in opf.FileNames)
                     addfile(s, txt_rep.Texts +"\\");           
         }
+
+     
     }
 }

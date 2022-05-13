@@ -18,20 +18,20 @@ namespace Gestion_expertise
     {
         string sc = ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString;
 
-        public convocation_page(string numexp)
+        public convocation_page(string RefCabinet)
         {
             InitializeComponent();
-            this.numexp = numexp;
+            this.RefCabinet = RefCabinet;
         }
 
-        string numexp;
+        string RefCabinet;
           
         private void convocation_page_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(sc);
             con.Open();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from Défenseur where NumExp like '" + numexp + "'", con);
-            SqlDataAdapter sa2 = new SqlDataAdapter("select * from Demandeur where NumExp like '" + numexp + "'", con);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from Défenseur where RefCabinet like '" + RefCabinet + "'", con);
+            SqlDataAdapter sa2 = new SqlDataAdapter("select * from Demandeur where RefCabinet like '" + RefCabinet + "'", con);
             DataTable dt = new DataTable();
             DataTable dt2 = new DataTable();
             sa.Fill(dt);
@@ -48,7 +48,7 @@ namespace Gestion_expertise
             cn.Open();
 
 
-            string req = "select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDem As NomComplet, D.Adresse, RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Demandeur D on D.NumExp = E.NumExp  where E.NumExp like " + numexp + " union select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDéf As NomComplet , D.Adresse,RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Défenseur D on D.NumExp = E.NumExp  where E.NumExp like " + numexp;
+            string req = "select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDem As NomComplet, D.Adresse, RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Demandeur D on D.RefCabinet = E.RefCabinet  where E.RefCabinet like " + RefCabinet + " union select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDéf As NomComplet , D.Adresse,RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Défenseur D on D.RefCabinet = E.RefCabinet  where E.RefCabinet like " + RefCabinet;
             SqlCommand com = new SqlCommand(req, cn);
             SqlDataAdapter daCA = new SqlDataAdapter(com);
             DataTable data = new DataTable();
@@ -69,7 +69,7 @@ namespace Gestion_expertise
                 C.SetParameterValue("nom complet", data.Rows[i][6]);
                 C.SetParameterValue("adresse", data.Rows[i][7] is null ? " " : data.Rows[i][7]);
 
-                string Chemin = data.Rows[i][8].ToString() + "الاستدعاءات" + @"\";
+                string Chemin = data.Rows[i][8].ToString() + @"\" + "الاستدعاءات" + @"\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
                 if (!Dir.Exists)
                     Dir.Create();
@@ -86,7 +86,7 @@ namespace Gestion_expertise
             cn.Open();
 
 
-            string req = "select RefRéféré,RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDem As NomComplet ,RépertoireDoc from Demandeur D inner join expertise E on D.NumExp = E.NumExp where E.NumExp  like " + numexp + " Union  select  RefRéféré,RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDéf As NomComplet ,RépertoireDoc from Défenseur Df inner join expertise E on Df.NumExp = E.NumExp   where E.NumExp  like " + numexp;
+            string req = "select RefRéféré,E.RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDem As NomComplet ,RépertoireDoc from Demandeur D inner join expertise E on D.RefCabinet = E.RefCabinet where E.RefCabinet  like " + RefCabinet + " Union  select  RefRéféré,E.RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDéf As NomComplet ,RépertoireDoc from Défenseur Df inner join expertise E on Df.RefCabinet = E.RefCabinet   where E.RefCabinet  like " + RefCabinet;
             SqlCommand com = new SqlCommand(req, cn);
             SqlDataAdapter daCA = new SqlDataAdapter(com);
             DataTable data = new DataTable();
@@ -101,7 +101,7 @@ namespace Gestion_expertise
                 C.SetParameterValue("Date_Reçu", Convert.ToDateTime(data.Rows[i][2]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
                 C.SetParameterValue("HeurRv", data.Rows[i][3]);
                 C.SetParameterValue("DateRV", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
-                string Chemin = data.Rows[i][6].ToString() + "التسليمات" + @"\";
+                string Chemin = data.Rows[i][6].ToString() + @"\" + "التسليمات" + @"\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
                 if (!Dir.Exists)
                     Dir.Create();

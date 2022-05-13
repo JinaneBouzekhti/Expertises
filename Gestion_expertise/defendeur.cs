@@ -14,17 +14,17 @@ namespace Gestion_expertise
 {
     public partial class defendeur : UserControl
     {
-        public defendeur(string numexp)
+        public defendeur(string RefCabinet)
         {
             InitializeComponent();
-            this.numexp = numexp;
+            this.RefCabinet = RefCabinet;
         }
-        string numexp;
+        string RefCabinet;
         private void defendeur_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
             con.Open();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from Défenseur where NumExp like '" + numexp + "'", con);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from Défenseur where RefCabinet like '" + RefCabinet + "'", con);
             DataTable dt = new DataTable();
             sa.Fill(dt);
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -33,7 +33,7 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            ajouter_partie ap = new ajouter_partie(numexp);
+            ajouter_partie ap = new ajouter_partie(RefCabinet);
             ap.Show();
         }
 

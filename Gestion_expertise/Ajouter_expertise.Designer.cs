@@ -66,7 +66,6 @@ namespace Gestion_expertise
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.txt_ref_cab = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.com_tribunalP = new System.Windows.Forms.ComboBox();
             this.lbl_VideDs = new System.Windows.Forms.Label();
@@ -85,7 +84,7 @@ namespace Gestion_expertise
             this.label2 = new System.Windows.Forms.Label();
             this.txt_refYear = new System.Windows.Forms.TextBox();
             this.txt_refCode = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).BeginInit();
+            this.txt_ref_cab = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -422,18 +421,6 @@ namespace Gestion_expertise
             this.label14.TabIndex = 104;
             this.label14.Text = "Référence du cabinet";
             // 
-            // txt_ref_cab
-            // 
-            this.txt_ref_cab.Location = new System.Drawing.Point(309, 3);
-            this.txt_ref_cab.Maximum = new decimal(new int[] {
-            -1981284352,
-            -1966660860,
-            0,
-            0});
-            this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Size = new System.Drawing.Size(301, 25);
-            this.txt_ref_cab.TabIndex = 103;
-            // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.White;
@@ -610,10 +597,10 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.txt_ref_cab, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label16, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txt_ref_cab, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -628,6 +615,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(613, 559);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -708,6 +696,13 @@ namespace Gestion_expertise
             this.txt_refCode.Size = new System.Drawing.Size(85, 25);
             this.txt_refCode.TabIndex = 6;
             // 
+            // txt_ref_cab
+            // 
+            this.txt_ref_cab.Location = new System.Drawing.Point(309, 3);
+            this.txt_ref_cab.Name = "txt_ref_cab";
+            this.txt_ref_cab.Size = new System.Drawing.Size(301, 25);
+            this.txt_ref_cab.TabIndex = 107;
+            // 
             // Ajouter_expertise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -722,7 +717,6 @@ namespace Gestion_expertise
             this.Text = "Ajouter_expertise";
             this.Load += new System.EventHandler(this.Ajouter_expertise_Load);
             this.SizeChanged += new System.EventHandler(this.Ajouter_expertise_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_ref_cab)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -784,7 +778,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.ComboBox com_tribunalP;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown txt_ref_cab;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -799,5 +792,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_refYear;
         private System.Windows.Forms.TextBox txt_refCode;
+        private System.Windows.Forms.TextBox txt_ref_cab;
     }
 }

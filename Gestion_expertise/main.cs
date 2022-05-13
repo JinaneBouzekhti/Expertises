@@ -48,8 +48,9 @@ namespace Gestion_expertise
 
             comboBox1.DataSource = bsExp;
             comboBox1.DisplayMember = "RefCabinet";
-            comboBox1.ValueMember = "NumExp";
+            comboBox1.ValueMember = "RefCabinet";
             comboBox1.Text = "---Sélectionner une expertise--";
+
             mainpanel.Controls.Clear();
             ToutesExp TtExp = new ToutesExp();
             mainpanel.Controls.Add(TtExp);

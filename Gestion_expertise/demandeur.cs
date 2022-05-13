@@ -14,17 +14,17 @@ namespace Gestion_expertise
 {
     public partial class demandeur : UserControl
     {
-        public demandeur(string numexp)
+        public demandeur(string RefCabinet)
         {
             InitializeComponent();
-            this.numexp = numexp;
+            this.RefCabinet = RefCabinet;
         }
-        string numexp;
+        string RefCabinet;
         private void UserControl1_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
             con.Open();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from Demandeur where NumExp like '" + numexp + "'", con);
+            SqlDataAdapter sa = new SqlDataAdapter("select * from Demandeur where RefCabinet like '" + RefCabinet + "'", con);
             DataTable dt = new DataTable();
             sa.Fill(dt);
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -34,7 +34,7 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            ajouter_partie ap = new ajouter_partie(numexp);
+            ajouter_partie ap = new ajouter_partie(RefCabinet);
             ap.Show();
         }
         private void btn_save_Click(object sender, EventArgs e)
@@ -61,5 +61,7 @@ namespace Gestion_expertise
                 this.Font = new Font("Arial", 14, FontStyle.Regular);
             }
         }
+
+        
     }
 }

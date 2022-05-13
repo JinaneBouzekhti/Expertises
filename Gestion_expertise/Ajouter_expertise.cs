@@ -42,9 +42,21 @@ namespace Gestion_expertise
 
         private void Ajouter_expertise_Load(object sender, EventArgs e)
         {
+            int RefCab;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
+           
+            SqlDataAdapter sa = new SqlDataAdapter("select Max(RefCabinet) from expertise", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
 
+            if (dt.Rows[0][0].ToString().Equals(""))
+                RefCab = 0;
+            else
+                RefCab = Convert.ToInt32(dt.Rows[0][0]);
+
+            RefCab += 1;
+            txt_ref_cab.Text = RefCab.ToString();
             //Remplisage comboBox CoursA:
             string req = "select* from CoursAppel";
             com = new SqlCommand(req, cn);
@@ -150,31 +162,32 @@ namespace Gestion_expertise
 
         public string GetFolderName()
         {
-            int NumExp;
+            int RefCab;
             string NameF;
 
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            SqlDataAdapter sa = new SqlDataAdapter("select Max(NumExp) from expertise", cn);
+            SqlDataAdapter sa = new SqlDataAdapter("select Max(RefCabinet) from expertise", cn);
             DataTable dt = new DataTable();
             sa.Fill(dt);
 
             if (dt.Rows[0][0].ToString().Equals(""))
-                NumExp = 0;
+                RefCab = 0;
             else
-                NumExp = Convert.ToInt32(dt.Rows[0][0]);
+                RefCab = Convert.ToInt32(dt.Rows[0][0]);
 
-            NumExp += 1;
+            RefCab += 1;
 
             string date = DateTime.Now.ToString("yyyy");
             string ext = Path.GetExtension(ofd.FileName);
-            NameF = "EXP" + "-" + date + "-" + NumExp + ext;
+            NameF = "EXP" + "-" + RefCab + "-" + date + ext;
             return NameF;
         }
+
         private void btn_open_file_Click(object sender, EventArgs e)
         {
             fbd.ShowDialog();
-            txt_rep.Text = fbd.SelectedPath.ToString() + @"\" + GetFolderName() + @"\";
+            txt_rep.Text = fbd.SelectedPath.ToString() + @"\" + GetFolderName();
         }
 
         private void btn_ajouter_Click(object sender, EventArgs e)
@@ -183,23 +196,22 @@ namespace Gestion_expertise
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
-            string rqt = "insert into expertise values (@NumExp,@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
+            string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
 
             com = new SqlCommand(rqt, cn);
-            int NumExp;
-            SqlDataAdapter sa = new SqlDataAdapter("select Max(NumExp) from expertise", cn);
-            DataTable dt = new DataTable();
-            sa.Fill(dt);
-            if (dt.Rows[0][0].ToString().Equals(""))
-                NumExp = 0;
-            else
-                NumExp = Convert.ToInt32(dt.Rows[0][0]);
+            //int RefCab;
+            //SqlDataAdapter sa = new SqlDataAdapter("select Max(RefCabinet) from expertise", cn);
+            //DataTable dt = new DataTable();
+            //sa.Fill(dt);
+            //if (dt.Rows[0][0].ToString().Equals(""))
+            //    RefCab = 0;
+            //else
+            //    RefCab = Convert.ToInt32(dt.Rows[0][0]);
 
 
-            NumExp += 1;
+            //RefCab += 1;
             bool terminer = false;
-            com.Parameters.Add(new SqlParameter("@NumExp", NumExp));
-            com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Text)));
+            com.Parameters.Add(new SqlParameter("@RefCabinet", txt_ref_cab.Text));
             com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
@@ -220,27 +232,27 @@ namespace Gestion_expertise
             com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(com_statu.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@Terminer", terminer));
 
-            string rqtUnq = "select RefCabinet from expertise";
-            SqlCommand com1 = new SqlCommand(rqtUnq, cn);
-            bool Unq = false;
-            SqlDataReader dr = com1.ExecuteReader();
+            //string rqtPK = "select RefCabinet from expertise";
+            //SqlCommand com1 = new SqlCommand(rqtPK, cn);
+            //bool Unq = false;
+            //SqlDataReader dr = com1.ExecuteReader();
 
 
-            while (dr.Read())
-            {
-                if (Convert.ToInt32(dr[0]) == Convert.ToInt32(txt_ref_cab.Text))
-                {
-                    MessageBox.Show("Cette expertise existe déja", "Ereur");
-                    Unq = true;
-                    break;
-                }
+            //while (dr.Read())
+            //{
+            //    if (Convert.ToInt32(dr[0]) == Convert.ToInt32(txt_ref_cab.Text))
+            //    {
+            //        MessageBox.Show("Cette expertise existe déja", "Ereur");
+            //        Unq = true;
+            //        break;
+            //    }
 
-            }
-            dr.Close();
-            dr = null;
-            com1 = null;
-            if (!Unq)
-            {
+            //}
+            //dr.Close();
+            //dr = null;
+            //com1 = null;
+            //if (!Unq)
+            //{
 
 
                 if (txt_rep.Text == "" || txt_rep.Text == @"\")
@@ -261,7 +273,7 @@ namespace Gestion_expertise
                     }
                 }
 
-            }
+            //}
 
             com = null;
             cn.Close();
@@ -327,5 +339,6 @@ namespace Gestion_expertise
                 catch (Exception ex) { }
             }
         }
+
     }
 }
