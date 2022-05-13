@@ -198,6 +198,10 @@ namespace Gestion_expertise
             Btn_Suivi.Enabled = true;
         }
 
-       
+        private void btn_Calendrier_Click(object sender, EventArgs e)
+        {
+            Calandrier.Clandrier cal = new Calandrier.Clandrier();
+            cal.Show();
+        }
     }
 }

@@ -63,6 +63,16 @@ namespace Gestion_expertise.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendrier {
+            get {
+                object obj = ResourceManager.GetObject("calendrier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Component_1__1_ {
             get {
                 object obj = ResourceManager.GetObject("Component 1 (1)", resourceCulture);

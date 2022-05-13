@@ -37,7 +37,6 @@ namespace Gestion_expertise
             this.Btn_Dem = new System.Windows.Forms.Button();
             this.Btn_Suivi = new System.Windows.Forms.Button();
             this.iconpanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.navbarpanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_TtExp = new System.Windows.Forms.Button();
@@ -46,13 +45,16 @@ namespace Gestion_expertise
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.folderView1 = new Gestion_expertise.FolderView();
+            this.btn_calendrier = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.sidebarpanel.SuspendLayout();
             this.iconpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.navbarpanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_calendrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,20 +179,6 @@ namespace Gestion_expertise
             this.iconpanel.Size = new System.Drawing.Size(229, 155);
             this.iconpanel.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.pictureBox1.BackgroundImage = global::Gestion_expertise.Properties.Resources.Red_Attorney__Law_Logo___Logos__2_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 155);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // navbarpanel
             // 
             this.navbarpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(233)))));
@@ -204,15 +192,17 @@ namespace Gestion_expertise
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel2.Controls.Add(this.Btn_TtExp, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_calendrier, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
@@ -248,7 +238,7 @@ namespace Gestion_expertise
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button3.Location = new System.Drawing.Point(914, 5);
+            this.button3.Location = new System.Drawing.Point(857, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 38);
@@ -262,7 +252,7 @@ namespace Gestion_expertise
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 20;
-            this.comboBox1.Location = new System.Drawing.Point(629, 10);
+            this.comboBox1.Location = new System.Drawing.Point(572, 10);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(281, 28);
@@ -307,6 +297,32 @@ namespace Gestion_expertise
             this.folderView1.Size = new System.Drawing.Size(31, 693);
             this.folderView1.TabIndex = 4;
             // 
+            // btn_calendrier
+            // 
+            this.btn_calendrier.ErrorImage = null;
+            this.btn_calendrier.Image = global::Gestion_expertise.Properties.Resources.calendrier;
+            this.btn_calendrier.Location = new System.Drawing.Point(1029, 3);
+            this.btn_calendrier.Name = "btn_calendrier";
+            this.btn_calendrier.Size = new System.Drawing.Size(51, 42);
+            this.btn_calendrier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btn_calendrier.TabIndex = 10;
+            this.btn_calendrier.TabStop = false;
+            this.btn_calendrier.Click += new System.EventHandler(this.btn_Calendrier_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.pictureBox1.BackgroundImage = global::Gestion_expertise.Properties.Resources.Red_Attorney__Law_Logo___Logos__2_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 155);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -326,10 +342,11 @@ namespace Gestion_expertise
             this.panel1.ResumeLayout(false);
             this.sidebarpanel.ResumeLayout(false);
             this.iconpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.navbarpanel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_calendrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,5 +370,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.Panel mainpanel;
         private FolderView folderView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox btn_calendrier;
     }
 }
