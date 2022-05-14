@@ -38,9 +38,9 @@ namespace Gestion_expertise
             this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avocat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_ajouter = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_ajouter = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -127,19 +127,6 @@ namespace Gestion_expertise
             this.telephone.MinimumWidth = 6;
             this.telephone.Name = "telephone";
             // 
-            // btn_ajouter
-            // 
-            this.btn_ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_ajouter.Location = new System.Drawing.Point(967, 9);
-            this.btn_ajouter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(165, 32);
-            this.btn_ajouter.TabIndex = 26;
-            this.btn_ajouter.Text = "ajouter";
-            this.btn_ajouter.UseVisualStyleBackColor = false;
-            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -172,10 +159,27 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1135, 51);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
+            // btn_ajouter
+            // 
+            this.btn_ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px1;
+            this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ajouter.Location = new System.Drawing.Point(967, 9);
+            this.btn_ajouter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ajouter.Name = "btn_ajouter";
+            this.btn_ajouter.Size = new System.Drawing.Size(165, 32);
+            this.btn_ajouter.TabIndex = 26;
+            this.btn_ajouter.Text = "ajouter";
+            this.btn_ajouter.UseVisualStyleBackColor = false;
+            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
+            // 
             // btn_save
             // 
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_save.Image = global::Gestion_expertise.Properties.Resources.save_as_25px;
+            this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_save.Location = new System.Drawing.Point(796, 9);
             this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save.Name = "btn_save";

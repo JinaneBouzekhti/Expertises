@@ -192,7 +192,7 @@ namespace Gestion_expertise
             this.com_CoursA.FormattingEnabled = true;
             this.com_CoursA.Location = new System.Drawing.Point(3, 3);
             this.com_CoursA.Name = "com_CoursA";
-            this.com_CoursA.Size = new System.Drawing.Size(144, 25);
+            this.com_CoursA.Size = new System.Drawing.Size(144, 31);
             this.com_CoursA.TabIndex = 2;
             this.com_CoursA.SelectedValueChanged += new System.EventHandler(this.com_CoursA_SelectedValueChanged);
             this.com_CoursA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_tribunal_KeyDown);
@@ -201,28 +201,28 @@ namespace Gestion_expertise
             // 
             this.txt_magistrat.Location = new System.Drawing.Point(309, 168);
             this.txt_magistrat.Name = "txt_magistrat";
-            this.txt_magistrat.Size = new System.Drawing.Size(301, 25);
+            this.txt_magistrat.Size = new System.Drawing.Size(301, 30);
             this.txt_magistrat.TabIndex = 3;
             // 
             // txt_juge
             // 
             this.txt_juge.Location = new System.Drawing.Point(309, 223);
             this.txt_juge.Name = "txt_juge";
-            this.txt_juge.Size = new System.Drawing.Size(301, 25);
+            this.txt_juge.Size = new System.Drawing.Size(301, 30);
             this.txt_juge.TabIndex = 4;
             // 
             // txt_greffier
             // 
             this.txt_greffier.Location = new System.Drawing.Point(309, 278);
             this.txt_greffier.Name = "txt_greffier";
-            this.txt_greffier.Size = new System.Drawing.Size(301, 25);
+            this.txt_greffier.Size = new System.Drawing.Size(301, 30);
             this.txt_greffier.TabIndex = 5;
             // 
             // txt_type_decision
             // 
             this.txt_type_decision.Location = new System.Drawing.Point(309, 333);
             this.txt_type_decision.Name = "txt_type_decision";
-            this.txt_type_decision.Size = new System.Drawing.Size(301, 25);
+            this.txt_type_decision.Size = new System.Drawing.Size(301, 30);
             this.txt_type_decision.TabIndex = 6;
             // 
             // label25
@@ -293,7 +293,7 @@ namespace Gestion_expertise
             this.com_statu.FormattingEnabled = true;
             this.com_statu.Location = new System.Drawing.Point(310, 388);
             this.com_statu.Name = "com_statu";
-            this.com_statu.Size = new System.Drawing.Size(301, 25);
+            this.com_statu.Size = new System.Drawing.Size(301, 31);
             this.com_statu.TabIndex = 23;
             this.com_statu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_statu_KeyDown);
             // 
@@ -303,7 +303,7 @@ namespace Gestion_expertise
             this.com_type_exp.FormattingEnabled = true;
             this.com_type_exp.Location = new System.Drawing.Point(310, 113);
             this.com_type_exp.Name = "com_type_exp";
-            this.com_type_exp.Size = new System.Drawing.Size(301, 25);
+            this.com_type_exp.Size = new System.Drawing.Size(301, 31);
             this.com_type_exp.TabIndex = 17;
             this.com_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_type_exp_KeyDown);
             // 
@@ -312,21 +312,21 @@ namespace Gestion_expertise
             this.txt_rep.Location = new System.Drawing.Point(3, 3);
             this.txt_rep.Name = "txt_rep";
             this.txt_rep.ReadOnly = true;
-            this.txt_rep.Size = new System.Drawing.Size(223, 25);
+            this.txt_rep.Size = new System.Drawing.Size(223, 30);
             this.txt_rep.TabIndex = 21;
             // 
             // txt_horai
             // 
             this.txt_horai.Location = new System.Drawing.Point(310, 278);
             this.txt_horai.Name = "txt_horai";
-            this.txt_horai.Size = new System.Drawing.Size(301, 25);
+            this.txt_horai.Size = new System.Drawing.Size(301, 30);
             this.txt_horai.TabIndex = 20;
             // 
             // txt_lieu
             // 
             this.txt_lieu.Location = new System.Drawing.Point(310, 58);
             this.txt_lieu.Name = "txt_lieu";
-            this.txt_lieu.Size = new System.Drawing.Size(301, 25);
+            this.txt_lieu.Size = new System.Drawing.Size(301, 30);
             this.txt_lieu.TabIndex = 16;
             // 
             // date_decision
@@ -334,7 +334,7 @@ namespace Gestion_expertise
             this.date_decision.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_decision.Location = new System.Drawing.Point(309, 388);
             this.date_decision.Name = "date_decision";
-            this.date_decision.Size = new System.Drawing.Size(301, 25);
+            this.date_decision.Size = new System.Drawing.Size(301, 30);
             this.date_decision.TabIndex = 7;
             this.date_decision.Value = new System.DateTime(2022, 4, 25, 0, 0, 0, 0);
             // 
@@ -343,7 +343,7 @@ namespace Gestion_expertise
             this.date_desi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_desi.Location = new System.Drawing.Point(309, 443);
             this.date_desi.Name = "date_desi";
-            this.date_desi.Size = new System.Drawing.Size(301, 25);
+            this.date_desi.Size = new System.Drawing.Size(301, 30);
             this.date_desi.TabIndex = 9;
             // 
             // date_acc
@@ -351,7 +351,7 @@ namespace Gestion_expertise
             this.date_acc.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_acc.Location = new System.Drawing.Point(309, 498);
             this.date_acc.Name = "date_acc";
-            this.date_acc.Size = new System.Drawing.Size(301, 25);
+            this.date_acc.Size = new System.Drawing.Size(301, 30);
             this.date_acc.TabIndex = 10;
             // 
             // date_consi
@@ -359,7 +359,7 @@ namespace Gestion_expertise
             this.date_consi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_consi.Location = new System.Drawing.Point(310, 3);
             this.date_consi.Name = "date_consi";
-            this.date_consi.Size = new System.Drawing.Size(301, 25);
+            this.date_consi.Size = new System.Drawing.Size(301, 30);
             this.date_consi.TabIndex = 11;
             // 
             // date_conv
@@ -367,7 +367,7 @@ namespace Gestion_expertise
             this.date_conv.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_conv.Location = new System.Drawing.Point(310, 168);
             this.date_conv.Name = "date_conv";
-            this.date_conv.Size = new System.Drawing.Size(301, 25);
+            this.date_conv.Size = new System.Drawing.Size(301, 30);
             this.date_conv.TabIndex = 18;
             // 
             // date_rend
@@ -375,7 +375,7 @@ namespace Gestion_expertise
             this.date_rend.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_rend.Location = new System.Drawing.Point(310, 223);
             this.date_rend.Name = "date_rend";
-            this.date_rend.Size = new System.Drawing.Size(301, 25);
+            this.date_rend.Size = new System.Drawing.Size(301, 30);
             this.date_rend.TabIndex = 19;
             // 
             // btn_open_file
@@ -435,7 +435,7 @@ namespace Gestion_expertise
             this.com_tribunalP.FormattingEnabled = true;
             this.com_tribunalP.Location = new System.Drawing.Point(153, 3);
             this.com_tribunalP.Name = "com_tribunalP";
-            this.com_tribunalP.Size = new System.Drawing.Size(145, 25);
+            this.com_tribunalP.Size = new System.Drawing.Size(145, 31);
             this.com_tribunalP.TabIndex = 92;
             // 
             // lbl_VideDs
@@ -459,7 +459,7 @@ namespace Gestion_expertise
             0,
             0});
             this.txt_montant.Name = "txt_montant";
-            this.txt_montant.Size = new System.Drawing.Size(301, 25);
+            this.txt_montant.Size = new System.Drawing.Size(301, 30);
             this.txt_montant.TabIndex = 92;
             // 
             // tableLayoutPanel1
@@ -660,7 +660,7 @@ namespace Gestion_expertise
             this.com_RefType.FormattingEnabled = true;
             this.com_RefType.Location = new System.Drawing.Point(108, 3);
             this.com_RefType.Name = "com_RefType";
-            this.com_RefType.Size = new System.Drawing.Size(82, 25);
+            this.com_RefType.Size = new System.Drawing.Size(82, 31);
             this.com_RefType.TabIndex = 1;
             this.com_RefType.SelectedIndexChanged += new System.EventHandler(this.com_RefType_SelectedIndexChanged);
             // 
@@ -669,7 +669,7 @@ namespace Gestion_expertise
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(91, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 19);
+            this.label1.Size = new System.Drawing.Size(11, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "/";
             // 
@@ -678,7 +678,7 @@ namespace Gestion_expertise
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(196, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 19);
+            this.label2.Size = new System.Drawing.Size(11, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "/";
             // 
@@ -686,14 +686,14 @@ namespace Gestion_expertise
             // 
             this.txt_refYear.Location = new System.Drawing.Point(3, 3);
             this.txt_refYear.Name = "txt_refYear";
-            this.txt_refYear.Size = new System.Drawing.Size(82, 25);
+            this.txt_refYear.Size = new System.Drawing.Size(82, 30);
             this.txt_refYear.TabIndex = 5;
             // 
             // txt_refCode
             // 
             this.txt_refCode.Location = new System.Drawing.Point(213, 3);
             this.txt_refCode.Name = "txt_refCode";
-            this.txt_refCode.Size = new System.Drawing.Size(85, 25);
+            this.txt_refCode.Size = new System.Drawing.Size(85, 30);
             this.txt_refCode.TabIndex = 6;
             // 
             // txt_ref_cab
@@ -701,12 +701,12 @@ namespace Gestion_expertise
             this.txt_ref_cab.Enabled = false;
             this.txt_ref_cab.Location = new System.Drawing.Point(309, 3);
             this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Size = new System.Drawing.Size(301, 25);
+            this.txt_ref_cab.Size = new System.Drawing.Size(301, 30);
             this.txt_ref_cab.TabIndex = 107;
             // 
             // Ajouter_expertise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1271, 581);

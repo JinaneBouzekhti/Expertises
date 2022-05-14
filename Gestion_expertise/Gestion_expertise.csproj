@@ -344,5 +344,50 @@
   <ItemGroup>
     <None Include="Resources\calendrier1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_tab_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_tab_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_tab_25px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet List_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\judge_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_as_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_trash_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_property_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_page_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_to_50px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

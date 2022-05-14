@@ -37,11 +37,14 @@ namespace Gestion_expertise
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_copier = new System.Windows.Forms.TextBox();
             this.dgv_dem = new System.Windows.Forms.DataGridView();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_def = new System.Windows.Forms.DataGridView();
-            this.btn_ajouter = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_traiter = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,10 +55,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_ajouter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_def)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -111,6 +111,20 @@ namespace Gestion_expertise
             this.dgv_dem.RowTemplate.Height = 29;
             this.dgv_dem.Size = new System.Drawing.Size(479, 292);
             this.dgv_dem.TabIndex = 3;
+            // 
+            // Type
+            // 
+            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Type.HeaderText = "Type";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            // 
+            // nom
+            // 
+            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nom.HeaderText = "Nom Complet";
+            this.nom.MinimumWidth = 6;
+            this.nom.Name = "nom";
             // 
             // label1
             // 
@@ -182,22 +196,26 @@ namespace Gestion_expertise
             this.dgv_def.Size = new System.Drawing.Size(479, 292);
             this.dgv_def.TabIndex = 8;
             // 
-            // btn_ajouter
+            // dataGridViewTextBoxColumn1
             // 
-            this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_ajouter.Location = new System.Drawing.Point(334, 3);
-            this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(142, 32);
-            this.btn_ajouter.TabIndex = 27;
-            this.btn_ajouter.Text = "Ajouter";
-            this.btn_ajouter.UseVisualStyleBackColor = false;
-            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nom Complet";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // btn_traiter
             // 
             this.btn_traiter.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_traiter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_traiter.Image = global::Gestion_expertise.Properties.Resources.filter_25px;
+            this.btn_traiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_traiter.Location = new System.Drawing.Point(3, 674);
             this.btn_traiter.Name = "btn_traiter";
             this.btn_traiter.Size = new System.Drawing.Size(173, 32);
@@ -209,9 +227,12 @@ namespace Gestion_expertise
             // btn_annuler
             // 
             this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_annuler.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_annuler.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
+            this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_annuler.Location = new System.Drawing.Point(186, 3);
             this.btn_annuler.Name = "btn_annuler";
+            this.btn_annuler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_annuler.Size = new System.Drawing.Size(142, 32);
             this.btn_annuler.TabIndex = 29;
             this.btn_annuler.Text = "Annuler";
@@ -327,33 +348,20 @@ namespace Gestion_expertise
             this.flowLayoutPanel2.Size = new System.Drawing.Size(479, 34);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
-            // Type
+            // btn_ajouter
             // 
-            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            // 
-            // nom
-            // 
-            this.nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nom.HeaderText = "Nom Complet";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Type";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nom Complet";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px1;
+            this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ajouter.Location = new System.Drawing.Point(334, 3);
+            this.btn_ajouter.Name = "btn_ajouter";
+            this.btn_ajouter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_ajouter.Size = new System.Drawing.Size(142, 32);
+            this.btn_ajouter.TabIndex = 27;
+            this.btn_ajouter.Text = "Ajouter";
+            this.btn_ajouter.UseVisualStyleBackColor = false;
+            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
             // ajouter_partie
             // 

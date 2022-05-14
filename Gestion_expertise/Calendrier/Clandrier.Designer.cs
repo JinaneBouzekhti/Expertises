@@ -39,8 +39,8 @@ namespace Gestion_expertise.Calandrier
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.yearmonth = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // container
@@ -122,7 +122,7 @@ namespace Gestion_expertise.Calandrier
             // 
             // yearmonth
             // 
-            this.yearmonth.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.yearmonth.BackColor = System.Drawing.SystemColors.Control;
             this.yearmonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.yearmonth.Location = new System.Drawing.Point(402, -1);
             this.yearmonth.Name = "yearmonth";
@@ -131,33 +131,33 @@ namespace Gestion_expertise.Calandrier
             this.yearmonth.Text = "month , year";
             this.yearmonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button1.Location = new System.Drawing.Point(903, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 55);
-            this.button1.TabIndex = 7;
-            this.button1.Text = ">";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button2.Location = new System.Drawing.Point(402, -1);
+            this.button2.Image = global::Gestion_expertise.Properties.Resources.back_to_50px;
+            this.button2.Location = new System.Drawing.Point(462, -2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 55);
+            this.button2.Size = new System.Drawing.Size(49, 55);
             this.button2.TabIndex = 8;
-            this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.button1.Image = global::Gestion_expertise.Properties.Resources.next_page_50px;
+            this.button1.Location = new System.Drawing.Point(858, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 55);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Clandrier
             // 

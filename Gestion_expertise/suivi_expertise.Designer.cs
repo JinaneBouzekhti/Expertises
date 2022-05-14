@@ -526,10 +526,10 @@ namespace Gestion_expertise
             this.txt_lieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lieu.ForeColor = System.Drawing.Color.DimGray;
             this.txt_lieu.Location = new System.Drawing.Point(5, 447);
-            this.txt_lieu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_lieu.Margin = new System.Windows.Forms.Padding(5);
             this.txt_lieu.Multiline = false;
             this.txt_lieu.Name = "txt_lieu";
-            this.txt_lieu.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_lieu.Padding = new System.Windows.Forms.Padding(8);
             this.txt_lieu.PasswordChar = false;
             this.txt_lieu.Size = new System.Drawing.Size(424, 37);
             this.txt_lieu.TabIndex = 117;
@@ -647,10 +647,10 @@ namespace Gestion_expertise
             this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
             this.txt_ref_cab.Location = new System.Drawing.Point(5, 55);
-            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(5);
             this.txt_ref_cab.Multiline = false;
             this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(8);
             this.txt_ref_cab.PasswordChar = false;
             this.txt_ref_cab.Size = new System.Drawing.Size(424, 37);
             this.txt_ref_cab.TabIndex = 124;
@@ -718,10 +718,10 @@ namespace Gestion_expertise
             this.txt_refCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_refCode.ForeColor = System.Drawing.Color.DimGray;
             this.txt_refCode.Location = new System.Drawing.Point(315, 5);
-            this.txt_refCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_refCode.Margin = new System.Windows.Forms.Padding(5);
             this.txt_refCode.Multiline = false;
             this.txt_refCode.Name = "txt_refCode";
-            this.txt_refCode.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_refCode.Padding = new System.Windows.Forms.Padding(8);
             this.txt_refCode.PasswordChar = false;
             this.txt_refCode.Size = new System.Drawing.Size(110, 37);
             this.txt_refCode.TabIndex = 115;
@@ -741,10 +741,10 @@ namespace Gestion_expertise
             this.txt_refYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_refYear.ForeColor = System.Drawing.Color.DimGray;
             this.txt_refYear.Location = new System.Drawing.Point(5, 5);
-            this.txt_refYear.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_refYear.Margin = new System.Windows.Forms.Padding(5);
             this.txt_refYear.Multiline = false;
             this.txt_refYear.Name = "txt_refYear";
-            this.txt_refYear.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_refYear.Padding = new System.Windows.Forms.Padding(8);
             this.txt_refYear.PasswordChar = false;
             this.txt_refYear.Size = new System.Drawing.Size(108, 37);
             this.txt_refYear.TabIndex = 115;
@@ -776,10 +776,10 @@ namespace Gestion_expertise
             this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
             this.txt_type_dec.Location = new System.Drawing.Point(5, 748);
-            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(5);
             this.txt_type_dec.Multiline = false;
             this.txt_type_dec.Name = "txt_type_dec";
-            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(8);
             this.txt_type_dec.PasswordChar = false;
             this.txt_type_dec.Size = new System.Drawing.Size(424, 37);
             this.txt_type_dec.TabIndex = 123;
@@ -797,10 +797,10 @@ namespace Gestion_expertise
             this.txt_gre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_gre.ForeColor = System.Drawing.Color.DimGray;
             this.txt_gre.Location = new System.Drawing.Point(5, 643);
-            this.txt_gre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_gre.Margin = new System.Windows.Forms.Padding(5);
             this.txt_gre.Multiline = false;
             this.txt_gre.Name = "txt_gre";
-            this.txt_gre.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_gre.Padding = new System.Windows.Forms.Padding(8);
             this.txt_gre.PasswordChar = false;
             this.txt_gre.Size = new System.Drawing.Size(424, 37);
             this.txt_gre.TabIndex = 115;
@@ -820,10 +820,10 @@ namespace Gestion_expertise
             this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
             this.txt_jug.Location = new System.Drawing.Point(5, 545);
-            this.txt_jug.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_jug.Margin = new System.Windows.Forms.Padding(5);
             this.txt_jug.Multiline = false;
             this.txt_jug.Name = "txt_jug";
-            this.txt_jug.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_jug.Padding = new System.Windows.Forms.Padding(8);
             this.txt_jug.PasswordChar = false;
             this.txt_jug.Size = new System.Drawing.Size(424, 37);
             this.txt_jug.TabIndex = 115;
@@ -843,10 +843,10 @@ namespace Gestion_expertise
             this.txt_magi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_magi.ForeColor = System.Drawing.Color.DimGray;
             this.txt_magi.Location = new System.Drawing.Point(5, 447);
-            this.txt_magi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_magi.Margin = new System.Windows.Forms.Padding(5);
             this.txt_magi.Multiline = false;
             this.txt_magi.Name = "txt_magi";
-            this.txt_magi.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_magi.Padding = new System.Windows.Forms.Padding(8);
             this.txt_magi.PasswordChar = false;
             this.txt_magi.Size = new System.Drawing.Size(424, 37);
             this.txt_magi.TabIndex = 115;
@@ -871,6 +871,8 @@ namespace Gestion_expertise
             // 
             this.btn_modifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_modifier.Image = global::Gestion_expertise.Properties.Resources.edit_property_25px;
+            this.btn_modifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_modifier.Location = new System.Drawing.Point(218, 19);
             this.btn_modifier.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modifier.Name = "btn_modifier";
@@ -884,6 +886,8 @@ namespace Gestion_expertise
             // 
             this.btn_suprimmer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_suprimmer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_suprimmer.Image = global::Gestion_expertise.Properties.Resources.delete_trash_25px;
+            this.btn_suprimmer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_suprimmer.Location = new System.Drawing.Point(2, 19);
             this.btn_suprimmer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_suprimmer.Name = "btn_suprimmer";
@@ -897,6 +901,8 @@ namespace Gestion_expertise
             // 
             this.btn_annuler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
+            this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_annuler.Location = new System.Drawing.Point(82, 72);
             this.btn_annuler.Margin = new System.Windows.Forms.Padding(2);
             this.btn_annuler.Name = "btn_annuler";
@@ -910,6 +916,8 @@ namespace Gestion_expertise
             // btn_valider
             // 
             this.btn_valider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_valider.Image = global::Gestion_expertise.Properties.Resources.save_as_25px;
+            this.btn_valider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_valider.Location = new System.Drawing.Point(218, 72);
             this.btn_valider.Margin = new System.Windows.Forms.Padding(2);
             this.btn_valider.Name = "btn_valider";
@@ -1027,10 +1035,10 @@ namespace Gestion_expertise
             this.txt_montan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_montan.ForeColor = System.Drawing.Color.DimGray;
             this.txt_montan.Location = new System.Drawing.Point(5, 371);
-            this.txt_montan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_montan.Margin = new System.Windows.Forms.Padding(5);
             this.txt_montan.Multiline = false;
             this.txt_montan.Name = "txt_montan";
-            this.txt_montan.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_montan.Padding = new System.Windows.Forms.Padding(8);
             this.txt_montan.PasswordChar = false;
             this.txt_montan.Size = new System.Drawing.Size(423, 37);
             this.txt_montan.TabIndex = 117;
@@ -1050,10 +1058,10 @@ namespace Gestion_expertise
             this.txt_hor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hor.ForeColor = System.Drawing.Color.DimGray;
             this.txt_hor.Location = new System.Drawing.Point(5, 59);
-            this.txt_hor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_hor.Margin = new System.Windows.Forms.Padding(5);
             this.txt_hor.Multiline = false;
             this.txt_hor.Name = "txt_hor";
-            this.txt_hor.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_hor.Padding = new System.Windows.Forms.Padding(8);
             this.txt_hor.PasswordChar = false;
             this.txt_hor.Size = new System.Drawing.Size(423, 37);
             this.txt_hor.TabIndex = 117;
@@ -1089,10 +1097,10 @@ namespace Gestion_expertise
             this.txt_rep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rep.ForeColor = System.Drawing.Color.DimGray;
             this.txt_rep.Location = new System.Drawing.Point(5, 5);
-            this.txt_rep.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_rep.Margin = new System.Windows.Forms.Padding(5);
             this.txt_rep.Multiline = false;
             this.txt_rep.Name = "txt_rep";
-            this.txt_rep.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_rep.Padding = new System.Windows.Forms.Padding(8);
             this.txt_rep.PasswordChar = false;
             this.txt_rep.Size = new System.Drawing.Size(354, 37);
             this.txt_rep.TabIndex = 117;
@@ -1141,7 +1149,7 @@ namespace Gestion_expertise
             this.dropfilepanel.Location = new System.Drawing.Point(2, 470);
             this.dropfilepanel.Margin = new System.Windows.Forms.Padding(2);
             this.dropfilepanel.Name = "dropfilepanel";
-            this.dropfilepanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.dropfilepanel.Padding = new System.Windows.Forms.Padding(15);
             this.dropfilepanel.Size = new System.Drawing.Size(429, 180);
             this.dropfilepanel.TabIndex = 123;
             this.dropfilepanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
