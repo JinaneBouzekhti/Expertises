@@ -92,7 +92,7 @@ namespace Gestion_expertise
             DataTable data = new DataTable();
             daCA.Fill(data);
 
-            reçu C = new reçu();
+            PageDeGarde C = new PageDeGarde();
 
             for (int i = 0; i < data.Rows.Count; i++)
             {

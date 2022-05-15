@@ -278,7 +278,7 @@ namespace Gestion_expertise
             this.btn_exporter.Name = "btn_exporter";
             this.btn_exporter.Size = new System.Drawing.Size(124, 26);
             this.btn_exporter.TabIndex = 27;
-            this.btn_exporter.Text = "Les Convocations";
+            this.btn_exporter.Text = "Les convocations";
             this.btn_exporter.UseVisualStyleBackColor = false;
             this.btn_exporter.Click += new System.EventHandler(this.btn_exporter_Click);
             // 
