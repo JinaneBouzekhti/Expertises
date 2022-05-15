@@ -16,14 +16,14 @@ namespace Gestion_expertise {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class reçu : ReportClass {
+    public class PageDeGarde : ReportClass {
         
-        public reçu() {
+        public PageDeGarde() {
         }
         
         public override string ResourceName {
             get {
-                return "reçu.rpt";
+                return "PageDeGarde.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Gestion_expertise {
         
         public override string FullResourceName {
             get {
-                return "Gestion_expertise.reçu.rpt";
+                return "Gestion_expertise.PageDeGarde.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,52 @@ namespace Gestion_expertise {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Ref_ref {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Ref_cab {
+            get {
+                return this.DataDefinition.ParameterFields[1];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Date_Reçu {
+            get {
+                return this.DataDefinition.ParameterFields[2];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_HeurRV {
+            get {
+                return this.DataDefinition.ParameterFields[3];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_DateRV {
+            get {
+                return this.DataDefinition.ParameterFields[4];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedreçu : Component, ICachedReport {
+    public class CachedPageDeGarde : Component, ICachedReport {
         
-        public Cachedreçu() {
+        public CachedPageDeGarde() {
         }
         
         [Browsable(false)]
@@ -129,7 +169,7 @@ namespace Gestion_expertise {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            reçu rpt = new reçu();
+            PageDeGarde rpt = new PageDeGarde();
             rpt.Site = this.Site;
             return rpt;
         }

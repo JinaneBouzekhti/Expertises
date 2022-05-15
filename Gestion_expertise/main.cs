@@ -158,7 +158,7 @@ namespace Gestion_expertise
                 try
                 {
                     mainpanel.Controls.Clear();
-                    convocation_page conv = new convocation_page(comboBox1.SelectedValue.ToString());
+                    Documents conv = new Documents(comboBox1.SelectedValue.ToString());
                     mainpanel.Controls.Add(conv);
                     conv.Dock = DockStyle.Fill;
                 }
