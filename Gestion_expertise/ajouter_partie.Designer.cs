@@ -68,11 +68,11 @@ namespace Gestion_expertise
             // txt_copier
             // 
             this.txt_copier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_copier.Location = new System.Drawing.Point(3, 152);
+            this.txt_copier.Location = new System.Drawing.Point(3, 117);
             this.txt_copier.Multiline = true;
             this.txt_copier.Name = "txt_copier";
             this.txt_copier.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_copier.Size = new System.Drawing.Size(479, 516);
+            this.txt_copier.Size = new System.Drawing.Size(420, 393);
             this.txt_copier.TabIndex = 0;
             // 
             // dgv_dem
@@ -105,11 +105,11 @@ namespace Gestion_expertise
             this.dgv_dem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dem.EnableHeadersVisualStyles = false;
             this.dgv_dem.GridColor = System.Drawing.Color.Gray;
-            this.dgv_dem.Location = new System.Drawing.Point(3, 40);
+            this.dgv_dem.Location = new System.Drawing.Point(3, 31);
             this.dgv_dem.Name = "dgv_dem";
             this.dgv_dem.RowHeadersWidth = 51;
             this.dgv_dem.RowTemplate.Height = 29;
-            this.dgv_dem.Size = new System.Drawing.Size(479, 292);
+            this.dgv_dem.Size = new System.Drawing.Size(420, 222);
             this.dgv_dem.TabIndex = 3;
             // 
             // Type
@@ -131,9 +131,9 @@ namespace Gestion_expertise
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(3, 17);
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(479, 115);
+            this.label1.Size = new System.Drawing.Size(420, 95);
             this.label1.TabIndex = 5;
             this.label1.Text = "Copier toutes les parties de l\'expertise a partire de site \r\n(www.mahakim.ma)\r\n__" +
     "___________________________________________________________\r\n\r\n Et collez-les ic" +
@@ -145,7 +145,7 @@ namespace Gestion_expertise
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Demandeur";
             // 
@@ -153,9 +153,9 @@ namespace Gestion_expertise
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(3, 335);
+            this.label3.Location = new System.Drawing.Point(3, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Défendeur";
             // 
@@ -189,11 +189,11 @@ namespace Gestion_expertise
             this.dgv_def.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_def.EnableHeadersVisualStyles = false;
             this.dgv_def.GridColor = System.Drawing.Color.Gray;
-            this.dgv_def.Location = new System.Drawing.Point(3, 375);
+            this.dgv_def.Location = new System.Drawing.Point(3, 287);
             this.dgv_def.Name = "dgv_def";
             this.dgv_def.RowHeadersWidth = 51;
             this.dgv_def.RowTemplate.Height = 29;
-            this.dgv_def.Size = new System.Drawing.Size(479, 292);
+            this.dgv_def.Size = new System.Drawing.Size(420, 222);
             this.dgv_def.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -216,7 +216,7 @@ namespace Gestion_expertise
             this.btn_traiter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_traiter.Image = global::Gestion_expertise.Properties.Resources.filter_25px;
             this.btn_traiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_traiter.Location = new System.Drawing.Point(3, 674);
+            this.btn_traiter.Location = new System.Drawing.Point(3, 516);
             this.btn_traiter.Name = "btn_traiter";
             this.btn_traiter.Size = new System.Drawing.Size(173, 32);
             this.btn_traiter.TabIndex = 28;
@@ -230,10 +230,10 @@ namespace Gestion_expertise
             this.btn_annuler.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
             this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_annuler.Location = new System.Drawing.Point(186, 3);
+            this.btn_annuler.Location = new System.Drawing.Point(127, 3);
             this.btn_annuler.Name = "btn_annuler";
             this.btn_annuler.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_annuler.Size = new System.Drawing.Size(142, 32);
+            this.btn_annuler.Size = new System.Drawing.Size(142, 22);
             this.btn_annuler.TabIndex = 29;
             this.btn_annuler.Text = "Annuler";
             this.btn_annuler.UseVisualStyleBackColor = false;
@@ -245,17 +245,19 @@ namespace Gestion_expertise
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 30;
             this.label4.Text = "Ajouter :";
             // 
             // ch_def
             // 
             this.ch_def.AutoSize = true;
+            this.ch_def.Checked = true;
+            this.ch_def.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ch_def.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.ch_def.Location = new System.Drawing.Point(79, 3);
+            this.ch_def.Location = new System.Drawing.Point(64, 3);
             this.ch_def.Name = "ch_def";
-            this.ch_def.Size = new System.Drawing.Size(105, 24);
+            this.ch_def.Size = new System.Drawing.Size(87, 19);
             this.ch_def.TabIndex = 31;
             this.ch_def.Text = "Défendeur";
             this.ch_def.UseVisualStyleBackColor = true;
@@ -263,10 +265,12 @@ namespace Gestion_expertise
             // ch_dem
             // 
             this.ch_dem.AutoSize = true;
+            this.ch_dem.Checked = true;
+            this.ch_dem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ch_dem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.ch_dem.Location = new System.Drawing.Point(190, 3);
+            this.ch_dem.Location = new System.Drawing.Point(157, 3);
             this.ch_dem.Name = "ch_dem";
-            this.ch_dem.Size = new System.Drawing.Size(113, 24);
+            this.ch_dem.Size = new System.Drawing.Size(92, 19);
             this.ch_dem.TabIndex = 32;
             this.ch_dem.Text = "Demandeur";
             this.ch_dem.UseVisualStyleBackColor = true;
@@ -283,7 +287,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(982, 753);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(864, 576);
             this.tableLayoutPanel1.TabIndex = 33;
             // 
             // tableLayoutPanel2
@@ -300,7 +304,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(485, 747);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(426, 570);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -314,7 +318,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel2, 0, 5);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(494, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(435, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
@@ -323,7 +327,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(485, 747);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(426, 570);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -332,9 +336,9 @@ namespace Gestion_expertise
             this.flowLayoutPanel1.Controls.Add(this.ch_def);
             this.flowLayoutPanel1.Controls.Add(this.ch_dem);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 673);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 515);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(479, 31);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(420, 22);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
@@ -342,10 +346,10 @@ namespace Gestion_expertise
             this.flowLayoutPanel2.Controls.Add(this.btn_ajouter);
             this.flowLayoutPanel2.Controls.Add(this.btn_annuler);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 710);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 543);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(479, 34);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(420, 24);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // btn_ajouter
@@ -354,10 +358,10 @@ namespace Gestion_expertise
             this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px1;
             this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajouter.Location = new System.Drawing.Point(334, 3);
+            this.btn_ajouter.Location = new System.Drawing.Point(275, 3);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_ajouter.Size = new System.Drawing.Size(142, 32);
+            this.btn_ajouter.Size = new System.Drawing.Size(142, 22);
             this.btn_ajouter.TabIndex = 27;
             this.btn_ajouter.Text = "Ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = false;
@@ -365,10 +369,10 @@ namespace Gestion_expertise
             // 
             // ajouter_partie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(982, 753);
+            this.ClientSize = new System.Drawing.Size(864, 576);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "ajouter_partie";

@@ -153,11 +153,17 @@ namespace Gestion_expertise
         }
         private void Btn_Document_Click(object sender, EventArgs e)
         {
-
-            mainpanel.Controls.Clear();
-            convocation_page conv = new convocation_page(comboBox1.SelectedValue.ToString());
-            mainpanel.Controls.Add(conv);
-            conv.Dock = DockStyle.Fill;
+            if (comboBox1.SelectedIndex > -1)
+            {
+                try
+                {
+                    mainpanel.Controls.Clear();
+                    convocation_page conv = new convocation_page(comboBox1.SelectedValue.ToString());
+                    mainpanel.Controls.Add(conv);
+                    conv.Dock = DockStyle.Fill;
+                }
+                catch (Exception ex) { }
+            }
         }
         private void Btn_Mahakim_Click(object sender, EventArgs e)
         {

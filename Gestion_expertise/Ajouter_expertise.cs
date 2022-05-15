@@ -45,7 +45,7 @@ namespace Gestion_expertise
             int RefCab;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-           
+
             SqlDataAdapter sa = new SqlDataAdapter("select Max(RefCabinet) from expertise", cn);
             DataTable dt = new DataTable();
             sa.Fill(dt);
@@ -76,8 +76,7 @@ namespace Gestion_expertise
             com_CoursA.ValueMember = "NumCoursAppel";
             com_CoursA.Text = "-------";
 
-
-            //Remplisage comboBox TypeExp:
+            //Remplisage comboBox CodeTypeExp:
             string req2 = "select* from TypeExp";
             com = new SqlCommand(req2, cn);
             daTypeExp = new SqlDataAdapter(com);
@@ -95,11 +94,30 @@ namespace Gestion_expertise
             com_RefType.DataSource = bsTypeExp;
             com_RefType.DisplayMember = "Code";
             com_RefType.ValueMember = "NumTypeExp";
-            com_RefType.Text = "-------";
 
             com = null;
             comB = null;
 
+            //Remplisage comboBox TypeExp:
+            com = new SqlCommand(req2, cn);
+            daTypeExp2 = new SqlDataAdapter(com);
+            if (ds.Tables["TypeExp2"] != null)
+                ds.Tables["TypeExp2"].Clear();
+
+            daTypeExp2.Fill(ds, "TypeExp2");
+
+            bsTypeExp2.DataSource = ds;
+            bsTypeExp2.DataMember = "TypeExp2";
+
+            comB = new SqlCommandBuilder(daTypeExp2);
+
+            com_type_exp.DataSource = bsTypeExp2;
+            com_type_exp.DisplayMember = "typeExp";
+            com_type_exp.ValueMember = "NumTypeExp";
+
+            com_type_exp.Text = "-------";
+            com = null;
+            comB = null;
             //Remplisage comboBox Statut:
             string req3 = "select* from Statut";
             com = new SqlCommand(req3, cn);
@@ -120,8 +138,6 @@ namespace Gestion_expertise
             com_statu.Text = "-------";
             com = null;
             comB = null;
-
-            com_type_exp.Text = "-------";
         } 
         
         private void com_CoursA_SelectedValueChanged(object sender, EventArgs e)
@@ -263,11 +279,14 @@ namespace Gestion_expertise
                 {
                     string Chemin = txt_rep.Text;
                     DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                    if (Dir.Exists)
-                        MessageBox.Show("Ce dossier existe déja ( " + GetFolderName() + " )", "Ereur");
-                    else
+                    if (!Dir.Exists)  
                     {
                         Dir.Create();
+                        com.ExecuteNonQuery();
+                        this.Hide();
+                    }
+                    else
+                    {
                         com.ExecuteNonQuery();
                         this.Hide();
                     }

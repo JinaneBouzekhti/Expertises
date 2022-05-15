@@ -91,7 +91,7 @@ namespace Gestion_expertise
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 52);
+            this.label1.Size = new System.Drawing.Size(229, 52);
             this.label1.TabIndex = 4;
             this.label1.Text = "LISTE DES EXPERTISES EN COURS";
             // 
@@ -103,7 +103,7 @@ namespace Gestion_expertise
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(3, 326);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(310, 52);
+            this.label2.Size = new System.Drawing.Size(243, 52);
             this.label2.TabIndex = 5;
             this.label2.Text = "LISTE DES EXPERTISES  TERMINÉES";
             // 
@@ -568,7 +568,7 @@ namespace Gestion_expertise
             // 
             // ToutesExp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.tableLayoutPanel1);
