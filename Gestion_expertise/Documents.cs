@@ -14,11 +14,11 @@ using System.IO;
 
 namespace Gestion_expertise
 {
-    public partial class convocation_page : UserControl
+    public partial class Documents : UserControl
     {
         string sc = ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString;
 
-        public convocation_page(string RefCabinet)
+        public Documents(string RefCabinet)
         {
             InitializeComponent();
             this.RefCabinet = RefCabinet;

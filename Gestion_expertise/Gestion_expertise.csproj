@@ -126,11 +126,11 @@
       <DependentUpon>convocation.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="convocation_page.cs">
+    <Compile Include="Documents.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="convocation_page.Designer.cs">
-      <DependentUpon>convocation_page.cs</DependentUpon>
+    <Compile Include="Documents.Designer.cs">
+      <DependentUpon>Documents.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomTools\CheckBoxCustom.cs">
       <SubType>Component</SubType>
@@ -189,10 +189,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="reçu.cs">
+    <Compile Include="PageDeGarde.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>reçu.rpt</DependentUpon>
+      <DependentUpon>PageDeGarde.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="suivi_expertise.cs">
@@ -223,8 +223,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>convocation.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="convocation_page.resx">
-      <DependentUpon>convocation_page.cs</DependentUpon>
+    <EmbeddedResource Include="Documents.resx">
+      <DependentUpon>Documents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="defendeur.resx">
       <DependentUpon>defendeur.cs</DependentUpon>
@@ -243,9 +243,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="reçu.rpt">
+    <EmbeddedResource Include="PageDeGarde.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>reçu.cs</LastGenOutput>
+      <LastGenOutput>PageDeGarde.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="suivi_expertise.resx">
       <DependentUpon>suivi_expertise.cs</DependentUpon>
