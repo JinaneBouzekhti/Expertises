@@ -32,30 +32,30 @@ namespace Gestion_expertise
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidebarpanel = new System.Windows.Forms.Panel();
-            this.iconpanel = new System.Windows.Forms.Panel();
-            this.navbarpanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Btn_TtExp = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.mainpanel = new System.Windows.Forms.Panel();
-            this.folderView1 = new Gestion_expertise.FolderView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btn_calendrier = new System.Windows.Forms.PictureBox();
             this.Btn_Mahakim = new System.Windows.Forms.Button();
             this.Btn_Def = new System.Windows.Forms.Button();
             this.Btn_Document = new System.Windows.Forms.Button();
             this.Btn_Dem = new System.Windows.Forms.Button();
             this.Btn_Suivi = new System.Windows.Forms.Button();
+            this.iconpanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.navbarpanel = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Btn_TtExp = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_calendrier = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.mainpanel = new System.Windows.Forms.Panel();
+            this.folderView1 = new Gestion_expertise.FolderView();
             this.panel1.SuspendLayout();
             this.sidebarpanel.SuspendLayout();
             this.iconpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.navbarpanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_calendrier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,150 +84,6 @@ namespace Gestion_expertise
             this.sidebarpanel.Name = "sidebarpanel";
             this.sidebarpanel.Size = new System.Drawing.Size(252, 594);
             this.sidebarpanel.TabIndex = 0;
-            // 
-            // iconpanel
-            // 
-            this.iconpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(233)))));
-            this.iconpanel.Controls.Add(this.pictureBox1);
-            this.iconpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconpanel.Location = new System.Drawing.Point(0, 0);
-            this.iconpanel.Margin = new System.Windows.Forms.Padding(2);
-            this.iconpanel.Name = "iconpanel";
-            this.iconpanel.Size = new System.Drawing.Size(252, 155);
-            this.iconpanel.TabIndex = 1;
-            // 
-            // navbarpanel
-            // 
-            this.navbarpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(233)))));
-            this.navbarpanel.Controls.Add(this.tableLayoutPanel2);
-            this.navbarpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navbarpanel.Location = new System.Drawing.Point(252, 0);
-            this.navbarpanel.Margin = new System.Windows.Forms.Padding(2);
-            this.navbarpanel.Name = "navbarpanel";
-            this.navbarpanel.Size = new System.Drawing.Size(1118, 48);
-            this.navbarpanel.TabIndex = 1;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 6;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel2.Controls.Add(this.Btn_TtExp, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_calendrier, 4, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1118, 48);
-            this.tableLayoutPanel2.TabIndex = 10;
-            // 
-            // Btn_TtExp
-            // 
-            this.Btn_TtExp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_TtExp.BackColor = System.Drawing.Color.White;
-            this.Btn_TtExp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_TtExp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.Btn_TtExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_TtExp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.Btn_TtExp.ForeColor = System.Drawing.Color.Black;
-            this.Btn_TtExp.Location = new System.Drawing.Point(2, 3);
-            this.Btn_TtExp.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_TtExp.Name = "Btn_TtExp";
-            this.Btn_TtExp.Size = new System.Drawing.Size(163, 42);
-            this.Btn_TtExp.TabIndex = 9;
-            this.Btn_TtExp.Text = "Toutes les expertises";
-            this.Btn_TtExp.UseVisualStyleBackColor = false;
-            this.Btn_TtExp.Click += new System.EventHandler(this.Btn_TtExp_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 20;
-            this.comboBox1.Location = new System.Drawing.Point(504, 10);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(275, 28);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.99873F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.001268F));
-            this.tableLayoutPanel1.Controls.Add(this.mainpanel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.folderView1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(252, 48);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1118, 701);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // mainpanel
-            // 
-            this.mainpanel.BackColor = System.Drawing.Color.White;
-            this.mainpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(2, 2);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1080, 697);
-            this.mainpanel.TabIndex = 3;
-            // 
-            // folderView1
-            // 
-            this.folderView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.folderView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.folderView1.Location = new System.Drawing.Point(1086, 4);
-            this.folderView1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.folderView1.Name = "folderView1";
-            this.folderView1.Size = new System.Drawing.Size(30, 693);
-            this.folderView1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button3.Image = global::Gestion_expertise.Properties.Resources.add_tab_25px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(783, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 38);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Ajouter  Expertise";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btn_calendrier
-            // 
-            this.btn_calendrier.ErrorImage = null;
-            this.btn_calendrier.Image = global::Gestion_expertise.Properties.Resources.calendrier;
-            this.btn_calendrier.Location = new System.Drawing.Point(1007, 3);
-            this.btn_calendrier.Name = "btn_calendrier";
-            this.btn_calendrier.Size = new System.Drawing.Size(49, 42);
-            this.btn_calendrier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btn_calendrier.TabIndex = 10;
-            this.btn_calendrier.TabStop = false;
-            this.btn_calendrier.Click += new System.EventHandler(this.btn_Calendrier_Click);
             // 
             // Btn_Mahakim
             // 
@@ -323,6 +179,17 @@ namespace Gestion_expertise
             this.Btn_Suivi.UseVisualStyleBackColor = true;
             this.Btn_Suivi.Click += new System.EventHandler(this.Btn_Suivi_Click);
             // 
+            // iconpanel
+            // 
+            this.iconpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(233)))));
+            this.iconpanel.Controls.Add(this.pictureBox1);
+            this.iconpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconpanel.Location = new System.Drawing.Point(0, 0);
+            this.iconpanel.Margin = new System.Windows.Forms.Padding(2);
+            this.iconpanel.Name = "iconpanel";
+            this.iconpanel.Size = new System.Drawing.Size(252, 155);
+            this.iconpanel.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
@@ -336,6 +203,139 @@ namespace Gestion_expertise
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // navbarpanel
+            // 
+            this.navbarpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(233)))));
+            this.navbarpanel.Controls.Add(this.tableLayoutPanel2);
+            this.navbarpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navbarpanel.Location = new System.Drawing.Point(252, 0);
+            this.navbarpanel.Margin = new System.Windows.Forms.Padding(2);
+            this.navbarpanel.Name = "navbarpanel";
+            this.navbarpanel.Size = new System.Drawing.Size(1118, 48);
+            this.navbarpanel.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel2.Controls.Add(this.Btn_TtExp, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_calendrier, 4, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1118, 48);
+            this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // Btn_TtExp
+            // 
+            this.Btn_TtExp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_TtExp.BackColor = System.Drawing.Color.White;
+            this.Btn_TtExp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_TtExp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.Btn_TtExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_TtExp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.Btn_TtExp.ForeColor = System.Drawing.Color.Black;
+            this.Btn_TtExp.Location = new System.Drawing.Point(2, 3);
+            this.Btn_TtExp.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_TtExp.Name = "Btn_TtExp";
+            this.Btn_TtExp.Size = new System.Drawing.Size(163, 42);
+            this.Btn_TtExp.TabIndex = 9;
+            this.Btn_TtExp.Text = "Toutes les expertises";
+            this.Btn_TtExp.UseVisualStyleBackColor = false;
+            this.Btn_TtExp.Click += new System.EventHandler(this.Btn_TtExp_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(212)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button3.Image = global::Gestion_expertise.Properties.Resources.add_tab_25px;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(783, 3);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(219, 42);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Ajouter  Expertise";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 20;
+            this.comboBox1.Location = new System.Drawing.Point(504, 11);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(275, 28);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
+            // 
+            // btn_calendrier
+            // 
+            this.btn_calendrier.ErrorImage = null;
+            this.btn_calendrier.Image = global::Gestion_expertise.Properties.Resources.calendrier;
+            this.btn_calendrier.Location = new System.Drawing.Point(1007, 3);
+            this.btn_calendrier.Name = "btn_calendrier";
+            this.btn_calendrier.Size = new System.Drawing.Size(49, 42);
+            this.btn_calendrier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btn_calendrier.TabIndex = 10;
+            this.btn_calendrier.TabStop = false;
+            this.btn_calendrier.Click += new System.EventHandler(this.btn_Calendrier_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.99873F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.001268F));
+            this.tableLayoutPanel1.Controls.Add(this.mainpanel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.folderView1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(252, 48);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1118, 701);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // mainpanel
+            // 
+            this.mainpanel.BackColor = System.Drawing.Color.White;
+            this.mainpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(2, 2);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(1080, 697);
+            this.mainpanel.TabIndex = 3;
+            // 
+            // folderView1
+            // 
+            this.folderView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.folderView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.folderView1.Location = new System.Drawing.Point(1086, 4);
+            this.folderView1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.folderView1.Name = "folderView1";
+            this.folderView1.Size = new System.Drawing.Size(30, 693);
+            this.folderView1.TabIndex = 4;
             // 
             // main
             // 
@@ -356,11 +356,11 @@ namespace Gestion_expertise
             this.panel1.ResumeLayout(false);
             this.sidebarpanel.ResumeLayout(false);
             this.iconpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.navbarpanel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_calendrier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

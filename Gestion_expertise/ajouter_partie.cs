@@ -29,12 +29,13 @@ namespace Gestion_expertise
             foreach (string s in l)
             {
                 string sentence = s.Replace('\t', ' ').Trim();
-                if (sentence != "") ;
+                string nom = s.Contains("(1)") ? s.Replace("مدعى عليه", "").Replace("(1)", "").Replace("مدعي", "").Replace("المحامون", "").Trim() : s.Replace("مدعى عليه", "").Trim();
+                if (sentence != "" && nom !="")
                 if (sentence.Contains("مدعى عليه"))
-                    dgv_def.Rows.Add("مدعى عليه", s.Contains("(1)") ? s.Replace("مدعى عليه", "").Replace("(1)", "").Replace("المحامون", "").Trim() : s.Replace("مدعى عليه", "").Trim());
+                    dgv_def.Rows.Add("مدعى عليه", nom);
 
                 else
-                    dgv_dem.Rows.Add("مدعي", s.Contains("(1)") ? s.Replace("مدعي", "").Replace("(1)", "").Replace("المحامون", "").Trim() : s.Replace("مدعي", "").Trim());
+                    dgv_dem.Rows.Add("مدعي",nom);
             }
         }
 
@@ -46,19 +47,17 @@ namespace Gestion_expertise
             if (ch_def.Checked)
                 for (int i = 0; i < dgv_def.RowCount; i++)
                 {
-                    if (dgv_def.Rows[i].Cells[1].Value.ToString() != "") { 
+                    
                         SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,RefCabinet) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "')", con);
                         cmd.ExecuteNonQuery();
-                    }
+                    
                 }
             if (ch_dem.Checked)
                 for (int i = 0; i < dgv_dem.RowCount; i++)
-                {
-                    if (dgv_dem.Rows[i].Cells[1].Value.ToString() != "")
-                    {
+                {                   
                         SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,RefCabinet) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "')", con);
                         cmd.ExecuteNonQuery();
-                    }
+                    
                 }
             this.Close();
         }
