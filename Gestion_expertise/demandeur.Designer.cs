@@ -54,7 +54,7 @@ namespace Gestion_expertise
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 28);
+            this.label1.Size = new System.Drawing.Size(131, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "LES DEMANDEURS";
             // 
@@ -92,12 +92,12 @@ namespace Gestion_expertise
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 46);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1137, 585);
+            this.dataGridView1.Size = new System.Drawing.Size(909, 468);
             this.dataGridView1.TabIndex = 2;
             // 
             // nom
@@ -133,13 +133,14 @@ namespace Gestion_expertise
             // 
             this.btn_ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_ajouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px1;
             this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajouter.Location = new System.Drawing.Point(968, 5);
+            this.btn_ajouter.Location = new System.Drawing.Point(774, 4);
             this.btn_ajouter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(167, 42);
+            this.btn_ajouter.Size = new System.Drawing.Size(133, 34);
             this.btn_ajouter.TabIndex = 26;
             this.btn_ajouter.Text = "ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = false;
@@ -160,7 +161,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1141, 702);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(913, 562);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
             // tableLayoutPanel2
@@ -171,25 +172,26 @@ namespace Gestion_expertise
             this.tableLayoutPanel2.Controls.Add(this.btn_save, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_ajouter, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 647);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 518);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1137, 53);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(909, 42);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // btn_save
             // 
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btn_save.Image = global::Gestion_expertise.Properties.Resources.save_as_25px;
             this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save.Location = new System.Drawing.Point(799, 5);
+            this.btn_save.Location = new System.Drawing.Point(638, 4);
             this.btn_save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(165, 42);
+            this.btn_save.Size = new System.Drawing.Size(132, 34);
             this.btn_save.TabIndex = 27;
             this.btn_save.Text = "enregistrer";
             this.btn_save.UseVisualStyleBackColor = false;
@@ -197,14 +199,14 @@ namespace Gestion_expertise
             // 
             // demandeur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "demandeur";
-            this.Size = new System.Drawing.Size(1141, 702);
+            this.Size = new System.Drawing.Size(913, 562);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.SizeChanged += new System.EventHandler(this.demandeur_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

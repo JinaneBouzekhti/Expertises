@@ -269,17 +269,23 @@ namespace Gestion_expertise
             //com1 = null;
             //if (!Unq)
             //{
+            if (txt_refYear.Text == "" || txt_refCode.Text == "" || txt_lieu.Text == "" || txt_horai.Text == "")
+            {
+                lbl_oblig.Visible = true;
+            }
+            else
+            {
 
-
-                if (txt_rep.Text == "" || txt_rep.Text == @"\")
+                if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
                 {
                     lbl_VideDs.Visible = true;
                 }
                 else
                 {
+
                     string Chemin = txt_rep.Text;
                     DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                    if (!Dir.Exists)  
+                    if (!Dir.Exists)
                     {
                         Dir.Create();
                         com.ExecuteNonQuery();
@@ -291,7 +297,7 @@ namespace Gestion_expertise
                         this.Hide();
                     }
                 }
-
+            }
             //}
 
             com = null;
@@ -359,5 +365,6 @@ namespace Gestion_expertise
             }
         }
 
+        
     }
 }
