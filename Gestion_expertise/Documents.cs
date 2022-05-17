@@ -47,19 +47,16 @@ namespace Gestion_expertise
             SqlConnection cn = new SqlConnection(sc);
             cn.Open();
 
-
             string req = "select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDem As NomComplet, D.Adresse, RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Demandeur D on D.RefCabinet = E.RefCabinet  where E.RefCabinet like " + RefCabinet + " union select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDéf As NomComplet , D.Adresse,RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Défenseur D on D.RefCabinet = E.RefCabinet  where E.RefCabinet like " + RefCabinet;
             SqlCommand com = new SqlCommand(req, cn);
             SqlDataAdapter daCA = new SqlDataAdapter(com);
             DataTable data = new DataTable();
             daCA.Fill(data);
 
-
             convocation C = new convocation();
 
             for (int i = 0; i < data.Rows.Count; i++)
             {
-
                 C.SetParameterValue("nomTribunal", data.Rows[i][0]);
                 C.SetParameterValue("refe_referer", data.Rows[i][1]);
                 C.SetParameterValue("date_Designation", data.Rows[i][2]);
@@ -80,11 +77,8 @@ namespace Gestion_expertise
 
         private void btn_recu_Click(object sender, EventArgs e)
         {
-
-
             SqlConnection cn = new SqlConnection(sc);
             cn.Open();
-
 
             string req = "select RefRéféré,E.RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDem As NomComplet ,RépertoireDoc from Demandeur D inner join expertise E on D.RefCabinet = E.RefCabinet where E.RefCabinet  like " + RefCabinet + " Union  select  RefRéféré,E.RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDéf As NomComplet ,RépertoireDoc from Défenseur Df inner join expertise E on Df.RefCabinet = E.RefCabinet   where E.RefCabinet  like " + RefCabinet;
             SqlCommand com = new SqlCommand(req, cn);
