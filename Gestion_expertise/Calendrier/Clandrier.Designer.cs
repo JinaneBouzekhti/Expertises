@@ -180,7 +180,7 @@ namespace Gestion_expertise.Calandrier
             this.MinimumSize = new System.Drawing.Size(1350, 968);
             this.Name = "Clandrier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Claendrier";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
