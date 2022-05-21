@@ -238,6 +238,10 @@ namespace Gestion_expertise
             
         }
 
-       
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            adminpanel ad = new adminpanel();
+            ad.Show();
+        }
     }
 }

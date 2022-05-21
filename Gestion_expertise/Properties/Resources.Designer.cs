@@ -203,6 +203,26 @@ namespace Gestion_expertise.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_account_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_account_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_account_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_account_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap judge_25px {
             get {
                 object obj = ResourceManager.GetObject("judge_25px", resourceCulture);
