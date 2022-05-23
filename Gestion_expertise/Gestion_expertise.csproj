@@ -207,6 +207,12 @@
       <DependentUpon>PageDeGarde.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reçu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reçu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="suivi_expertise.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -261,6 +267,10 @@
     <EmbeddedResource Include="PageDeGarde.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PageDeGarde.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reçu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reçu.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="suivi_expertise.resx">
       <DependentUpon>suivi_expertise.cs</DependentUpon>

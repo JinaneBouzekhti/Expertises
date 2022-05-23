@@ -77,30 +77,36 @@ namespace Gestion_expertise
 
         private void btn_recu_Click(object sender, EventArgs e)
         {
+
             SqlConnection cn = new SqlConnection(sc);
             cn.Open();
 
-            string req = "select RefRéféré,E.RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDem As NomComplet ,RépertoireDoc from Demandeur D inner join expertise E on D.RefCabinet = E.RefCabinet where E.RefCabinet  like " + RefCabinet + " Union  select  RefRéféré,E.RefCabinet,DateConvPart,DateRvPart,HeureRvPart,NomCompletDéf As NomComplet ,RépertoireDoc from Défenseur Df inner join expertise E on Df.RefCabinet = E.RefCabinet   where E.RefCabinet  like " + RefCabinet;
+            string req = "select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDem As NomComplet, D.Adresse, RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Demandeur D on D.RefCabinet = E.RefCabinet  where E.RefCabinet like " + RefCabinet + " union select NomTribunalP, RefRéféré, DateDésignation, NomMagistrat, DateRvPart, HeureRvPart, NomCompletDéf As NomComplet , D.Adresse,RépertoireDoc from TribunauxPremière T inner join Expertise E on T.NumTribunalP = E.NumTribunalP inner join Défenseur D on D.RefCabinet = E.RefCabinet  where E.RefCabinet like " + RefCabinet;
             SqlCommand com = new SqlCommand(req, cn);
             SqlDataAdapter daCA = new SqlDataAdapter(com);
             DataTable data = new DataTable();
             daCA.Fill(data);
 
-            PageDeGarde C = new PageDeGarde();
+            reçu C = new reçu();
 
             for (int i = 0; i < data.Rows.Count; i++)
             {
-                C.SetParameterValue("Ref_ref", data.Rows[i][0]);
-                C.SetParameterValue("Ref_cab", data.Rows[i][1]);
-                C.SetParameterValue("Date_Reçu", Convert.ToDateTime(data.Rows[i][2]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
-                C.SetParameterValue("HeurRv", data.Rows[i][3]);
-                C.SetParameterValue("DateRV", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
-                string Chemin = data.Rows[i][6].ToString() + @"\" + "التسليمات" + @"\";
+                C.SetParameterValue("nomTribunal", data.Rows[i][0]);
+                C.SetParameterValue("refe_referer", data.Rows[i][1]);
+                C.SetParameterValue("date_Designation", data.Rows[i][2]);
+                C.SetParameterValue("juje", data.Rows[i][3]);
+                C.SetParameterValue("date_rendez_vous", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
+                C.SetParameterValue("heur_rendez_vous", data.Rows[i][5]);
+                C.SetParameterValue("nom complet", data.Rows[i][6]);
+                C.SetParameterValue("adresse", data.Rows[i][7] is null ? " " : data.Rows[i][7]);
+
+                string Chemin = data.Rows[i][8].ToString() + @"\" + "التسليمات" + @"\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
                 if (!Dir.Exists)
                     Dir.Create();
-                C.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Chemin + data.Rows[i][5] + ".pdf");
+                C.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Chemin + data.Rows[i][6] + ".pdf");
             }
+
 
         }
     }
