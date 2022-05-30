@@ -49,5 +49,18 @@ namespace Gestion_expertise
             }
             MessageBox.Show("les modification est enregistré avec succès");
         }
+        private void defendeur_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.Width < 1200)
+            {
+                this.Font = new Font("Arial", 10, FontStyle.Regular);
+            }
+            else
+            {
+
+                this.Font = new Font("Arial", 14, FontStyle.Regular);
+            }
+        }
+
     }
 }

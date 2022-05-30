@@ -45,17 +45,17 @@ namespace Gestion_expertise
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
             con.Open();
             if (ch_def.Checked)
-                for (int i = 0; i < dgv_def.RowCount; i++)
+                for (int i = 0; i < dgv_def.RowCount-1; i++)
                 {
                     
-                        SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,RefCabinet) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "')", con);
+                        SqlCommand cmd = new SqlCommand("insert into Défenseur(NomCompletDéf,RefCabinet,Adresse) values(N'" + dgv_def.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "',' ')", con);
                         cmd.ExecuteNonQuery();
                     
                 }
             if (ch_dem.Checked)
-                for (int i = 0; i < dgv_dem.RowCount; i++)
+                for (int i = 0; i < dgv_dem.RowCount-1; i++)
                 {                   
-                        SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,RefCabinet) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "')", con);
+                        SqlCommand cmd = new SqlCommand("insert into Demandeur(NomCompletDem,RefCabinet,Adresse) values(N'" + dgv_dem.Rows[i].Cells[1].Value + "','" + Convert.ToInt32(RefCabinet) + "' ,' ')", con);
                         cmd.ExecuteNonQuery();
                     
                 }

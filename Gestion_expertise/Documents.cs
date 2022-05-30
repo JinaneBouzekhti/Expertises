@@ -62,9 +62,19 @@ namespace Gestion_expertise
                 C.SetParameterValue("date_Designation", data.Rows[i][2]);
                 C.SetParameterValue("juje", data.Rows[i][3]);
                 C.SetParameterValue("date_rendez_vous", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
+                string period="";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 9 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 12 )
+                    period = "صباحا";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 12 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 14)
+                    period = "زوالا";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 14 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 16)
+                    period = "بعد الزوال";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 16 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 18)
+                    period = "مساءا";
+                C.SetParameterValue("period", period.ToString());
                 C.SetParameterValue("heur_rendez_vous", data.Rows[i][5]);
                 C.SetParameterValue("nom complet", data.Rows[i][6]);
-                C.SetParameterValue("adresse", data.Rows[i][7] is null ? " " : data.Rows[i][7]);
+                C.SetParameterValue("adresse", data.Rows[i][7]);
 
                 string Chemin = data.Rows[i][8].ToString() + @"\" + "الاستدعاءات" + @"\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);
@@ -97,8 +107,18 @@ namespace Gestion_expertise
                 C.SetParameterValue("juje", data.Rows[i][3]);
                 C.SetParameterValue("date_rendez_vous", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
                 C.SetParameterValue("heur_rendez_vous", data.Rows[i][5]);
+                string period = "";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 9 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 12)
+                    period = "صباحا";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 12 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 14)
+                    period = "زوالا";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 14 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 16)
+                    period = "بعد الزوال";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 16 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 18)
+                    period = "مساءا";
+                C.SetParameterValue("period", period.ToString());
                 C.SetParameterValue("nom complet", data.Rows[i][6]);
-                C.SetParameterValue("adresse", data.Rows[i][7] is null ? " " : data.Rows[i][7]);
+                C.SetParameterValue("adresse", data.Rows[i][7]);
 
                 string Chemin = data.Rows[i][8].ToString() + @"\" + "التسليمات" + @"\";
                 DirectoryInfo Dir = new DirectoryInfo(Chemin);

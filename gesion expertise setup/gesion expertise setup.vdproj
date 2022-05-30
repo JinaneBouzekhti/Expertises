@@ -34,12 +34,18 @@
         "Entry"
         {
         "MsmKey" = "8:_0BDF88FDF8566DDCFC9717E07B3300F0"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0BDF88FDF8566DDCFC9717E07B3300F0"
         "OwnerKey" = "8:_242E6BBFBC3E43B892CCD910E8176B00"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0C78C50CA925473B898FF9F4F5300EF4"
+        "MsmKey" = "8:_11FA1D97C9C64131B3D8F5DDF678DD7D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -59,6 +65,12 @@
         {
         "MsmKey" = "8:_1C9700AD54F3A0C92B69F62DDF04B477"
         "OwnerKey" = "8:_AF3A4C42EFF94C7CA8C0118C70B99B12"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1C9700AD54F3A0C92B69F62DDF04B477"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,14 +99,38 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2BA9747A535DEFD9B5249E2B4ECD8481"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3573A1AF77AA501BB23A537DAB5C2D36"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_3573A1AF77AA501BB23A537DAB5C2D36"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3D629E217DF61C4F67DB10F7019D4EAA"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3D629E217DF61C4F67DB10F7019D4EAA"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -111,14 +147,32 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_474B1A25B07D200CF281521BCB5B7726"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4BF93BCFEDF33BC926B49DEC3D495CC5"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_4BF93BCFEDF33BC926B49DEC3D495CC5"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4D6E5F4BDE756EDD2B07DC69F30F9975"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4D6E5F4BDE756EDD2B07DC69F30F9975"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -135,8 +189,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5CC11ED149D64DA2B6C4A77339E35E98"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_55B2669F937306FA18495AE69F13DA0C"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -184,6 +238,12 @@
         "Entry"
         {
         "MsmKey" = "8:_7FE2303A16B378894D24C24364C54094"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7FE2303A16B378894D24C24364C54094"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -219,6 +279,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_928D7914393D71CCE1F53889BCA326F3"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_970E0AF303EB413EB765D228017C1B11"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -249,6 +315,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A87603D417FD4228B61A72A7A4DEBE18"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_AB760E7A2898C43D49D97DA691A43246"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
         "MsmSig" = "8:_UNDEFINED"
@@ -257,6 +329,12 @@
         {
         "MsmKey" = "8:_AB760E7A2898C43D49D97DA691A43246"
         "OwnerKey" = "8:_74363B22405F4E5693C65F6CF15F78E3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AB760E7A2898C43D49D97DA691A43246"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -281,6 +359,12 @@
         {
         "MsmKey" = "8:_B898FE8A7A5F2C09826A35AEA553ADBF"
         "OwnerKey" = "8:_50F8DD22744F440B841A8E0EE40BFEDB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B898FE8A7A5F2C09826A35AEA553ADBF"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -346,6 +430,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D041E28A4AA9FE2487D61350AA1C8086"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D041E28A4AA9FE2487D61350AA1C8086"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -369,6 +459,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DDBEC6775E231A77FAFE416130DEE41A"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_EB495A1BF1774543B3CC4446E246D82C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -383,6 +479,12 @@
         {
         "MsmKey" = "8:_EC12B2D14B41E31D111C03308904D82C"
         "OwnerKey" = "8:_84F285D58A1B465B82BF292625254367"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EC12B2D14B41E31D111C03308904D82C"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -580,6 +682,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2F422E1941054F24AA95D3F1FCAF3AB8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_23868F17274E4E179420CCB177EA6806"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -710,10 +818,10 @@
                     "Name" = "8:Microsoft .NET Framework 4.8 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.8"
                     }
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.11.1"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.15.0"
                     {
-                    "Name" = "8:SQL Server 2012 Express LocalDB"
-                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.11.1"
+                    "Name" = "8:SQL Server 2019 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.15.0"
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:SAP.CrystalReports14.NET.2.0"
                     {
@@ -745,6 +853,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -868,10 +984,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C78C50CA925473B898FF9F4F5300EF4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_11FA1D97C9C64131B3D8F5DDF678DD7D"
             {
-            "SourcePath" = "8:..\\Gestion_expertise\\bin\\Debug\\expertises.mdf"
-            "TargetName" = "8:expertises.mdf"
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\icon\\iconourapp.ico"
+            "TargetName" = "8:iconourapp.ico"
             "Tag" = "8:"
             "Folder" = "8:_64EA21D94FF0470884753A5E85D8BD08"
             "Condition" = "8:"
@@ -1291,26 +1407,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5CC11ED149D64DA2B6C4A77339E35E98"
-            {
-            "SourcePath" = "8:..\\Gestion_expertise\\bin\\Debug\\expertises_log.ldf"
-            "TargetName" = "8:expertises_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_64EA21D94FF0470884753A5E85D8BD08"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6A1E977B068D40C7917DA2BEAD210AF2"
             {
             "AssemblyRegister" = "3:1"
@@ -1698,6 +1794,26 @@
             "TargetName" = "8:Gestion_expertise.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_64EA21D94FF0470884753A5E85D8BD08"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A87603D417FD4228B61A72A7A4DEBE18"
+            {
+            "SourcePath" = "8:..\\Gestion_expertise\\bin\\Debug\\DB\\expertises.mdf"
+            "TargetName" = "8:expertises.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_1A1D906EA8C14156A097818F7D576D79"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2255,6 +2371,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_1A1D906EA8C14156A097818F7D576D79"
+                    {
+                    "Name" = "8:DB"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_53B62BAD0C094E63A66B78DC9B5BB3D3"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_E774751349CB45D598D51B4A518F5104"
@@ -2296,7 +2423,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:gesion expertise setup"
         "ProductCode" = "8:{83F24587-635B-4174-97DD-3FA7B46AD111}"
-        "PackageCode" = "8:{4BD0816C-D22A-4B42-9120-6BCD39BDF9D1}"
+        "PackageCode" = "8:{CC0BB3A2-1DAA-4921-9533-1DCE267AA4DC}"
         "UpgradeCode" = "8:{75B68622-0BD1-41C4-913A-7A0C1792EE09}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -2418,7 +2545,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3BA58CCDA6234F4F9B04F62245EC2FC7"
             {
-            "Name" = "8:Gestion_expertise.exe"
+            "Name" = "8:Gestion expertise"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -2427,12 +2554,12 @@
             "Target" = "8:_81E138746800447CB27117C3889DFFA1"
             "Folder" = "8:_E774751349CB45D598D51B4A518F5104"
             "WorkingFolder" = "8:_64EA21D94FF0470884753A5E85D8BD08"
-            "Icon" = "8:_8C6A2759FB974E02AA8AFB440390EA85"
+            "Icon" = "8:_11FA1D97C9C64131B3D8F5DDF678DD7D"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6FBCCA26533C4FAB843C5D721CCE6AC3"
             {
-            "Name" = "8:Gestion_expertise.exe"
+            "Name" = "8:Gestion expertise"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -2844,6 +2971,34 @@
         "ProjectOutput"
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_23868F17274E4E179420CCB177EA6806"
+            {
+            "SourcePath" = "8:..\\Gestion_expertise\\obj\\Debug\\Gestion_expertise.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_64EA21D94FF0470884753A5E85D8BD08"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{4D4D7F5C-D23E-4D21-B22D-59C1B4C199B5}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2F422E1941054F24AA95D3F1FCAF3AB8"
             {
             "SourcePath" = "8:..\\Gestion_expertise\\obj\\Debug\\Gestion_expertise.exe"
             "TargetName" = "8:"
