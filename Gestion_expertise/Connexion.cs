@@ -55,30 +55,36 @@ namespace Gestion_expertise
             SqlDataAdapter sa = new SqlDataAdapter("select * from Utilisateur where login = '" + txt_login.Text + "' and password = '" + txt_password.Text + "'", con);
             DataTable dt = new DataTable();
             sa.Fill(dt);
+
             if (dt.Rows.Count == 1)
             {
-                SqlCommand com1 = new SqlCommand(" delete from DernierSession where local like '" + GetMACAddress1() + "'", con);
+                lbl_Err.Visible = false;
+                SqlCommand com1 = new SqlCommand("delete from DernierSession where local like '" + GetMACAddress1() + "'", con);
                 com1.ExecuteNonQuery();
                 if (keepit.Checked)
                 {
-                    SqlCommand com = new SqlCommand("insert into DernierSession values ('" + txt_login.Text + "','" + txt_password.Text.Trim() + "', '"+GetMACAddress1()+"')", con);
+                    SqlCommand com = new SqlCommand("insert into DernierSession values ('" + txt_login.Text + "','" + txt_password.Text.Trim() + "', '" + GetMACAddress1() + "')", con);
                     com.ExecuteNonQuery();
                 }
                 else
                 {
-                    SqlCommand com = new SqlCommand(" delete from DernierSession where local like '" + GetMACAddress1() + "'", con);
+                    SqlCommand com = new SqlCommand("delete from DernierSession where local like '" + GetMACAddress1() + "'", con);
                     com.ExecuteNonQuery();
                 }
-                this.Hide();
-                main m1 = new main();
-                m1.Show();
-
-
-
+                if (Convert.ToBoolean(dt.Rows[0][5]) == true)
+                {
+                    this.Hide();
+                    main m1 = new main(dt.Rows[0][0].ToString());
+                    m1.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Votre compte est invalide", "Avertissement");
+                }
 
             }
             else
-                MessageBox.Show("not ok", "not ok");
+                lbl_Err.Visible = true;
 
 
         }

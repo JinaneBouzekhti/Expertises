@@ -18,18 +18,29 @@ namespace Gestion_expertise
         string cs = ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString;
         DataSet ds = new DataSet();
         BindingSource bsExp = new BindingSource();
-        public main()
+
+        public main(string log)
         {
             InitializeComponent();
+            this.log = log;
         }
 
-        
+        string log;
 
         private void main_Load(object sender, EventArgs e)
         {
             comboBox1.Focus();
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
+
+            SqlDataAdapter sa = new SqlDataAdapter("select type from Utilisateur where login like '" + log + "'", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
+                pictureBox2.Visible = true;
+
+
+
             string req = "select * from expertise";
             SqlCommand com = new SqlCommand(req, cn);
 

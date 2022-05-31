@@ -21,14 +21,43 @@ namespace Gestion_expertise
 
         private void adminpanel_Load(object sender, EventArgs e)
         {
+            DataSet ds = new DataSet();
+            BindingSource bsTypeU = new BindingSource();
+            string cs = ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString;
+
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            string req2 = "select * from typeUtilisateur";
+            SqlCommand com = new SqlCommand(req2, cn);
+            SqlDataAdapter daTypeU = new SqlDataAdapter(com);
+            if (ds.Tables["TypeU"] != null)
+                ds.Tables["TypeU"].Clear();
+
+            daTypeU.Fill(ds, "TypeU");
+
+            bsTypeU.DataSource = ds;
+            bsTypeU.DataMember = "TypeU";
+
+            SqlCommandBuilder comB = new SqlCommandBuilder(daTypeU);
+
+
+            rjComboBox1.DataSource = bsTypeU;
+            rjComboBox1.DisplayMember = "NomtypeUtilisateur";
+            rjComboBox1.ValueMember = "NumtypeUtilisateur";
+
+            com = null;
+            comB = null;
+
             // TODO: This line of code loads data into the 'expertisesDataSet2.Utilisateur' table. You can move, or remove it, as needed.
             this.utilisateurTableAdapter.Fill(this.expertisesDataSet2.Utilisateur);
+
             txt_log.Texts = dgv_users.Rows[0].Cells[0].Value.ToString();
             txt_pas.Texts = dgv_users.Rows[0].Cells[1].Value.ToString();
             txt_nom.Texts = dgv_users.Rows[0].Cells[2].Value.ToString();
             txt_pren.Texts = dgv_users.Rows[0].Cells[3].Value.ToString();
             txt_mail.Texts = dgv_users.Rows[0].Cells[4].Value.ToString();
-            cb_valide.Checked =Convert.ToBoolean(dgv_users.Rows[0].Cells[5].Value.ToString()) ;
+            cb_valide.Checked =Convert.ToBoolean(dgv_users.Rows[0].Cells[6].Value.ToString()) ;
+            rjComboBox1.Texts = dgv_users.Rows[0].Cells[5].Value.ToString();
         }
 
         private void dgv_users_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -38,7 +67,8 @@ namespace Gestion_expertise
             txt_nom.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[2].Value.ToString();
             txt_pren.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[3].Value.ToString();
             txt_mail.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            cb_valide.Checked = Convert.ToBoolean(dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[5].Value.ToString());
+            cb_valide.Checked = Convert.ToBoolean(dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            rjComboBox1.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[5].Value.ToString(); 
         }
 
         private void btn_ajouter_Click(object sender, EventArgs e)
@@ -50,6 +80,7 @@ namespace Gestion_expertise
             txt_pas.Texts = "";
             txt_pren.Texts = "";
             cb_valide.Enabled = true;
+            rjComboBox1.Enabled = true;
             btn = 1;
         }
 
@@ -61,6 +92,7 @@ namespace Gestion_expertise
             txt_pas.Enabled = v;
             txt_pren.Enabled = v;
             cb_valide.Enabled = v;
+            rjComboBox1.Enabled = v;
             btn_valider.Visible = v;
             btn_annuler.Visible = v;
             btn_ajouter.Visible = !v;
@@ -82,26 +114,29 @@ namespace Gestion_expertise
             txt_nom.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[2].Value.ToString();
             txt_pren.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[3].Value.ToString();
             txt_mail.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            cb_valide.Checked = Convert.ToBoolean(dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[5].Value.ToString());
+            cb_valide.Checked = Convert.ToBoolean(dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[6].Value.ToString());
+            rjComboBox1.Texts = dgv_users.Rows[dgv_users.CurrentCell.RowIndex].Cells[5].Value.ToString();
             Activate(false);
         }
 
         private void btn_valider_Click(object sender, EventArgs e)
         {
+            int type = Convert.ToInt32(rjComboBox1.SelectedIndex) + 1;
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["expertises.Properties.Settings.expertisesConnectionString"].ConnectionString);
             con.Open();
+
             if (isempty()==false)
             {
                 if (btn == 1)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into utilisateur values ('" + txt_log.Texts + "','" + txt_pas.Texts + "','" + txt_nom.Texts + "','" + txt_pren.Texts + "','" + txt_mail.Texts + "'," + Convert.ToString(cb_valide.Checked ? 1 : 0) + ",''); ",con);
+                    SqlCommand cmd = new SqlCommand("insert into utilisateur values ('" + txt_log.Texts + "','" + txt_pas.Texts + "','" + txt_nom.Texts + "','" + txt_pren.Texts + "','" + txt_mail.Texts + "'," + Convert.ToString(cb_valide.Checked ? 1 : 0) + ",'',"+ type + ")", con);
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
                     SqlCommand cmd = new SqlCommand("delete from utilisateur where login ='" + oldlogin + "'",con);
                     cmd.ExecuteNonQuery();
-                    SqlCommand cmd2 = new SqlCommand("insert into utilisateur values ('" + txt_log.Texts + "','" + txt_pas.Texts + "','" + txt_nom.Texts + "','" + txt_pren.Texts + "','" + txt_mail.Texts + "'," + Convert.ToString(cb_valide.Checked ? 1 : 0) + ",''); ",con);
+                    SqlCommand cmd2 = new SqlCommand("insert into utilisateur values ('" + txt_log.Texts + "','" + txt_pas.Texts + "','" + txt_nom.Texts + "','" + txt_pren.Texts + "','" + txt_mail.Texts + "'," + Convert.ToString(cb_valide.Checked ? 1 : 0) + ",''," + type +")",con);
                     cmd2.ExecuteNonQuery();
                 }
             }
@@ -131,5 +166,6 @@ namespace Gestion_expertise
                 this.utilisateurTableAdapter.Fill(this.expertisesDataSet2.Utilisateur);
             }
         }
+
     }
 }

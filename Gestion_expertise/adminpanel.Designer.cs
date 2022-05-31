@@ -39,12 +39,11 @@ namespace Gestion_expertise
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomtypeUtilisateur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validationDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.hashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utilisateurBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expertisesDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expertisesDataSet2 = new Gestion_expertise.expertisesDataSet2();
-            this.utilisateurTableAdapter = new Gestion_expertise.expertisesDataSet2TableAdapters.UtilisateurTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,6 +57,9 @@ namespace Gestion_expertise
             this.btn_suprimmer = new System.Windows.Forms.Button();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_ajouter = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.utilisateurTableAdapter = new Gestion_expertise.expertisesDataSet2TableAdapters.UtilisateurTableAdapter();
+            this.rjComboBox1 = new CustomControls.RJControls.RJComboBox();
             this.cb_valide = new WinFormsApp1.CheckBoxCustom();
             this.txt_mail = new CustomControls.RJControls.RJTextBox();
             this.txt_pren = new CustomControls.RJControls.RJTextBox();
@@ -97,8 +99,8 @@ namespace Gestion_expertise
             this.nomDataGridViewTextBoxColumn,
             this.prenomDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.validationDataGridViewCheckBoxColumn,
-            this.hashDataGridViewTextBoxColumn});
+            this.NomtypeUtilisateur,
+            this.validationDataGridViewCheckBoxColumn});
             this.dgv_users.DataSource = this.utilisateurBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -110,12 +112,13 @@ namespace Gestion_expertise
             this.dgv_users.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_users.EnableHeadersVisualStyles = false;
             this.dgv_users.GridColor = System.Drawing.Color.Gray;
-            this.dgv_users.Location = new System.Drawing.Point(8, 8);
+            this.dgv_users.Location = new System.Drawing.Point(6, 6);
+            this.dgv_users.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_users.Name = "dgv_users";
             this.dgv_users.ReadOnly = true;
             this.dgv_users.RowHeadersWidth = 51;
             this.dgv_users.RowTemplate.Height = 29;
-            this.dgv_users.Size = new System.Drawing.Size(1085, 341);
+            this.dgv_users.Size = new System.Drawing.Size(814, 277);
             this.dgv_users.TabIndex = 4;
             this.dgv_users.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_users_CellContentClick);
             // 
@@ -164,6 +167,13 @@ namespace Gestion_expertise
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // NomtypeUtilisateur
+            // 
+            this.NomtypeUtilisateur.DataPropertyName = "NomtypeUtilisateur";
+            this.NomtypeUtilisateur.HeaderText = "Type";
+            this.NomtypeUtilisateur.Name = "NomtypeUtilisateur";
+            this.NomtypeUtilisateur.ReadOnly = true;
+            // 
             // validationDataGridViewCheckBoxColumn
             // 
             this.validationDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -172,15 +182,6 @@ namespace Gestion_expertise
             this.validationDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.validationDataGridViewCheckBoxColumn.Name = "validationDataGridViewCheckBoxColumn";
             this.validationDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // hashDataGridViewTextBoxColumn
-            // 
-            this.hashDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hashDataGridViewTextBoxColumn.DataPropertyName = "Hash";
-            this.hashDataGridViewTextBoxColumn.HeaderText = "Hash";
-            this.hashDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hashDataGridViewTextBoxColumn.Name = "hashDataGridViewTextBoxColumn";
-            this.hashDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // utilisateurBindingSource
             // 
@@ -197,27 +198,25 @@ namespace Gestion_expertise
             this.expertisesDataSet2.DataSetName = "expertisesDataSet2";
             this.expertisesDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // utilisateurTableAdapter
-            // 
-            this.utilisateurTableAdapter.ClearBeforeFill = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(24, 405);
+            this.label1.Location = new System.Drawing.Point(20, 329);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.Size = new System.Drawing.Size(126, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Login";
+            this.label1.Text = "Nom d\'utilisateur";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(24, 472);
+            this.label2.Location = new System.Drawing.Point(20, 386);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 25);
+            this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Mot de passe ";
             // 
@@ -225,9 +224,10 @@ namespace Gestion_expertise
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(24, 541);
+            this.label3.Location = new System.Drawing.Point(20, 443);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 25);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nom";
             // 
@@ -235,9 +235,10 @@ namespace Gestion_expertise
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(24, 616);
+            this.label4.Location = new System.Drawing.Point(20, 500);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 25);
+            this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "Prenom";
             // 
@@ -245,9 +246,10 @@ namespace Gestion_expertise
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(577, 405);
+            this.label5.Location = new System.Drawing.Point(433, 329);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 25);
+            this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Email";
             // 
@@ -255,9 +257,10 @@ namespace Gestion_expertise
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(577, 472);
+            this.label6.Location = new System.Drawing.Point(429, 441);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 25);
+            this.label6.Size = new System.Drawing.Size(109, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "Compte valide";
             // 
@@ -279,10 +282,10 @@ namespace Gestion_expertise
             this.btn_nodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_nodifier.Image = global::Gestion_expertise.Properties.Resources.edit_property_25px;
             this.btn_nodifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nodifier.Location = new System.Drawing.Point(723, 558);
+            this.btn_nodifier.Location = new System.Drawing.Point(545, 524);
             this.btn_nodifier.Margin = new System.Windows.Forms.Padding(2);
             this.btn_nodifier.Name = "btn_nodifier";
-            this.btn_nodifier.Size = new System.Drawing.Size(180, 42);
+            this.btn_nodifier.Size = new System.Drawing.Size(136, 34);
             this.btn_nodifier.TabIndex = 124;
             this.btn_nodifier.Text = "Modifier";
             this.btn_nodifier.UseVisualStyleBackColor = false;
@@ -295,10 +298,10 @@ namespace Gestion_expertise
             this.btn_valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_valider.Image = global::Gestion_expertise.Properties.Resources.save_as_25px;
             this.btn_valider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_valider.Location = new System.Drawing.Point(827, 616);
+            this.btn_valider.Location = new System.Drawing.Point(623, 562);
             this.btn_valider.Margin = new System.Windows.Forms.Padding(2);
             this.btn_valider.Name = "btn_valider";
-            this.btn_valider.Size = new System.Drawing.Size(132, 42);
+            this.btn_valider.Size = new System.Drawing.Size(99, 34);
             this.btn_valider.TabIndex = 122;
             this.btn_valider.Text = "Valider";
             this.btn_valider.UseVisualStyleBackColor = false;
@@ -313,10 +316,10 @@ namespace Gestion_expertise
             this.btn_suprimmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_suprimmer.Image = global::Gestion_expertise.Properties.Resources.delete_trash_25px;
             this.btn_suprimmer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_suprimmer.Location = new System.Drawing.Point(539, 558);
+            this.btn_suprimmer.Location = new System.Drawing.Point(407, 524);
             this.btn_suprimmer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_suprimmer.Name = "btn_suprimmer";
-            this.btn_suprimmer.Size = new System.Drawing.Size(180, 42);
+            this.btn_suprimmer.Size = new System.Drawing.Size(136, 34);
             this.btn_suprimmer.TabIndex = 121;
             this.btn_suprimmer.Text = "Suprimmer";
             this.btn_suprimmer.UseVisualStyleBackColor = false;
@@ -330,10 +333,10 @@ namespace Gestion_expertise
             this.btn_annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
             this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_annuler.Location = new System.Drawing.Point(691, 616);
+            this.btn_annuler.Location = new System.Drawing.Point(520, 562);
             this.btn_annuler.Margin = new System.Windows.Forms.Padding(2);
             this.btn_annuler.Name = "btn_annuler";
-            this.btn_annuler.Size = new System.Drawing.Size(132, 42);
+            this.btn_annuler.Size = new System.Drawing.Size(99, 34);
             this.btn_annuler.TabIndex = 123;
             this.btn_annuler.Text = "Annuler";
             this.btn_annuler.UseVisualStyleBackColor = false;
@@ -348,27 +351,62 @@ namespace Gestion_expertise
             this.btn_ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px;
             this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajouter.Location = new System.Drawing.Point(907, 558);
+            this.btn_ajouter.Location = new System.Drawing.Point(683, 524);
             this.btn_ajouter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(180, 42);
+            this.btn_ajouter.Size = new System.Drawing.Size(136, 34);
             this.btn_ajouter.TabIndex = 120;
             this.btn_ajouter.Text = "Ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = false;
             this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.Location = new System.Drawing.Point(433, 385);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 20);
+            this.label7.TabIndex = 125;
+            this.label7.Text = "Type";
+            // 
+            // utilisateurTableAdapter
+            // 
+            this.utilisateurTableAdapter.ClearBeforeFill = true;
+            // 
+            // rjComboBox1
+            // 
+            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.rjComboBox1.BorderSize = 2;
+            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.rjComboBox1.Enabled = false;
+            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Location = new System.Drawing.Point(545, 377);
+            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.rjComboBox1.Name = "rjComboBox1";
+            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.rjComboBox1.Size = new System.Drawing.Size(249, 30);
+            this.rjComboBox1.TabIndex = 126;
+            this.rjComboBox1.Texts = "";
+            // 
             // cb_valide
             // 
             this.cb_valide.Enabled = false;
-            this.cb_valide.Location = new System.Drawing.Point(772, 471);
+            this.cb_valide.Location = new System.Drawing.Point(575, 435);
             this.cb_valide.Margin = new System.Windows.Forms.Padding(2);
-            this.cb_valide.MinimumSize = new System.Drawing.Size(25, 22);
+            this.cb_valide.MinimumSize = new System.Drawing.Size(19, 18);
             this.cb_valide.Name = "cb_valide";
             this.cb_valide.OffBackColor = System.Drawing.Color.Gray;
             this.cb_valide.OffToggleColor = System.Drawing.Color.Gainsboro;
             this.cb_valide.OnBackColor = System.Drawing.Color.Gainsboro;
             this.cb_valide.OnToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.cb_valide.Size = new System.Drawing.Size(82, 34);
+            this.cb_valide.Size = new System.Drawing.Size(62, 28);
             this.cb_valide.TabIndex = 97;
             this.cb_valide.UseVisualStyleBackColor = true;
             // 
@@ -381,13 +419,13 @@ namespace Gestion_expertise
             this.txt_mail.Enabled = false;
             this.txt_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_mail.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_mail.Location = new System.Drawing.Point(712, 395);
+            this.txt_mail.Location = new System.Drawing.Point(547, 319);
             this.txt_mail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mail.Multiline = false;
             this.txt_mail.Name = "txt_mail";
-            this.txt_mail.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_mail.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_mail.PasswordChar = false;
-            this.txt_mail.Size = new System.Drawing.Size(332, 35);
+            this.txt_mail.Size = new System.Drawing.Size(249, 30);
             this.txt_mail.TabIndex = 14;
             this.txt_mail.Texts = "";
             this.txt_mail.UnderlinedStyle = false;
@@ -401,13 +439,13 @@ namespace Gestion_expertise
             this.txt_pren.Enabled = false;
             this.txt_pren.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_pren.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_pren.Location = new System.Drawing.Point(159, 606);
+            this.txt_pren.Location = new System.Drawing.Point(152, 490);
             this.txt_pren.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pren.Multiline = false;
             this.txt_pren.Name = "txt_pren";
-            this.txt_pren.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_pren.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_pren.PasswordChar = false;
-            this.txt_pren.Size = new System.Drawing.Size(352, 35);
+            this.txt_pren.Size = new System.Drawing.Size(264, 30);
             this.txt_pren.TabIndex = 12;
             this.txt_pren.Texts = "";
             this.txt_pren.UnderlinedStyle = false;
@@ -421,13 +459,13 @@ namespace Gestion_expertise
             this.txt_nom.Enabled = false;
             this.txt_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_nom.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_nom.Location = new System.Drawing.Point(159, 531);
+            this.txt_nom.Location = new System.Drawing.Point(152, 433);
             this.txt_nom.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nom.Multiline = false;
             this.txt_nom.Name = "txt_nom";
-            this.txt_nom.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_nom.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_nom.PasswordChar = false;
-            this.txt_nom.Size = new System.Drawing.Size(352, 35);
+            this.txt_nom.Size = new System.Drawing.Size(264, 30);
             this.txt_nom.TabIndex = 10;
             this.txt_nom.Texts = "";
             this.txt_nom.UnderlinedStyle = false;
@@ -441,13 +479,13 @@ namespace Gestion_expertise
             this.txt_pas.Enabled = false;
             this.txt_pas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_pas.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_pas.Location = new System.Drawing.Point(159, 462);
+            this.txt_pas.Location = new System.Drawing.Point(152, 376);
             this.txt_pas.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pas.Multiline = false;
             this.txt_pas.Name = "txt_pas";
-            this.txt_pas.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_pas.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_pas.PasswordChar = false;
-            this.txt_pas.Size = new System.Drawing.Size(352, 35);
+            this.txt_pas.Size = new System.Drawing.Size(264, 30);
             this.txt_pas.TabIndex = 8;
             this.txt_pas.Texts = "";
             this.txt_pas.UnderlinedStyle = false;
@@ -461,23 +499,25 @@ namespace Gestion_expertise
             this.txt_log.Enabled = false;
             this.txt_log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_log.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_log.Location = new System.Drawing.Point(159, 395);
+            this.txt_log.Location = new System.Drawing.Point(152, 319);
             this.txt_log.Margin = new System.Windows.Forms.Padding(4);
             this.txt_log.Multiline = false;
             this.txt_log.Name = "txt_log";
-            this.txt_log.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_log.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_log.PasswordChar = false;
-            this.txt_log.Size = new System.Drawing.Size(352, 35);
+            this.txt_log.Size = new System.Drawing.Size(264, 30);
             this.txt_log.TabIndex = 6;
             this.txt_log.Texts = "";
             this.txt_log.UnderlinedStyle = false;
             // 
             // adminpanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1105, 708);
+            this.ClientSize = new System.Drawing.Size(830, 604);
+            this.Controls.Add(this.rjComboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_nodifier);
             this.Controls.Add(this.btn_valider);
             this.Controls.Add(this.btn_suprimmer);
@@ -497,6 +537,7 @@ namespace Gestion_expertise
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_users);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "adminpanel";
             this.Text = "adminpanel";
@@ -519,15 +560,7 @@ namespace Gestion_expertise
         private expertisesDataSet expertisesDataSet;
         private System.Windows.Forms.BindingSource expertisesDataSet2BindingSource;
         private expertisesDataSet2 expertisesDataSet2;
-        private System.Windows.Forms.BindingSource utilisateurBindingSource;
         private expertisesDataSet2TableAdapters.UtilisateurTableAdapter utilisateurTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn validationDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hashDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJTextBox txt_log;
         private CustomControls.RJControls.RJTextBox txt_pas;
@@ -545,5 +578,16 @@ namespace Gestion_expertise
         private System.Windows.Forms.Button btn_annuler;
         private System.Windows.Forms.Button btn_ajouter;
         private System.Windows.Forms.Button btn_nodifier;
+        private System.Windows.Forms.Label label7;
+        private CustomControls.RJControls.RJComboBox rjComboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hashDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource utilisateurBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomtypeUtilisateur;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn validationDataGridViewCheckBoxColumn;
     }
 }
