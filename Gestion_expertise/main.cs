@@ -77,7 +77,7 @@ namespace Gestion_expertise
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Ajouter_expertise ex = new Ajouter_expertise();
+            Ajouter_expertise ex = new Ajouter_expertise(log);
             ex.Show();
         }
 
@@ -125,7 +125,7 @@ namespace Gestion_expertise
                 try
                 {
                     mainpanel.Controls.Clear();
-                    suivi_expertise suivi = new suivi_expertise(comboBox1.SelectedValue.ToString());
+                    suivi_expertise suivi = new suivi_expertise(comboBox1.SelectedValue.ToString(),log);
                     mainpanel.Controls.Add(suivi);
                     suivi.Dock = DockStyle.Fill;
                 }

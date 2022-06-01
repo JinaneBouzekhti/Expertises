@@ -36,13 +36,14 @@ namespace Gestion_expertise
 
         OpenFileDialog ofd = new OpenFileDialog();
         FolderBrowserDialog fbd = new FolderBrowserDialog();
-        public suivi_expertise(string RefCabinet)
+        public suivi_expertise(string RefCabinet, string log )
         {
             InitializeComponent();
             this.RefCabinet = RefCabinet;
+            this.log = log;
         }
         string RefCabinet;
-
+        string log;
         private void suivi_expertise_Load(object sender, EventArgs e)
         {
             SqlConnection cn = new SqlConnection(cs);
@@ -297,7 +298,21 @@ namespace Gestion_expertise
 
         private void btn_modifier_Click(object sender, EventArgs e)
         {
-            string message, title, defaultValue;
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+
+            SqlDataAdapter sa = new SqlDataAdapter("select type from Utilisateur where login like '" + log + "'", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
+            {
+                Activate(true);
+            }
+            else
+            {
+
+            
+                string message, title, defaultValue;
             object myValue;
             message = "Entrer le clé de securité";
             title = "Clé de securité";
@@ -312,6 +327,7 @@ namespace Gestion_expertise
             {
                 if ((string)myValue != "")
                     Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité ( " + myValue.ToString() + " ) est incorrect , Impossible de modifier cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+            }
             }
         }
       
@@ -514,23 +530,20 @@ namespace Gestion_expertise
 
         private void btn_suprimmer_Click(object sender, EventArgs e)
         {
-            string message, title, defaultValue;
-            object myValue;
-            message = "Entrer le clé de securité";
-            title = "Clé de securité";
-            defaultValue = "";
-            myValue = Interaction.InputBox(message, title, defaultValue);
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
 
-            if((string)myValue == "B20J21I22")
+            SqlDataAdapter sa = new SqlDataAdapter("select type from Utilisateur where login like '" + log + "'", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
             {
-                    if (MessageBox.Show("Etes-vous sûre de cette supression !!", "Supression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Etes-vous sûre de cette supression !!", "Supression", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         string dossier = "";
                         if (txt_rep.Texts != "")
                             dossier = txt_rep.Texts;
 
-                        SqlConnection cn = new SqlConnection(cs);
-                        cn.Open();
                         string rqt = "delete from expertise where RefCabinet like '" + RefCabinet + "'";
                         SqlCommand com = new SqlCommand(rqt, cn);
 
@@ -545,13 +558,46 @@ namespace Gestion_expertise
                         uc = new ToutesExp();
                         this.Controls.Add(uc);
                         uc.Dock = DockStyle.Fill;
-                    }
-                  
+                }
             }
             else
             {
-                if ((string)myValue != "")
-                    Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité est incorrect ( " + myValue.ToString() + " ), Impossible de supprimer cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+                 string message, title, defaultValue;
+                 object myValue;
+                 message = "Entrer le clé de securité";
+                 title = "Clé de securité";
+                 defaultValue = "";
+                 myValue = Interaction.InputBox(message, title, defaultValue);
+
+                if((string)myValue == "B20J21I22")
+                {
+                    if (MessageBox.Show("Etes-vous sûre de cette supression !!", "Supression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                         string dossier = "";
+                         if (txt_rep.Texts != "")
+                                    dossier = txt_rep.Texts;
+
+                         string rqt = "delete from expertise where RefCabinet like '" + RefCabinet + "'";
+                         SqlCommand com = new SqlCommand(rqt, cn);
+
+                                if (dossier != "")
+                                {
+                                    if (Directory.Exists(dossier))
+                                        Directory.Delete(dossier, true);
+                                }
+                                com.ExecuteNonQuery();
+                                this.Controls.Clear();
+                                ToutesExp uc = null;
+                                uc = new ToutesExp();
+                                this.Controls.Add(uc);
+                                uc.Dock = DockStyle.Fill;
+                    }
+                }
+                else
+                {
+                        if ((string)myValue != "")
+                            Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité est incorrect ( " + myValue.ToString() + " ), Impossible de supprimer cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+                }
             }
         }
 

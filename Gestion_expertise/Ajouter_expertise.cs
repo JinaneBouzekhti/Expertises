@@ -36,10 +36,12 @@ namespace Gestion_expertise
 
         OpenFileDialog ofd = new OpenFileDialog();
         FolderBrowserDialog fbd = new FolderBrowserDialog();
-        public Ajouter_expertise()
+        public Ajouter_expertise(string log)
         {
             InitializeComponent();
+            this.log = log;
         }
+        string log;
 
         private void Ajouter_expertise_Load(object sender, EventArgs e)
         {
@@ -209,18 +211,17 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            string message, title, defaultValue;
-            object myValue;
-            message = "Entrer le clé de securité";
-            title = "Clé de securité";
-            defaultValue = "";
-            myValue = Interaction.InputBox(message, title, defaultValue);
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
 
-            if ((string)myValue == "B20J21I22")
+            SqlDataAdapter sa = new SqlDataAdapter("select type from Utilisateur where login like '" + log + "'", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
             {
+
                 string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
-                SqlConnection cn = new SqlConnection(cs);
-                cn.Open();
+
 
                 string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
 
@@ -284,10 +285,82 @@ namespace Gestion_expertise
             }
             else
             {
-                if ((string)myValue != "")
-                    Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité ( " + myValue.ToString() + " ) est incorrect , Impossible de modifier cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+                string message, title, defaultValue;
+                object myValue;
+                message = "Entrer le clé de securité";
+                title = "Clé de securité";
+                defaultValue = "";
+                myValue = Interaction.InputBox(message, title, defaultValue);
+
+                if ((string)myValue == "B20J21I22")
+                {
+                    string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
+
+
+                    string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
+
+                    com = new SqlCommand(rqt, cn);
+
+                    bool terminer = false;
+                    com.Parameters.Add(new SqlParameter("@RefCabinet", txt_ref_cab.Text));
+                    com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
+                    com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
+                    com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
+                    com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
+                    com.Parameters.Add(new SqlParameter("@NomGreffier", txt_greffier.Text));
+                    com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_decision.Text));
+                    com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
+                    com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
+                    com.Parameters.Add(new SqlParameter("@DateAcceptation", Convert.ToDateTime(date_acc.Text)));
+                    com.Parameters.Add(new SqlParameter("@DateConsignation", Convert.ToDateTime(date_consi.Text)));
+                    com.Parameters.Add(new SqlParameter("@MontantConsignation", txt_montant.Text));
+                    com.Parameters.Add(new SqlParameter("@LieuExp", txt_lieu.Text));
+                    com.Parameters.Add(new SqlParameter("@NumTypeExp", Convert.ToInt32(com_type_exp.SelectedValue)));
+                    com.Parameters.Add(new SqlParameter("@DateConvPart", Convert.ToDateTime(date_conv.Text)));
+                    com.Parameters.Add(new SqlParameter("@DateRvPart", Convert.ToDateTime(date_rend.Text)));
+                    com.Parameters.Add(new SqlParameter("@HeureRvPart", txt_horai.Text));
+                    com.Parameters.Add(new SqlParameter("@RépertoireDoc", txt_rep.Text));
+                    com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(com_statu.SelectedValue)));
+                    com.Parameters.Add(new SqlParameter("@Terminer", terminer));
+
+                    if (txt_refYear.Text == "" || txt_refCode.Text == "" || txt_lieu.Text == "" || txt_horai.Text == "")
+                    {
+                        lbl_oblig.Visible = true;
+                    }
+                    else
+                    {
+                        if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
+                        {
+                            lbl_VideDs.Visible = true;
+                        }
+                        else
+                        {
+
+                            string Chemin = txt_rep.Text;
+                            DirectoryInfo Dir = new DirectoryInfo(Chemin);
+                            if (!Dir.Exists)
+                            {
+                                Dir.Create();
+                                com.ExecuteNonQuery();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                com.ExecuteNonQuery();
+                                this.Hide();
+                            }
+                        }
+                    }
+                    com = null;
+                    cn.Close();
+                    cn = null;
+                }
+                else
+                {
+                    if ((string)myValue != "")
+                        Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité ( " + myValue.ToString() + " ) est incorrect , Impossible de modifier cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+                }
             }
-            
         }
 
         private void btn_annuler_Click(object sender, EventArgs e)
