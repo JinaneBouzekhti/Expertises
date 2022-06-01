@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace Gestion_expertise
 {
@@ -208,101 +209,85 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
+            string message, title, defaultValue;
+            object myValue;
+            message = "Entrer le clé de securité";
+            title = "Clé de securité";
+            defaultValue = "";
+            myValue = Interaction.InputBox(message, title, defaultValue);
 
-            string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
-
-            com = new SqlCommand(rqt, cn);
-            //int RefCab;
-            //SqlDataAdapter sa = new SqlDataAdapter("select Max(RefCabinet) from expertise", cn);
-            //DataTable dt = new DataTable();
-            //sa.Fill(dt);
-            //if (dt.Rows[0][0].ToString().Equals(""))
-            //    RefCab = 0;
-            //else
-            //    RefCab = Convert.ToInt32(dt.Rows[0][0]);
-
-
-            //RefCab += 1;
-            bool terminer = false;
-            com.Parameters.Add(new SqlParameter("@RefCabinet", txt_ref_cab.Text));
-            com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
-            com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
-            com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
-            com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
-            com.Parameters.Add(new SqlParameter("@NomGreffier", txt_greffier.Text));
-            com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_decision.Text));
-            com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
-            com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
-            com.Parameters.Add(new SqlParameter("@DateAcceptation", Convert.ToDateTime(date_acc.Text)));
-            com.Parameters.Add(new SqlParameter("@DateConsignation", Convert.ToDateTime(date_consi.Text)));
-            com.Parameters.Add(new SqlParameter("@MontantConsignation", txt_montant.Text));
-            com.Parameters.Add(new SqlParameter("@LieuExp", txt_lieu.Text));
-            com.Parameters.Add(new SqlParameter("@NumTypeExp", Convert.ToInt32(com_type_exp.SelectedValue)));
-            com.Parameters.Add(new SqlParameter("@DateConvPart", Convert.ToDateTime(date_conv.Text)));
-            com.Parameters.Add(new SqlParameter("@DateRvPart", Convert.ToDateTime(date_rend.Text)));
-            com.Parameters.Add(new SqlParameter("@HeureRvPart", txt_horai.Text));
-            com.Parameters.Add(new SqlParameter("@RépertoireDoc", txt_rep.Text));
-            com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(com_statu.SelectedValue)));
-            com.Parameters.Add(new SqlParameter("@Terminer", terminer));
-
-            //string rqtPK = "select RefCabinet from expertise";
-            //SqlCommand com1 = new SqlCommand(rqtPK, cn);
-            //bool Unq = false;
-            //SqlDataReader dr = com1.ExecuteReader();
-
-
-            //while (dr.Read())
-            //{
-            //    if (Convert.ToInt32(dr[0]) == Convert.ToInt32(txt_ref_cab.Text))
-            //    {
-            //        MessageBox.Show("Cette expertise existe déja", "Ereur");
-            //        Unq = true;
-            //        break;
-            //    }
-
-            //}
-            //dr.Close();
-            //dr = null;
-            //com1 = null;
-            //if (!Unq)
-            //{
-            if (txt_refYear.Text == "" || txt_refCode.Text == "" || txt_lieu.Text == "" || txt_horai.Text == "")
+            if ((string)myValue == "B20J21I22")
             {
-                lbl_oblig.Visible = true;
-            }
-            else
-            {
+                string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
+                SqlConnection cn = new SqlConnection(cs);
+                cn.Open();
 
-                if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
+                string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
+
+                com = new SqlCommand(rqt, cn);
+
+                bool terminer = false;
+                com.Parameters.Add(new SqlParameter("@RefCabinet", txt_ref_cab.Text));
+                com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
+                com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
+                com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
+                com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
+                com.Parameters.Add(new SqlParameter("@NomGreffier", txt_greffier.Text));
+                com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_decision.Text));
+                com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
+                com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
+                com.Parameters.Add(new SqlParameter("@DateAcceptation", Convert.ToDateTime(date_acc.Text)));
+                com.Parameters.Add(new SqlParameter("@DateConsignation", Convert.ToDateTime(date_consi.Text)));
+                com.Parameters.Add(new SqlParameter("@MontantConsignation", txt_montant.Text));
+                com.Parameters.Add(new SqlParameter("@LieuExp", txt_lieu.Text));
+                com.Parameters.Add(new SqlParameter("@NumTypeExp", Convert.ToInt32(com_type_exp.SelectedValue)));
+                com.Parameters.Add(new SqlParameter("@DateConvPart", Convert.ToDateTime(date_conv.Text)));
+                com.Parameters.Add(new SqlParameter("@DateRvPart", Convert.ToDateTime(date_rend.Text)));
+                com.Parameters.Add(new SqlParameter("@HeureRvPart", txt_horai.Text));
+                com.Parameters.Add(new SqlParameter("@RépertoireDoc", txt_rep.Text));
+                com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(com_statu.SelectedValue)));
+                com.Parameters.Add(new SqlParameter("@Terminer", terminer));
+
+                if (txt_refYear.Text == "" || txt_refCode.Text == "" || txt_lieu.Text == "" || txt_horai.Text == "")
                 {
-                    lbl_VideDs.Visible = true;
+                    lbl_oblig.Visible = true;
                 }
                 else
                 {
 
-                    string Chemin = txt_rep.Text;
-                    DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                    if (!Dir.Exists)
+                    if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
                     {
-                        Dir.Create();
-                        com.ExecuteNonQuery();
-                        this.Hide();
+                        lbl_VideDs.Visible = true;
                     }
                     else
                     {
-                        com.ExecuteNonQuery();
-                        this.Hide();
+
+                        string Chemin = txt_rep.Text;
+                        DirectoryInfo Dir = new DirectoryInfo(Chemin);
+                        if (!Dir.Exists)
+                        {
+                            Dir.Create();
+                            com.ExecuteNonQuery();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            com.ExecuteNonQuery();
+                            this.Hide();
+                        }
                     }
                 }
-            }
-            //}
 
-            com = null;
-            cn.Close();
-            cn = null;
+                com = null;
+                cn.Close();
+                cn = null;
+            }
+            else
+            {
+                if ((string)myValue != "")
+                    Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité ( " + myValue.ToString() + " ) est incorrect , Impossible de modifier cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+            }
+            
         }
 
         private void btn_annuler_Click(object sender, EventArgs e)

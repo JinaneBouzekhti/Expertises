@@ -11,6 +11,7 @@ using CustomControls.RJControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
+using Microsoft.VisualBasic;
 namespace Gestion_expertise
 {
     public partial class suivi_expertise : UserControl
@@ -296,7 +297,22 @@ namespace Gestion_expertise
 
         private void btn_modifier_Click(object sender, EventArgs e)
         {
-            Activate(true);
+            string message, title, defaultValue;
+            object myValue;
+            message = "Entrer le clé de securité";
+            title = "Clé de securité";
+            defaultValue = "";
+            myValue = Interaction.InputBox(message, title, defaultValue);
+
+            if ((string)myValue == "B20J21I22")
+            {
+                Activate(true);
+            }
+            else
+            {
+                if ((string)myValue != "")
+                    Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité ( " + myValue.ToString() + " ) est incorrect , Impossible de modifier cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
+            }
         }
       
        
@@ -317,7 +333,6 @@ namespace Gestion_expertise
             string rqt = " update expertise set RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where RefCabinet like '" + RefCabinet + "'";
             SqlCommand com = new SqlCommand(rqt, cn);
 
-            //com.Parameters.Add(new SqlParameter("@RefCabinet", Convert.ToInt32(txt_ref_cab.Texts)));
            com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
             if(cmb_trib_pr.SelectedValue != null)
             com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(cmb_trib_pr.SelectedValue)));
@@ -341,27 +356,6 @@ namespace Gestion_expertise
             com.Parameters.Add(new SqlParameter("@NumStatut", Convert.ToInt32(cmb_stat.SelectedValue)));
             com.Parameters.Add(new SqlParameter("@Terminer", tr));
 
-            //string rqtUnq = "select RefCabinet from expertise where NumExp !=" + numexp;
-            //SqlCommand com1 = new SqlCommand(rqtUnq, cn);
-            //bool Unq = false;
-            //SqlDataReader dr = com1.ExecuteReader();
-
-
-            //while (dr.Read())
-            //{
-            //    if (Convert.ToInt32(txt_ref_cab.Text) == Convert.ToInt32(dr[0]))
-            //    {
-            //        Unq = true;
-            //        break;
-            //    }
-
-            //}
-            //dr.Close();
-            //dr = null;
-            //com1 = null;
-
-            //if (!Unq)
-            //{
             string Chemin = txt_rep.Texts;
             if (Chemin != "")
                 {
@@ -383,12 +377,6 @@ namespace Gestion_expertise
                     com.ExecuteNonQuery();
                     Activate(false);
                 }
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Cette expertise existe déja", "Ereur");
-            //}
 
             com = null;
             cn.Close();
@@ -526,28 +514,44 @@ namespace Gestion_expertise
 
         private void btn_suprimmer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Etes-vous sûre de cette supression !!", "Supression", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                string dossier = "";
-                if (txt_rep.Texts != "")
-                    dossier = txt_rep.Texts;
-                
-                SqlConnection cn = new SqlConnection(cs);
-                cn.Open();
-                string rqt = "delete from expertise where RefCabinet like '" + RefCabinet + "'";
-                SqlCommand com = new SqlCommand(rqt, cn);
+            string message, title, defaultValue;
+            object myValue;
+            message = "Entrer le clé de securité";
+            title = "Clé de securité";
+            defaultValue = "";
+            myValue = Interaction.InputBox(message, title, defaultValue);
 
-                if (dossier != "")
-                {
-                    if (Directory.Exists(dossier))
-                        Directory.Delete(dossier,true);
-                }
-                com.ExecuteNonQuery();
-                this.Controls.Clear();
-                ToutesExp uc = null;
-                uc = new ToutesExp();
-                this.Controls.Add(uc);
-                uc.Dock = DockStyle.Fill;
+            if((string)myValue == "B20J21I22")
+            {
+                    if (MessageBox.Show("Etes-vous sûre de cette supression !!", "Supression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        string dossier = "";
+                        if (txt_rep.Texts != "")
+                            dossier = txt_rep.Texts;
+
+                        SqlConnection cn = new SqlConnection(cs);
+                        cn.Open();
+                        string rqt = "delete from expertise where RefCabinet like '" + RefCabinet + "'";
+                        SqlCommand com = new SqlCommand(rqt, cn);
+
+                        if (dossier != "")
+                        {
+                            if (Directory.Exists(dossier))
+                                Directory.Delete(dossier, true);
+                        }
+                        com.ExecuteNonQuery();
+                        this.Controls.Clear();
+                        ToutesExp uc = null;
+                        uc = new ToutesExp();
+                        this.Controls.Add(uc);
+                        uc.Dock = DockStyle.Fill;
+                    }
+                  
+            }
+            else
+            {
+                if ((string)myValue != "")
+                    Microsoft.VisualBasic.Interaction.MsgBox("Clé de sécurité est incorrect ( " + myValue.ToString() + " ), Impossible de supprimer cette expertise !!!", MsgBoxStyle.OkOnly | MsgBoxStyle.Information, "Erreur");
             }
         }
 

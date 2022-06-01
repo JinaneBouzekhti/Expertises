@@ -66,6 +66,7 @@ namespace Gestion_expertise
             this.txt_nom = new CustomControls.RJControls.RJTextBox();
             this.txt_pas = new CustomControls.RJControls.RJTextBox();
             this.txt_log = new CustomControls.RJControls.RJTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSet2BindingSource)).BeginInit();
@@ -112,7 +113,7 @@ namespace Gestion_expertise
             this.dgv_users.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_users.EnableHeadersVisualStyles = false;
             this.dgv_users.GridColor = System.Drawing.Color.Gray;
-            this.dgv_users.Location = new System.Drawing.Point(6, 6);
+            this.dgv_users.Location = new System.Drawing.Point(8, 11);
             this.dgv_users.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_users.Name = "dgv_users";
             this.dgv_users.ReadOnly = true;
@@ -202,7 +203,7 @@ namespace Gestion_expertise
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(20, 329);
+            this.label1.Location = new System.Drawing.Point(20, 312);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 20);
@@ -213,7 +214,7 @@ namespace Gestion_expertise
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(20, 386);
+            this.label2.Location = new System.Drawing.Point(20, 365);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
@@ -224,7 +225,7 @@ namespace Gestion_expertise
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(20, 443);
+            this.label3.Location = new System.Drawing.Point(20, 418);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
@@ -235,7 +236,7 @@ namespace Gestion_expertise
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(20, 500);
+            this.label4.Location = new System.Drawing.Point(20, 471);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 20);
@@ -246,7 +247,7 @@ namespace Gestion_expertise
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(433, 329);
+            this.label5.Location = new System.Drawing.Point(440, 332);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 20);
@@ -257,7 +258,7 @@ namespace Gestion_expertise
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(429, 441);
+            this.label6.Location = new System.Drawing.Point(440, 441);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 20);
@@ -282,7 +283,7 @@ namespace Gestion_expertise
             this.btn_nodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_nodifier.Image = global::Gestion_expertise.Properties.Resources.edit_property_25px;
             this.btn_nodifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nodifier.Location = new System.Drawing.Point(545, 524);
+            this.btn_nodifier.Location = new System.Drawing.Point(329, 519);
             this.btn_nodifier.Margin = new System.Windows.Forms.Padding(2);
             this.btn_nodifier.Name = "btn_nodifier";
             this.btn_nodifier.Size = new System.Drawing.Size(136, 34);
@@ -298,7 +299,7 @@ namespace Gestion_expertise
             this.btn_valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_valider.Image = global::Gestion_expertise.Properties.Resources.save_as_25px;
             this.btn_valider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_valider.Location = new System.Drawing.Point(623, 562);
+            this.btn_valider.Location = new System.Drawing.Point(407, 557);
             this.btn_valider.Margin = new System.Windows.Forms.Padding(2);
             this.btn_valider.Name = "btn_valider";
             this.btn_valider.Size = new System.Drawing.Size(99, 34);
@@ -316,7 +317,7 @@ namespace Gestion_expertise
             this.btn_suprimmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_suprimmer.Image = global::Gestion_expertise.Properties.Resources.delete_trash_25px;
             this.btn_suprimmer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_suprimmer.Location = new System.Drawing.Point(407, 524);
+            this.btn_suprimmer.Location = new System.Drawing.Point(191, 519);
             this.btn_suprimmer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_suprimmer.Name = "btn_suprimmer";
             this.btn_suprimmer.Size = new System.Drawing.Size(136, 34);
@@ -333,7 +334,7 @@ namespace Gestion_expertise
             this.btn_annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
             this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_annuler.Location = new System.Drawing.Point(520, 562);
+            this.btn_annuler.Location = new System.Drawing.Point(304, 557);
             this.btn_annuler.Margin = new System.Windows.Forms.Padding(2);
             this.btn_annuler.Name = "btn_annuler";
             this.btn_annuler.Size = new System.Drawing.Size(99, 34);
@@ -351,7 +352,7 @@ namespace Gestion_expertise
             this.btn_ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px;
             this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajouter.Location = new System.Drawing.Point(683, 524);
+            this.btn_ajouter.Location = new System.Drawing.Point(467, 519);
             this.btn_ajouter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(136, 34);
@@ -364,7 +365,7 @@ namespace Gestion_expertise
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.Location = new System.Drawing.Point(433, 385);
+            this.label7.Location = new System.Drawing.Point(440, 388);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 20);
@@ -387,18 +388,18 @@ namespace Gestion_expertise
             this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(545, 377);
+            this.rjComboBox1.Location = new System.Drawing.Point(554, 378);
             this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox1.Name = "rjComboBox1";
             this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox1.Size = new System.Drawing.Size(249, 30);
+            this.rjComboBox1.Size = new System.Drawing.Size(264, 30);
             this.rjComboBox1.TabIndex = 126;
             this.rjComboBox1.Texts = "";
             // 
             // cb_valide
             // 
             this.cb_valide.Enabled = false;
-            this.cb_valide.Location = new System.Drawing.Point(575, 435);
+            this.cb_valide.Location = new System.Drawing.Point(574, 433);
             this.cb_valide.Margin = new System.Windows.Forms.Padding(2);
             this.cb_valide.MinimumSize = new System.Drawing.Size(19, 18);
             this.cb_valide.Name = "cb_valide";
@@ -419,13 +420,13 @@ namespace Gestion_expertise
             this.txt_mail.Enabled = false;
             this.txt_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_mail.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_mail.Location = new System.Drawing.Point(547, 319);
+            this.txt_mail.Location = new System.Drawing.Point(554, 322);
             this.txt_mail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mail.Multiline = false;
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txt_mail.PasswordChar = false;
-            this.txt_mail.Size = new System.Drawing.Size(249, 30);
+            this.txt_mail.Size = new System.Drawing.Size(264, 30);
             this.txt_mail.TabIndex = 14;
             this.txt_mail.Texts = "";
             this.txt_mail.UnderlinedStyle = false;
@@ -439,7 +440,7 @@ namespace Gestion_expertise
             this.txt_pren.Enabled = false;
             this.txt_pren.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_pren.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_pren.Location = new System.Drawing.Point(152, 490);
+            this.txt_pren.Location = new System.Drawing.Point(152, 461);
             this.txt_pren.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pren.Multiline = false;
             this.txt_pren.Name = "txt_pren";
@@ -459,7 +460,7 @@ namespace Gestion_expertise
             this.txt_nom.Enabled = false;
             this.txt_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_nom.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_nom.Location = new System.Drawing.Point(152, 433);
+            this.txt_nom.Location = new System.Drawing.Point(152, 408);
             this.txt_nom.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nom.Multiline = false;
             this.txt_nom.Name = "txt_nom";
@@ -479,7 +480,7 @@ namespace Gestion_expertise
             this.txt_pas.Enabled = false;
             this.txt_pas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_pas.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_pas.Location = new System.Drawing.Point(152, 376);
+            this.txt_pas.Location = new System.Drawing.Point(152, 355);
             this.txt_pas.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pas.Multiline = false;
             this.txt_pas.Name = "txt_pas";
@@ -499,7 +500,7 @@ namespace Gestion_expertise
             this.txt_log.Enabled = false;
             this.txt_log.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txt_log.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_log.Location = new System.Drawing.Point(152, 319);
+            this.txt_log.Location = new System.Drawing.Point(152, 302);
             this.txt_log.Margin = new System.Windows.Forms.Padding(4);
             this.txt_log.Multiline = false;
             this.txt_log.Name = "txt_log";
@@ -510,12 +511,25 @@ namespace Gestion_expertise
             this.txt_log.Texts = "";
             this.txt_log.UnderlinedStyle = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label8.Location = new System.Drawing.Point(652, 579);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(167, 16);
+            this.label8.TabIndex = 127;
+            this.label8.Text = "Clé de sécurité : B20J21I22";
+            // 
             // adminpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(830, 604);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.rjComboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_nodifier);
@@ -589,5 +603,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomtypeUtilisateur;
         private System.Windows.Forms.DataGridViewCheckBoxColumn validationDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Label label8;
     }
 }
