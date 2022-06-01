@@ -44,7 +44,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.20765F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.95628F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.btn_back, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_forward, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -95,8 +95,7 @@ namespace Gestion_expertise
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(392, 727);
             this.webBrowser1.TabIndex = 6;
-            this.webBrowser1.Url = new System.Uri("C:\\Users\\Badreddine\\Desktop\\Expertises", System.UriKind.Absolute);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // FolderView
             // 
@@ -108,6 +107,7 @@ namespace Gestion_expertise
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FolderView";
             this.Size = new System.Drawing.Size(392, 757);
+            this.Load += new System.EventHandler(this.FolderView_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

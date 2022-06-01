@@ -476,6 +476,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="iconourapp.ico" />
+    <None Include="Resources\file_contract_32px.png" />
+    <None Include="Resources\file_invoice_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

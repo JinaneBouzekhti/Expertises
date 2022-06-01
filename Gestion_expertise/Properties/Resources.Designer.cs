@@ -193,6 +193,26 @@ namespace Gestion_expertise.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_contract_32px {
+            get {
+                object obj = ResourceManager.GetObject("file_contract_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_invoice_32px {
+            get {
+                object obj = ResourceManager.GetObject("file_invoice_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filter_25px {
             get {
                 object obj = ResourceManager.GetObject("filter_25px", resourceCulture);

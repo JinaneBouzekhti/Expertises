@@ -30,150 +30,70 @@ namespace Gestion_expertise
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_recu = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nomCompletDéfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkdef = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.défenseurBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expertisesDataSet = new Gestion_expertise.expertisesDataSet();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.nomCompletDemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portableDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkdem = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.demandeurBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expertisesDataSet1 = new Gestion_expertise.expertisesDataSet1();
-            this.btn_exporter = new System.Windows.Forms.Button();
             this.défenseurTableAdapter = new Gestion_expertise.expertisesDataSetTableAdapters.DéfenseurTableAdapter();
             this.expertisesDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.demandeurTableAdapter = new Gestion_expertise.expertisesDataSet1TableAdapters.DemandeurTableAdapter();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.convocation = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.conteur = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.défenseurBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.demandeurBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSetBindingSource)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.convocation.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_recu, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_exporter, 1, 2);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.737589F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.26241F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(703, 458);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(937, 564);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btn_recu
+            // label1
             // 
-            this.btn_recu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_recu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_recu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_recu.Location = new System.Drawing.Point(225, 428);
-            this.btn_recu.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_recu.Name = "btn_recu";
-            this.btn_recu.Size = new System.Drawing.Size(124, 26);
-            this.btn_recu.TabIndex = 28;
-            this.btn_recu.Text = "Les reçus";
-            this.btn_recu.UseVisualStyleBackColor = false;
-            this.btn_recu.Click += new System.EventHandler(this.btn_recu_Click);
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomCompletDéfDataGridViewTextBoxColumn,
-            this.adresseDataGridViewTextBoxColumn,
-            this.portableDataGridViewTextBoxColumn,
-            this.checkdef});
-            this.dataGridView1.DataSource = this.défenseurBindingSource;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 30);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(347, 392);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // nomCompletDéfDataGridViewTextBoxColumn
-            // 
-            this.nomCompletDéfDataGridViewTextBoxColumn.DataPropertyName = "NomCompletDéf";
-            this.nomCompletDéfDataGridViewTextBoxColumn.HeaderText = "NomCompletDéf";
-            this.nomCompletDéfDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomCompletDéfDataGridViewTextBoxColumn.Name = "nomCompletDéfDataGridViewTextBoxColumn";
-            this.nomCompletDéfDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adresseDataGridViewTextBoxColumn
-            // 
-            this.adresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse";
-            this.adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
-            this.adresseDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adresseDataGridViewTextBoxColumn.Name = "adresseDataGridViewTextBoxColumn";
-            this.adresseDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // portableDataGridViewTextBoxColumn
-            // 
-            this.portableDataGridViewTextBoxColumn.DataPropertyName = "Portable";
-            this.portableDataGridViewTextBoxColumn.HeaderText = "Portable";
-            this.portableDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.portableDataGridViewTextBoxColumn.Name = "portableDataGridViewTextBoxColumn";
-            this.portableDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // checkdef
-            // 
-            this.checkdef.DataPropertyName = "NumDéf";
-            this.checkdef.HeaderText = "check";
-            this.checkdef.MinimumWidth = 6;
-            this.checkdef.Name = "checkdef";
-            this.checkdef.ReadOnly = true;
-            this.checkdef.Width = 125;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(500, 32);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "GENERATION DES DOCUMMENTS";
             // 
             // défenseurBindingSource
             // 
@@ -185,81 +105,6 @@ namespace Gestion_expertise
             this.expertisesDataSet.DataSetName = "expertisesDataSet";
             this.expertisesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView2
-            // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomCompletDemDataGridViewTextBoxColumn,
-            this.adresseDataGridViewTextBoxColumn1,
-            this.portableDataGridViewTextBoxColumn1,
-            this.checkdem});
-            this.dataGridView2.DataSource = this.demandeurBindingSource;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView2.Location = new System.Drawing.Point(353, 30);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(348, 392);
-            this.dataGridView2.TabIndex = 4;
-            // 
-            // nomCompletDemDataGridViewTextBoxColumn
-            // 
-            this.nomCompletDemDataGridViewTextBoxColumn.DataPropertyName = "NomCompletDem";
-            this.nomCompletDemDataGridViewTextBoxColumn.HeaderText = "NomCompletDem";
-            this.nomCompletDemDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomCompletDemDataGridViewTextBoxColumn.Name = "nomCompletDemDataGridViewTextBoxColumn";
-            this.nomCompletDemDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adresseDataGridViewTextBoxColumn1
-            // 
-            this.adresseDataGridViewTextBoxColumn1.DataPropertyName = "Adresse";
-            this.adresseDataGridViewTextBoxColumn1.HeaderText = "Adresse";
-            this.adresseDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.adresseDataGridViewTextBoxColumn1.Name = "adresseDataGridViewTextBoxColumn1";
-            this.adresseDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // portableDataGridViewTextBoxColumn1
-            // 
-            this.portableDataGridViewTextBoxColumn1.DataPropertyName = "Portable";
-            this.portableDataGridViewTextBoxColumn1.HeaderText = "Portable";
-            this.portableDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.portableDataGridViewTextBoxColumn1.Name = "portableDataGridViewTextBoxColumn1";
-            this.portableDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // checkdem
-            // 
-            this.checkdem.DataPropertyName = "NumDem";
-            this.checkdem.HeaderText = "chek";
-            this.checkdem.MinimumWidth = 6;
-            this.checkdem.Name = "checkdem";
-            this.checkdem.ReadOnly = true;
-            this.checkdem.Width = 125;
-            // 
             // demandeurBindingSource
             // 
             this.demandeurBindingSource.DataMember = "Demandeur";
@@ -269,20 +114,6 @@ namespace Gestion_expertise
             // 
             this.expertisesDataSet1.DataSetName = "expertisesDataSet1";
             this.expertisesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btn_exporter
-            // 
-            this.btn_exporter.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_exporter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_exporter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exporter.Location = new System.Drawing.Point(577, 428);
-            this.btn_exporter.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_exporter.Name = "btn_exporter";
-            this.btn_exporter.Size = new System.Drawing.Size(124, 26);
-            this.btn_exporter.TabIndex = 27;
-            this.btn_exporter.Text = "Les convocations";
-            this.btn_exporter.UseVisualStyleBackColor = false;
-            this.btn_exporter.Click += new System.EventHandler(this.btn_exporter_Click);
             // 
             // défenseurTableAdapter
             // 
@@ -297,23 +128,190 @@ namespace Gestion_expertise
             // 
             this.demandeurTableAdapter.ClearBeforeFill = true;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.convocation);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 48);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 400);
+            this.flowLayoutPanel1.TabIndex = 30;
+            // 
+            // convocation
+            // 
+            this.convocation.BackColor = System.Drawing.Color.White;
+            this.convocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.convocation.Controls.Add(this.label3);
+            this.convocation.Controls.Add(this.label2);
+            this.convocation.Controls.Add(this.pictureBox1);
+            this.convocation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.convocation.Location = new System.Drawing.Point(3, 3);
+            this.convocation.Name = "convocation";
+            this.convocation.Size = new System.Drawing.Size(221, 178);
+            this.convocation.TabIndex = 31;
+            this.convocation.Click += new System.EventHandler(this.btn_exporter_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label3.Location = new System.Drawing.Point(3, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 85);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "     Ce bouton crée toutes les \r\nconvocations aux parties en \r\nconflit ,toutes ce" +
+    "s convocations \r\nsont automatiquement chargées \r\ndans le dossier de l\'affaire.\r\n" +
+    "";
+            this.label3.Click += new System.EventHandler(this.btn_exporter_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(59, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 40);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "LES \r\nCONVOCATIONS";
+            this.label2.Click += new System.EventHandler(this.btn_exporter_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel1.Location = new System.Drawing.Point(230, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(221, 178);
+            this.panel1.TabIndex = 32;
+            this.panel1.Click += new System.EventHandler(this.btn_recu_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label4.Location = new System.Drawing.Point(15, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 85);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "   Ce bouton crée toutes les \r\nreçus aux parties en conflit,\r\ntoutes ces reçus so" +
+    "nt\r\nautomatiquement chargées \r\ndans le dossier de l\'affaire.\r\n";
+            this.label4.Click += new System.EventHandler(this.btn_recu_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(59, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 40);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "LES \r\nREÇUS ";
+            this.label5.Click += new System.EventHandler(this.btn_recu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Gestion_expertise.Properties.Resources.file_invoice_32px;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btn_exporter_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Gestion_expertise.Properties.Resources.file_contract_32px;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(56, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btn_recu_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.tableLayoutPanel2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 454);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(931, 107);
+            this.panel2.TabIndex = 31;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.conteur, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.progressBar1, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(929, 105);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // conteur
+            // 
+            this.conteur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.conteur.AutoSize = true;
+            this.conteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conteur.Location = new System.Drawing.Point(827, 13);
+            this.conteur.Name = "conteur";
+            this.conteur.Size = new System.Drawing.Size(99, 18);
+            this.conteur.TabIndex = 0;
+            this.conteur.Text = "13 file sur 120";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.ForeColor = System.Drawing.Color.PaleGreen;
+            this.progressBar1.Location = new System.Drawing.Point(3, 50);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(923, 36);
+            this.progressBar1.TabIndex = 1;
+            // 
             // Documents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Documents";
-            this.Size = new System.Drawing.Size(703, 458);
+            this.Size = new System.Drawing.Size(937, 564);
             this.Load += new System.EventHandler(this.convocation_page_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.défenseurBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.demandeurBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expertisesDataSetBindingSource)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.convocation.ResumeLayout(false);
+            this.convocation.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -321,24 +319,26 @@ namespace Gestion_expertise
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource défenseurBindingSource;
         private expertisesDataSet expertisesDataSet;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private expertisesDataSetTableAdapters.DéfenseurTableAdapter défenseurTableAdapter;
         private System.Windows.Forms.BindingSource demandeurBindingSource;
         private expertisesDataSet1 expertisesDataSet1;
         private System.Windows.Forms.BindingSource expertisesDataSetBindingSource;
         private expertisesDataSet1TableAdapters.DemandeurTableAdapter demandeurTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomCompletDemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn portableDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomCompletDéfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn portableDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkdef;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkdem;
-        private System.Windows.Forms.Button btn_exporter;
-        private System.Windows.Forms.Button btn_recu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel convocation;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label conteur;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

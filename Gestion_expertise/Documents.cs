@@ -28,17 +28,18 @@ namespace Gestion_expertise
           
         private void convocation_page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(sc);
-            con.Open();
-            SqlDataAdapter sa = new SqlDataAdapter("select * from Défenseur where RefCabinet like '" + RefCabinet + "'", con);
-            SqlDataAdapter sa2 = new SqlDataAdapter("select * from Demandeur where RefCabinet like '" + RefCabinet + "'", con);
-            DataTable dt = new DataTable();
-            DataTable dt2 = new DataTable();
-            sa.Fill(dt);
-            sa2.Fill(dt2);
+            panel2.Visible = false;
+            //SqlConnection con = new SqlConnection(sc);
+            //con.Open();
+            //SqlDataAdapter sa = new SqlDataAdapter("select * from Défenseur where RefCabinet like '" + RefCabinet + "'", con);
+            //SqlDataAdapter sa2 = new SqlDataAdapter("select * from Demandeur where RefCabinet like '" + RefCabinet + "'", con);
+            //DataTable dt = new DataTable();
+            //DataTable dt2 = new DataTable();
+            //sa.Fill(dt);
+            //sa2.Fill(dt2);
 
-            dataGridView1.DataSource = dt;
-            dataGridView2.DataSource = dt2;
+            //dataGridView1.DataSource = dt;
+            //dataGridView2.DataSource = dt2;
         }
 
         private void btn_exporter_Click(object sender, EventArgs e)
@@ -54,7 +55,9 @@ namespace Gestion_expertise
             daCA.Fill(data);
 
             convocation C = new convocation();
-
+            panel2.Visible = true;
+            progressBar1.Maximum = data.Rows.Count;
+            conteur.Text = progressBar1.Value.ToString() + " sur " + data.Rows.Count.ToString() + " fichiers";
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 C.SetParameterValue("nomTribunal", data.Rows[i][0]);
@@ -62,8 +65,8 @@ namespace Gestion_expertise
                 C.SetParameterValue("date_Designation", data.Rows[i][2]);
                 C.SetParameterValue("juje", data.Rows[i][3]);
                 C.SetParameterValue("date_rendez_vous", Convert.ToDateTime(data.Rows[i][4]).ToString("dddd dd MMMM yyyy ", new CultureInfo("ar-AE")));
-                string period="";
-                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 9 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 12 )
+                string period = "";
+                if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 9 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 12)
                     period = "صباحا";
                 if (Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) >= 12 || Convert.ToInt32(data.Rows[i][5].ToString().Substring(0, 2)) < 14)
                     period = "زوالا";
@@ -82,7 +85,11 @@ namespace Gestion_expertise
                     Dir.Create();
 
                 C.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Chemin + data.Rows[i][6] + ".pdf");
+                conteur.Text = progressBar1.Value.ToString() +" sur "+ data.Rows.Count.ToString()+" fichiers"; 
+                progressBar1.Value += 1;
             }
+            panel2.Visible = false;
+            progressBar1.Value = 0;
         }
 
         private void btn_recu_Click(object sender, EventArgs e)
@@ -98,7 +105,9 @@ namespace Gestion_expertise
             daCA.Fill(data);
 
             reçu C = new reçu();
-
+            panel2.Visible = true;
+            progressBar1.Maximum = data.Rows.Count;
+            conteur.Text = progressBar1.Value.ToString() + " sur " + data.Rows.Count.ToString() + " fichiers";
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 C.SetParameterValue("nomTribunal", data.Rows[i][0]);
@@ -125,9 +134,13 @@ namespace Gestion_expertise
                 if (!Dir.Exists)
                     Dir.Create();
                 C.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Chemin + data.Rows[i][6] + ".pdf");
+                conteur.Text = progressBar1.Value.ToString() + " sur " + data.Rows.Count.ToString() + " fichiers";
+                progressBar1.Value += 1;
             }
-
+            panel2.Visible = false;
+            progressBar1.Value = 0;
 
         }
+
     }
 }
