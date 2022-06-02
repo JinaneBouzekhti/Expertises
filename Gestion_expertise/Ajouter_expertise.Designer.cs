@@ -47,7 +47,6 @@ namespace Gestion_expertise
             this.com_statu = new System.Windows.Forms.ComboBox();
             this.com_type_exp = new System.Windows.Forms.ComboBox();
             this.txt_rep = new System.Windows.Forms.TextBox();
-            this.txt_horai = new System.Windows.Forms.TextBox();
             this.txt_lieu = new System.Windows.Forms.TextBox();
             this.date_decision = new System.Windows.Forms.DateTimePicker();
             this.date_desi = new System.Windows.Forms.DateTimePicker();
@@ -100,6 +99,9 @@ namespace Gestion_expertise
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_horai = new System.Windows.Forms.TextBox();
+            this.lblHrr = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -117,6 +119,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // label17
@@ -273,13 +276,6 @@ namespace Gestion_expertise
             this.txt_rep.ReadOnly = true;
             this.txt_rep.Size = new System.Drawing.Size(223, 25);
             this.txt_rep.TabIndex = 21;
-            // 
-            // txt_horai
-            // 
-            this.txt_horai.Location = new System.Drawing.Point(310, 278);
-            this.txt_horai.Name = "txt_horai";
-            this.txt_horai.Size = new System.Drawing.Size(301, 25);
-            this.txt_horai.TabIndex = 20;
             // 
             // txt_lieu
             // 
@@ -459,7 +455,6 @@ namespace Gestion_expertise
             this.tableLayoutPanel3.Controls.Add(this.date_consi, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.com_statu, 1, 7);
             this.tableLayoutPanel3.Controls.Add(this.label25, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.txt_horai, 1, 5);
             this.tableLayoutPanel3.Controls.Add(this.txt_lieu, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.date_rend, 1, 4);
             this.tableLayoutPanel3.Controls.Add(this.date_conv, 1, 3);
@@ -473,6 +468,7 @@ namespace Gestion_expertise
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel13, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel14, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel11, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel15, 1, 5);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -923,6 +919,39 @@ namespace Gestion_expertise
             this.label16.TabIndex = 103;
             this.label16.Text = "Référence du référé";
             // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 1;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Controls.Add(this.lblHrr, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.txt_horai, 0, 0);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(310, 278);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 2;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.22449F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.77551F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(301, 49);
+            this.tableLayoutPanel15.TabIndex = 104;
+            // 
+            // txt_horai
+            // 
+            this.txt_horai.Location = new System.Drawing.Point(3, 3);
+            this.txt_horai.Name = "txt_horai";
+            this.txt_horai.Size = new System.Drawing.Size(295, 25);
+            this.txt_horai.TabIndex = 21;
+            // 
+            // lblHrr
+            // 
+            this.lblHrr.BackColor = System.Drawing.Color.White;
+            this.lblHrr.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblHrr.ForeColor = System.Drawing.Color.Red;
+            this.lblHrr.Location = new System.Drawing.Point(3, 30);
+            this.lblHrr.Name = "lblHrr";
+            this.lblHrr.Size = new System.Drawing.Size(223, 15);
+            this.lblHrr.TabIndex = 96;
+            this.lblHrr.Text = "Champ invalide";
+            this.lblHrr.Visible = false;
+            // 
             // Ajouter_expertise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -958,6 +987,8 @@ namespace Gestion_expertise
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -981,7 +1012,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.ComboBox com_statu;
         private System.Windows.Forms.ComboBox com_type_exp;
         private System.Windows.Forms.TextBox txt_rep;
-        private System.Windows.Forms.TextBox txt_horai;
         private System.Windows.Forms.TextBox txt_lieu;
         private System.Windows.Forms.DateTimePicker date_decision;
         private System.Windows.Forms.DateTimePicker date_desi;
@@ -1035,5 +1065,8 @@ namespace Gestion_expertise
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Label lblHrr;
+        private System.Windows.Forms.TextBox txt_horai;
     }
 }

@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 using Microsoft.VisualBasic;
+using System.Text.RegularExpressions;
 
 namespace Gestion_expertise
 {
@@ -77,7 +78,7 @@ namespace Gestion_expertise
             com_CoursA.DataSource = bsCA;
             com_CoursA.DisplayMember = "NomCoursAppel";
             com_CoursA.ValueMember = "NumCoursAppel";
-            com_CoursA.Text = "-------";
+            //com_CoursA.Text = "-------";
 
             //Remplisage comboBox CodeTypeExp:
             string req2 = "select* from TypeExp";
@@ -98,6 +99,7 @@ namespace Gestion_expertise
             com_RefType.DisplayMember = "Code";
             com_RefType.ValueMember = "NumTypeExp";
 
+            //com_RefType.Text = "-------";
             com = null;
             comB = null;
 
@@ -118,9 +120,10 @@ namespace Gestion_expertise
             com_type_exp.DisplayMember = "typeExp";
             com_type_exp.ValueMember = "NumTypeExp";
 
-            com_type_exp.Text = "-------";
+            //com_type_exp.Text = "-------";
             com = null;
             comB = null;
+
             //Remplisage comboBox Statut:
             string req3 = "select* from Statut";
             com = new SqlCommand(req3, cn);
@@ -138,9 +141,12 @@ namespace Gestion_expertise
             com_statu.DataSource = bsStt;
             com_statu.DisplayMember = "statut";
             com_statu.ValueMember = "NumStatut";
-            com_statu.Text = "-------";
+            //com_statu.Text = "-------";
             com = null;
             comB = null;
+
+            txt_horai.Text = "Ex: 00:00";
+            txt_horai.ForeColor = Color.Gray ;
         } 
         
         private void com_CoursA_SelectedValueChanged(object sender, EventArgs e)
@@ -169,7 +175,7 @@ namespace Gestion_expertise
                     com_tribunalP.DataSource = bsTr;
                     com_tribunalP.DisplayMember = "NomTribunalP";
                     com_tribunalP.ValueMember = "NumTribunalP";
-                    com_tribunalP.Text = "-------";
+                    //com_tribunalP.Text = "-------";
 
                     com = null;
                     comB = null;
@@ -211,6 +217,9 @@ namespace Gestion_expertise
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
+            lblHrr.Visible = false;
+            lbl_VideDs.Visible = false;
+            lbl_oblig.Visible = false;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
@@ -256,32 +265,39 @@ namespace Gestion_expertise
                 else
                 {
 
-                    if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
+                    if (!Regex.Match(txt_horai.Text, "^([0-1][0-9])?([2][0-3])?:([0-5][0-9])$").Success) 
                     {
-                        lbl_VideDs.Visible = true;
-                    }
-                    else
-                    {
-
-                        string Chemin = txt_rep.Text;
-                        DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                        if (!Dir.Exists)
+                        lblHrr.Visible = true;
+                    } 
+                    else 
+                    { 
+                        if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
                         {
-                            Dir.Create();
-                            com.ExecuteNonQuery();
-                            this.Hide();
+                            lbl_VideDs.Visible = true;
                         }
                         else
                         {
-                            com.ExecuteNonQuery();
-                            this.Hide();
+
+                            string Chemin = txt_rep.Text;
+                            DirectoryInfo Dir = new DirectoryInfo(Chemin);
+                            if (!Dir.Exists)
+                            {
+                                Dir.Create();
+                                com.ExecuteNonQuery();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                com.ExecuteNonQuery();
+                                this.Hide();
+                            }
                         }
                     }
-                }
 
-                com = null;
-                cn.Close();
-                cn = null;
+                    com = null;
+                    cn.Close();
+                    cn = null;
+                }
             }
             else
             {
@@ -329,31 +345,40 @@ namespace Gestion_expertise
                     }
                     else
                     {
-                        if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
+
+                        if (!Regex.Match(txt_horai.Text, "^([0-1][0-9])?([2][0-3])?:([0-5][0-9])$").Success)
                         {
-                            lbl_VideDs.Visible = true;
+                            lblHrr.Visible = true;
                         }
                         else
                         {
-
-                            string Chemin = txt_rep.Text;
-                            DirectoryInfo Dir = new DirectoryInfo(Chemin);
-                            if (!Dir.Exists)
+                            if (txt_rep.Text == "" || txt_rep.Text == @"\" + GetFolderName())
                             {
-                                Dir.Create();
-                                com.ExecuteNonQuery();
-                                this.Hide();
+                                lbl_VideDs.Visible = true;
                             }
                             else
                             {
-                                com.ExecuteNonQuery();
-                                this.Hide();
+
+                                string Chemin = txt_rep.Text;
+                                DirectoryInfo Dir = new DirectoryInfo(Chemin);
+                                if (!Dir.Exists)
+                                {
+                                    Dir.Create();
+                                    com.ExecuteNonQuery();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    com.ExecuteNonQuery();
+                                    this.Hide();
+                                }
                             }
                         }
+
+                        com = null;
+                        cn.Close();
+                        cn = null;
                     }
-                    com = null;
-                    cn.Close();
-                    cn = null;
                 }
                 else
                 {
@@ -366,6 +391,8 @@ namespace Gestion_expertise
         private void btn_annuler_Click(object sender, EventArgs e)
         {
             this.Hide();
+
+
         }
 
         private void com_tribunal_KeyDown(object sender, KeyEventArgs e)
