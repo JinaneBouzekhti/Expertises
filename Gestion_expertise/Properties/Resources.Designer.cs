@@ -253,9 +253,29 @@ namespace Gestion_expertise.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logout_26px {
+            get {
+                object obj = ResourceManager.GetObject("Logout_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap next_page_50px {
             get {
                 object obj = ResourceManager.GetObject("next_page_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profil_vide {
+            get {
+                object obj = ResourceManager.GetObject("profil-vide", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

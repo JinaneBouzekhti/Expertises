@@ -254,5 +254,12 @@ namespace Gestion_expertise
             adminpanel ad = new adminpanel();
             ad.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+           Application.Restart();
+            
+        }
+
     }
 }
