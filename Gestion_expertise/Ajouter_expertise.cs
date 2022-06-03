@@ -232,7 +232,7 @@ namespace Gestion_expertise
                 string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
 
 
-                string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
+                string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@sujet,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
 
                 com = new SqlCommand(rqt, cn);
 
@@ -242,7 +242,7 @@ namespace Gestion_expertise
                 com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
                 com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
                 com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
-                com.Parameters.Add(new SqlParameter("@NomGreffier", txt_greffier.Text));
+                com.Parameters.Add(new SqlParameter("@sujet", txt_sujet.Text));
                 com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_decision.Text));
                 com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
                 com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
@@ -313,7 +313,7 @@ namespace Gestion_expertise
                     string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
 
 
-                    string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@NomGreffier,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
+                    string rqt = "insert into expertise values (@RefCabinet,@RefRéféré,@NumTribunalP,@NomMagistrat,@NomJugeControleur,@sujet,@TypeDécision,@DateDécision,@DateDésignation,@DateAcceptation,@DateConsignation,@MontantConsignation,@LieuExp,@NumTypeExp,@DateConvPart,@DateRvPart,@HeureRvPart,@RépertoireDoc,@NumStatut,@Terminer)";
 
                     com = new SqlCommand(rqt, cn);
 
@@ -323,7 +323,7 @@ namespace Gestion_expertise
                     com.Parameters.Add(new SqlParameter("@NumTribunalP", Convert.ToInt32(com_tribunalP.SelectedValue)));
                     com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magistrat.Text));
                     com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_juge.Text));
-                    com.Parameters.Add(new SqlParameter("@NomGreffier", txt_greffier.Text));
+                    com.Parameters.Add(new SqlParameter("@sujet", txt_sujet.Text));
                     com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_decision.Text));
                     com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
                     com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
@@ -450,6 +450,24 @@ namespace Gestion_expertise
             }
         }
 
-        
+        private void tableLayoutPanel16_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_horai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

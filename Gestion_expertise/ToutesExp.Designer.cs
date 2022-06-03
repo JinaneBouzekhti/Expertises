@@ -43,7 +43,7 @@ namespace Gestion_expertise
             this.Tribunal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomMagistrat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomJugeControleur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomGreffier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sujet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeDécision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateDécision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateDésignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -129,7 +129,7 @@ namespace Gestion_expertise
             this.Tribunal,
             this.NomMagistrat,
             this.NomJugeControleur,
-            this.NomGreffier,
+            this.sujet,
             this.TypeDécision,
             this.DateDécision,
             this.DateDésignation,
@@ -208,15 +208,15 @@ namespace Gestion_expertise
             this.NomJugeControleur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.NomJugeControleur.Width = 125;
             // 
-            // NomGreffier
+            // sujet
             // 
-            this.NomGreffier.HeaderText = "Greffier";
-            this.NomGreffier.MinimumWidth = 6;
-            this.NomGreffier.Name = "NomGreffier";
-            this.NomGreffier.ReadOnly = true;
-            this.NomGreffier.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NomGreffier.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.NomGreffier.Width = 125;
+            this.sujet.HeaderText = "Greffier";
+            this.sujet.MinimumWidth = 6;
+            this.sujet.Name = "sujet";
+            this.sujet.ReadOnly = true;
+            this.sujet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sujet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.sujet.Width = 125;
             // 
             // TypeDécision
             // 
@@ -594,7 +594,7 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridViewTextBoxColumn Tribunal;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomMagistrat;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomJugeControleur;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomGreffier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sujet;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeDécision;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateDécision;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateDésignation;

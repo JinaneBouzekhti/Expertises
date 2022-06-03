@@ -62,22 +62,14 @@ namespace Gestion_expertise
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.cmb_type_exp = new System.Windows.Forms.ComboBox();
-            this.txt_lieu = new CustomControls.RJControls.RJTextBox();
             this.cmb_stat = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_ref_cab = new CustomControls.RJControls.RJTextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.com_RefType = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txt_refCode = new CustomControls.RJControls.RJTextBox();
-            this.txt_refYear = new CustomControls.RJControls.RJTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txt_type_dec = new CustomControls.RJControls.RJTextBox();
-            this.txt_gre = new CustomControls.RJControls.RJTextBox();
-            this.txt_jug = new CustomControls.RJControls.RJTextBox();
-            this.txt_magi = new CustomControls.RJControls.RJTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.btn_suprimmer = new System.Windows.Forms.Button();
@@ -88,14 +80,22 @@ namespace Gestion_expertise
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_montan = new CustomControls.RJControls.RJTextBox();
-            this.txt_hor = new CustomControls.RJControls.RJTextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_rep = new CustomControls.RJControls.RJTextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.cb_termine = new WinFormsApp1.CheckBoxCustom();
             this.dropfilepanel = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.txt_montan = new CustomControls.RJControls.RJTextBox();
+            this.txt_hor = new CustomControls.RJControls.RJTextBox();
+            this.txt_rep = new CustomControls.RJControls.RJTextBox();
+            this.cb_termine = new WinFormsApp1.CheckBoxCustom();
+            this.txt_ref_cab = new CustomControls.RJControls.RJTextBox();
+            this.txt_refCode = new CustomControls.RJControls.RJTextBox();
+            this.txt_refYear = new CustomControls.RJControls.RJTextBox();
+            this.txt_type_dec = new CustomControls.RJControls.RJTextBox();
+            this.txt_gre = new CustomControls.RJControls.RJTextBox();
+            this.txt_jug = new CustomControls.RJControls.RJTextBox();
+            this.txt_magi = new CustomControls.RJControls.RJTextBox();
+            this.txt_lieu = new CustomControls.RJControls.RJTextBox();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -218,7 +218,7 @@ namespace Gestion_expertise
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 22);
             this.label6.TabIndex = 102;
-            this.label6.Text = "Greffier";
+            this.label6.Text = "sujet";
             // 
             // label5
             // 
@@ -429,14 +429,15 @@ namespace Gestion_expertise
             // 
             // btn_Rep
             // 
+            this.btn_Rep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Rep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.btn_Rep.Enabled = false;
             this.btn_Rep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.btn_Rep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_Rep.Location = new System.Drawing.Point(366, 2);
+            this.btn_Rep.Location = new System.Drawing.Point(366, 7);
             this.btn_Rep.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Rep.Name = "btn_Rep";
-            this.btn_Rep.Size = new System.Drawing.Size(25, 35);
+            this.btn_Rep.Size = new System.Drawing.Size(61, 33);
             this.btn_Rep.TabIndex = 94;
             this.btn_Rep.Text = "...";
             this.btn_Rep.UseVisualStyleBackColor = false;
@@ -514,29 +515,6 @@ namespace Gestion_expertise
             this.cmb_type_exp.Size = new System.Drawing.Size(430, 28);
             this.cmb_type_exp.TabIndex = 119;
             this.cmb_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_type_exp_KeyDown);
-            // 
-            // txt_lieu
-            // 
-            this.txt_lieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_lieu.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_lieu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_lieu.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_lieu.BorderSize = 2;
-            this.txt_lieu.Enabled = false;
-            this.txt_lieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lieu.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_lieu.Location = new System.Drawing.Point(5, 447);
-            this.txt_lieu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_lieu.Multiline = false;
-            this.txt_lieu.Name = "txt_lieu";
-            this.txt_lieu.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_lieu.PasswordChar = false;
-            this.txt_lieu.Size = new System.Drawing.Size(424, 37);
-            this.txt_lieu.TabIndex = 117;
-            this.txt_lieu.Texts = "";
-            this.txt_lieu.UnderlinedStyle = false;
-            this.txt_lieu.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_lieu.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // cmb_stat
             // 
@@ -636,27 +614,6 @@ namespace Gestion_expertise
             this.tableLayoutPanel8.Size = new System.Drawing.Size(434, 798);
             this.tableLayoutPanel8.TabIndex = 23;
             // 
-            // txt_ref_cab
-            // 
-            this.txt_ref_cab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_ref_cab.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ref_cab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_cab.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_ref_cab.BorderSize = 2;
-            this.txt_ref_cab.Enabled = false;
-            this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_ref_cab.Location = new System.Drawing.Point(5, 55);
-            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_ref_cab.Multiline = false;
-            this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_ref_cab.PasswordChar = false;
-            this.txt_ref_cab.Size = new System.Drawing.Size(424, 37);
-            this.txt_ref_cab.TabIndex = 124;
-            this.txt_ref_cab.Texts = "";
-            this.txt_ref_cab.UnderlinedStyle = false;
-            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 5;
@@ -707,52 +664,6 @@ namespace Gestion_expertise
             this.label23.TabIndex = 0;
             this.label23.Text = "\\";
             // 
-            // txt_refCode
-            // 
-            this.txt_refCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_refCode.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_refCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_refCode.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_refCode.BorderSize = 2;
-            this.txt_refCode.Enabled = false;
-            this.txt_refCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_refCode.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_refCode.Location = new System.Drawing.Point(315, 5);
-            this.txt_refCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_refCode.Multiline = false;
-            this.txt_refCode.Name = "txt_refCode";
-            this.txt_refCode.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_refCode.PasswordChar = false;
-            this.txt_refCode.Size = new System.Drawing.Size(110, 37);
-            this.txt_refCode.TabIndex = 115;
-            this.txt_refCode.Texts = "";
-            this.txt_refCode.UnderlinedStyle = false;
-            this.txt_refCode.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_refCode.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_refYear
-            // 
-            this.txt_refYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_refYear.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_refYear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_refYear.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_refYear.BorderSize = 2;
-            this.txt_refYear.Enabled = false;
-            this.txt_refYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_refYear.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_refYear.Location = new System.Drawing.Point(5, 5);
-            this.txt_refYear.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_refYear.Multiline = false;
-            this.txt_refYear.Name = "txt_refYear";
-            this.txt_refYear.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_refYear.PasswordChar = false;
-            this.txt_refYear.Size = new System.Drawing.Size(108, 37);
-            this.txt_refYear.TabIndex = 115;
-            this.txt_refYear.Texts = "";
-            this.txt_refYear.UnderlinedStyle = false;
-            this.txt_refYear.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_refYear.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -764,96 +675,6 @@ namespace Gestion_expertise
             this.label15.Size = new System.Drawing.Size(33, 29);
             this.label15.TabIndex = 122;
             this.label15.Text = "\\";
-            // 
-            // txt_type_dec
-            // 
-            this.txt_type_dec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_type_dec.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_type_dec.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_type_dec.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_type_dec.BorderSize = 2;
-            this.txt_type_dec.Enabled = false;
-            this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_type_dec.Location = new System.Drawing.Point(5, 748);
-            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_type_dec.Multiline = false;
-            this.txt_type_dec.Name = "txt_type_dec";
-            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_type_dec.PasswordChar = false;
-            this.txt_type_dec.Size = new System.Drawing.Size(424, 37);
-            this.txt_type_dec.TabIndex = 123;
-            this.txt_type_dec.Texts = "";
-            this.txt_type_dec.UnderlinedStyle = false;
-            // 
-            // txt_gre
-            // 
-            this.txt_gre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_gre.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_gre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_gre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_gre.BorderSize = 2;
-            this.txt_gre.Enabled = false;
-            this.txt_gre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_gre.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_gre.Location = new System.Drawing.Point(5, 643);
-            this.txt_gre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_gre.Multiline = false;
-            this.txt_gre.Name = "txt_gre";
-            this.txt_gre.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_gre.PasswordChar = false;
-            this.txt_gre.Size = new System.Drawing.Size(424, 37);
-            this.txt_gre.TabIndex = 115;
-            this.txt_gre.Texts = "";
-            this.txt_gre.UnderlinedStyle = false;
-            this.txt_gre.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_gre.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_jug
-            // 
-            this.txt_jug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_jug.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_jug.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_jug.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_jug.BorderSize = 2;
-            this.txt_jug.Enabled = false;
-            this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_jug.Location = new System.Drawing.Point(5, 545);
-            this.txt_jug.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_jug.Multiline = false;
-            this.txt_jug.Name = "txt_jug";
-            this.txt_jug.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_jug.PasswordChar = false;
-            this.txt_jug.Size = new System.Drawing.Size(424, 37);
-            this.txt_jug.TabIndex = 115;
-            this.txt_jug.Texts = "";
-            this.txt_jug.UnderlinedStyle = false;
-            this.txt_jug.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_jug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_magi
-            // 
-            this.txt_magi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_magi.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_magi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_magi.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.txt_magi.BorderSize = 2;
-            this.txt_magi.Enabled = false;
-            this.txt_magi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_magi.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_magi.Location = new System.Drawing.Point(5, 447);
-            this.txt_magi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txt_magi.Multiline = false;
-            this.txt_magi.Name = "txt_magi";
-            this.txt_magi.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.txt_magi.PasswordChar = false;
-            this.txt_magi.Size = new System.Drawing.Size(424, 37);
-            this.txt_magi.TabIndex = 115;
-            this.txt_magi.Texts = "";
-            this.txt_magi.UnderlinedStyle = false;
-            this.txt_magi.Enter += new System.EventHandler(this.TextBox_Enter);
-            this.txt_magi.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // button3
             // 
@@ -1032,6 +853,66 @@ namespace Gestion_expertise
             this.tableLayoutPanel4.Size = new System.Drawing.Size(433, 652);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.Controls.Add(this.txt_rep, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_Rep, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 158);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(429, 48);
+            this.tableLayoutPanel5.TabIndex = 121;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cb_termine, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 418);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(429, 48);
+            this.tableLayoutPanel6.TabIndex = 122;
+            // 
+            // dropfilepanel
+            // 
+            this.dropfilepanel.AllowDrop = true;
+            this.dropfilepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.dropfilepanel.Controls.Add(this.linkLabel1);
+            this.dropfilepanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dropfilepanel.Location = new System.Drawing.Point(2, 470);
+            this.dropfilepanel.Margin = new System.Windows.Forms.Padding(2);
+            this.dropfilepanel.Name = "dropfilepanel";
+            this.dropfilepanel.Padding = new System.Windows.Forms.Padding(15);
+            this.dropfilepanel.Size = new System.Drawing.Size(429, 180);
+            this.dropfilepanel.TabIndex = 123;
+            this.dropfilepanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
+            this.dropfilepanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel1.Location = new System.Drawing.Point(15, 15);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(122, 17);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "choisis les fichiers";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // txt_montan
             // 
             this.txt_montan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -1043,10 +924,10 @@ namespace Gestion_expertise
             this.txt_montan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_montan.ForeColor = System.Drawing.Color.DimGray;
             this.txt_montan.Location = new System.Drawing.Point(5, 371);
-            this.txt_montan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_montan.Margin = new System.Windows.Forms.Padding(5);
             this.txt_montan.Multiline = false;
             this.txt_montan.Name = "txt_montan";
-            this.txt_montan.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_montan.Padding = new System.Windows.Forms.Padding(8);
             this.txt_montan.PasswordChar = false;
             this.txt_montan.Size = new System.Drawing.Size(423, 37);
             this.txt_montan.TabIndex = 117;
@@ -1066,10 +947,10 @@ namespace Gestion_expertise
             this.txt_hor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_hor.ForeColor = System.Drawing.Color.DimGray;
             this.txt_hor.Location = new System.Drawing.Point(5, 59);
-            this.txt_hor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_hor.Margin = new System.Windows.Forms.Padding(5);
             this.txt_hor.Multiline = false;
             this.txt_hor.Name = "txt_hor";
-            this.txt_hor.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_hor.Padding = new System.Windows.Forms.Padding(8);
             this.txt_hor.PasswordChar = false;
             this.txt_hor.Size = new System.Drawing.Size(423, 37);
             this.txt_hor.TabIndex = 117;
@@ -1077,22 +958,6 @@ namespace Gestion_expertise
             this.txt_hor.UnderlinedStyle = false;
             this.txt_hor.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txt_hor.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel5.Controls.Add(this.txt_rep, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btn_Rep, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 158);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(429, 48);
-            this.tableLayoutPanel5.TabIndex = 121;
             // 
             // txt_rep
             // 
@@ -1105,10 +970,10 @@ namespace Gestion_expertise
             this.txt_rep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rep.ForeColor = System.Drawing.Color.DimGray;
             this.txt_rep.Location = new System.Drawing.Point(5, 5);
-            this.txt_rep.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_rep.Margin = new System.Windows.Forms.Padding(5);
             this.txt_rep.Multiline = false;
             this.txt_rep.Name = "txt_rep";
-            this.txt_rep.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txt_rep.Padding = new System.Windows.Forms.Padding(8);
             this.txt_rep.PasswordChar = false;
             this.txt_rep.Size = new System.Drawing.Size(354, 37);
             this.txt_rep.TabIndex = 117;
@@ -1116,22 +981,6 @@ namespace Gestion_expertise
             this.txt_rep.UnderlinedStyle = false;
             this.txt_rep.Enter += new System.EventHandler(this.TextBox_Enter);
             this.txt_rep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.cb_termine, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 418);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(429, 48);
-            this.tableLayoutPanel6.TabIndex = 122;
             // 
             // cb_termine
             // 
@@ -1148,33 +997,186 @@ namespace Gestion_expertise
             this.cb_termine.TabIndex = 96;
             this.cb_termine.UseVisualStyleBackColor = true;
             // 
-            // dropfilepanel
+            // txt_ref_cab
             // 
-            this.dropfilepanel.AllowDrop = true;
-            this.dropfilepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
-            this.dropfilepanel.Controls.Add(this.linkLabel1);
-            this.dropfilepanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dropfilepanel.Location = new System.Drawing.Point(2, 470);
-            this.dropfilepanel.Margin = new System.Windows.Forms.Padding(2);
-            this.dropfilepanel.Name = "dropfilepanel";
-            this.dropfilepanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.dropfilepanel.Size = new System.Drawing.Size(429, 180);
-            this.dropfilepanel.TabIndex = 123;
-            this.dropfilepanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
-            this.dropfilepanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
+            this.txt_ref_cab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ref_cab.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ref_cab.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_ref_cab.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_ref_cab.BorderSize = 2;
+            this.txt_ref_cab.Enabled = false;
+            this.txt_ref_cab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ref_cab.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_ref_cab.Location = new System.Drawing.Point(5, 55);
+            this.txt_ref_cab.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_ref_cab.Multiline = false;
+            this.txt_ref_cab.Name = "txt_ref_cab";
+            this.txt_ref_cab.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_ref_cab.PasswordChar = false;
+            this.txt_ref_cab.Size = new System.Drawing.Size(424, 37);
+            this.txt_ref_cab.TabIndex = 124;
+            this.txt_ref_cab.Texts = "";
+            this.txt_ref_cab.UnderlinedStyle = false;
             // 
-            // linkLabel1
+            // txt_refCode
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel1.Location = new System.Drawing.Point(15, 15);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(122, 17);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "choisis les fichiers";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.txt_refCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_refCode.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_refCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_refCode.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_refCode.BorderSize = 2;
+            this.txt_refCode.Enabled = false;
+            this.txt_refCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_refCode.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_refCode.Location = new System.Drawing.Point(315, 5);
+            this.txt_refCode.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_refCode.Multiline = false;
+            this.txt_refCode.Name = "txt_refCode";
+            this.txt_refCode.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_refCode.PasswordChar = false;
+            this.txt_refCode.Size = new System.Drawing.Size(110, 37);
+            this.txt_refCode.TabIndex = 115;
+            this.txt_refCode.Texts = "";
+            this.txt_refCode.UnderlinedStyle = false;
+            this.txt_refCode.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_refCode.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_refYear
+            // 
+            this.txt_refYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_refYear.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_refYear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_refYear.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_refYear.BorderSize = 2;
+            this.txt_refYear.Enabled = false;
+            this.txt_refYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_refYear.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_refYear.Location = new System.Drawing.Point(5, 5);
+            this.txt_refYear.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_refYear.Multiline = false;
+            this.txt_refYear.Name = "txt_refYear";
+            this.txt_refYear.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_refYear.PasswordChar = false;
+            this.txt_refYear.Size = new System.Drawing.Size(108, 37);
+            this.txt_refYear.TabIndex = 115;
+            this.txt_refYear.Texts = "";
+            this.txt_refYear.UnderlinedStyle = false;
+            this.txt_refYear.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_refYear.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_type_dec
+            // 
+            this.txt_type_dec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_type_dec.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_type_dec.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_type_dec.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_type_dec.BorderSize = 2;
+            this.txt_type_dec.Enabled = false;
+            this.txt_type_dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_type_dec.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_type_dec.Location = new System.Drawing.Point(5, 748);
+            this.txt_type_dec.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_type_dec.Multiline = false;
+            this.txt_type_dec.Name = "txt_type_dec";
+            this.txt_type_dec.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_type_dec.PasswordChar = false;
+            this.txt_type_dec.Size = new System.Drawing.Size(424, 37);
+            this.txt_type_dec.TabIndex = 123;
+            this.txt_type_dec.Texts = "";
+            this.txt_type_dec.UnderlinedStyle = false;
+            // 
+            // txt_gre
+            // 
+            this.txt_gre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_gre.AutoScroll = true;
+            this.txt_gre.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_gre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_gre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_gre.BorderSize = 2;
+            this.txt_gre.Enabled = false;
+            this.txt_gre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gre.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_gre.Location = new System.Drawing.Point(5, 643);
+            this.txt_gre.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_gre.Multiline = true;
+            this.txt_gre.Name = "txt_gre";
+            this.txt_gre.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_gre.PasswordChar = false;
+            this.txt_gre.Size = new System.Drawing.Size(424, 37);
+            this.txt_gre.TabIndex = 115;
+            this.txt_gre.Texts = "";
+            this.txt_gre.UnderlinedStyle = false;
+            this.txt_gre.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_gre.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_jug
+            // 
+            this.txt_jug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_jug.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_jug.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_jug.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_jug.BorderSize = 2;
+            this.txt_jug.Enabled = false;
+            this.txt_jug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_jug.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_jug.Location = new System.Drawing.Point(5, 545);
+            this.txt_jug.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_jug.Multiline = false;
+            this.txt_jug.Name = "txt_jug";
+            this.txt_jug.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_jug.PasswordChar = false;
+            this.txt_jug.Size = new System.Drawing.Size(424, 37);
+            this.txt_jug.TabIndex = 115;
+            this.txt_jug.Texts = "";
+            this.txt_jug.UnderlinedStyle = false;
+            this.txt_jug.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_jug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_magi
+            // 
+            this.txt_magi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_magi.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_magi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_magi.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_magi.BorderSize = 2;
+            this.txt_magi.Enabled = false;
+            this.txt_magi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_magi.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_magi.Location = new System.Drawing.Point(5, 447);
+            this.txt_magi.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_magi.Multiline = false;
+            this.txt_magi.Name = "txt_magi";
+            this.txt_magi.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_magi.PasswordChar = false;
+            this.txt_magi.Size = new System.Drawing.Size(424, 37);
+            this.txt_magi.TabIndex = 115;
+            this.txt_magi.Texts = "";
+            this.txt_magi.UnderlinedStyle = false;
+            this.txt_magi.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_magi.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_lieu
+            // 
+            this.txt_lieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_lieu.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_lieu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_lieu.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.txt_lieu.BorderSize = 2;
+            this.txt_lieu.Enabled = false;
+            this.txt_lieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lieu.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_lieu.Location = new System.Drawing.Point(5, 447);
+            this.txt_lieu.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_lieu.Multiline = false;
+            this.txt_lieu.Name = "txt_lieu";
+            this.txt_lieu.Padding = new System.Windows.Forms.Padding(8);
+            this.txt_lieu.PasswordChar = false;
+            this.txt_lieu.Size = new System.Drawing.Size(424, 37);
+            this.txt_lieu.TabIndex = 117;
+            this.txt_lieu.Texts = "";
+            this.txt_lieu.UnderlinedStyle = false;
+            this.txt_lieu.Enter += new System.EventHandler(this.TextBox_Enter);
+            this.txt_lieu.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // suivi_expertise
             // 

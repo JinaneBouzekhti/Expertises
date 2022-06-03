@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 using Microsoft.VisualBasic;
+using System.Text.RegularExpressions;
+
 namespace Gestion_expertise
 {
     public partial class suivi_expertise : UserControl
@@ -334,6 +336,7 @@ namespace Gestion_expertise
        
         private void btn_valider_Click(object sender, EventArgs e)
         {
+            label10.ForeColor = Color.Black;
             string Ref = txt_refYear.Texts + "/" + com_RefType.Text + "/" + txt_refCode.Texts;
             bool tr = false;
             if (cb_termine.Checked)
@@ -346,7 +349,7 @@ namespace Gestion_expertise
             sa.Fill(dt);
 
            
-            string rqt = " update expertise set RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,NomGreffier=@NomGreffier,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where RefCabinet like '" + RefCabinet + "'";
+            string rqt = " update expertise set RefRéféré =@RefRéféré,NumTribunalP=@NumTribunalP,NomMagistrat=@NomMagistrat,NomJugeControleur=@NomJugeControleur,sujet=@sujet,TypeDécision=@TypeDécision,DateDécision=@DateDécision,DateDésignation=@DateDésignation,DateAcceptation=@DateAcceptation,DateConsignation=@DateConsignation,MontantConsignation=@MontantConsignation,LieuExp=@LieuExp,NumTypeExp=@NumTypeExp,DateConvPart=@DateConvPart,DateRvPart=@DateRvPart,HeureRvPart=@HeureRvPart,RépertoireDoc=@RépertoireDoc,NumStatut=@NumStatut,Terminé=@Terminer where RefCabinet like '" + RefCabinet + "'";
             SqlCommand com = new SqlCommand(rqt, cn);
 
            com.Parameters.Add(new SqlParameter("@RefRéféré", Ref));
@@ -356,7 +359,7 @@ namespace Gestion_expertise
             com.Parameters.Add(new SqlParameter("@NumTribunalP", dt.Rows[0][0]));
             com.Parameters.Add(new SqlParameter("@NomMagistrat", txt_magi.Texts));
             com.Parameters.Add(new SqlParameter("@NomJugeControleur", txt_jug.Texts));
-            com.Parameters.Add(new SqlParameter("@NomGreffier", txt_gre.Texts));
+            com.Parameters.Add(new SqlParameter("@sujet", txt_gre.Texts));
             com.Parameters.Add(new SqlParameter("@TypeDécision", txt_type_dec.Texts));
             com.Parameters.Add(new SqlParameter("@DateDécision", Convert.ToDateTime(date_decision.Text)));
             com.Parameters.Add(new SqlParameter("@DateDésignation", Convert.ToDateTime(date_desi.Text)));
@@ -378,14 +381,31 @@ namespace Gestion_expertise
                     DirectoryInfo Dir = new DirectoryInfo(Chemin);
                     if (!Dir.Exists)
                     {
-                        Dir.Create();
-                        com.ExecuteNonQuery();
-                        Activate(false);
+
+                        if (!Regex.Match(txt_hor.Texts, "^([0-1][0-9])?([2][0-3])?:([0-5][0-9])$").Success)
+                        {
+                            label10.ForeColor = Color.Red;                           
+                        }
+                        else
+                        {
+                            Dir.Create();
+                            com.ExecuteNonQuery();
+                            Activate(false);
+                         }
+                    
                     }
                     else
                     {
-                        com.ExecuteNonQuery();
-                        Activate(false);
+                        if (!Regex.Match(txt_hor.Texts, "^([0-1][0-9])?([2][0-3])?:([0-5][0-9])$").Success)
+                        {
+                            label10.ForeColor = Color.Red;                       
+                        }
+                        else
+                        { 
+                            com.ExecuteNonQuery();
+                            Activate(false);
+                        }
+                    
                     }
                 }
                 else
@@ -401,6 +421,7 @@ namespace Gestion_expertise
 
         private void btn_annuler_Click(object sender, EventArgs e)
         {
+            label10.ForeColor = Color.Black;
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
             
