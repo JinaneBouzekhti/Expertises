@@ -373,7 +373,7 @@ namespace Gestion_expertise
             // 
             // rjComboBox1
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rjComboBox1.BackColor = System.Drawing.Color.White;
             this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.rjComboBox1.BorderSize = 2;
             this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
@@ -409,7 +409,7 @@ namespace Gestion_expertise
             // 
             // txt_mail
             // 
-            this.txt_mail.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_mail.BackColor = System.Drawing.Color.White;
             this.txt_mail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_mail.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_mail.BorderSize = 2;
@@ -429,7 +429,7 @@ namespace Gestion_expertise
             // 
             // txt_pren
             // 
-            this.txt_pren.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_pren.BackColor = System.Drawing.Color.White;
             this.txt_pren.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_pren.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_pren.BorderSize = 2;
@@ -449,7 +449,7 @@ namespace Gestion_expertise
             // 
             // txt_nom
             // 
-            this.txt_nom.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_nom.BackColor = System.Drawing.Color.White;
             this.txt_nom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_nom.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_nom.BorderSize = 2;
@@ -469,7 +469,7 @@ namespace Gestion_expertise
             // 
             // txt_pas
             // 
-            this.txt_pas.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_pas.BackColor = System.Drawing.Color.White;
             this.txt_pas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_pas.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_pas.BorderSize = 2;
@@ -489,7 +489,7 @@ namespace Gestion_expertise
             // 
             // txt_log
             // 
-            this.txt_log.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_log.BackColor = System.Drawing.Color.White;
             this.txt_log.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
             this.txt_log.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txt_log.BorderSize = 2;

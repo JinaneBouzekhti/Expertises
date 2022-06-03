@@ -33,14 +33,6 @@ namespace Gestion_expertise
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
-            SqlDataAdapter sa = new SqlDataAdapter("select type from Utilisateur where login like '" + log + "'", cn);
-            DataTable dt = new DataTable();
-            sa.Fill(dt);
-            if (Convert.ToInt32(dt.Rows[0][0]) == 1)
-                pictureBox2.Visible = true;
-
-
-
             string req = "select * from expertise";
             SqlCommand com = new SqlCommand(req, cn);
 
@@ -251,7 +243,7 @@ namespace Gestion_expertise
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            adminpanel ad = new adminpanel();
+            Parametre ad = new Parametre(log);
             ad.Show();
         }
 
