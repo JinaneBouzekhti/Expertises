@@ -48,7 +48,7 @@ namespace Gestion_expertise
             this.txt_login.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_login.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_login.Location = new System.Drawing.Point(626, 236);
-            this.txt_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_login.Margin = new System.Windows.Forms.Padding(2);
             this.txt_login.Name = "txt_login";
             this.txt_login.Size = new System.Drawing.Size(183, 18);
             this.txt_login.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace Gestion_expertise
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_password.Location = new System.Drawing.Point(626, 303);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(169, 18);
@@ -73,7 +73,7 @@ namespace Gestion_expertise
             this.btn_login.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold);
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Location = new System.Drawing.Point(665, 402);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(158, 39);
             this.btn_login.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace Gestion_expertise
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(828, 305);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(20, 17);
             this.panel1.TabIndex = 3;
@@ -111,7 +111,7 @@ namespace Gestion_expertise
             this.keepit.BackColor = System.Drawing.Color.White;
             this.keepit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keepit.Location = new System.Drawing.Point(627, 362);
-            this.keepit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.keepit.Margin = new System.Windows.Forms.Padding(2);
             this.keepit.Name = "keepit";
             this.keepit.Size = new System.Drawing.Size(216, 21);
             this.keepit.TabIndex = 3;
@@ -189,11 +189,11 @@ namespace Gestion_expertise
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Connexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Expert";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

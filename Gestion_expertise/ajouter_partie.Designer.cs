@@ -35,6 +35,7 @@ namespace Gestion_expertise
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ajouter_partie));
             this.txt_copier = new System.Windows.Forms.TextBox();
             this.dgv_dem = new System.Windows.Forms.DataGridView();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -378,9 +379,10 @@ namespace Gestion_expertise
             this.ClientSize = new System.Drawing.Size(1063, 749);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ajouter_partie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ajouter_partie";
+            this.Text = "Ajouter des parties";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_def)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

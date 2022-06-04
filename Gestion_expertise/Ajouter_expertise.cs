@@ -308,7 +308,11 @@ namespace Gestion_expertise
                 defaultValue = "";
                 myValue = Interaction.InputBox(message, title, defaultValue);
 
-                if ((string)myValue == "B20J21I22")
+                SqlDataAdapter sa1 = new SqlDataAdapter("select clé from plus ", cn);
+                DataTable dt1 = new DataTable();
+                sa1.Fill(dt1);
+
+                if ((string)myValue == dt1.Rows[0][0].ToString())
                 {
                     string Ref = txt_refYear.Text + "/" + com_RefType.Text + "/" + txt_refCode.Text;
 

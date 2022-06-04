@@ -154,6 +154,12 @@
     <Compile Include="Calendrier\details.Designer.cs">
       <DependentUpon>details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clé.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clé.Designer.cs">
+      <DependentUpon>Clé.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Calendrier\Clandrier.resx">
       <DependentUpon>Clandrier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clé.resx">
+      <DependentUpon>Clé.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>

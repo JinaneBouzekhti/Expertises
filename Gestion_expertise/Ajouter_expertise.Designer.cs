@@ -29,6 +29,7 @@ namespace Gestion_expertise
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ajouter_expertise));
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -54,8 +55,6 @@ namespace Gestion_expertise
             this.date_conv = new System.Windows.Forms.DateTimePicker();
             this.date_rend = new System.Windows.Forms.DateTimePicker();
             this.btn_open_file = new System.Windows.Forms.Button();
-            this.btn_ajouter = new System.Windows.Forms.Button();
-            this.btn_annuler = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.com_tribunalP = new System.Windows.Forms.ComboBox();
             this.lbl_VideDs = new System.Windows.Forms.Label();
@@ -67,6 +66,8 @@ namespace Gestion_expertise
             this.lbl_oblig = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_annuler = new System.Windows.Forms.Button();
+            this.btn_ajouter = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -140,7 +141,7 @@ namespace Gestion_expertise
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(3, 477);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(162, 23);
+            this.label19.Size = new System.Drawing.Size(135, 19);
             this.label19.TabIndex = 70;
             this.label19.Text = "Date d\'acceptation";
             // 
@@ -150,7 +151,7 @@ namespace Gestion_expertise
             this.label20.BackColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(3, 424);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(147, 23);
+            this.label20.Size = new System.Drawing.Size(122, 19);
             this.label20.TabIndex = 71;
             this.label20.Text = "Date désignation";
             // 
@@ -160,7 +161,7 @@ namespace Gestion_expertise
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(3, 371);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 23);
+            this.label8.Size = new System.Drawing.Size(120, 19);
             this.label8.TabIndex = 57;
             this.label8.Text = "Date de décision";
             // 
@@ -170,7 +171,7 @@ namespace Gestion_expertise
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(3, 318);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 23);
+            this.label7.Size = new System.Drawing.Size(121, 19);
             this.label7.TabIndex = 58;
             this.label7.Text = "Type de décision";
             // 
@@ -180,7 +181,7 @@ namespace Gestion_expertise
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 23);
+            this.label6.Size = new System.Drawing.Size(119, 19);
             this.label6.TabIndex = 59;
             this.label6.Text = "Sujet de l\'affaire";
             // 
@@ -190,7 +191,7 @@ namespace Gestion_expertise
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 23);
+            this.label5.Size = new System.Drawing.Size(114, 19);
             this.label5.TabIndex = 60;
             this.label5.Text = "Juge controleur";
             // 
@@ -200,7 +201,7 @@ namespace Gestion_expertise
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 23);
+            this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 61;
             this.label4.Text = "Magistrat";
             // 
@@ -210,7 +211,7 @@ namespace Gestion_expertise
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
+            this.label3.Size = new System.Drawing.Size(63, 19);
             this.label3.TabIndex = 62;
             this.label3.Text = "Tribunal";
             // 
@@ -219,7 +220,7 @@ namespace Gestion_expertise
             this.com_CoursA.FormattingEnabled = true;
             this.com_CoursA.Location = new System.Drawing.Point(3, 3);
             this.com_CoursA.Name = "com_CoursA";
-            this.com_CoursA.Size = new System.Drawing.Size(144, 31);
+            this.com_CoursA.Size = new System.Drawing.Size(144, 25);
             this.com_CoursA.TabIndex = 2;
             this.com_CoursA.SelectedValueChanged += new System.EventHandler(this.com_CoursA_SelectedValueChanged);
             this.com_CoursA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_tribunal_KeyDown);
@@ -228,14 +229,14 @@ namespace Gestion_expertise
             // 
             this.txt_magistrat.Location = new System.Drawing.Point(309, 162);
             this.txt_magistrat.Name = "txt_magistrat";
-            this.txt_magistrat.Size = new System.Drawing.Size(301, 30);
+            this.txt_magistrat.Size = new System.Drawing.Size(301, 25);
             this.txt_magistrat.TabIndex = 3;
             // 
             // txt_juge
             // 
             this.txt_juge.Location = new System.Drawing.Point(309, 215);
             this.txt_juge.Name = "txt_juge";
-            this.txt_juge.Size = new System.Drawing.Size(301, 30);
+            this.txt_juge.Size = new System.Drawing.Size(301, 25);
             this.txt_juge.TabIndex = 4;
             // 
             // txt_sujet
@@ -252,7 +253,7 @@ namespace Gestion_expertise
             // 
             this.txt_type_decision.Location = new System.Drawing.Point(309, 321);
             this.txt_type_decision.Name = "txt_type_decision";
-            this.txt_type_decision.Size = new System.Drawing.Size(301, 30);
+            this.txt_type_decision.Size = new System.Drawing.Size(301, 25);
             this.txt_type_decision.TabIndex = 6;
             // 
             // com_statu
@@ -260,7 +261,7 @@ namespace Gestion_expertise
             this.com_statu.FormattingEnabled = true;
             this.com_statu.Location = new System.Drawing.Point(310, 388);
             this.com_statu.Name = "com_statu";
-            this.com_statu.Size = new System.Drawing.Size(301, 31);
+            this.com_statu.Size = new System.Drawing.Size(301, 25);
             this.com_statu.TabIndex = 23;
             this.com_statu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_statu_KeyDown);
             // 
@@ -270,7 +271,7 @@ namespace Gestion_expertise
             this.com_type_exp.FormattingEnabled = true;
             this.com_type_exp.Location = new System.Drawing.Point(310, 113);
             this.com_type_exp.Name = "com_type_exp";
-            this.com_type_exp.Size = new System.Drawing.Size(301, 31);
+            this.com_type_exp.Size = new System.Drawing.Size(301, 25);
             this.com_type_exp.TabIndex = 17;
             this.com_type_exp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.com_type_exp_KeyDown);
             // 
@@ -279,14 +280,14 @@ namespace Gestion_expertise
             this.txt_rep.Location = new System.Drawing.Point(3, 3);
             this.txt_rep.Name = "txt_rep";
             this.txt_rep.ReadOnly = true;
-            this.txt_rep.Size = new System.Drawing.Size(223, 30);
+            this.txt_rep.Size = new System.Drawing.Size(223, 25);
             this.txt_rep.TabIndex = 21;
             // 
             // txt_lieu
             // 
             this.txt_lieu.Location = new System.Drawing.Point(310, 58);
             this.txt_lieu.Name = "txt_lieu";
-            this.txt_lieu.Size = new System.Drawing.Size(301, 30);
+            this.txt_lieu.Size = new System.Drawing.Size(301, 25);
             this.txt_lieu.TabIndex = 16;
             // 
             // date_decision
@@ -294,7 +295,7 @@ namespace Gestion_expertise
             this.date_decision.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_decision.Location = new System.Drawing.Point(309, 374);
             this.date_decision.Name = "date_decision";
-            this.date_decision.Size = new System.Drawing.Size(301, 30);
+            this.date_decision.Size = new System.Drawing.Size(301, 25);
             this.date_decision.TabIndex = 7;
             this.date_decision.Value = new System.DateTime(2022, 4, 25, 0, 0, 0, 0);
             // 
@@ -303,7 +304,7 @@ namespace Gestion_expertise
             this.date_desi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_desi.Location = new System.Drawing.Point(309, 427);
             this.date_desi.Name = "date_desi";
-            this.date_desi.Size = new System.Drawing.Size(301, 30);
+            this.date_desi.Size = new System.Drawing.Size(301, 25);
             this.date_desi.TabIndex = 9;
             // 
             // date_acc
@@ -311,7 +312,7 @@ namespace Gestion_expertise
             this.date_acc.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_acc.Location = new System.Drawing.Point(309, 480);
             this.date_acc.Name = "date_acc";
-            this.date_acc.Size = new System.Drawing.Size(301, 30);
+            this.date_acc.Size = new System.Drawing.Size(301, 25);
             this.date_acc.TabIndex = 10;
             // 
             // date_consi
@@ -319,7 +320,7 @@ namespace Gestion_expertise
             this.date_consi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_consi.Location = new System.Drawing.Point(310, 3);
             this.date_consi.Name = "date_consi";
-            this.date_consi.Size = new System.Drawing.Size(301, 30);
+            this.date_consi.Size = new System.Drawing.Size(301, 25);
             this.date_consi.TabIndex = 11;
             // 
             // date_conv
@@ -327,7 +328,7 @@ namespace Gestion_expertise
             this.date_conv.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_conv.Location = new System.Drawing.Point(310, 168);
             this.date_conv.Name = "date_conv";
-            this.date_conv.Size = new System.Drawing.Size(301, 30);
+            this.date_conv.Size = new System.Drawing.Size(301, 25);
             this.date_conv.TabIndex = 18;
             // 
             // date_rend
@@ -335,7 +336,7 @@ namespace Gestion_expertise
             this.date_rend.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.date_rend.Location = new System.Drawing.Point(310, 223);
             this.date_rend.Name = "date_rend";
-            this.date_rend.Size = new System.Drawing.Size(301, 30);
+            this.date_rend.Size = new System.Drawing.Size(301, 25);
             this.date_rend.TabIndex = 19;
             // 
             // btn_open_file
@@ -349,36 +350,6 @@ namespace Gestion_expertise
             this.btn_open_file.Text = "...";
             this.btn_open_file.UseVisualStyleBackColor = false;
             this.btn_open_file.Click += new System.EventHandler(this.btn_open_file_Click);
-            // 
-            // btn_ajouter
-            // 
-            this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_ajouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px;
-            this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajouter.Location = new System.Drawing.Point(153, 3);
-            this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(145, 42);
-            this.btn_ajouter.TabIndex = 25;
-            this.btn_ajouter.Text = "ajouter";
-            this.btn_ajouter.UseVisualStyleBackColor = false;
-            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
-            // 
-            // btn_annuler
-            // 
-            this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
-            this.btn_annuler.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_annuler.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
-            this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_annuler.Location = new System.Drawing.Point(3, 3);
-            this.btn_annuler.Name = "btn_annuler";
-            this.btn_annuler.Size = new System.Drawing.Size(144, 42);
-            this.btn_annuler.TabIndex = 24;
-            this.btn_annuler.Text = "annuler";
-            this.btn_annuler.UseVisualStyleBackColor = false;
-            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
             // label14
             // 
@@ -394,7 +365,7 @@ namespace Gestion_expertise
             this.com_tribunalP.FormattingEnabled = true;
             this.com_tribunalP.Location = new System.Drawing.Point(153, 3);
             this.com_tribunalP.Name = "com_tribunalP";
-            this.com_tribunalP.Size = new System.Drawing.Size(145, 31);
+            this.com_tribunalP.Size = new System.Drawing.Size(145, 25);
             this.com_tribunalP.TabIndex = 92;
             // 
             // lbl_VideDs
@@ -418,7 +389,7 @@ namespace Gestion_expertise
             0,
             0});
             this.txt_montant.Name = "txt_montant";
-            this.txt_montant.Size = new System.Drawing.Size(301, 30);
+            this.txt_montant.Size = new System.Drawing.Size(301, 25);
             this.txt_montant.TabIndex = 92;
             // 
             // tableLayoutPanel1
@@ -546,6 +517,36 @@ namespace Gestion_expertise
             this.tableLayoutPanel6.Size = new System.Drawing.Size(301, 58);
             this.tableLayoutPanel6.TabIndex = 93;
             // 
+            // btn_annuler
+            // 
+            this.btn_annuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_annuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_annuler.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_annuler.Image = global::Gestion_expertise.Properties.Resources.undo_25px;
+            this.btn_annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_annuler.Location = new System.Drawing.Point(3, 3);
+            this.btn_annuler.Name = "btn_annuler";
+            this.btn_annuler.Size = new System.Drawing.Size(144, 42);
+            this.btn_annuler.TabIndex = 24;
+            this.btn_annuler.Text = "annuler";
+            this.btn_annuler.UseVisualStyleBackColor = false;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
+            // 
+            // btn_ajouter
+            // 
+            this.btn_ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(155)))));
+            this.btn_ajouter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ajouter.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btn_ajouter.Image = global::Gestion_expertise.Properties.Resources.add_25px;
+            this.btn_ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ajouter.Location = new System.Drawing.Point(153, 3);
+            this.btn_ajouter.Name = "btn_ajouter";
+            this.btn_ajouter.Size = new System.Drawing.Size(145, 42);
+            this.btn_ajouter.TabIndex = 25;
+            this.btn_ajouter.Text = "ajouter";
+            this.btn_ajouter.UseVisualStyleBackColor = false;
+            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
+            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 2;
@@ -565,7 +566,7 @@ namespace Gestion_expertise
             this.label24.BackColor = System.Drawing.Color.White;
             this.label24.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(104, 0);
+            this.label24.Location = new System.Drawing.Point(90, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(13, 16);
             this.label24.TabIndex = 109;
@@ -577,7 +578,7 @@ namespace Gestion_expertise
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 23);
+            this.label9.Size = new System.Drawing.Size(81, 19);
             this.label9.TabIndex = 83;
             this.label9.Text = "Répertoire";
             // 
@@ -600,7 +601,7 @@ namespace Gestion_expertise
             this.label26.BackColor = System.Drawing.Color.White;
             this.label26.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(164, 0);
+            this.label26.Location = new System.Drawing.Point(138, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(13, 16);
             this.label26.TabIndex = 110;
@@ -612,7 +613,7 @@ namespace Gestion_expertise
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(3, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(155, 23);
+            this.label18.Size = new System.Drawing.Size(129, 19);
             this.label18.TabIndex = 70;
             this.label18.Text = "Date consignation";
             // 
@@ -635,7 +636,7 @@ namespace Gestion_expertise
             this.label28.BackColor = System.Drawing.Color.White;
             this.label28.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(184, 0);
+            this.label28.Location = new System.Drawing.Point(156, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(13, 16);
             this.label28.TabIndex = 110;
@@ -647,7 +648,7 @@ namespace Gestion_expertise
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 23);
+            this.label12.Size = new System.Drawing.Size(147, 19);
             this.label12.TabIndex = 86;
             this.label12.Text = "Date du convocation";
             // 
@@ -704,7 +705,7 @@ namespace Gestion_expertise
             this.label30.BackColor = System.Drawing.Color.White;
             this.label30.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.Color.Red;
-            this.label30.Location = new System.Drawing.Point(210, 0);
+            this.label30.Location = new System.Drawing.Point(179, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(13, 16);
             this.label30.TabIndex = 110;
@@ -716,7 +717,7 @@ namespace Gestion_expertise
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(201, 23);
+            this.label10.Size = new System.Drawing.Size(170, 19);
             this.label10.TabIndex = 84;
             this.label10.Text = "Horaire du Rendez Vous";
             // 
@@ -739,7 +740,7 @@ namespace Gestion_expertise
             this.label21.BackColor = System.Drawing.Color.White;
             this.label21.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(165, 0);
+            this.label21.Location = new System.Drawing.Point(140, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(13, 16);
             this.label21.TabIndex = 111;
@@ -751,7 +752,7 @@ namespace Gestion_expertise
             this.label22.BackColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(3, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(156, 23);
+            this.label22.Size = new System.Drawing.Size(131, 19);
             this.label22.TabIndex = 88;
             this.label22.Text = "Lieu de l\'expertise";
             // 
@@ -785,7 +786,7 @@ namespace Gestion_expertise
             // 
             this.txt_horai.Location = new System.Drawing.Point(3, 3);
             this.txt_horai.Name = "txt_horai";
-            this.txt_horai.Size = new System.Drawing.Size(295, 30);
+            this.txt_horai.Size = new System.Drawing.Size(295, 25);
             this.txt_horai.TabIndex = 21;
             this.txt_horai.TextChanged += new System.EventHandler(this.txt_horai_TextChanged);
             // 
@@ -810,7 +811,7 @@ namespace Gestion_expertise
             this.label27.BackColor = System.Drawing.Color.White;
             this.label27.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(178, 0);
+            this.label27.Location = new System.Drawing.Point(148, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(13, 16);
             this.label27.TabIndex = 110;
@@ -822,7 +823,7 @@ namespace Gestion_expertise
             this.label25.BackColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(3, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(169, 23);
+            this.label25.Size = new System.Drawing.Size(139, 19);
             this.label25.TabIndex = 84;
             this.label25.Text = "Statut de la mission";
             this.label25.Click += new System.EventHandler(this.label25_Click);
@@ -924,7 +925,7 @@ namespace Gestion_expertise
             this.com_RefType.FormattingEnabled = true;
             this.com_RefType.Location = new System.Drawing.Point(108, 3);
             this.com_RefType.Name = "com_RefType";
-            this.com_RefType.Size = new System.Drawing.Size(82, 31);
+            this.com_RefType.Size = new System.Drawing.Size(82, 25);
             this.com_RefType.TabIndex = 1;
             this.com_RefType.SelectedIndexChanged += new System.EventHandler(this.com_RefType_SelectedIndexChanged);
             // 
@@ -933,7 +934,7 @@ namespace Gestion_expertise
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(91, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 23);
+            this.label1.Size = new System.Drawing.Size(11, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "/";
             // 
@@ -942,7 +943,7 @@ namespace Gestion_expertise
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(196, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 23);
+            this.label2.Size = new System.Drawing.Size(11, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "/";
             // 
@@ -950,14 +951,14 @@ namespace Gestion_expertise
             // 
             this.txt_refYear.Location = new System.Drawing.Point(3, 3);
             this.txt_refYear.Name = "txt_refYear";
-            this.txt_refYear.Size = new System.Drawing.Size(82, 30);
+            this.txt_refYear.Size = new System.Drawing.Size(82, 25);
             this.txt_refYear.TabIndex = 5;
             // 
             // txt_refCode
             // 
             this.txt_refCode.Location = new System.Drawing.Point(213, 3);
             this.txt_refCode.Name = "txt_refCode";
-            this.txt_refCode.Size = new System.Drawing.Size(85, 30);
+            this.txt_refCode.Size = new System.Drawing.Size(85, 25);
             this.txt_refCode.TabIndex = 6;
             // 
             // txt_ref_cab
@@ -965,7 +966,7 @@ namespace Gestion_expertise
             this.txt_ref_cab.Enabled = false;
             this.txt_ref_cab.Location = new System.Drawing.Point(309, 3);
             this.txt_ref_cab.Name = "txt_ref_cab";
-            this.txt_ref_cab.Size = new System.Drawing.Size(301, 30);
+            this.txt_ref_cab.Size = new System.Drawing.Size(301, 25);
             this.txt_ref_cab.TabIndex = 107;
             // 
             // tableLayoutPanel8
@@ -987,7 +988,7 @@ namespace Gestion_expertise
             this.label23.BackColor = System.Drawing.Color.White;
             this.label23.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(177, 0);
+            this.label23.Location = new System.Drawing.Point(151, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(13, 16);
             this.label23.TabIndex = 108;
@@ -999,22 +1000,23 @@ namespace Gestion_expertise
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(3, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(168, 23);
+            this.label16.Size = new System.Drawing.Size(142, 19);
             this.label16.TabIndex = 103;
             this.label16.Text = "Référence du référé";
             // 
             // Ajouter_expertise
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1271, 581);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 450);
             this.Name = "Ajouter_expertise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "z";
+            this.Text = "Ajouter une expertise";
             this.Load += new System.EventHandler(this.Ajouter_expertise_Load);
             this.SizeChanged += new System.EventHandler(this.Ajouter_expertise_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.txt_montant)).EndInit();

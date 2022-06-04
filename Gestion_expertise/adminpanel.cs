@@ -58,6 +58,13 @@ namespace Gestion_expertise
             txt_mail.Texts = dgv_users.Rows[0].Cells[4].Value.ToString();
             cb_valide.Checked =Convert.ToBoolean(dgv_users.Rows[0].Cells[6].Value.ToString()) ;
             rjComboBox1.Texts = dgv_users.Rows[0].Cells[5].Value.ToString();
+
+
+            SqlDataAdapter sa = new SqlDataAdapter("select clé from plus ", cn);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+            label8.Text = "Clé de sécurité : "+ dt.Rows[0][0].ToString(); 
+            
         }
 
         private void dgv_users_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -167,5 +174,11 @@ namespace Gestion_expertise
             }
         }
 
+
+        private void btnEditkey_Click_1(object sender, EventArgs e)
+        {
+            Clé c = new Clé();
+            c.Show();
+        }
     }
 }
