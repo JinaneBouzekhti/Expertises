@@ -31,7 +31,7 @@ namespace Gestion_expertise
             for (int i = 0; i < dt.Rows.Count; i++)
             {
 
-                if (Convert.ToInt32(dt.Rows[i][19]) == 0 && DateTime.Now <= Convert.ToDateTime(dt.Rows[i][10]).AddDays(30))
+                if (Convert.ToInt32(dt.Rows[i][19]) == 0)
                 {
 
                     SqlDataAdapter sa1 = new SqlDataAdapter("select NomTribunalP from TribunauxPremière where NumTribunalP =" + dt.Rows[i][2], con);
@@ -73,9 +73,7 @@ namespace Gestion_expertise
                 }
                 else
                 {
-                    string rqt = "update expertise set Terminé=1 where RefCabinet like '" + dt.Rows[i][0].ToString() + "'";
-                    SqlCommand com = new SqlCommand(rqt, con);
-                    com.ExecuteNonQuery();
+                    
 
                     SqlDataAdapter sa1 = new SqlDataAdapter("select NomTribunalP from TribunauxPremière where NumTribunalP =" + dt.Rows[i][2], con);
                     DataTable dt1 = new DataTable();

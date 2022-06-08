@@ -343,6 +343,7 @@ namespace Gestion_expertise
             bool tr = false;
             if (cb_termine.Checked)
                 tr = true;
+            
 
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();

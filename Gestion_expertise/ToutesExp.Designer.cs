@@ -38,26 +38,8 @@ namespace Gestion_expertise
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RefCabinet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefRéféré = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tribunal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomMagistrat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomJugeControleur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sujet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeDécision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDécision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDésignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateAcceptation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateConsignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MontantConsignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LieuExp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeExp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateConvPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateRvPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HeureRvPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RépertoireDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumStatut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +59,25 @@ namespace Gestion_expertise
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.RefCabinet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefRéféré = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tribunal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomMagistrat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomJugeControleur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sujet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeDécision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateDécision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateDésignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateAcceptation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateConsignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MontantConsignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LieuExp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeExp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateConvPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateRvPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HeureRvPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RépertoireDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumStatut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,7 +91,7 @@ namespace Gestion_expertise
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 52);
+            this.label1.Size = new System.Drawing.Size(290, 52);
             this.label1.TabIndex = 4;
             this.label1.Text = "LISTE DES EXPERTISES EN COURS";
             // 
@@ -103,7 +103,7 @@ namespace Gestion_expertise
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(3, 326);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 52);
+            this.label2.Size = new System.Drawing.Size(310, 52);
             this.label2.TabIndex = 5;
             this.label2.Text = "LISTE DES EXPERTISES  TERMINÉES";
             // 
@@ -162,171 +162,6 @@ namespace Gestion_expertise
             this.dataGridView1.Size = new System.Drawing.Size(1006, 270);
             this.dataGridView1.TabIndex = 7;
             // 
-            // RefCabinet
-            // 
-            this.RefCabinet.HeaderText = "Référence du Cabinet";
-            this.RefCabinet.MinimumWidth = 6;
-            this.RefCabinet.Name = "RefCabinet";
-            this.RefCabinet.ReadOnly = true;
-            this.RefCabinet.Width = 125;
-            // 
-            // RefRéféré
-            // 
-            this.RefRéféré.HeaderText = "Référence du Référé";
-            this.RefRéféré.MinimumWidth = 6;
-            this.RefRéféré.Name = "RefRéféré";
-            this.RefRéféré.ReadOnly = true;
-            this.RefRéféré.Width = 150;
-            // 
-            // Tribunal
-            // 
-            this.Tribunal.HeaderText = "Tribunal de première instance";
-            this.Tribunal.MinimumWidth = 6;
-            this.Tribunal.Name = "Tribunal";
-            this.Tribunal.ReadOnly = true;
-            this.Tribunal.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Tribunal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Tribunal.Width = 200;
-            // 
-            // NomMagistrat
-            // 
-            this.NomMagistrat.HeaderText = "Magistrat";
-            this.NomMagistrat.MinimumWidth = 6;
-            this.NomMagistrat.Name = "NomMagistrat";
-            this.NomMagistrat.ReadOnly = true;
-            this.NomMagistrat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NomMagistrat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.NomMagistrat.Width = 125;
-            // 
-            // NomJugeControleur
-            // 
-            this.NomJugeControleur.HeaderText = "Juge Controleur";
-            this.NomJugeControleur.MinimumWidth = 6;
-            this.NomJugeControleur.Name = "NomJugeControleur";
-            this.NomJugeControleur.ReadOnly = true;
-            this.NomJugeControleur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NomJugeControleur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.NomJugeControleur.Width = 125;
-            // 
-            // sujet
-            // 
-            this.sujet.HeaderText = "Greffier";
-            this.sujet.MinimumWidth = 6;
-            this.sujet.Name = "sujet";
-            this.sujet.ReadOnly = true;
-            this.sujet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.sujet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.sujet.Width = 125;
-            // 
-            // TypeDécision
-            // 
-            this.TypeDécision.HeaderText = "Type Décision";
-            this.TypeDécision.MinimumWidth = 6;
-            this.TypeDécision.Name = "TypeDécision";
-            this.TypeDécision.ReadOnly = true;
-            this.TypeDécision.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TypeDécision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TypeDécision.Width = 125;
-            // 
-            // DateDécision
-            // 
-            this.DateDécision.HeaderText = "Décision";
-            this.DateDécision.MinimumWidth = 6;
-            this.DateDécision.Name = "DateDécision";
-            this.DateDécision.ReadOnly = true;
-            this.DateDécision.Width = 125;
-            // 
-            // DateDésignation
-            // 
-            this.DateDésignation.HeaderText = "Désignation";
-            this.DateDésignation.MinimumWidth = 6;
-            this.DateDésignation.Name = "DateDésignation";
-            this.DateDésignation.ReadOnly = true;
-            this.DateDésignation.Width = 125;
-            // 
-            // DateAcceptation
-            // 
-            this.DateAcceptation.HeaderText = "Acceptation";
-            this.DateAcceptation.MinimumWidth = 6;
-            this.DateAcceptation.Name = "DateAcceptation";
-            this.DateAcceptation.ReadOnly = true;
-            this.DateAcceptation.Width = 125;
-            // 
-            // DateConsignation
-            // 
-            this.DateConsignation.HeaderText = "Consignation";
-            this.DateConsignation.MinimumWidth = 6;
-            this.DateConsignation.Name = "DateConsignation";
-            this.DateConsignation.ReadOnly = true;
-            this.DateConsignation.Width = 125;
-            // 
-            // MontantConsignation
-            // 
-            this.MontantConsignation.HeaderText = "Montant Consignation";
-            this.MontantConsignation.MinimumWidth = 6;
-            this.MontantConsignation.Name = "MontantConsignation";
-            this.MontantConsignation.ReadOnly = true;
-            this.MontantConsignation.Width = 125;
-            // 
-            // LieuExp
-            // 
-            this.LieuExp.HeaderText = "Lieu";
-            this.LieuExp.MinimumWidth = 6;
-            this.LieuExp.Name = "LieuExp";
-            this.LieuExp.ReadOnly = true;
-            this.LieuExp.Width = 125;
-            // 
-            // TypeExp
-            // 
-            this.TypeExp.HeaderText = "Type";
-            this.TypeExp.MinimumWidth = 6;
-            this.TypeExp.Name = "TypeExp";
-            this.TypeExp.ReadOnly = true;
-            this.TypeExp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TypeExp.Width = 125;
-            // 
-            // DateConvPart
-            // 
-            this.DateConvPart.HeaderText = "Convocation";
-            this.DateConvPart.MinimumWidth = 6;
-            this.DateConvPart.Name = "DateConvPart";
-            this.DateConvPart.ReadOnly = true;
-            this.DateConvPart.Width = 125;
-            // 
-            // DateRvPart
-            // 
-            this.DateRvPart.HeaderText = "RV";
-            this.DateRvPart.MinimumWidth = 6;
-            this.DateRvPart.Name = "DateRvPart";
-            this.DateRvPart.ReadOnly = true;
-            this.DateRvPart.Width = 125;
-            // 
-            // HeureRvPart
-            // 
-            this.HeureRvPart.HeaderText = "Heure RV";
-            this.HeureRvPart.MinimumWidth = 6;
-            this.HeureRvPart.Name = "HeureRvPart";
-            this.HeureRvPart.ReadOnly = true;
-            this.HeureRvPart.Width = 125;
-            // 
-            // RépertoireDoc
-            // 
-            this.RépertoireDoc.HeaderText = "Répertoire Document";
-            this.RépertoireDoc.MinimumWidth = 6;
-            this.RépertoireDoc.Name = "RépertoireDoc";
-            this.RépertoireDoc.ReadOnly = true;
-            this.RépertoireDoc.Width = 125;
-            // 
-            // NumStatut
-            // 
-            this.NumStatut.HeaderText = "Statut";
-            this.NumStatut.MinimumWidth = 6;
-            this.NumStatut.Name = "NumStatut";
-            this.NumStatut.ReadOnly = true;
-            this.NumStatut.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NumStatut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.NumStatut.Width = 125;
-            // 
             // dataGridView2
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
@@ -382,6 +217,25 @@ namespace Gestion_expertise
             this.dataGridView2.Size = new System.Drawing.Size(1006, 272);
             this.dataGridView2.TabIndex = 8;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 0, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 654);
+            this.tableLayoutPanel1.TabIndex = 9;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Référence du Cabinet";
@@ -430,7 +284,7 @@ namespace Gestion_expertise
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Greffier";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Sujet d\'affaire";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -547,28 +401,174 @@ namespace Gestion_expertise
             this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn19.Width = 125;
             // 
-            // tableLayoutPanel1
+            // RefCabinet
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView2, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 654);
-            this.tableLayoutPanel1.TabIndex = 9;
+            this.RefCabinet.HeaderText = "Référence du Cabinet";
+            this.RefCabinet.MinimumWidth = 6;
+            this.RefCabinet.Name = "RefCabinet";
+            this.RefCabinet.ReadOnly = true;
+            this.RefCabinet.Width = 125;
+            // 
+            // RefRéféré
+            // 
+            this.RefRéféré.HeaderText = "Référence du Référé";
+            this.RefRéféré.MinimumWidth = 6;
+            this.RefRéféré.Name = "RefRéféré";
+            this.RefRéféré.ReadOnly = true;
+            this.RefRéféré.Width = 150;
+            // 
+            // Tribunal
+            // 
+            this.Tribunal.HeaderText = "Tribunal de première instance";
+            this.Tribunal.MinimumWidth = 6;
+            this.Tribunal.Name = "Tribunal";
+            this.Tribunal.ReadOnly = true;
+            this.Tribunal.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tribunal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Tribunal.Width = 200;
+            // 
+            // NomMagistrat
+            // 
+            this.NomMagistrat.HeaderText = "Magistrat";
+            this.NomMagistrat.MinimumWidth = 6;
+            this.NomMagistrat.Name = "NomMagistrat";
+            this.NomMagistrat.ReadOnly = true;
+            this.NomMagistrat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NomMagistrat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.NomMagistrat.Width = 125;
+            // 
+            // NomJugeControleur
+            // 
+            this.NomJugeControleur.HeaderText = "Juge Controleur";
+            this.NomJugeControleur.MinimumWidth = 6;
+            this.NomJugeControleur.Name = "NomJugeControleur";
+            this.NomJugeControleur.ReadOnly = true;
+            this.NomJugeControleur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NomJugeControleur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.NomJugeControleur.Width = 125;
+            // 
+            // sujet
+            // 
+            this.sujet.HeaderText = "Sujet d\'affaire";
+            this.sujet.MinimumWidth = 6;
+            this.sujet.Name = "sujet";
+            this.sujet.ReadOnly = true;
+            this.sujet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sujet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.sujet.Width = 125;
+            // 
+            // TypeDécision
+            // 
+            this.TypeDécision.HeaderText = "Type Décision";
+            this.TypeDécision.MinimumWidth = 6;
+            this.TypeDécision.Name = "TypeDécision";
+            this.TypeDécision.ReadOnly = true;
+            this.TypeDécision.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TypeDécision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TypeDécision.Width = 125;
+            // 
+            // DateDécision
+            // 
+            this.DateDécision.HeaderText = "Décision";
+            this.DateDécision.MinimumWidth = 6;
+            this.DateDécision.Name = "DateDécision";
+            this.DateDécision.ReadOnly = true;
+            this.DateDécision.Width = 125;
+            // 
+            // DateDésignation
+            // 
+            this.DateDésignation.HeaderText = "Désignation";
+            this.DateDésignation.MinimumWidth = 6;
+            this.DateDésignation.Name = "DateDésignation";
+            this.DateDésignation.ReadOnly = true;
+            this.DateDésignation.Width = 125;
+            // 
+            // DateAcceptation
+            // 
+            this.DateAcceptation.HeaderText = "Acceptation";
+            this.DateAcceptation.MinimumWidth = 6;
+            this.DateAcceptation.Name = "DateAcceptation";
+            this.DateAcceptation.ReadOnly = true;
+            this.DateAcceptation.Width = 125;
+            // 
+            // DateConsignation
+            // 
+            this.DateConsignation.HeaderText = "Consignation";
+            this.DateConsignation.MinimumWidth = 6;
+            this.DateConsignation.Name = "DateConsignation";
+            this.DateConsignation.ReadOnly = true;
+            this.DateConsignation.Width = 125;
+            // 
+            // MontantConsignation
+            // 
+            this.MontantConsignation.HeaderText = "Montant Consignation";
+            this.MontantConsignation.MinimumWidth = 6;
+            this.MontantConsignation.Name = "MontantConsignation";
+            this.MontantConsignation.ReadOnly = true;
+            this.MontantConsignation.Width = 125;
+            // 
+            // LieuExp
+            // 
+            this.LieuExp.HeaderText = "Lieu";
+            this.LieuExp.MinimumWidth = 6;
+            this.LieuExp.Name = "LieuExp";
+            this.LieuExp.ReadOnly = true;
+            this.LieuExp.Width = 125;
+            // 
+            // TypeExp
+            // 
+            this.TypeExp.HeaderText = "Type";
+            this.TypeExp.MinimumWidth = 6;
+            this.TypeExp.Name = "TypeExp";
+            this.TypeExp.ReadOnly = true;
+            this.TypeExp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TypeExp.Width = 125;
+            // 
+            // DateConvPart
+            // 
+            this.DateConvPart.HeaderText = "Convocation";
+            this.DateConvPart.MinimumWidth = 6;
+            this.DateConvPart.Name = "DateConvPart";
+            this.DateConvPart.ReadOnly = true;
+            this.DateConvPart.Width = 125;
+            // 
+            // DateRvPart
+            // 
+            this.DateRvPart.HeaderText = "RV";
+            this.DateRvPart.MinimumWidth = 6;
+            this.DateRvPart.Name = "DateRvPart";
+            this.DateRvPart.ReadOnly = true;
+            this.DateRvPart.Width = 125;
+            // 
+            // HeureRvPart
+            // 
+            this.HeureRvPart.HeaderText = "Heure RV";
+            this.HeureRvPart.MinimumWidth = 6;
+            this.HeureRvPart.Name = "HeureRvPart";
+            this.HeureRvPart.ReadOnly = true;
+            this.HeureRvPart.Width = 125;
+            // 
+            // RépertoireDoc
+            // 
+            this.RépertoireDoc.HeaderText = "Répertoire Document";
+            this.RépertoireDoc.MinimumWidth = 6;
+            this.RépertoireDoc.Name = "RépertoireDoc";
+            this.RépertoireDoc.ReadOnly = true;
+            this.RépertoireDoc.Width = 125;
+            // 
+            // NumStatut
+            // 
+            this.NumStatut.HeaderText = "Statut";
+            this.NumStatut.MinimumWidth = 6;
+            this.NumStatut.Name = "NumStatut";
+            this.NumStatut.ReadOnly = true;
+            this.NumStatut.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NumStatut.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.NumStatut.Width = 125;
             // 
             // ToutesExp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.tableLayoutPanel1);
@@ -589,6 +589,8 @@ namespace Gestion_expertise
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefCabinet;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefRéféré;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tribunal;
@@ -608,7 +610,6 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridViewTextBoxColumn HeureRvPart;
         private System.Windows.Forms.DataGridViewTextBoxColumn RépertoireDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumStatut;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -628,6 +629,5 @@ namespace Gestion_expertise
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
