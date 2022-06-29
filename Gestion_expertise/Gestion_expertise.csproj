@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Badreddine\Desktop\setup\</PublishUrl>
+    <PublishUrl>C:\Users\hp\Desktop\setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <ProductName>Expert assistant</ProductName>
     <PublisherName>Expert</PublisherName>
     <SuiteName>Expert</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -395,7 +395,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 et x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -405,7 +405,7 @@
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SqlServer.Express.10.5">
       <Visible>False</Visible>
-      <ProductName>SQL Server 2008 R2 Express</ProductName>
+      <ProductName>SQL Server 2008 R2 Express</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
